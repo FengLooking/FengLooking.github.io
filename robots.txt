@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://fenglooking.github.io/sitemap.xml
