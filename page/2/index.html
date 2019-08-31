@@ -62,7 +62,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://fenglooking.github.io/" />
 
-<meta property="og:updated_time" content="2019-08-31T01:15:13+08:00" />
+<meta property="og:updated_time" content="2017-08-20T21:38:52+08:00" />
 <meta itemprop="name" content="dyfblogs">
 <meta itemprop="description" content="Hugo theme jane example site.">
 
@@ -287,17 +287,24 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/math-preview/">Math Preview</a>
+        <span class="post-pinned">
+          <svg class="icon" style="" viewBox="0 0 1024 1024" version="1.1"
+  width="32" height="32">
+  <path d="M682.666667 512V170.666667h42.666666V85.333333H298.666667v85.333334h42.666666v341.333333l-85.333333 85.333333v85.333334h221.866667v256h68.266666v-256H768v-85.333334l-85.333333-85.333333z"></path>
+</svg>
+
+        </span>
+      
+      <a class="post-link" href="/post/html-element-classify/">HTML元素分类</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2019-03-04" class="post-time">
-        2019-03-04
+      <time datetime="2016-09-05" class="post-time">
+        2016-09-05
       </time>
       <div class="post-category">
-          <a href="https://fenglooking.github.io/categories/docs/"> docs </a>
-          <a href="https://fenglooking.github.io/categories/math/"> math </a>
-          <a href="https://fenglooking.github.io/categories/index/"> index </a>
+          <a href="https://fenglooking.github.io/categories/html/"> html </a>
+          <a href="https://fenglooking.github.io/categories/element/"> element </a>
           
         </div>
       
@@ -309,101 +316,10 @@
   <div class="post-content">
     
     <div class="post-summary">
-      <p><a href="https://www.intmath.com/cg5/katex-mathjax-comparison.php">KaTeX and MathJax Comparison Demo, currently processed as KaTex</a></p>
+      在HTML中，HTML标签元素大体被分为三种不同的类型：内联元素(又叫行内元素)，块状元素，内联块状元素。 常用的内联元素有： &lt;a&gt
     </div>
     <div class="read-more">
-      <a href="/post/math-preview/" class="read-more-link">Read more</a>
-    </div>
-    
-  </div>
-</article>
-
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/shortcodes-preview/">Shortcodes Preview</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2018-03-04" class="post-time">
-        2018-03-04
-      </time>
-      <div class="post-category">
-          <a href="https://fenglooking.github.io/categories/docs/"> docs </a>
-          <a href="https://fenglooking.github.io/categories/shortcodes/"> shortcodes </a>
-          <a href="https://fenglooking.github.io/categories/index/"> index </a>
-          
-        </div>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      <h2 id="what-a-shortcode-is">What a Shortcode is</h2>
-
-<p>Hugo loves Markdown because of its simple content format, but there are times when Markdown falls short. Often, content authors are forced to add raw HTML (e.g., video <code>&lt;iframes&gt;</code>) to Markdown content. We think this contradicts the beautiful simplicity of Markdown&rsquo;s syntax.</p>
-
-<p>Hugo created <strong>shortcodes</strong> to circumvent these limitations.</p>
-
-<p>A shortcode is a simple snippet inside a content file that Hugo will render using a predefined template. Note that shortcodes will not work in template files. If you need the type of drop-in functionality that shortcodes provide but in a template, you most likely want a [partial template][partials] instead.</p>
-
-<p>In addition to cleaner Markdown, shortcodes can be updated any time to reflect new classes, techniques, or standards. At the point of site generation, Hugo shortcodes will easily merge in your changes. You avoid a possibly complicated search and replace operation.</p>
-
-<p>More details: <a href="https://gohugo.io/content-management/shortcodes/">https://gohugo.io/content-management/shortcodes/</a></p>
-    </div>
-    <div class="read-more">
-      <a href="/post/shortcodes-preview/" class="read-more-link">Read more</a>
-    </div>
-    
-  </div>
-</article>
-
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/image-preview/">Image Preview</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2018-03-03" class="post-time">
-        2018-03-03
-      </time>
-      <div class="post-category">
-          <a href="https://fenglooking.github.io/categories/docs/"> docs </a>
-          <a href="https://fenglooking.github.io/categories/shortcodes/"> shortcodes </a>
-          <a href="https://fenglooking.github.io/categories/index/"> index </a>
-          
-        </div>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      <p>Thanks for <a href="https://github.com/liwenyip/hugo-easy-gallery">liwenyip/hugo-easy-gallery</a> &amp; <a href="https://github.com/xianmin/hugo-theme-jane/pull/48">Zebradil · Pull Request #48</a> .</p>
-
-<p>Now, we could use <code>{{&lt; gallery &gt;}}</code> shortcode in hugo-theme-jane.</p>
-
-<h2 id="normal-image">Normal Image</h2>
-
-<p>This is an image in <code>static/image</code> folder.</p>
-
-<pre><code class="language-markdown">![This is an image in `static/image` folder.](/image/example.jpg)
-</code></pre>
-    </div>
-    <div class="read-more">
-      <a href="/post/image-preview/" class="read-more-link">Read more</a>
+      <a href="/post/html-element-classify/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -441,18 +357,6 @@
       
       <li  class="active" >
         <a href="/page/2/">2</a>
-      </li>
-      
-      <li >
-        <a href="/page/3/">3</a>
-      </li>
-      
-      <li >
-        <a href="/page/4/">4</a>
-      </li>
-      
-      <li >
-        <a href="/page/5/">5</a>
       </li>
       
     </ul>
