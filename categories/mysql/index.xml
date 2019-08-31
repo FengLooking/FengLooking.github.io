@@ -17,7 +17,7 @@
       <pubDate>Sun, 05 Mar 2017 20:22:01 +0800</pubDate>
       
       <guid>https://fenglooking.github.io/post/mysql-common/</guid>
-      <description>MySQL创建用户并添加权限的方式： 1.进入mysql数据库 mysql -u root mysql 2.在mysql界面添加用户及权限 create user &#39;pyjsh&#39;@&#39;localhost&#39; identified by &#39;pyjsh&#39;; grant all on *.* to pyjsh@&#39;%&#39; identified by &#39;pyjsh&#39;; grant all on *.*</description>
+      <description>MySQL创建用户并添加权限的方式： 1.进入mysql数据库 mysql -u root mysql 2.在mysql界面添加用户及权限 create user &amp;#39;pyjsh&amp;#39;@&amp;#39;localhost&amp;#39; identified by &amp;#39;pyjsh&amp;#39;; grant all on *.* to pyjsh@&amp;#39;%&amp;#39; identified by &amp;#39;pyjsh&amp;#39;; grant all on *.*</description>
     </item>
     
   </channel>

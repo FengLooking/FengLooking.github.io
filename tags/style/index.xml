@@ -17,7 +17,7 @@
       <pubDate>Thu, 08 Sep 2016 20:22:01 +0800</pubDate>
       
       <guid>https://fenglooking.github.io/post/css-typesetting/</guid>
-      <description>.firstp { /* 文字排版：颜色、字号、字体、粗体、斜体、下划线、删除线 */ color: #666; /*颜色*/ font-size: 30px; /*字号*/ font-family: &amp;quot;宋体&amp;quot;; /*字体*/ font-weight:</description>
+      <description>199.firstp { 200 /* 文字排版：颜色、字号、字体、粗体、斜体、下划线、删除线 */ 201 color: #666; /*颜色*/ 202 font-size: 30px; /*字号*/ 203 font-family: &amp;#34;宋体&amp;#34;; /*字体*</description>
     </item>
     
     <item>

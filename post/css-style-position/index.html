@@ -51,7 +51,7 @@
 
 
 
-<link rel="stylesheet" href="/sass/jane.min.9c51b0fc4ad0a1f7263a6924cb00b12bd80841321b275bd02d39c2c5b81be8b6.css" integrity="sha256-nFGw/ErQofcmOmkkywCxK9gIQTIbJ1vQLTnCxbgb6LY=" media="screen" crossorigin="anonymous">
+<link rel="stylesheet" href="/sass/jane.min.001ad54ce32cd6cfecd1a1a70ee9009cde80099c5bdfe53b55f61699421b9f0a.css" integrity="sha256-ABrVTOMs1s/s0aGnDukAnN6ACZxb3&#43;U7VfYWmUIbnwo=" media="screen" crossorigin="anonymous">
 
 
 
@@ -69,7 +69,7 @@
 
 <meta itemprop="datePublished" content="2016-09-06T22:00:01&#43;08:00" />
 <meta itemprop="dateModified" content="2016-09-06T22:00:01&#43;08:00" />
-<meta itemprop="wordCount" content="575">
+<meta itemprop="wordCount" content="578">
 
 
 
@@ -333,24 +333,20 @@
 
 <h4 id="内联样式-就是将css样式写在html的开始标签中">内联样式：就是将CSS样式写在HTML的开始标签中</h4>
 
-<pre><code>&lt; style=&quot;color:#CCC;&quot;&gt;这里式设置了#CCC颜色的字&lt;/style&gt;
-</code></pre>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">199</span>&lt; <span style="color:#a6e22e">style</span>=<span style="color:#e6db74">&#34;color:#CCC;&#34;</span>&gt;<span style="color:#a6e22e">这里式设置了</span><span style="color:#960050;background-color:#1e0010">#</span><span style="color:#a6e22e">CCC颜色的字</span>&lt;<span style="color:#f92672">/</span><span style="color:#a6e22e">style</span>&gt;</code></pre></div>
 
 <h4 id="嵌入样式-将css样式写在style标签之间">嵌入样式：将CSS样式写在style标签之间</h4>
 
-<pre><code>    &lt; style type=&quot;text/css&quot;&gt;
-        p {
-            font-size: 17px;
-        }
-    &lt;/style&gt;
-</code></pre>
-
-<p>嵌入式CSS样式必须写在<style></style>之间， 并且通常情况下嵌入式样式写在<head></head>之间</p>
+<p><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">199</span>    &lt; <span style="color:#a6e22e">style</span> <span style="color:#66d9ef">type</span>=<span style="color:#e6db74">&#34;text/css&#34;</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">200</span>        <span style="color:#a6e22e">p</span> {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">201</span>            <span style="color:#a6e22e">font</span><span style="color:#f92672">-</span><span style="color:#a6e22e">size</span>: <span style="color:#ae81ff">17</span><span style="color:#a6e22e">px</span>;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">202</span>        }
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">203</span>    &lt;<span style="color:#f92672">/</span><span style="color:#a6e22e">style</span>&gt;</code></pre></div><br />
+嵌入式CSS样式必须写在<style></style>之间， 并且通常情况下嵌入式样式写在<head></head>之间</p>
 
 <h4 id="外部式css样式-就是把css代码写在一个单独的外部文件中-这个css文件以-css为后缀扩展名-在-head-标签内使用-link-标签将css样式文件链接到html文件内">外部式CSS样式：就是把CSS代码写在一个单独的外部文件中，这个CSS文件以.css为后缀扩展名， 在<head>标签内使用<link>标签将CSS样式文件链接到HTML文件内</h4>
 
-<pre><code>&lt;link href=&quot;main.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; /&gt;
-</code></pre>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">199</span>&lt;<span style="color:#a6e22e">link</span> <span style="color:#a6e22e">href</span>=<span style="color:#e6db74">&#34;main.css&#34;</span> <span style="color:#a6e22e">rel</span>=<span style="color:#e6db74">&#34;stylesheet&#34;</span> <span style="color:#66d9ef">type</span>=<span style="color:#e6db74">&#34;text/css&#34;</span> <span style="color:#f92672">/</span>&gt;</code></pre></div>
 
 <h5 id="备注">备注：</h5>
 
@@ -368,12 +364,9 @@
 
 <h5 id="important">!important</h5>
 
-<p>在某些特殊情况下为某些样式设置最高权限可以使用!important来处理</p>
-
-<pre><code>    p {color: #DDD!important;}
-</code></pre>
-
-<p>此外浏览器也有一套默认的样式来显示网页，用户页可以自己设置样式，这些样式的优先级为：
+<p>在某些特殊情况下为某些样式设置最高权限可以使用!important来处理
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">199</span><span style="color:#a6e22e">p</span> {<span style="color:#a6e22e">color</span>: <span style="color:#960050;background-color:#1e0010">#</span><span style="color:#a6e22e">DDD</span>!<span style="color:#a6e22e">important</span>;}</code></pre></div><br />
+此外浏览器也有一套默认的样式来显示网页，用户页可以自己设置样式，这些样式的优先级为：
 浏览器默认的样式&gt;网页制作者样式&gt;用户自己设置的样式&gt;设置了!important的样式。</p>
 
     </div>

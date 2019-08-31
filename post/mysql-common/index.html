@@ -23,7 +23,7 @@
 <meta name="mobile-web-app-capable" content="yes">
 
 <meta name="author" content="dyf" />
-  <meta name="description" content="MySQL创建用户并添加权限的方式： 1.进入mysql数据库 mysql -u root mysql 2.在mysql界面添加用户及权限 create user &#39;pyjsh&#39;@&#39;localhost&#39; identified by &#39;pyjsh&#39;; grant all on *.* to pyjsh@&#39;%&#39; identified by &#39;pyjsh&#39;; grant all on *.*" />
+  <meta name="description" content="MySQL创建用户并添加权限的方式： 1.进入mysql数据库 mysql -u root mysql 2.在mysql界面添加用户及权限 create user &amp;#39;pyjsh&amp;#39;@&amp;#39;localhost&amp;#39; identified by &amp;#39;pyjsh&amp;#39;; grant all on *.* to pyjsh@&amp;#39;%&amp;#39; identified by &amp;#39;pyjsh&amp;#39;; grant all on *.*" />
 
   <meta name="keywords" content="Hugo, theme, jane" />
 
@@ -51,7 +51,7 @@
 
 
 
-<link rel="stylesheet" href="/sass/jane.min.9c51b0fc4ad0a1f7263a6924cb00b12bd80841321b275bd02d39c2c5b81be8b6.css" integrity="sha256-nFGw/ErQofcmOmkkywCxK9gIQTIbJ1vQLTnCxbgb6LY=" media="screen" crossorigin="anonymous">
+<link rel="stylesheet" href="/sass/jane.min.001ad54ce32cd6cfecd1a1a70ee9009cde80099c5bdfe53b55f61699421b9f0a.css" integrity="sha256-ABrVTOMs1s/s0aGnDukAnN6ACZxb3&#43;U7VfYWmUIbnwo=" media="screen" crossorigin="anonymous">
 
 
 
@@ -346,109 +346,87 @@
 
 <h5 id="mysql创建用户并添加权限的方式">MySQL创建用户并添加权限的方式：</h5>
 
-<p>1.进入mysql数据库</p>
-
-<pre><code>mysql -u root mysql
-</code></pre>
-
-<p>2.在mysql界面添加用户及权限</p>
-
-<pre><code>create user 'pyjsh'@'localhost' identified by 'pyjsh';
-grant all on *.* to pyjsh@'%' identified by 'pyjsh';
-grant all on *.* to pyjsh@'localhost' identified by 'pyjsh';
-flush privileges;
-</code></pre>
+<p>1.进入mysql数据库
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-mysql" data-lang="mysql">mysql <span style="color:#f92672">-</span>u root mysql</code></pre></div>
+2.在mysql界面添加用户及权限
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-mysql" data-lang="mysql"><span style="color:#66d9ef">create</span> user <span style="color:#e6db74">&#39;pyjsh&#39;</span><span style="color:#f92672">@</span><span style="color:#e6db74">&#39;localhost&#39;</span> identified <span style="color:#66d9ef">by</span> <span style="color:#e6db74">&#39;pyjsh&#39;</span>;
+<span style="color:#66d9ef">grant</span> <span style="color:#66d9ef">all</span> <span style="color:#66d9ef">on</span> <span style="color:#f92672">*</span>.<span style="color:#f92672">*</span> <span style="color:#66d9ef">to</span> pyjsh<span style="color:#f92672">@</span><span style="color:#e6db74">&#39;%&#39;</span> identified <span style="color:#66d9ef">by</span> <span style="color:#e6db74">&#39;pyjsh&#39;</span>;
+<span style="color:#66d9ef">grant</span> <span style="color:#66d9ef">all</span> <span style="color:#66d9ef">on</span> <span style="color:#f92672">*</span>.<span style="color:#f92672">*</span> <span style="color:#66d9ef">to</span> pyjsh<span style="color:#f92672">@</span><span style="color:#e6db74">&#39;localhost&#39;</span> identified <span style="color:#66d9ef">by</span> <span style="color:#e6db74">&#39;pyjsh&#39;</span>;
+<span style="color:#66d9ef">flush</span> privileges;</code></pre></div></p>
 
 <h4 id="查询数据库">查询数据库</h4>
 
-<pre><code>show databases;
-</code></pre>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-mysql" data-lang="mysql"><span style="color:#66d9ef">show</span> <span style="color:#66d9ef">databases</span>;</code></pre></div>
 
 <h4 id="创建数据库">创建数据库</h4>
 
-<pre><code>create database dbname;
-</code></pre>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-mysql" data-lang="mysql"><span style="color:#66d9ef">create</span> <span style="color:#66d9ef">database</span> dbname;</code></pre></div>
 
 <h4 id="删除数据库">删除数据库</h4>
 
-<pre><code>drop database dbname;
-</code></pre>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-mysql" data-lang="mysql"><span style="color:#66d9ef">drop</span> <span style="color:#66d9ef">database</span> dbname;</code></pre></div>
 
 <h4 id="创建数据库表并设置自增长主键">创建数据库表并设置自增长主键</h4>
 
-<pre><code>MariaDB [dyf_da]&gt; create table test_tb
-    -&gt; (
-    -&gt; id int(11) not null AUTO_INCREMENT primary key,
-    -&gt; total int(11),
-    -&gt; name varchar(256));
-Query OK, 0 rows affected (0.021 sec)
-</code></pre>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-mysql" data-lang="mysql">MariaDB [dyf_da]<span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">create</span> <span style="color:#66d9ef">table</span> test_tb
+    <span style="color:#f92672">-&gt;</span> (
+    <span style="color:#f92672">-&gt;</span> id <span style="color:#66d9ef">int</span>(<span style="color:#ae81ff">11</span>) <span style="color:#66d9ef">not</span> <span style="color:#66d9ef">null</span> <span style="color:#66d9ef">AUTO_INCREMENT</span> <span style="color:#66d9ef">primary</span> <span style="color:#66d9ef">key</span>,
+    <span style="color:#f92672">-&gt;</span> total <span style="color:#66d9ef">int</span>(<span style="color:#ae81ff">11</span>),
+    <span style="color:#f92672">-&gt;</span> name <span style="color:#66d9ef">varchar</span>(<span style="color:#ae81ff">256</span>));
+Query OK, <span style="color:#ae81ff">0</span> rows <span style="color:#a6e22e">affected</span> (<span style="color:#ae81ff">0</span>.<span style="color:#ae81ff">021</span> sec)</code></pre></div>
 
 <h5 id="查看数据表结构">查看数据表结构</h5>
 
-<pre><code>desc test_tb;
-show columns from test_tb; 和上条命令查询结果一致
-</code></pre>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-mysql" data-lang="mysql"><span style="color:#66d9ef">desc</span> test_tb;
+<span style="color:#66d9ef">show</span> columns <span style="color:#66d9ef">from</span> test_tb; <span style="color:#960050;background-color:#1e0010">和上条命令查询结果一致</span></code></pre></div>
 
 <h5 id="向数据表中插入列">向数据表中插入列</h5>
 
-<pre><code>alter table test_tb add column age varchar(256);
-</code></pre>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-mysql" data-lang="mysql"><span style="color:#66d9ef">alter</span> <span style="color:#66d9ef">table</span> test_tb <span style="color:#66d9ef">add</span> <span style="color:#66d9ef">column</span> age <span style="color:#66d9ef">varchar</span>(<span style="color:#ae81ff">256</span>);</code></pre></div>
 
 <h5 id="修改列的类型">修改列的类型</h5>
 
-<pre><code>alter table test_tb modify age int(11);
-</code></pre>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-mysql" data-lang="mysql"><span style="color:#66d9ef">alter</span> <span style="color:#66d9ef">table</span> test_tb modify age <span style="color:#66d9ef">int</span>(<span style="color:#ae81ff">11</span>);</code></pre></div>
 
 <h5 id="插入一条新数据">插入一条新数据</h5>
 
-<pre><code>insert into test_tb(total,name,age) values(34,'tina',23);
-</code></pre>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-mysql" data-lang="mysql"><span style="color:#66d9ef">insert</span> <span style="color:#66d9ef">into</span> <span style="color:#a6e22e">test_tb</span>(total,name,age) <span style="color:#66d9ef">values</span>(<span style="color:#ae81ff">34</span>,<span style="color:#e6db74">&#39;tina&#39;</span>,<span style="color:#ae81ff">23</span>);</code></pre></div>
 
 <h5 id="修改一条数据记录">修改一条数据记录</h5>
 
-<pre><code>update test_tb set total=15,name='andy',age=22 where id=1;
-</code></pre>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-mysql" data-lang="mysql"><span style="color:#66d9ef">update</span> test_tb <span style="color:#66d9ef">set</span> total<span style="color:#f92672">=</span><span style="color:#ae81ff">15</span>,name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;andy&#39;</span>,age<span style="color:#f92672">=</span><span style="color:#ae81ff">22</span> <span style="color:#66d9ef">where</span> id<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>;</code></pre></div>
 
 <h5 id="查询记录数量">查询记录数量</h5>
 
-<pre><code> select count(*) from test_tb; 
-</code></pre>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-mysql" data-lang="mysql"> <span style="color:#66d9ef">select</span> <span style="color:#a6e22e">count</span>(<span style="color:#f92672">*</span>) <span style="color:#66d9ef">from</span> test_tb; </code></pre></div>
 
 <h5 id="按关键字查询">按关键字查询</h5>
 
-<pre><code>select * from test_tb where name like '%and%';
-</code></pre>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-mysql" data-lang="mysql"><span style="color:#66d9ef">select</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">from</span> test_tb <span style="color:#66d9ef">where</span> name <span style="color:#66d9ef">like</span> <span style="color:#e6db74">&#39;%and%&#39;</span>;</code></pre></div>
 
 <h5 id="数据表重命名">数据表重命名</h5>
 
-<pre><code>alter table test_tb rename to tb01;
-</code></pre>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-mysql" data-lang="mysql"><span style="color:#66d9ef">alter</span> <span style="color:#66d9ef">table</span> test_tb <span style="color:#66d9ef">rename</span> <span style="color:#66d9ef">to</span> tb01;</code></pre></div>
 
 <h5 id="删除数据表中的数据">删除数据表中的数据</h5>
 
-<pre><code>delete from tb01 where id=2;
-</code></pre>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-mysql" data-lang="mysql"><span style="color:#66d9ef">delete</span> <span style="color:#66d9ef">from</span> tb01 <span style="color:#66d9ef">where</span> id<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>;</code></pre></div>
 
 <h5 id="清空数据表-清空后主键id会从1开始递增">清空数据表：清空后主键id会从1开始递增</h5>
 
-<pre><code>truncate table tb01;
-</code></pre>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-mysql" data-lang="mysql">truncate <span style="color:#66d9ef">table</span> tb01;</code></pre></div>
 
 <h5 id="复制一个表">复制一个表</h5>
 
-<pre><code>create table tb2 select * from tb01;
-</code></pre>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-mysql" data-lang="mysql"><span style="color:#66d9ef">create</span> <span style="color:#66d9ef">table</span> tb2 <span style="color:#66d9ef">select</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">from</span> tb01;</code></pre></div>
 
 <h5 id="删除数据表">删除数据表</h5>
 
-<pre><code>drop table tb01;
-</code></pre>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-mysql" data-lang="mysql"><span style="color:#66d9ef">drop</span> <span style="color:#66d9ef">table</span> tb01;</code></pre></div>
 
 <h5 id="删除数据库-1">删除数据库</h5>
 
-<pre><code>drop database dyf_da;
-</code></pre>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-mysql" data-lang="mysql"><span style="color:#66d9ef">drop</span> <span style="color:#66d9ef">database</span> dyf_da;</code></pre></div>
 
     </div>
 

@@ -22,109 +22,87 @@
 
 &lt;h5 id=&#34;mysql创建用户并添加权限的方式&#34;&gt;MySQL创建用户并添加权限的方式：&lt;/h5&gt;
 
-&lt;p&gt;1.进入mysql数据库&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;mysql -u root mysql
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;2.在mysql界面添加用户及权限&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;create user &#39;pyjsh&#39;@&#39;localhost&#39; identified by &#39;pyjsh&#39;;
-grant all on *.* to pyjsh@&#39;%&#39; identified by &#39;pyjsh&#39;;
-grant all on *.* to pyjsh@&#39;localhost&#39; identified by &#39;pyjsh&#39;;
-flush privileges;
-&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;1.进入mysql数据库
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-mysql&#34; data-lang=&#34;mysql&#34;&gt;mysql &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;u root mysql&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+2.在mysql界面添加用户及权限
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-mysql&#34; data-lang=&#34;mysql&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;create&lt;/span&gt; user &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;pyjsh&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;@&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;localhost&amp;#39;&lt;/span&gt; identified &lt;span style=&#34;color:#66d9ef&#34;&gt;by&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;pyjsh&amp;#39;&lt;/span&gt;;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;grant&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;all&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;on&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;.&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;to&lt;/span&gt; pyjsh&lt;span style=&#34;color:#f92672&#34;&gt;@&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;%&amp;#39;&lt;/span&gt; identified &lt;span style=&#34;color:#66d9ef&#34;&gt;by&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;pyjsh&amp;#39;&lt;/span&gt;;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;grant&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;all&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;on&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;.&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;to&lt;/span&gt; pyjsh&lt;span style=&#34;color:#f92672&#34;&gt;@&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;localhost&amp;#39;&lt;/span&gt; identified &lt;span style=&#34;color:#66d9ef&#34;&gt;by&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;pyjsh&amp;#39;&lt;/span&gt;;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;flush&lt;/span&gt; privileges;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;查询数据库&#34;&gt;查询数据库&lt;/h4&gt;
 
-&lt;pre&gt;&lt;code&gt;show databases;
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-mysql&#34; data-lang=&#34;mysql&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;show&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;databases&lt;/span&gt;;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h4 id=&#34;创建数据库&#34;&gt;创建数据库&lt;/h4&gt;
 
-&lt;pre&gt;&lt;code&gt;create database dbname;
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-mysql&#34; data-lang=&#34;mysql&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;create&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;database&lt;/span&gt; dbname;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h4 id=&#34;删除数据库&#34;&gt;删除数据库&lt;/h4&gt;
 
-&lt;pre&gt;&lt;code&gt;drop database dbname;
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-mysql&#34; data-lang=&#34;mysql&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;drop&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;database&lt;/span&gt; dbname;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h4 id=&#34;创建数据库表并设置自增长主键&#34;&gt;创建数据库表并设置自增长主键&lt;/h4&gt;
 
-&lt;pre&gt;&lt;code&gt;MariaDB [dyf_da]&amp;gt; create table test_tb
-    -&amp;gt; (
-    -&amp;gt; id int(11) not null AUTO_INCREMENT primary key,
-    -&amp;gt; total int(11),
-    -&amp;gt; name varchar(256));
-Query OK, 0 rows affected (0.021 sec)
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-mysql&#34; data-lang=&#34;mysql&#34;&gt;MariaDB [dyf_da]&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;create&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;table&lt;/span&gt; test_tb
+    &lt;span style=&#34;color:#f92672&#34;&gt;-&amp;gt;&lt;/span&gt; (
+    &lt;span style=&#34;color:#f92672&#34;&gt;-&amp;gt;&lt;/span&gt; id &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;11&lt;/span&gt;) &lt;span style=&#34;color:#66d9ef&#34;&gt;not&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;null&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;AUTO_INCREMENT&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;primary&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;key&lt;/span&gt;,
+    &lt;span style=&#34;color:#f92672&#34;&gt;-&amp;gt;&lt;/span&gt; total &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;11&lt;/span&gt;),
+    &lt;span style=&#34;color:#f92672&#34;&gt;-&amp;gt;&lt;/span&gt; name &lt;span style=&#34;color:#66d9ef&#34;&gt;varchar&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;256&lt;/span&gt;));
+Query OK, &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt; rows &lt;span style=&#34;color:#a6e22e&#34;&gt;affected&lt;/span&gt; (&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;.&lt;span style=&#34;color:#ae81ff&#34;&gt;021&lt;/span&gt; sec)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h5 id=&#34;查看数据表结构&#34;&gt;查看数据表结构&lt;/h5&gt;
 
-&lt;pre&gt;&lt;code&gt;desc test_tb;
-show columns from test_tb; 和上条命令查询结果一致
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-mysql&#34; data-lang=&#34;mysql&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;desc&lt;/span&gt; test_tb;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;show&lt;/span&gt; columns &lt;span style=&#34;color:#66d9ef&#34;&gt;from&lt;/span&gt; test_tb; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;和上条命令查询结果一致&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h5 id=&#34;向数据表中插入列&#34;&gt;向数据表中插入列&lt;/h5&gt;
 
-&lt;pre&gt;&lt;code&gt;alter table test_tb add column age varchar(256);
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-mysql&#34; data-lang=&#34;mysql&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;alter&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;table&lt;/span&gt; test_tb &lt;span style=&#34;color:#66d9ef&#34;&gt;add&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;column&lt;/span&gt; age &lt;span style=&#34;color:#66d9ef&#34;&gt;varchar&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;256&lt;/span&gt;);&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h5 id=&#34;修改列的类型&#34;&gt;修改列的类型&lt;/h5&gt;
 
-&lt;pre&gt;&lt;code&gt;alter table test_tb modify age int(11);
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-mysql&#34; data-lang=&#34;mysql&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;alter&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;table&lt;/span&gt; test_tb modify age &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;11&lt;/span&gt;);&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h5 id=&#34;插入一条新数据&#34;&gt;插入一条新数据&lt;/h5&gt;
 
-&lt;pre&gt;&lt;code&gt;insert into test_tb(total,name,age) values(34,&#39;tina&#39;,23);
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-mysql&#34; data-lang=&#34;mysql&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;insert&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;into&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;test_tb&lt;/span&gt;(total,name,age) &lt;span style=&#34;color:#66d9ef&#34;&gt;values&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;34&lt;/span&gt;,&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;tina&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;23&lt;/span&gt;);&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h5 id=&#34;修改一条数据记录&#34;&gt;修改一条数据记录&lt;/h5&gt;
 
-&lt;pre&gt;&lt;code&gt;update test_tb set total=15,name=&#39;andy&#39;,age=22 where id=1;
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-mysql&#34; data-lang=&#34;mysql&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;update&lt;/span&gt; test_tb &lt;span style=&#34;color:#66d9ef&#34;&gt;set&lt;/span&gt; total&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;15&lt;/span&gt;,name&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;andy&amp;#39;&lt;/span&gt;,age&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;22&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;where&lt;/span&gt; id&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h5 id=&#34;查询记录数量&#34;&gt;查询记录数量&lt;/h5&gt;
 
-&lt;pre&gt;&lt;code&gt; select count(*) from test_tb; 
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-mysql&#34; data-lang=&#34;mysql&#34;&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;select&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;count&lt;/span&gt;(&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;) &lt;span style=&#34;color:#66d9ef&#34;&gt;from&lt;/span&gt; test_tb; &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h5 id=&#34;按关键字查询&#34;&gt;按关键字查询&lt;/h5&gt;
 
-&lt;pre&gt;&lt;code&gt;select * from test_tb where name like &#39;%and%&#39;;
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-mysql&#34; data-lang=&#34;mysql&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;select&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;from&lt;/span&gt; test_tb &lt;span style=&#34;color:#66d9ef&#34;&gt;where&lt;/span&gt; name &lt;span style=&#34;color:#66d9ef&#34;&gt;like&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;%and%&amp;#39;&lt;/span&gt;;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h5 id=&#34;数据表重命名&#34;&gt;数据表重命名&lt;/h5&gt;
 
-&lt;pre&gt;&lt;code&gt;alter table test_tb rename to tb01;
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-mysql&#34; data-lang=&#34;mysql&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;alter&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;table&lt;/span&gt; test_tb &lt;span style=&#34;color:#66d9ef&#34;&gt;rename&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;to&lt;/span&gt; tb01;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h5 id=&#34;删除数据表中的数据&#34;&gt;删除数据表中的数据&lt;/h5&gt;
 
-&lt;pre&gt;&lt;code&gt;delete from tb01 where id=2;
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-mysql&#34; data-lang=&#34;mysql&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;delete&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;from&lt;/span&gt; tb01 &lt;span style=&#34;color:#66d9ef&#34;&gt;where&lt;/span&gt; id&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h5 id=&#34;清空数据表-清空后主键id会从1开始递增&#34;&gt;清空数据表：清空后主键id会从1开始递增&lt;/h5&gt;
 
-&lt;pre&gt;&lt;code&gt;truncate table tb01;
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-mysql&#34; data-lang=&#34;mysql&#34;&gt;truncate &lt;span style=&#34;color:#66d9ef&#34;&gt;table&lt;/span&gt; tb01;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h5 id=&#34;复制一个表&#34;&gt;复制一个表&lt;/h5&gt;
 
-&lt;pre&gt;&lt;code&gt;create table tb2 select * from tb01;
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-mysql&#34; data-lang=&#34;mysql&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;create&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;table&lt;/span&gt; tb2 &lt;span style=&#34;color:#66d9ef&#34;&gt;select&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;from&lt;/span&gt; tb01;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h5 id=&#34;删除数据表&#34;&gt;删除数据表&lt;/h5&gt;
 
-&lt;pre&gt;&lt;code&gt;drop table tb01;
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-mysql&#34; data-lang=&#34;mysql&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;drop&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;table&lt;/span&gt; tb01;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h5 id=&#34;删除数据库-1&#34;&gt;删除数据库&lt;/h5&gt;
 
-&lt;pre&gt;&lt;code&gt;drop database dyf_da;
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-mysql&#34; data-lang=&#34;mysql&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;drop&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;database&lt;/span&gt; dyf_da;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 </description>
       
     </item>
@@ -138,91 +116,67 @@ show columns from test_tb; 和上条命令查询结果一致
       
         <description>
 
-&lt;pre&gt;&lt;code&gt;.firstp {
-    /* 文字排版：颜色、字号、字体、粗体、斜体、下划线、删除线 */
-    color: #666;  /*颜色*/
-    font-size: 30px; /*字号*/
-    font-family: &amp;quot;宋体&amp;quot;; /*字体*/
-    font-weight: bold; /*粗体*/
-    font-style: italic; /*斜体*/
-    text-decoration: underline; /*下划线  删除线用：line-through*/
-
-    /* 段落排版：缩进、行高、文字距离、单词间距、对齐 */
-    text-indent: 2em; /* 缩进 */
-    line-height: 1.5em; /* 行高 */
-    letter-spacing: 5px; /* 中文字距离 || 字母间距 */
-    word-spacing: 50px; /* 单词间距 */
-    text-align: center; /* 对齐：居中：center、左对齐：left、右对齐：right */
-
-    /* 背景设置：背景色、背景图片、背景平铺模式、背景定位 */
-    background-color: #333; /* 背景色*/
-    background-image: url(img/bg.png); /* 背景图片 */
-    background-repeat: no-repeat; /* 背景平铺模式: 不重复 */
-    background-position: 30% 20px; /* 背景定位 */
-}
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;199&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;firstp&lt;/span&gt; {
+&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;200&lt;/span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;/* 文字排版：颜色、字号、字体、粗体、斜体、下划线、删除线 */&lt;/span&gt;
+&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;201&lt;/span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;color&lt;/span&gt;: &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;#&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;666&lt;/span&gt;;  &lt;span style=&#34;color:#75715e&#34;&gt;/*颜色*/&lt;/span&gt;
+&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;202&lt;/span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;font&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;size&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;30&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;px&lt;/span&gt;; &lt;span style=&#34;color:#75715e&#34;&gt;/*字号*/&lt;/span&gt;
+&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;203&lt;/span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;font&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;family&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;宋体&amp;#34;&lt;/span&gt;; &lt;span style=&#34;color:#75715e&#34;&gt;/*字体*/&lt;/span&gt;
+&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;204&lt;/span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;font&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;weight&lt;/span&gt;: &lt;span style=&#34;color:#a6e22e&#34;&gt;bold&lt;/span&gt;; &lt;span style=&#34;color:#75715e&#34;&gt;/*粗体*/&lt;/span&gt;
+&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;205&lt;/span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;font&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;style&lt;/span&gt;: &lt;span style=&#34;color:#a6e22e&#34;&gt;italic&lt;/span&gt;; &lt;span style=&#34;color:#75715e&#34;&gt;/*斜体*/&lt;/span&gt;
+&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;206&lt;/span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;text&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;decoration&lt;/span&gt;: &lt;span style=&#34;color:#a6e22e&#34;&gt;underline&lt;/span&gt;; &lt;span style=&#34;color:#75715e&#34;&gt;/*下划线  删除线用：line-through*/&lt;/span&gt;
+&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;207&lt;/span&gt;
+&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;208&lt;/span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;/* 段落排版：缩进、行高、文字距离、单词间距、对齐 */&lt;/span&gt;
+&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;209&lt;/span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;text&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;indent&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;em&lt;/span&gt;; &lt;span style=&#34;color:#75715e&#34;&gt;/* 缩进 */&lt;/span&gt;
+&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;210&lt;/span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;line&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;height&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;1.5&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;em&lt;/span&gt;; &lt;span style=&#34;color:#75715e&#34;&gt;/* 行高 */&lt;/span&gt;
+&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;211&lt;/span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;letter&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;spacing&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;5&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;px&lt;/span&gt;; &lt;span style=&#34;color:#75715e&#34;&gt;/* 中文字距离 || 字母间距 */&lt;/span&gt;
+&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;212&lt;/span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;word&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;spacing&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;50&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;px&lt;/span&gt;; &lt;span style=&#34;color:#75715e&#34;&gt;/* 单词间距 */&lt;/span&gt;
+&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;213&lt;/span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;text&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;align&lt;/span&gt;: &lt;span style=&#34;color:#a6e22e&#34;&gt;center&lt;/span&gt;; &lt;span style=&#34;color:#75715e&#34;&gt;/* 对齐：居中：center、左对齐：left、右对齐：right */&lt;/span&gt;
+&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;214&lt;/span&gt;
+&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;215&lt;/span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;/* 背景设置：背景色、背景图片、背景平铺模式、背景定位 */&lt;/span&gt;
+&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;216&lt;/span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;background&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;color&lt;/span&gt;: &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;#&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;333&lt;/span&gt;; &lt;span style=&#34;color:#75715e&#34;&gt;/* 背景色*/&lt;/span&gt;
+&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;217&lt;/span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;background&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;image&lt;/span&gt;: &lt;span style=&#34;color:#a6e22e&#34;&gt;url&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;img&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;bg&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;png&lt;/span&gt;); &lt;span style=&#34;color:#75715e&#34;&gt;/* 背景图片 */&lt;/span&gt;
+&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;218&lt;/span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;background&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;repeat&lt;/span&gt;: &lt;span style=&#34;color:#a6e22e&#34;&gt;no&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;repeat&lt;/span&gt;; &lt;span style=&#34;color:#75715e&#34;&gt;/* 背景平铺模式: 不重复 */&lt;/span&gt;
+&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;219&lt;/span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;background&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;position&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;30&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;%&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;20&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;px&lt;/span&gt;; &lt;span style=&#34;color:#75715e&#34;&gt;/* 背景定位 */&lt;/span&gt;
+&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;220&lt;/span&gt;}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h4 id=&#34;css中设置颜色的方法有多种&#34;&gt;CSS中设置颜色的方法有多种&lt;/h4&gt;
 
 &lt;ol&gt;
-&lt;li&gt;&lt;p&gt;颜色的英文单词&lt;/p&gt;
+&lt;li&gt;颜色的英文单词
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;display:block;width:100%;background-color:#3c3d38&#34;&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;10&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;cont&lt;/span&gt; {&lt;span style=&#34;color:#a6e22e&#34;&gt;color&lt;/span&gt;: &lt;span style=&#34;color:#a6e22e&#34;&gt;red&lt;/span&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;RGB配色：由R(red)、G(green)、B(blue)三种颜色的比例来配色
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;display:block;width:100%;background-color:#3c3d38&#34;&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;10&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;cont&lt;/span&gt; {&lt;span style=&#34;color:#a6e22e&#34;&gt;color&lt;/span&gt;: &lt;span style=&#34;color:#a6e22e&#34;&gt;rgb&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;51&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;102&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;102&lt;/span&gt;)}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+这三个值也可以用0%~100%之间的值来设置
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;display:block;width:100%;background-color:#3c3d38&#34;&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;10&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;cont&lt;/span&gt; {&lt;span style=&#34;color:#a6e22e&#34;&gt;color&lt;/span&gt;: &lt;span style=&#34;color:#a6e22e&#34;&gt;rgb&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;%&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;30&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;%&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;66&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;%&lt;/span&gt;)}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
 
-&lt;pre&gt;&lt;code&gt;.cont {color: red}
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;RGB配色：由R(red)、G(green)、B(blue)三种颜色的比例来配色&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;.cont {color: rgb(51, 102, 102)}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;这三个值也可以用0%~100%之间的值来设置&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;.cont {color: rgb(10%, 30%, 66%)}
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;十六进制颜色：00-ff&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;.cont {color: #0033ff}
-&lt;/code&gt;&lt;/pre&gt;
+&lt;li&gt;&lt;p&gt;十六进制颜色：00-ff
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;display:block;width:100%;background-color:#3c3d38&#34;&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;10&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;cont&lt;/span&gt; {&lt;span style=&#34;color:#a6e22e&#34;&gt;color&lt;/span&gt;: &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;#&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0033&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;ff&lt;/span&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;css的颜色值当使用16进制的色彩值时-若每两位的值相同-可以缩写一半&#34;&gt;CSS的颜色值当使用16进制的色彩值时，若每两位的值相同，可以缩写一半&lt;/h4&gt;
 
-&lt;pre&gt;&lt;code&gt;.cont {color: #333333}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;可以缩写成：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;.cont {color: #333}
-&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;display:block;width:100%;background-color:#3c3d38&#34;&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;10&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;cont&lt;/span&gt; {&lt;span style=&#34;color:#a6e22e&#34;&gt;color&lt;/span&gt;: &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;#&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;333333&lt;/span&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+可以缩写成：
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;display:block;width:100%;background-color:#3c3d38&#34;&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;10&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;cont&lt;/span&gt; {&lt;span style=&#34;color:#a6e22e&#34;&gt;color&lt;/span&gt;: &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;#&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;333&lt;/span&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
 
-&lt;pre&gt;&lt;code&gt;.cont {color: #aa3366}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;可以缩写成：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;.cont {color: #a36}
-&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;display:block;width:100%;background-color:#3c3d38&#34;&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;10&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;cont&lt;/span&gt; {&lt;span style=&#34;color:#a6e22e&#34;&gt;color&lt;/span&gt;: &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;#&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;aa3366&lt;/span&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+可以缩写成：
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;display:block;width:100%;background-color:#3c3d38&#34;&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;10&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;cont&lt;/span&gt; {&lt;span style=&#34;color:#a6e22e&#34;&gt;color&lt;/span&gt;: &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;#&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;a36&lt;/span&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;字体样式可以进行缩写&#34;&gt;字体样式可以进行缩写&lt;/h4&gt;
 
-&lt;pre&gt;&lt;code&gt;.cont {font: bold italic small-caps 18px/1.5em &amp;quot;宋体&amp;quot;}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;上面的缩写顺序为：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;.con {
-font-weight: bold;
-font-style: italic;
-font-variant: small-caps;
-font-size: 18px;
-line-height: 1.5em;
-font-family: &amp;quot;宋体&amp;quot;;
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;该缩写顺序的先后为：&lt;/p&gt;&lt;/li&gt;
+&lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;display:block;width:100%;background-color:#3c3d38&#34;&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;10&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;cont&lt;/span&gt; {&lt;span style=&#34;color:#a6e22e&#34;&gt;font&lt;/span&gt;: &lt;span style=&#34;color:#a6e22e&#34;&gt;bold&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;italic&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;small&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;caps&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;18&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;px&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1.5&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;em&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;宋体&amp;#34;&lt;/span&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+上面的缩写顺序为：
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;display:block;width:100%;background-color:#3c3d38&#34;&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;199&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;con&lt;/span&gt; {
+&lt;/span&gt;&lt;span style=&#34;display:block;width:100%;background-color:#3c3d38&#34;&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;200&lt;/span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;font&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;weight&lt;/span&gt;: &lt;span style=&#34;color:#a6e22e&#34;&gt;bold&lt;/span&gt;;
+&lt;/span&gt;&lt;span style=&#34;display:block;width:100%;background-color:#3c3d38&#34;&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;201&lt;/span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;font&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;style&lt;/span&gt;: &lt;span style=&#34;color:#a6e22e&#34;&gt;italic&lt;/span&gt;;
+&lt;/span&gt;&lt;span style=&#34;display:block;width:100%;background-color:#3c3d38&#34;&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;202&lt;/span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;font&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;variant&lt;/span&gt;: &lt;span style=&#34;color:#a6e22e&#34;&gt;small&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;caps&lt;/span&gt;;
+&lt;/span&gt;&lt;span style=&#34;display:block;width:100%;background-color:#3c3d38&#34;&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;203&lt;/span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;font&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;size&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;18&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;px&lt;/span&gt;;
+&lt;/span&gt;&lt;span style=&#34;display:block;width:100%;background-color:#3c3d38&#34;&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;204&lt;/span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;line&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;height&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;1.5&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;em&lt;/span&gt;;
+&lt;/span&gt;&lt;span style=&#34;display:block;width:100%;background-color:#3c3d38&#34;&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;205&lt;/span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;font&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;family&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;宋体&amp;#34;&lt;/span&gt;;
+&lt;/span&gt;&lt;span style=&#34;display:block;width:100%;background-color:#3c3d38&#34;&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;206&lt;/span&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+该缩写顺序的先后为：&lt;/p&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;先声明：font-weight、font-style、font-variant。这三个样式不分先后&lt;/p&gt;&lt;/li&gt;
 
@@ -233,18 +187,14 @@ font-family: &amp;quot;宋体&amp;quot;;
 
 &lt;h4 id=&#34;背景样式可以缩写成&#34;&gt;背景样式可以缩写成&lt;/h4&gt;
 
-&lt;pre&gt;&lt;code&gt;.con {background: #333 url(img/bg.png) no-repeat 30% 20px;}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;该缩写顺序为：
-&lt;code&gt;
-.con {
-    background-color: #333; /* 背景色*/
-    background-image: url(img/bg.png); /* 背景图片 */
-    background-repeat: no-repeat; /* 背景平铺模式: 不重复 */
-    background-position: 30% 20px; /* 背景定位 */
-}
-&lt;/code&gt;`&lt;/p&gt;
+&lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;display:block;width:100%;background-color:#3c3d38&#34;&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;10&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;con&lt;/span&gt; {&lt;span style=&#34;color:#a6e22e&#34;&gt;background&lt;/span&gt;: &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;#&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;333&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;url&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;img&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;bg&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;png&lt;/span&gt;) &lt;span style=&#34;color:#a6e22e&#34;&gt;no&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;repeat&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;30&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;%&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;20&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;px&lt;/span&gt;;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+该缩写顺序为：&lt;br /&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;display:block;width:100%;background-color:#3c3d38&#34;&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;100&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;con&lt;/span&gt; {
+&lt;/span&gt;&lt;span style=&#34;display:block;width:100%;background-color:#3c3d38&#34;&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;101&lt;/span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;background&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;color&lt;/span&gt;: &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;#&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;333&lt;/span&gt;; &lt;span style=&#34;color:#75715e&#34;&gt;/* 背景色*/&lt;/span&gt;
+&lt;/span&gt;&lt;span style=&#34;display:block;width:100%;background-color:#3c3d38&#34;&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;102&lt;/span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;background&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;image&lt;/span&gt;: &lt;span style=&#34;color:#a6e22e&#34;&gt;url&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;img&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;bg&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;png&lt;/span&gt;); &lt;span style=&#34;color:#75715e&#34;&gt;/* 背景图片 */&lt;/span&gt;
+&lt;/span&gt;&lt;span style=&#34;display:block;width:100%;background-color:#3c3d38&#34;&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;103&lt;/span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;background&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;repeat&lt;/span&gt;: &lt;span style=&#34;color:#a6e22e&#34;&gt;no&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;repeat&lt;/span&gt;; &lt;span style=&#34;color:#75715e&#34;&gt;/* 背景平铺模式: 不重复 */&lt;/span&gt;
+&lt;/span&gt;&lt;span style=&#34;display:block;width:100%;background-color:#3c3d38&#34;&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;104&lt;/span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;background&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;position&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;30&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;%&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;20&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;px&lt;/span&gt;; &lt;span style=&#34;color:#75715e&#34;&gt;/* 背景定位 */&lt;/span&gt;
+&lt;/span&gt;&lt;span style=&#34;display:block;width:100%;background-color:#3c3d38&#34;&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;105&lt;/span&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/p&gt;
 </description>
       
     </item>
@@ -262,24 +212,20 @@ font-family: &amp;quot;宋体&amp;quot;;
 
 &lt;h4 id=&#34;内联样式-就是将css样式写在html的开始标签中&#34;&gt;内联样式：就是将CSS样式写在HTML的开始标签中&lt;/h4&gt;
 
-&lt;pre&gt;&lt;code&gt;&amp;lt; style=&amp;quot;color:#CCC;&amp;quot;&amp;gt;这里式设置了#CCC颜色的字&amp;lt;/style&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;199&lt;/span&gt;&amp;lt; &lt;span style=&#34;color:#a6e22e&#34;&gt;style&lt;/span&gt;=&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;color:#CCC;&amp;#34;&lt;/span&gt;&amp;gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;这里式设置了&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;#&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;CCC颜色的字&lt;/span&gt;&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;style&lt;/span&gt;&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h4 id=&#34;嵌入样式-将css样式写在style标签之间&#34;&gt;嵌入样式：将CSS样式写在style标签之间&lt;/h4&gt;
 
-&lt;pre&gt;&lt;code&gt;    &amp;lt; style type=&amp;quot;text/css&amp;quot;&amp;gt;
-        p {
-            font-size: 17px;
-        }
-    &amp;lt;/style&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;嵌入式CSS样式必须写在&lt;style&gt;&lt;/style&gt;之间， 并且通常情况下嵌入式样式写在&lt;head&gt;&lt;/head&gt;之间&lt;/p&gt;
+&lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;199&lt;/span&gt;    &amp;lt; &lt;span style=&#34;color:#a6e22e&#34;&gt;style&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;type&lt;/span&gt;=&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;text/css&amp;#34;&lt;/span&gt;&amp;gt;
+&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;200&lt;/span&gt;        &lt;span style=&#34;color:#a6e22e&#34;&gt;p&lt;/span&gt; {
+&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;201&lt;/span&gt;            &lt;span style=&#34;color:#a6e22e&#34;&gt;font&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;size&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;17&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;px&lt;/span&gt;;
+&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;202&lt;/span&gt;        }
+&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;203&lt;/span&gt;    &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;style&lt;/span&gt;&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br /&gt;
+嵌入式CSS样式必须写在&lt;style&gt;&lt;/style&gt;之间， 并且通常情况下嵌入式样式写在&lt;head&gt;&lt;/head&gt;之间&lt;/p&gt;
 
 &lt;h4 id=&#34;外部式css样式-就是把css代码写在一个单独的外部文件中-这个css文件以-css为后缀扩展名-在-head-标签内使用-link-标签将css样式文件链接到html文件内&#34;&gt;外部式CSS样式：就是把CSS代码写在一个单独的外部文件中，这个CSS文件以.css为后缀扩展名， 在&lt;head&gt;标签内使用&lt;link&gt;标签将CSS样式文件链接到HTML文件内&lt;/h4&gt;
 
-&lt;pre&gt;&lt;code&gt;&amp;lt;link href=&amp;quot;main.css&amp;quot; rel=&amp;quot;stylesheet&amp;quot; type=&amp;quot;text/css&amp;quot; /&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;199&lt;/span&gt;&amp;lt;&lt;span style=&#34;color:#a6e22e&#34;&gt;link&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;href&lt;/span&gt;=&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;main.css&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;rel&lt;/span&gt;=&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;stylesheet&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;type&lt;/span&gt;=&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;text/css&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h5 id=&#34;备注&#34;&gt;备注：&lt;/h5&gt;
 
@@ -297,12 +243,9 @@ font-family: &amp;quot;宋体&amp;quot;;
 
 &lt;h5 id=&#34;important&#34;&gt;!important&lt;/h5&gt;
 
-&lt;p&gt;在某些特殊情况下为某些样式设置最高权限可以使用!important来处理&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;    p {color: #DDD!important;}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;此外浏览器也有一套默认的样式来显示网页，用户页可以自己设置样式，这些样式的优先级为：
+&lt;p&gt;在某些特殊情况下为某些样式设置最高权限可以使用!important来处理
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;199&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;p&lt;/span&gt; {&lt;span style=&#34;color:#a6e22e&#34;&gt;color&lt;/span&gt;: &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;#&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;DDD&lt;/span&gt;!&lt;span style=&#34;color:#a6e22e&#34;&gt;important&lt;/span&gt;;}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br /&gt;
+此外浏览器也有一套默认的样式来显示网页，用户页可以自己设置样式，这些样式的优先级为：
 浏览器默认的样式&amp;gt;网页制作者样式&amp;gt;用户自己设置的样式&amp;gt;设置了!important的样式。&lt;/p&gt;
 </description>
       
@@ -321,53 +264,41 @@ font-family: &amp;quot;宋体&amp;quot;;
 
 &lt;h3 id=&#34;常用的内联元素有&#34;&gt;常用的内联元素有：&lt;/h3&gt;
 
-&lt;pre&gt;&lt;code&gt;&amp;lt;a&amp;gt;、&amp;lt;span&amp;gt;、&amp;lt;br /&amp;gt;、&amp;lt;i&amp;gt;、&amp;lt;em&amp;gt;、 &amp;lt;strong&amp;gt;、&amp;lt;label&amp;gt;、&amp;lt;q&amp;gt;、&amp;lt;var&amp;gt;、&amp;lt;cite&amp;gt;、&amp;lt;code&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;内联元素的特点：&lt;/strong&gt;
+&lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;199&lt;/span&gt;&amp;lt;&lt;span style=&#34;color:#a6e22e&#34;&gt;a&lt;/span&gt;&amp;gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;、&lt;/span&gt;&amp;lt;&lt;span style=&#34;color:#a6e22e&#34;&gt;span&lt;/span&gt;&amp;gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;、&lt;/span&gt;&amp;lt;&lt;span style=&#34;color:#a6e22e&#34;&gt;br&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&amp;gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;、&lt;/span&gt;&amp;lt;&lt;span style=&#34;color:#a6e22e&#34;&gt;i&lt;/span&gt;&amp;gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;、&lt;/span&gt;&amp;lt;&lt;span style=&#34;color:#a6e22e&#34;&gt;em&lt;/span&gt;&amp;gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;、&lt;/span&gt; &amp;lt;&lt;span style=&#34;color:#a6e22e&#34;&gt;strong&lt;/span&gt;&amp;gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;、&lt;/span&gt;&amp;lt;&lt;span style=&#34;color:#a6e22e&#34;&gt;label&lt;/span&gt;&amp;gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;、&lt;/span&gt;&amp;lt;&lt;span style=&#34;color:#a6e22e&#34;&gt;q&lt;/span&gt;&amp;gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;、&lt;/span&gt;&amp;lt;&lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt;&amp;gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;、&lt;/span&gt;&amp;lt;&lt;span style=&#34;color:#a6e22e&#34;&gt;cite&lt;/span&gt;&amp;gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;、&lt;/span&gt;&amp;lt;&lt;span style=&#34;color:#a6e22e&#34;&gt;code&lt;/span&gt;&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;strong&gt;内联元素的特点：&lt;/strong&gt;
 1. 和其他内联元素都显示在同一行
 2. 元素的宽度、高度、顶部边距和底部边距不可设置
 3. 元素的宽度就是它包含的文字或图片的宽度，不可改变&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;可通过CSS代码display:inline将元素设置为内联元素:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;    div {
-        display: inline;
-    }
-&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;可通过CSS代码display:inline将元素设置为内联元素:&lt;/strong&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;199&lt;/span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;div&lt;/span&gt; {
+&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;200&lt;/span&gt;        &lt;span style=&#34;color:#a6e22e&#34;&gt;display&lt;/span&gt;: &lt;span style=&#34;color:#a6e22e&#34;&gt;inline&lt;/span&gt;;
+&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;201&lt;/span&gt;    }&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;常用的块状元素有&#34;&gt;常用的块状元素有：&lt;/h3&gt;
 
-&lt;pre&gt;&lt;code&gt;&amp;lt;div&amp;gt;、&amp;lt;p&amp;gt;、&amp;lt;h1&amp;gt;…&amp;lt;h6 /&amp;gt;、&amp;lt;ul&amp;gt;、&amp;lt;ol&amp;gt;、 &amp;lt;table&amp;gt;、&amp;lt;address&amp;gt;、&amp;lt;blockquote&amp;gt;、&amp;lt;form&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;块状元素的特点：&lt;/strong&gt;
+&lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;199&lt;/span&gt;&amp;lt;&lt;span style=&#34;color:#a6e22e&#34;&gt;div&lt;/span&gt;&amp;gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;、&lt;/span&gt;&amp;lt;&lt;span style=&#34;color:#a6e22e&#34;&gt;p&lt;/span&gt;&amp;gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;、&lt;/span&gt;&amp;lt;&lt;span style=&#34;color:#a6e22e&#34;&gt;h1&lt;/span&gt;&amp;gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;…&lt;/span&gt;&amp;lt;&lt;span style=&#34;color:#a6e22e&#34;&gt;h6&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&amp;gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;、&lt;/span&gt;&amp;lt;&lt;span style=&#34;color:#a6e22e&#34;&gt;ul&lt;/span&gt;&amp;gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;、&lt;/span&gt;&amp;lt;&lt;span style=&#34;color:#a6e22e&#34;&gt;ol&lt;/span&gt;&amp;gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;、&lt;/span&gt; &amp;lt;&lt;span style=&#34;color:#a6e22e&#34;&gt;table&lt;/span&gt;&amp;gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;、&lt;/span&gt;&amp;lt;&lt;span style=&#34;color:#a6e22e&#34;&gt;address&lt;/span&gt;&amp;gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;、&lt;/span&gt;&amp;lt;&lt;span style=&#34;color:#a6e22e&#34;&gt;blockquote&lt;/span&gt;&amp;gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;、&lt;/span&gt;&amp;lt;&lt;span style=&#34;color:#a6e22e&#34;&gt;form&lt;/span&gt;&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;strong&gt;块状元素的特点：&lt;/strong&gt;
 1. 每个块状元素都从新的一行开始，并切其后的元素也另起一行(一个块状元素独占一行)
 2. 元素的宽度、高度、顶部边距和底部边距都可设置
 3. 元素的宽度在不设置的情况下，是他本身父容器的100%&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;可通过CSS代码display:block将元素设置为块状元素：&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;    div {
-        display: block;
-    }
-&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;可通过CSS代码display:block将元素设置为块状元素：&lt;/strong&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;199&lt;/span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;div&lt;/span&gt; {
+&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;200&lt;/span&gt;        &lt;span style=&#34;color:#a6e22e&#34;&gt;display&lt;/span&gt;: &lt;span style=&#34;color:#a6e22e&#34;&gt;block&lt;/span&gt;;
+&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;201&lt;/span&gt;    }&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;常用的内联块状元素有&#34;&gt;常用的内联块状元素有：&lt;/h3&gt;
 
-&lt;pre&gt;&lt;code&gt;&amp;lt;img&amp;gt;、&amp;lt;input&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;内联块状元素的特点：&lt;/strong&gt;
+&lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;199&lt;/span&gt;&amp;lt;&lt;span style=&#34;color:#a6e22e&#34;&gt;img&lt;/span&gt;&amp;gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;、&lt;/span&gt;&amp;lt;&lt;span style=&#34;color:#a6e22e&#34;&gt;input&lt;/span&gt;&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;strong&gt;内联块状元素的特点：&lt;/strong&gt;
 1. 和其他内联元素或者内联块状元素都显示在同一行
 2. 元素的宽度、高度、顶部边距和底部边距都可设置&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;可通过CSS代码display:inline-block将元素设置为内联块状元素：&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;    div {
-        display: inline-block;
-    }
-&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;可通过CSS代码display:inline-block将元素设置为内联块状元素：&lt;/strong&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;199&lt;/span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;div&lt;/span&gt; {
+&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;200&lt;/span&gt;        &lt;span style=&#34;color:#a6e22e&#34;&gt;display&lt;/span&gt;: &lt;span style=&#34;color:#a6e22e&#34;&gt;inline&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;block&lt;/span&gt;;
+&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;201&lt;/span&gt;    }&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/p&gt;
 </description>
       
     </item>

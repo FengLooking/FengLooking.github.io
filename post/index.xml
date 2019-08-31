@@ -17,7 +17,7 @@
       <pubDate>Sun, 05 Mar 2017 20:22:01 +0800</pubDate>
       
       <guid>https://fenglooking.github.io/post/mysql-common/</guid>
-      <description>MySQL创建用户并添加权限的方式： 1.进入mysql数据库 mysql -u root mysql 2.在mysql界面添加用户及权限 create user &#39;pyjsh&#39;@&#39;localhost&#39; identified by &#39;pyjsh&#39;; grant all on *.* to pyjsh@&#39;%&#39; identified by &#39;pyjsh&#39;; grant all on *.*</description>
+      <description>MySQL创建用户并添加权限的方式： 1.进入mysql数据库 mysql -u root mysql 2.在mysql界面添加用户及权限 create user &amp;#39;pyjsh&amp;#39;@&amp;#39;localhost&amp;#39; identified by &amp;#39;pyjsh&amp;#39;; grant all on *.* to pyjsh@&amp;#39;%&amp;#39; identified by &amp;#39;pyjsh&amp;#39;; grant all on *.*</description>
     </item>
     
     <item>
@@ -26,7 +26,7 @@
       <pubDate>Thu, 08 Sep 2016 20:22:01 +0800</pubDate>
       
       <guid>https://fenglooking.github.io/post/css-typesetting/</guid>
-      <description>.firstp { /* 文字排版：颜色、字号、字体、粗体、斜体、下划线、删除线 */ color: #666; /*颜色*/ font-size: 30px; /*字号*/ font-family: &amp;quot;宋体&amp;quot;; /*字体*/ font-weight:</description>
+      <description>199.firstp { 200 /* 文字排版：颜色、字号、字体、粗体、斜体、下划线、删除线 */ 201 color: #666; /*颜色*/ 202 font-size: 30px; /*字号*/ 203 font-family: &amp;#34;宋体&amp;#34;; /*字体*</description>
     </item>
     
     <item>
@@ -44,7 +44,7 @@
       <pubDate>Mon, 05 Sep 2016 18:00:01 +0800</pubDate>
       
       <guid>https://fenglooking.github.io/post/html-element-classify/</guid>
-      <description>在HTML中，HTML标签元素大体被分为三种不同的类型：内联元素(又叫行内元素)，块状元素，内联块状元素。 常用的内联元素有： &amp;lt;a&amp;gt</description>
+      <description>在HTML中，HTML标签元素大体被分为三种不同的类型：内联元素(又叫行内元素)，块状元素，内联块状元素。 常用的内联元素有： 199&amp;lt;a</description>
     </item>
     
   </channel>
