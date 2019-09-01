@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>css on dyfblogs</title>
+    <title>CSS on dyfblogs</title>
     <link>https://fenglooking.github.io/tags/css/</link>
-    <description>Recent content in css on dyfblogs</description>
+    <description>Recent content in CSS on dyfblogs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Thu, 08 Sep 2016 20:22:01 +0800</lastBuildDate>
@@ -21,9 +21,18 @@
     </item>
     
     <item>
+      <title>CSS颜色样式</title>
+      <link>https://fenglooking.github.io/post/css-color/</link>
+      <pubDate>Mon, 05 Sep 2016 23:13:54 +0800</pubDate>
+      
+      <guid>https://fenglooking.github.io/post/css-color/</guid>
+      <description>1.英文单词设置颜色样色 20.content {color: red;} 2.RGB值设置颜色样式：由R(green)、G、B三种颜色的比例来配色设置CSS颜色 2.content {color: rgb(21, 105, 105);} RGB的每一项</description>
+    </item>
+    
+    <item>
       <title>CSS样式在HTML中的位置</title>
       <link>https://fenglooking.github.io/post/css-style-position/</link>
-      <pubDate>Tue, 06 Sep 2016 22:00:01 +0800</pubDate>
+      <pubDate>Sat, 03 Sep 2016 22:00:01 +0800</pubDate>
       
       <guid>https://fenglooking.github.io/post/css-style-position/</guid>
       <description>从CSS样式代码插入HTML文件的形式来看可以分为三种插入形式：内联样式、嵌入样式、外部样式。 内联样式：就是将CSS样式写在HTML的开始标</description>

@@ -1,20 +1,29 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>html on dyfblogs</title>
+    <title>HTML on dyfblogs</title>
     <link>https://fenglooking.github.io/tags/html/</link>
-    <description>Recent content in html on dyfblogs</description>
+    <description>Recent content in HTML on dyfblogs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 05 Sep 2016 18:00:01 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 04 Sep 2016 20:36:29 +0800</lastBuildDate>
     
 	<atom:link href="https://fenglooking.github.io/tags/html/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>HTML常用实体</title>
+      <link>https://fenglooking.github.io/post/html-entity/</link>
+      <pubDate>Sun, 04 Sep 2016 20:36:29 +0800</pubDate>
+      
+      <guid>https://fenglooking.github.io/post/html-entity/</guid>
+      <description>name HTML 换行 &amp;lt;br /&amp;gt; 空格 &amp;amp;nbsp; 水平线 &amp;lt;hr /&amp;gt; 左双引号“ &amp;amp;ldquo; 左双引号” &amp;amp;rdquo; 和号&amp;amp; &amp;amp;amp; 短横线 &amp;amp;mdash; 省略号 &amp;amp;hellip; 小于号&amp;lt; &amp;amp;lt; 大于号&amp;gt; &amp;amp;gt; 已注册&amp;reg; &amp;amp;reg; 版权&amp;</description>
+    </item>
+    
+    <item>
       <title>HTML元素分类</title>
       <link>https://fenglooking.github.io/post/html-element-classify/</link>
-      <pubDate>Mon, 05 Sep 2016 18:00:01 +0800</pubDate>
+      <pubDate>Fri, 02 Sep 2016 18:00:01 +0800</pubDate>
       
       <guid>https://fenglooking.github.io/post/html-element-classify/</guid>
       <description>在HTML中，HTML标签元素大体被分为三种不同的类型：内联元素(又叫行内元素)，块状元素，内联块状元素。 常用的内联元素有： 199&amp;lt;a</description>

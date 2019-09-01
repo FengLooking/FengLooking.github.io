@@ -23,7 +23,7 @@
     <item>
       <title>CSS样式在HTML中的位置</title>
       <link>https://fenglooking.github.io/post/css-style-position/</link>
-      <pubDate>Tue, 06 Sep 2016 22:00:01 +0800</pubDate>
+      <pubDate>Sat, 03 Sep 2016 22:00:01 +0800</pubDate>
       
       <guid>https://fenglooking.github.io/post/css-style-position/</guid>
       <description>从CSS样式代码插入HTML文件的形式来看可以分为三种插入形式：内联样式、嵌入样式、外部样式。 内联样式：就是将CSS样式写在HTML的开始标</description>

@@ -23,15 +23,29 @@
   </url>
   
   <url>
+    <loc>https://fenglooking.github.io/post/css-color/</loc>
+    <lastmod>2016-09-05T23:37:22+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://fenglooking.github.io/post/html-entity/</loc>
+    <lastmod>2016-09-04T20:37:22+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://fenglooking.github.io/post/css-style-position/</loc>
-    <lastmod>2016-09-06T22:00:01+08:00</lastmod>
+    <lastmod>2016-09-03T22:00:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://fenglooking.github.io/post/html-element-classify/</loc>
-    <lastmod>2016-09-05T18:00:01+08:00</lastmod>
+    <lastmod>2016-09-02T18:00:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -65,14 +79,14 @@
   </url>
   
   <url>
-    <loc>https://fenglooking.github.io/categories/python/</loc>
+    <loc>https://fenglooking.github.io/tags/python/</loc>
     <lastmod>2017-03-10T23:37:22+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://fenglooking.github.io/tags/python/</loc>
+    <loc>https://fenglooking.github.io/categories/python/</loc>
     <lastmod>2017-03-10T23:37:22+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -142,36 +156,50 @@
   </url>
   
   <url>
-    <loc>https://fenglooking.github.io/tags/classify/</loc>
-    <lastmod>2016-09-05T18:00:01+08:00</lastmod>
+    <loc>https://fenglooking.github.io/tags/color/</loc>
+    <lastmod>2016-09-05T23:37:22+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://fenglooking.github.io/categories/element/</loc>
-    <lastmod>2016-09-05T18:00:01+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://fenglooking.github.io/tags/element/</loc>
-    <lastmod>2016-09-05T18:00:01+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://fenglooking.github.io/categories/html/</loc>
-    <lastmod>2016-09-05T18:00:01+08:00</lastmod>
+    <loc>https://fenglooking.github.io/categories/color/</loc>
+    <lastmod>2016-09-05T23:37:22+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://fenglooking.github.io/tags/html/</loc>
-    <lastmod>2016-09-05T18:00:01+08:00</lastmod>
+    <lastmod>2016-09-04T20:37:22+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://fenglooking.github.io/categories/html/</loc>
+    <lastmod>2016-09-04T20:37:22+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://fenglooking.github.io/tags/classify/</loc>
+    <lastmod>2016-09-02T18:00:01+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://fenglooking.github.io/categories/element/</loc>
+    <lastmod>2016-09-02T18:00:01+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://fenglooking.github.io/tags/element/</loc>
+    <lastmod>2016-09-02T18:00:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

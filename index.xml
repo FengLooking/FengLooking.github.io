@@ -304,9 +304,144 @@ Query OK, &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt; rows &lt;span
     </item>
     
     <item>
+      <title>CSS颜色样式</title>
+      <link>https://fenglooking.github.io/post/css-color/</link>
+      <pubDate>Mon, 05 Sep 2016 23:13:54 +0800</pubDate>
+      
+      <guid>https://fenglooking.github.io/post/css-color/</guid>
+      
+        <description>
+
+&lt;h4 id=&#34;1-英文单词设置颜色样色&#34;&gt;1.英文单词设置颜色样色&lt;/h4&gt;
+
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;20&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;content&lt;/span&gt; {&lt;span style=&#34;color:#a6e22e&#34;&gt;color&lt;/span&gt;: &lt;span style=&#34;color:#a6e22e&#34;&gt;red&lt;/span&gt;;}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h4 id=&#34;2-rgb值设置颜色样式-由r-green-g-b三种颜色的比例来配色设置css颜色&#34;&gt;2.RGB值设置颜色样式：由R(green)、G、B三种颜色的比例来配色设置CSS颜色&lt;/h4&gt;
+
+&lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;2&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;content&lt;/span&gt; {&lt;span style=&#34;color:#a6e22e&#34;&gt;color&lt;/span&gt;: &lt;span style=&#34;color:#a6e22e&#34;&gt;rgb&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;21&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;105&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;105&lt;/span&gt;);}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+RGB的每一项可以是0~255之间的整数，也可以是0%~100%之间的百分数
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;8&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;content&lt;/span&gt; {&lt;span style=&#34;color:#a6e22e&#34;&gt;color&lt;/span&gt;: &lt;span style=&#34;color:#a6e22e&#34;&gt;rgb&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;20&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;%&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;%&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;70&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;%&lt;/span&gt;);}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;3-十六进制设置颜色样式&#34;&gt;3.十六进制设置颜色样式&lt;/h4&gt;
+
+&lt;p&gt;在CSS颜色设置中使用十六进制来设置颜色比较常用，其原理也是RGB配色，但是每一项的值由0~255变成00~ff
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;30&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;content&lt;/span&gt; {&lt;span style=&#34;color:#a6e22e&#34;&gt;color&lt;/span&gt;: &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;#&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;00&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;FFFF&lt;/span&gt;;}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;颜色值得缩写&#34;&gt;颜色值得缩写&lt;/h3&gt;
+
+&lt;p&gt;颜色的CSS样式是可以缩写的：当设置的颜色是十六进制的颜色值时，如果每两位的值相同，就可以缩写一半。&lt;br /&gt;
+&lt;strong&gt;例子1&lt;/strong&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;50&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;content&lt;/span&gt; {&lt;span style=&#34;color:#a6e22e&#34;&gt;color&lt;/span&gt;: &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;#&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;FFFFFF&lt;/span&gt;;}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+可以缩写成
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;52&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;content&lt;/span&gt; {&lt;span style=&#34;color:#a6e22e&#34;&gt;color&lt;/span&gt;: &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;#&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;FFF&lt;/span&gt;;}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;strong&gt;例子2&lt;/strong&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;55&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;content&lt;/span&gt; {&lt;span style=&#34;color:#a6e22e&#34;&gt;color&lt;/span&gt;: &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;#&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;225588&lt;/span&gt;;}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+可以缩写成
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;58&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;content&lt;/span&gt; {&lt;span style=&#34;color:#a6e22e&#34;&gt;color&lt;/span&gt;: &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;#&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;258&lt;/span&gt;;}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;strong&gt;例子3&lt;/strong&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;60&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;content&lt;/span&gt; {&lt;span style=&#34;color:#a6e22e&#34;&gt;color&lt;/span&gt;: &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;#&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;33&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;FFEE&lt;/span&gt;;}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+可以缩写成
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;62&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;content&lt;/span&gt; {&lt;span style=&#34;color:#a6e22e&#34;&gt;color&lt;/span&gt;: &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;#&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;FE&lt;/span&gt;;}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;常用十六进制颜色表&#34;&gt;常用十六进制颜色表&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://fenglooking.github.io/image/csscolor.jpg&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>HTML常用实体</title>
+      <link>https://fenglooking.github.io/post/html-entity/</link>
+      <pubDate>Sun, 04 Sep 2016 20:36:29 +0800</pubDate>
+      
+      <guid>https://fenglooking.github.io/post/html-entity/</guid>
+      
+        <description>&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;name&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;HTML&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;换行&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&amp;lt;br /&amp;gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;空格&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&amp;amp;nbsp;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;水平线&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&amp;lt;hr /&amp;gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;左双引号“&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&amp;amp;ldquo;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;左双引号”&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&amp;amp;rdquo;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;和号&amp;amp;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&amp;amp;amp;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;短横线&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&amp;amp;mdash;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;省略号&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&amp;amp;hellip;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;小于号&amp;lt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&amp;amp;lt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;大于号&amp;gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&amp;amp;gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;已注册&amp;reg;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&amp;amp;reg;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;版权&amp;copy;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&amp;amp;copy;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;商标&amp;trade;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&amp;amp;trade;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;HTML部分实体如上表，以后有机会再新增😏&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
       <title>CSS样式在HTML中的位置</title>
       <link>https://fenglooking.github.io/post/css-style-position/</link>
-      <pubDate>Tue, 06 Sep 2016 22:00:01 +0800</pubDate>
+      <pubDate>Sat, 03 Sep 2016 22:00:01 +0800</pubDate>
       
       <guid>https://fenglooking.github.io/post/css-style-position/</guid>
       
@@ -358,7 +493,7 @@ Query OK, &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt; rows &lt;span
     <item>
       <title>HTML元素分类</title>
       <link>https://fenglooking.github.io/post/html-element-classify/</link>
-      <pubDate>Mon, 05 Sep 2016 18:00:01 +0800</pubDate>
+      <pubDate>Fri, 02 Sep 2016 18:00:01 +0800</pubDate>
       
       <guid>https://fenglooking.github.io/post/html-element-classify/</guid>
       
