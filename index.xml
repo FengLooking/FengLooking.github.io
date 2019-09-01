@@ -312,11 +312,13 @@ Query OK, &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt; rows &lt;span
       
         <description>
 
-&lt;h4 id=&#34;1-英文单词设置颜色样色&#34;&gt;1.英文单词设置颜色样色&lt;/h4&gt;
+&lt;h3 id=&#34;css颜色样式设置&#34;&gt;CSS颜色样式设置&lt;/h3&gt;
+
+&lt;h4 id=&#34;1-英文单词设置颜色样式&#34;&gt;1.英文单词设置颜色样式&lt;/h4&gt;
 
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;20&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;content&lt;/span&gt; {&lt;span style=&#34;color:#a6e22e&#34;&gt;color&lt;/span&gt;: &lt;span style=&#34;color:#a6e22e&#34;&gt;red&lt;/span&gt;;}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h4 id=&#34;2-rgb值设置颜色样式-由r-green-g-b三种颜色的比例来配色设置css颜色&#34;&gt;2.RGB值设置颜色样式：由R(green)、G、B三种颜色的比例来配色设置CSS颜色&lt;/h4&gt;
+&lt;h4 id=&#34;2-rgb值设置颜色样式-由r-red-g-green-b-blue-三种颜色的比例来配色设置css颜色&#34;&gt;2.RGB值设置颜色样式：由R(red)、G(green)、B(blue)三种颜色的比例来配色设置CSS颜色&lt;/h4&gt;
 
 &lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;2&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;content&lt;/span&gt; {&lt;span style=&#34;color:#a6e22e&#34;&gt;color&lt;/span&gt;: &lt;span style=&#34;color:#a6e22e&#34;&gt;rgb&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;21&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;105&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;105&lt;/span&gt;);}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 RGB的每一项可以是0~255之间的整数，也可以是0%~100%之间的百分数
@@ -327,7 +329,7 @@ RGB的每一项可以是0~255之间的整数，也可以是0%~100%之间的百�
 &lt;p&gt;在CSS颜色设置中使用十六进制来设置颜色比较常用，其原理也是RGB配色，但是每一项的值由0~255变成00~ff
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;30&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;content&lt;/span&gt; {&lt;span style=&#34;color:#a6e22e&#34;&gt;color&lt;/span&gt;: &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;#&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;00&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;FFFF&lt;/span&gt;;}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;颜色值得缩写&#34;&gt;颜色值得缩写&lt;/h3&gt;
+&lt;h3 id=&#34;颜色值的缩写&#34;&gt;颜色值的缩写&lt;/h3&gt;
 
 &lt;p&gt;颜色的CSS样式是可以缩写的：当设置的颜色是十六进制的颜色值时，如果每两位的值相同，就可以缩写一半。&lt;br /&gt;
 &lt;strong&gt;例子1&lt;/strong&gt;
