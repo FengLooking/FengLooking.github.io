@@ -69,7 +69,7 @@
 
 <meta itemprop="datePublished" content="2016-09-05T23:13:54&#43;08:00" />
 <meta itemprop="dateModified" content="2016-09-05T23:37:22&#43;08:00" />
-<meta itemprop="wordCount" content="304">
+<meta itemprop="wordCount" content="307">
 
 
 
@@ -307,12 +307,7 @@
 <ul>
 <li>
 <ul>
-<li><a href="#css颜色样式设置">CSS颜色样式设置</a>
-<ul>
-<li><a href="#1-英文单词设置颜色样式">1.英文单词设置颜色样式</a></li>
-<li><a href="#2-rgb值设置颜色样式-由r-red-g-green-b-blue-三种颜色的比例来配色设置css颜色">2.RGB值设置颜色样式：由R(red)、G(green)、B(blue)三种颜色的比例来配色设置CSS颜色</a></li>
-<li><a href="#3-十六进制设置颜色样式">3.十六进制设置颜色样式</a></li>
-</ul></li>
+<li><a href="#css颜色样式设置">CSS颜色样式设置</a></li>
 <li><a href="#颜色值的缩写">颜色值的缩写</a></li>
 <li><a href="#常用十六进制颜色表">常用十六进制颜色表</a></li>
 </ul></li>
@@ -328,33 +323,30 @@
 
 <h3 id="css颜色样式设置">CSS颜色样式设置</h3>
 
-<h4 id="1-英文单词设置颜色样式">1.英文单词设置颜色样式</h4>
+<p>1.英文单词设置颜色样式
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20</span>.<span style="color:#a6e22e">content</span> {<span style="color:#a6e22e">color</span>: <span style="color:#a6e22e">red</span>;}</code></pre></div></p>
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20</span>.<span style="color:#a6e22e">content</span> {<span style="color:#a6e22e">color</span>: <span style="color:#a6e22e">red</span>;}</code></pre></div>
-
-<h4 id="2-rgb值设置颜色样式-由r-red-g-green-b-blue-三种颜色的比例来配色设置css颜色">2.RGB值设置颜色样式：由R(red)、G(green)、B(blue)三种颜色的比例来配色设置CSS颜色</h4>
-
-<p><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span>.<span style="color:#a6e22e">content</span> {<span style="color:#a6e22e">color</span>: <span style="color:#a6e22e">rgb</span>(<span style="color:#ae81ff">21</span>, <span style="color:#ae81ff">105</span>, <span style="color:#ae81ff">105</span>);}</code></pre></div>
+<p>2.RGB值设置颜色样式：由R(red)、G(green)、B(blue)三种颜色的比例来配色设置CSS颜色
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span>.<span style="color:#a6e22e">content</span> {<span style="color:#a6e22e">color</span>: <span style="color:#a6e22e">rgb</span>(<span style="color:#ae81ff">21</span>, <span style="color:#ae81ff">105</span>, <span style="color:#ae81ff">105</span>);}</code></pre></div>
 RGB的每一项可以是0~255之间的整数，也可以是0%~100%之间的百分数
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8</span>.<span style="color:#a6e22e">content</span> {<span style="color:#a6e22e">color</span>: <span style="color:#a6e22e">rgb</span>(<span style="color:#ae81ff">20</span><span style="color:#f92672">%</span>, <span style="color:#ae81ff">10</span><span style="color:#f92672">%</span>, <span style="color:#ae81ff">70</span><span style="color:#f92672">%</span>);}</code></pre></div></p>
 
-<h4 id="3-十六进制设置颜色样式">3.十六进制设置颜色样式</h4>
-
-<p>在CSS颜色设置中使用十六进制来设置颜色比较常用，其原理也是RGB配色，但是每一项的值由0~255变成00~ff
+<p>3.十六进制设置颜色样式
+在CSS颜色设置中使用十六进制来设置颜色比较常用，其原理也是RGB配色，但是每一项的值由0~255变成00~ff
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30</span>.<span style="color:#a6e22e">content</span> {<span style="color:#a6e22e">color</span>: <span style="color:#960050;background-color:#1e0010">#</span><span style="color:#ae81ff">00</span><span style="color:#a6e22e">FFFF</span>;}</code></pre></div></p>
 
 <h3 id="颜色值的缩写">颜色值的缩写</h3>
 
 <p>颜色的CSS样式是可以缩写的：当设置的颜色是十六进制的颜色值时，如果每两位的值相同，就可以缩写一半。<br />
-<strong>例子1</strong>
+例子1:
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">50</span>.<span style="color:#a6e22e">content</span> {<span style="color:#a6e22e">color</span>: <span style="color:#960050;background-color:#1e0010">#</span><span style="color:#a6e22e">FFFFFF</span>;}</code></pre></div>
 可以缩写成
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">52</span>.<span style="color:#a6e22e">content</span> {<span style="color:#a6e22e">color</span>: <span style="color:#960050;background-color:#1e0010">#</span><span style="color:#a6e22e">FFF</span>;}</code></pre></div>
-<strong>例子2</strong>
+例子2:
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">55</span>.<span style="color:#a6e22e">content</span> {<span style="color:#a6e22e">color</span>: <span style="color:#960050;background-color:#1e0010">#</span><span style="color:#ae81ff">225588</span>;}</code></pre></div>
 可以缩写成
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">58</span>.<span style="color:#a6e22e">content</span> {<span style="color:#a6e22e">color</span>: <span style="color:#960050;background-color:#1e0010">#</span><span style="color:#ae81ff">258</span>;}</code></pre></div>
-<strong>例子3</strong>
+例子3:
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">60</span>.<span style="color:#a6e22e">content</span> {<span style="color:#a6e22e">color</span>: <span style="color:#960050;background-color:#1e0010">#</span><span style="color:#ae81ff">33</span><span style="color:#a6e22e">FFEE</span>;}</code></pre></div>
 可以缩写成
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">62</span>.<span style="color:#a6e22e">content</span> {<span style="color:#a6e22e">color</span>: <span style="color:#960050;background-color:#1e0010">#</span><span style="color:#ae81ff">3</span><span style="color:#a6e22e">FE</span>;}</code></pre></div></p>
