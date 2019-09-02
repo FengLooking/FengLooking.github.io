@@ -23,7 +23,7 @@
 <meta name="mobile-web-app-capable" content="yes">
 
 <meta name="author" content="dyf" />
-  <meta name="description" content="GIL(Global Interpreter Lock): Python标准解释器执行代码时有一个GIL(Global Interpreter Lock)锁，任何Python线程执行前，必须先获得GIL锁，然后，每执行" />
+  <meta name="description" content="进程：一个程序的执行实例。对操作系统来说：一个任务就是一个进程。 线程：一个进程内往往同时运行着多个子任务，这些子任务就是线程。线程是操作系统" />
 
   <meta name="keywords" content="Hugo, theme, jane" />
 
@@ -58,25 +58,25 @@
 
 
 <meta property="og:title" content="Python多进程" />
-<meta property="og:description" content="GIL(Global Interpreter Lock): Python标准解释器执行代码时有一个GIL(Global Interpreter Lock)锁，任何Python线程执行前，必须先获得GIL锁，然后，每执行" />
+<meta property="og:description" content="进程：一个程序的执行实例。对操作系统来说：一个任务就是一个进程。 线程：一个进程内往往同时运行着多个子任务，这些子任务就是线程。线程是操作系统" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://fenglooking.github.io/post/python-multprocess/" />
 <meta property="article:published_time" content="2017-03-10T23:37:22+08:00" />
 <meta property="article:modified_time" content="2017-03-10T23:37:22+08:00" />
 <meta itemprop="name" content="Python多进程">
-<meta itemprop="description" content="GIL(Global Interpreter Lock): Python标准解释器执行代码时有一个GIL(Global Interpreter Lock)锁，任何Python线程执行前，必须先获得GIL锁，然后，每执行">
+<meta itemprop="description" content="进程：一个程序的执行实例。对操作系统来说：一个任务就是一个进程。 线程：一个进程内往往同时运行着多个子任务，这些子任务就是线程。线程是操作系统">
 
 
 <meta itemprop="datePublished" content="2017-03-10T23:37:22&#43;08:00" />
 <meta itemprop="dateModified" content="2017-03-10T23:37:22&#43;08:00" />
-<meta itemprop="wordCount" content="744">
+<meta itemprop="wordCount" content="998">
 
 
 
 <meta itemprop="keywords" content="Python,subprocess," />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Python多进程"/>
-<meta name="twitter:description" content="GIL(Global Interpreter Lock): Python标准解释器执行代码时有一个GIL(Global Interpreter Lock)锁，任何Python线程执行前，必须先获得GIL锁，然后，每执行"/>
+<meta name="twitter:description" content="进程：一个程序的执行实例。对操作系统来说：一个任务就是一个进程。 线程：一个进程内往往同时运行着多个子任务，这些子任务就是线程。线程是操作系统"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -307,7 +307,12 @@
 
     
     <div class="post-content">
-      <p>GIL(Global Interpreter Lock): Python标准解释器执行代码时有一个GIL(Global Interpreter Lock)锁，任何Python线程执行前，必须先获得GIL锁，然后，每执行100个字节码，解释器就自动释放GIL锁，让别的线程有机会执行。Python中线程的执行代码都被GIL上了锁，所以Python中多线程只能交替执行，并不能并发执行。Python中实现并发任务一般用多进程。</p>
+      <p><strong>进程</strong>：一个程序的执行实例。对操作系统来说：一个任务就是一个进程。<br />
+<strong>线程</strong>：一个进程内往往同时运行着多个子任务，这些子任务就是线程。线程是操作系统能够进行运算调度的最小单位。<br />
+一个进程至少有一个线程，一个进程也可以并发多个线程，这些线程可以并行执行不同的任务。一个进程在启动时会先产生一个线程，这个线程被称为主线程，主线程又可以创建其他子线程。<br />
+<strong>事件驱动模型</strong>：单个进程中单个线程执行多任务的模型。<br />
+<strong>协程</strong>：单线程的异步编程模型称为协程，可基于事件驱动编写高效的多任务程序。协程又被称为微线程。协程适用于IO密集型的程序中。<br />
+<strong>GIL(Global Interpreter Lock)</strong>: Python标准解释器执行代码时有一个GIL(Global Interpreter Lock)锁，任何Python线程执行前，必须先获得GIL锁，然后，每执行100个字节码，解释器就自动释放GIL锁，让别的线程有机会执行。Python中线程的执行代码都被GIL上了锁，所以Python中多线程只能交替执行，并不能并发执行。Python中实现并发任务一般用多进程。</p>
 
 <p>Python中的 multiprocessing 模块是跨平台版本的多进程模块
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20</span><span style="color:#f92672">import</span> <span style="color:#a6e22e">os</span>

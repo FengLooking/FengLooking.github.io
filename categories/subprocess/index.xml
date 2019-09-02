@@ -17,7 +17,7 @@
       <pubDate>Fri, 10 Mar 2017 23:37:22 +0800</pubDate>
       
       <guid>https://fenglooking.github.io/post/python-multprocess/</guid>
-      <description>GIL(Global Interpreter Lock): Python标准解释器执行代码时有一个GIL(Global Interpreter Lock)锁，任何Python线程执行前，必须先获得GIL锁，然后，每执行</description>
+      <description>进程：一个程序的执行实例。对操作系统来说：一个任务就是一个进程。 线程：一个进程内往往同时运行着多个子任务，这些子任务就是线程。线程是操作系统</description>
     </item>
     
   </channel>

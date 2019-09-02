@@ -18,7 +18,12 @@
       
       <guid>https://fenglooking.github.io/post/python-multprocess/</guid>
       
-        <description>&lt;p&gt;GIL(Global Interpreter Lock): Python标准解释器执行代码时有一个GIL(Global Interpreter Lock)锁，任何Python线程执行前，必须先获得GIL锁，然后，每执行100个字节码，解释器就自动释放GIL锁，让别的线程有机会执行。Python中线程的执行代码都被GIL上了锁，所以Python中多线程只能交替执行，并不能并发执行。Python中实现并发任务一般用多进程。&lt;/p&gt;
+        <description>&lt;p&gt;&lt;strong&gt;进程&lt;/strong&gt;：一个程序的执行实例。对操作系统来说：一个任务就是一个进程。&lt;br /&gt;
+&lt;strong&gt;线程&lt;/strong&gt;：一个进程内往往同时运行着多个子任务，这些子任务就是线程。线程是操作系统能够进行运算调度的最小单位。&lt;br /&gt;
+一个进程至少有一个线程，一个进程也可以并发多个线程，这些线程可以并行执行不同的任务。一个进程在启动时会先产生一个线程，这个线程被称为主线程，主线程又可以创建其他子线程。&lt;br /&gt;
+&lt;strong&gt;事件驱动模型&lt;/strong&gt;：单个进程中单个线程执行多任务的模型。&lt;br /&gt;
+&lt;strong&gt;协程&lt;/strong&gt;：单线程的异步编程模型称为协程，可基于事件驱动编写高效的多任务程序。协程又被称为微线程。协程适用于IO密集型的程序中。&lt;br /&gt;
+&lt;strong&gt;GIL(Global Interpreter Lock)&lt;/strong&gt;: Python标准解释器执行代码时有一个GIL(Global Interpreter Lock)锁，任何Python线程执行前，必须先获得GIL锁，然后，每执行100个字节码，解释器就自动释放GIL锁，让别的线程有机会执行。Python中线程的执行代码都被GIL上了锁，所以Python中多线程只能交替执行，并不能并发执行。Python中实现并发任务一般用多进程。&lt;/p&gt;
 
 &lt;p&gt;Python中的 multiprocessing 模块是跨平台版本的多进程模块
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;20&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;os&lt;/span&gt;
