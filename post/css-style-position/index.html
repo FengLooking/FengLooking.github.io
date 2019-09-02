@@ -69,7 +69,7 @@
 
 <meta itemprop="datePublished" content="2016-09-03T22:00:01&#43;08:00" />
 <meta itemprop="dateModified" content="2016-09-03T22:00:01&#43;08:00" />
-<meta itemprop="wordCount" content="578">
+<meta itemprop="wordCount" content="678">
 
 
 
@@ -301,70 +301,37 @@
 <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">Table of Contents</h2>
   <div class="post-toc-content">
-    <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li><a href="#内联样式-就是将css样式写在html的开始标签中">内联样式：就是将CSS样式写在HTML的开始标签中</a></li>
-<li><a href="#嵌入样式-将css样式写在style标签之间">嵌入样式：将CSS样式写在style标签之间</a></li>
-<li><a href="#外部式css样式-就是把css代码写在一个单独的外部文件中-这个css文件以-css为后缀扩展名-在-head-标签内使用-link-标签将css样式文件链接到html文件内">外部式CSS样式：就是把CSS代码写在一个单独的外部文件中，这个CSS文件以.css为后缀扩展名， 在<head>标签内使用<link>标签将CSS样式文件链接到HTML文件内</a>
-<ul>
-<li><a href="#备注">备注：</a></li>
-<li><a href="#三种插入样式的优先级">三种插入样式的优先级：</a></li>
-<li><a href="#important">!important</a></li>
-</ul></li>
-</ul></li>
-</ul></li>
-</ul></li>
-</ul>
-</nav>
+    
   </div>
 </div>
 
     
     <div class="post-content">
-      
+      <p>从CSS样式代码插入HTML文件的形式来看可以分为三种插入形式：内联样式、嵌入样式、外部样式。</p>
 
-<p>从CSS样式代码插入HTML文件的形式来看可以分为三种插入形式：内联样式、嵌入样式、外部样式。</p>
-
-<h4 id="内联样式-就是将css样式写在html的开始标签中">内联样式：就是将CSS样式写在HTML的开始标签中</h4>
-
+<p><strong>内联样式</strong>：就是将CSS样式写在HTML的开始标签中
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">199</span>&lt; <span style="color:#a6e22e">style</span>=<span style="color:#e6db74">&#34;color:#CCC;&#34;</span>&gt;<span style="color:#a6e22e">这里式设置了</span><span style="color:#960050;background-color:#1e0010">#</span><span style="color:#a6e22e">CCC颜色的字</span>&lt;<span style="color:#f92672">/</span><span style="color:#a6e22e">style</span>&gt;</code></pre></div>
-
-<h4 id="嵌入样式-将css样式写在style标签之间">嵌入样式：将CSS样式写在style标签之间</h4>
-
-<p><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">199</span>    &lt; <span style="color:#a6e22e">style</span> <span style="color:#66d9ef">type</span>=<span style="color:#e6db74">&#34;text/css&#34;</span>&gt;
+<strong>嵌入样式</strong>：将CSS样式写在style标签之间<br />
+嵌入式CSS样式必须写在&lt;style&gt;&lt;/style&gt;之间， 并且style标签写在&lt;head&gt;&lt;/head&gt;之间
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">199</span>    &lt; <span style="color:#a6e22e">style</span> <span style="color:#66d9ef">type</span>=<span style="color:#e6db74">&#34;text/css&#34;</span>&gt;
 <span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">200</span>        <span style="color:#a6e22e">p</span> {
 <span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">201</span>            <span style="color:#a6e22e">font</span><span style="color:#f92672">-</span><span style="color:#a6e22e">size</span>: <span style="color:#ae81ff">17</span><span style="color:#a6e22e">px</span>;
 <span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">202</span>        }
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">203</span>    &lt;<span style="color:#f92672">/</span><span style="color:#a6e22e">style</span>&gt;</code></pre></div><br />
-嵌入式CSS样式必须写在<style></style>之间， 并且通常情况下嵌入式样式写在<head></head>之间</p>
-
-<h4 id="外部式css样式-就是把css代码写在一个单独的外部文件中-这个css文件以-css为后缀扩展名-在-head-标签内使用-link-标签将css样式文件链接到html文件内">外部式CSS样式：就是把CSS代码写在一个单独的外部文件中，这个CSS文件以.css为后缀扩展名， 在<head>标签内使用<link>标签将CSS样式文件链接到HTML文件内</h4>
-
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">203</span>    &lt;<span style="color:#f92672">/</span><span style="color:#a6e22e">style</span>&gt;</code></pre></div>
+<strong>外部式CSS样式</strong>：就是把CSS代码写在一个单独的外部文件中，这个CSS文件以.css为后缀扩展名， 在&lt;head&gt;标签内使用&lt;link&gt;标签将CSS样式文件链接到HTML文件内
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">199</span>&lt;<span style="color:#a6e22e">link</span> <span style="color:#a6e22e">href</span>=<span style="color:#e6db74">&#34;main.css&#34;</span> <span style="color:#a6e22e">rel</span>=<span style="color:#e6db74">&#34;stylesheet&#34;</span> <span style="color:#66d9ef">type</span>=<span style="color:#e6db74">&#34;text/css&#34;</span> <span style="color:#f92672">/</span>&gt;</code></pre></div>
+<strong>备注</strong>：<br />
+1. CSS样式文件名称以有意义的英文字母命名，如：index.css<br />
+2. rel=&ldquo;stylesheet&rdquo; type=&ldquo;text/css&rdquo; 是固定写法不可修改<br />
+3. &lt;link&gt;标签位置一般写在&lt;head&gt;标签内</p>
 
-<h5 id="备注">备注：</h5>
-
-<ol>
-<li>CSS样式文件名称以有意义的英文字母命名，如：index.css</li>
-<li>rel=&ldquo;stylesheet&rdquo; type=&ldquo;text/css&rdquo; 是固定写法不可修改</li>
-<li><link>标签位置一般写在<head>标签内</li>
-</ol>
-
-<h5 id="三种插入样式的优先级">三种插入样式的优先级：</h5>
-
-<p>三种插入样式优先级从高到底为：内联式&gt;嵌入式&gt;外部式
-其中嵌入式&gt;外部式的条件为：嵌入式CSS的位置在外部式的后面
+<p><strong>三种插入样式的优先级</strong>：<br />
+三种插入样式优先级从高到底为：内联式&gt;嵌入式&gt;外部式<br />
+其中嵌入式&gt;外部式的条件为：嵌入式CSS的位置在外部式的后面<br />
 可以理解为：就近原则&ndash;离被设置元素越近优先级别越高</p>
 
-<h5 id="important">!important</h5>
-
-<p>在某些特殊情况下为某些样式设置最高权限可以使用!important来处理
+<p><strong>!important</strong><br />
+在某些特殊情况下为某些样式设置最高权限可以使用!important来处理
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">199</span><span style="color:#a6e22e">p</span> {<span style="color:#a6e22e">color</span>: <span style="color:#960050;background-color:#1e0010">#</span><span style="color:#a6e22e">DDD</span>!<span style="color:#a6e22e">important</span>;}</code></pre></div><br />
 此外浏览器也有一套默认的样式来显示网页，用户页可以自己设置样式，这些样式的优先级为：
 浏览器默认的样式&gt;网页制作者样式&gt;用户自己设置的样式&gt;设置了!important的样式。</p>

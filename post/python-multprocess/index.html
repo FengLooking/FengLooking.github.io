@@ -69,7 +69,7 @@
 
 <meta itemprop="datePublished" content="2017-03-10T23:37:22&#43;08:00" />
 <meta itemprop="dateModified" content="2017-03-10T23:37:22&#43;08:00" />
-<meta itemprop="wordCount" content="998">
+<meta itemprop="wordCount" content="1080">
 
 
 
@@ -307,12 +307,19 @@
 
     
     <div class="post-content">
-      <p><strong>进程</strong>：一个程序的执行实例。对操作系统来说：一个任务就是一个进程。<br />
-<strong>线程</strong>：一个进程内往往同时运行着多个子任务，这些子任务就是线程。线程是操作系统能够进行运算调度的最小单位。<br />
-一个进程至少有一个线程，一个进程也可以并发多个线程，这些线程可以并行执行不同的任务。一个进程在启动时会先产生一个线程，这个线程被称为主线程，主线程又可以创建其他子线程。<br />
-<strong>事件驱动模型</strong>：单个进程中单个线程执行多任务的模型。<br />
+      <p><strong>进程</strong>：一个程序的执行实例。对操作系统来说：一个任务就是一个进程。</p>
+
+<p><strong>线程</strong>：一个进程内往往同时运行着多个子任务，这些子任务就是线程。线程是操作系统能够进行运算调度的最小单位。</p>
+
+<p>一个进程至少有一个线程，一个进程也可以并发多个线程，这些线程可以并行执行不同的任务。一个进程在启动时会先产生一个线程，这个线程被称为主线程，主线程又可以创建其他子线程。</p>
+
+<p><strong>事件驱动模型</strong>：单个进程中单个线程执行多任务的模型。<br />
 <strong>协程</strong>：单线程的异步编程模型称为协程，可基于事件驱动编写高效的多任务程序。协程又被称为微线程。协程适用于IO密集型的程序中。<br />
-<strong>GIL(Global Interpreter Lock)</strong>: Python标准解释器执行代码时有一个GIL(Global Interpreter Lock)锁，任何Python线程执行前，必须先获得GIL锁，然后，每执行100个字节码，解释器就自动释放GIL锁，让别的线程有机会执行。Python中线程的执行代码都被GIL上了锁，所以Python中多线程只能交替执行，并不能并发执行。Python中实现并发任务一般用多进程。</p>
+协程的优势：<br />
+1.执行效率极高：程序自身控制子程序切换不是线程切换，因此没有线程切换的开销。<br />
+2.不需要多线程的锁机制，不存在同时写变量冲突，控制共享资源只需判断状态。</p>
+
+<p><strong>GIL(Global Interpreter Lock)</strong>: Python标准解释器执行代码时有一个GIL(Global Interpreter Lock)锁，任何Python线程执行前，必须先获得GIL锁，然后，每执行100个字节码，解释器就自动释放GIL锁，让别的线程有机会执行。Python中线程的执行代码都被GIL上了锁，所以Python中多线程只能交替执行，并不能并发执行。Python中实现并发任务一般用多进程。</p>
 
 <p>Python中的 multiprocessing 模块是跨平台版本的多进程模块
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20</span><span style="color:#f92672">import</span> <span style="color:#a6e22e">os</span>
@@ -427,7 +434,7 @@ all subprocess done
         
         
           <a class="next" href="/post/mysql-common/">
-            <span class="next-text nav-default">Mysql常用命令</span>
+            <span class="next-text nav-default">MySQL常用命令</span>
             <span class="prev-text nav-mobile">Next</span>
             
             <i class="iconfont">
