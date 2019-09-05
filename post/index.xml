@@ -30,6 +30,15 @@
     </item>
     
     <item>
+      <title>SQLite基础使用</title>
+      <link>https://fenglooking.github.io/post/sqlite-notes/</link>
+      <pubDate>Tue, 28 Feb 2017 23:22:01 +0800</pubDate>
+      
+      <guid>https://fenglooking.github.io/post/sqlite-notes/</guid>
+      <description>数据库(database)：存放数据的仓库 RDBMS(Relational DataBase Management System)：关系数据库管理系统，是将数据组织为行和列的系统，是所有现代数据库系统的基础。</description>
+    </item>
+    
+    <item>
       <title>CSS文字段落排版常用设置</title>
       <link>https://fenglooking.github.io/post/css-typesetting/</link>
       <pubDate>Thu, 08 Sep 2016 20:22:01 +0800</pubDate>
@@ -72,15 +81,6 @@
       
       <guid>https://fenglooking.github.io/post/html-element-classify/</guid>
       <description>在HTML中，HTML标签元素大体被分为三种不同的类型：内联元素(又叫行内元素)，块状元素，内联块状元素。 一.常用的内联元素有： 199&amp;lt</description>
-    </item>
-    
-    <item>
-      <title>SQLite随笔</title>
-      <link>https://fenglooking.github.io/post/sqlite-notes/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://fenglooking.github.io/post/sqlite-notes/</guid>
-      <description>数据库(database)：存放数据的仓库 RDBMS(Relational DataBase Management System)：关系数据库管理系统，是将数据组织为行和列的系统，是所有现代数据库系统的基础。</description>
     </item>
     
   </channel>

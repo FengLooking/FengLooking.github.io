@@ -16,6 +16,13 @@
   </url>
   
   <url>
+    <loc>https://fenglooking.github.io/post/sqlite-notes/</loc>
+    <lastmod>2017-02-28T23:22:01+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://fenglooking.github.io/post/css-typesetting/</loc>
     <lastmod>2016-09-08T20:30:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -46,12 +53,6 @@
   <url>
     <loc>https://fenglooking.github.io/post/html-element-classify/</loc>
     <lastmod>2016-09-02T18:00:01+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://fenglooking.github.io/post/sqlite-notes/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -134,14 +135,28 @@
   </url>
   
   <url>
-    <loc>https://fenglooking.github.io/tags/css/</loc>
-    <lastmod>2016-09-08T20:30:01+08:00</lastmod>
+    <loc>https://fenglooking.github.io/categories/sqlite/</loc>
+    <lastmod>2017-02-28T23:22:01+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://fenglooking.github.io/tags/sqlite/</loc>
+    <lastmod>2017-02-28T23:22:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://fenglooking.github.io/categories/css/</loc>
+    <lastmod>2016-09-08T20:30:01+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://fenglooking.github.io/tags/css/</loc>
     <lastmod>2016-09-08T20:30:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -162,14 +177,14 @@
   </url>
   
   <url>
-    <loc>https://fenglooking.github.io/categories/color/</loc>
+    <loc>https://fenglooking.github.io/tags/color/</loc>
     <lastmod>2016-09-05T23:37:22+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://fenglooking.github.io/tags/color/</loc>
+    <loc>https://fenglooking.github.io/categories/color/</loc>
     <lastmod>2016-09-05T23:37:22+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -206,18 +221,6 @@
   <url>
     <loc>https://fenglooking.github.io/categories/element/</loc>
     <lastmod>2016-09-02T18:00:01+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://fenglooking.github.io/tags/sqlite/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://fenglooking.github.io/categories/sqlite/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
