@@ -194,17 +194,34 @@ Query OK, &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt; rows &lt;span
       
       <guid>https://fenglooking.github.io/post/sqlite-notes/</guid>
       
-        <description>&lt;p&gt;&lt;strong&gt;数据库(database)&lt;/strong&gt;：存放数据的仓库&lt;/p&gt;
+        <description>&lt;p&gt;&lt;strong&gt;数据库(database)&lt;/strong&gt;：存放数据的仓库，是一些关联表的集合。&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;RDBMS(Relational DataBase Management System)&lt;/strong&gt;：关系数据库管理系统，是将数据组织为行和列的系统，是所有现代数据库系统的基础。&lt;br /&gt;
-RDBMS的特点：&lt;br /&gt;
-1.数据以表格的形式出现&lt;br /&gt;
-2.每行为各种记录名称&lt;br /&gt;
-3.每列为记录名称所对应的数据域&lt;br /&gt;
-4.许多的行和列组成一张表单&lt;br /&gt;
-5.若干的表单组成数据库&lt;/p&gt;
+RDBMS的特点：
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;数据以表格的形式出现&lt;/span&gt;  
+&lt;span style=&#34;color:#ae81ff&#34;&gt;2.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;每行为各种记录名称&lt;/span&gt;  
+&lt;span style=&#34;color:#ae81ff&#34;&gt;3.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;每列为记录名称所对应的数据域&lt;/span&gt;  
+&lt;span style=&#34;color:#ae81ff&#34;&gt;4.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;许多的行和列组成一张表单&lt;/span&gt;  
+&lt;span style=&#34;color:#ae81ff&#34;&gt;5.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;若干的表单组成数据库&lt;/span&gt; &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+RDBMS术语：&lt;br /&gt;
+1.数据库：一些关联表的集合。&lt;br /&gt;
+2.数据表：数据的矩阵，数据库中的表看起来像一个个简单的电子表格。&lt;br /&gt;
+3.行：行也称为记录，是一组相关的数据。&lt;br /&gt;
+4.列：列也称为数据元素，包含了相同的数据。&lt;br /&gt;
+5.冗余：存储两倍的数据。&lt;br /&gt;
+6.主键：一个数据表中主键是唯一的，可以用主键来查询数据。
+7.外键：用于关联两个数据表。&lt;br /&gt;
+8.索引：是对数据表中一列或多列的值进行排序的一种结构。类似于书籍目录。使用索引可以快速访问数据库表中的特定信息。&lt;br /&gt;
+9.复合键：将多个列作为一个索引，一般用于复合索引。&lt;br /&gt;
+10.参照完整性：参照的完整性要求关系中不允许引用不存在的实体。与实体完整性是关系模型必须满足的完整性约束条件，目的是保证数据的一致性。&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;SQLite&lt;/strong&gt;：SQLite是一个实现了自给自足的、无服务器的、零配置的、事务性的SQL数据库引擎。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;ACID事务&lt;/strong&gt;：事务(Transaction)，和现实世界中的交易很类似。&lt;br /&gt;
+1.A(Atomicity)原子性：事务成功的条件是事务里所有的操作都成功，只要有一个操作失败，整个事务就失败，需要回滚。&lt;br /&gt;
+2.C(Consistency)一致性：数据库要一直处于一致的状态，事务的运行不会改变数据库的一致性约束。&lt;br /&gt;
+3.I(Isolation)独立性：并发的事务之间不会互相影响，如果有一个事务要访问的数据正在被另外一个事务修改，只要另一个事务未提交，它访问的数据就不受未提交事务的影响。&lt;br /&gt;
+4.D(Durability)持久性：指一旦事务提交后，它所做的修改将会永久的保存在数据库上。&lt;/p&gt;
 
 &lt;p&gt;要使用SQLite，必须先安装它：Python3自带sqlite3，旧版本Python必须安装PySQLite才能使用SQLite数据库。然后需要连接到数据库，可以使用函数connect，这个函数接受多个参数，具体是哪些参数取决于使用的数据库。&lt;/p&gt;
 

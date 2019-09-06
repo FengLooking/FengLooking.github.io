@@ -17,7 +17,7 @@
       <pubDate>Tue, 28 Feb 2017 23:22:01 +0800</pubDate>
       
       <guid>https://fenglooking.github.io/post/sqlite-notes/</guid>
-      <description>数据库(database)：存放数据的仓库 RDBMS(Relational DataBase Management System)：关系数据库管理系统，是将数据组织为行和列的系统，是所有现代数据库系统的基础。</description>
+      <description>数据库(database)：存放数据的仓库，是一些关联表的集合。 RDBMS(Relational DataBase Management System)：关系数据库管理系统，是将数据组织为行和列的系统，是所有</description>
     </item>
     
   </channel>
