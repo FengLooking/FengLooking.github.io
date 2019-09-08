@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://fenglooking.github.io/post/mongodb-basicuse/</loc>
+    <lastmod>2017-03-20T22:30:01+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://fenglooking.github.io/post/python-multprocess/</loc>
     <lastmod>2017-03-10T23:37:22+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -73,14 +80,35 @@
   
   <url>
     <loc>https://fenglooking.github.io/categories/</loc>
-    <lastmod>2017-03-10T23:37:22+08:00</lastmod>
+    <lastmod>2017-03-20T22:30:01+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://fenglooking.github.io/categories/mongodb/</loc>
+    <lastmod>2017-03-20T22:30:01+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://fenglooking.github.io/tags/mongodb/</loc>
+    <lastmod>2017-03-20T22:30:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://fenglooking.github.io/post/</loc>
-    <lastmod>2017-03-10T23:37:22+08:00</lastmod>
+    <lastmod>2017-03-20T22:30:01+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://fenglooking.github.io/tags/</loc>
+    <lastmod>2017-03-20T22:30:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -100,13 +128,6 @@
   </url>
   
   <url>
-    <loc>https://fenglooking.github.io/tags/subprocess/</loc>
-    <lastmod>2017-03-10T23:37:22+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://fenglooking.github.io/categories/subprocess/</loc>
     <lastmod>2017-03-10T23:37:22+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -114,21 +135,21 @@
   </url>
   
   <url>
-    <loc>https://fenglooking.github.io/tags/</loc>
+    <loc>https://fenglooking.github.io/tags/subprocess/</loc>
     <lastmod>2017-03-10T23:37:22+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://fenglooking.github.io/tags/mysql/</loc>
+    <loc>https://fenglooking.github.io/categories/mysql/</loc>
     <lastmod>2017-03-05T20:30:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://fenglooking.github.io/categories/mysql/</loc>
+    <loc>https://fenglooking.github.io/tags/mysql/</loc>
     <lastmod>2017-03-05T20:30:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

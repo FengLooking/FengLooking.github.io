@@ -6,10 +6,19 @@
     <description>Recent content in Posts on dyfblogs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 10 Mar 2017 23:37:22 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 20 Mar 2017 22:22:01 +0800</lastBuildDate>
     
 	<atom:link href="https://fenglooking.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>MongoDB基础使用</title>
+      <link>https://fenglooking.github.io/post/mongodb-basicuse/</link>
+      <pubDate>Mon, 20 Mar 2017 22:22:01 +0800</pubDate>
+      
+      <guid>https://fenglooking.github.io/post/mongodb-basicuse/</guid>
+      <description>MongoDB：是一个基于分布式文件存储的非关系数据库。由C++语言编写。旨在为WEB应用提供可扩展的高性能数据存储解决方案。MongoDB</description>
+    </item>
     
     <item>
       <title>Python多进程</title>
