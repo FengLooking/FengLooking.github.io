@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>MongoDB常用命令 - dyfblogs</title>
+  
+
+<meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta name="MobileOptimized" content="width"/>
+<meta name="HandheldFriendly" content="true"/>
+
+
+<meta name="applicable-device" content="pc,mobile">
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+<meta name="mobile-web-app-capable" content="yes">
+
+<meta name="author" content="dyf" />
+  <meta name="description" content="切换/创建数据库：use database_name use stuedu 查看所有数据库： show dbs 查看所有集合： show collections 删除当前操作的数据库：db.dropDatabase() db.dropDatabase() 从指定机器上复" />
+
+  <meta name="keywords" content="Hugo, theme, jane" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.57.2" />
+
+
+<link rel="canonical" href="https://fenglooking.github.io/post/mongodb-common/" />
+
+
+
+<link rel="icon" href="/favicon.ico" />
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/sass/jane.min.4e18788ce5f9270fa85812680693f51e3c2f2fda8b64de93d905db9f686c1c75.css" integrity="sha256-Thh4jOX5Jw&#43;oWBJoBpP1HjwvL9qLZN6T2QXbn2hsHHU=" media="screen" crossorigin="anonymous">
+
+
+
+
+
+<meta property="og:title" content="MongoDB常用命令" />
+<meta property="og:description" content="切换/创建数据库：use database_name use stuedu 查看所有数据库： show dbs 查看所有集合： show collections 删除当前操作的数据库：db.dropDatabase() db.dropDatabase() 从指定机器上复" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://fenglooking.github.io/post/mongodb-common/" />
+<meta property="article:published_time" content="2018-08-03T19:20:01+08:00" />
+<meta property="article:modified_time" content="2018-08-03T19:30:01+08:00" />
+<meta itemprop="name" content="MongoDB常用命令">
+<meta itemprop="description" content="切换/创建数据库：use database_name use stuedu 查看所有数据库： show dbs 查看所有集合： show collections 删除当前操作的数据库：db.dropDatabase() db.dropDatabase() 从指定机器上复">
+
+
+<meta itemprop="datePublished" content="2018-08-03T19:20:01&#43;08:00" />
+<meta itemprop="dateModified" content="2018-08-03T19:30:01&#43;08:00" />
+<meta itemprop="wordCount" content="908">
+
+
+
+<meta itemprop="keywords" content="MongoDB," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="MongoDB常用命令"/>
+<meta name="twitter:description" content="切换/创建数据库：use database_name use stuedu 查看所有数据库： show dbs 查看所有集合： show collections 删除当前操作的数据库：db.dropDatabase() db.dropDatabase() 从指定机器上复"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+
+
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">DYFBLOGS</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <li class="mobile-menu-item">
+          
+          
+            <a class="menu-item-link" href="https://fenglooking.github.io/">首页</a>
+          
+      </li><li class="mobile-menu-item">
+          
+          
+            <a class="menu-item-link" href="https://fenglooking.github.io/post/">归档</a>
+          
+      </li><li class="mobile-menu-item">
+          
+          
+            <a class="menu-item-link" href="https://fenglooking.github.io/tags/">标签</a>
+          
+      </li><li class="mobile-menu-item">
+          
+          
+            <a class="menu-item-link" href="https://fenglooking.github.io/categories/">归类</a>
+          
+      </li><li class="mobile-menu-item">
+          
+          
+            <a class="menu-item-link" href="https://fenglooking.github.io/about/">关于</a>
+          
+      </li>
+    
+
+    
+  </ul>
+</nav>
+
+
+  
+    
+
+
+
+
+
+
+  <link rel="stylesheet" href="/lib/photoswipe/photoswipe.min.css" />
+  <link rel="stylesheet" href="/lib/photoswipe/default-skin/default-skin.min.css" />
+
+
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+  
+
+  
+
+  
+
+  <header id="header" class="header container">
+    <div class="logo-wrapper">
+  <a href="/" class="logo">
+    
+      DYFBLOGS
+    
+  </a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    
+    
+        <li class="menu-item">
+          
+          
+          
+            <a class="menu-item-link" href="https://fenglooking.github.io/">首页</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+          
+          
+          
+            <a class="menu-item-link" href="https://fenglooking.github.io/post/">归档</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+          
+          
+          
+            <a class="menu-item-link" href="https://fenglooking.github.io/tags/">标签</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+          
+          
+          
+            <a class="menu-item-link" href="https://fenglooking.github.io/categories/">归类</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+          
+          
+          
+            <a class="menu-item-link" href="https://fenglooking.github.io/about/">关于</a>
+          
+
+        
+
+      </li>
+    
+
+    
+    
+
+    
+  </ul>
+</nav>
+
+  </header>
+
+  <div id="mobile-panel">
+    <main id="main" class="main bg-llight">
+      <div class="content-wrapper">
+        <div id="content" class="content container">
+          <article class="post bg-white">
+    
+    <header class="post-header">
+      <h1 class="post-title">MongoDB常用命令</h1>
+      
+      <div class="post-meta">
+        <span>发表于</span>
+        <time datetime="2018-08-03" class="post-time">
+          2018-08-03
+        </time>
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Table of Contents</h2>
+  <div class="post-toc-content">
+    
+  </div>
+</div>
+
+    
+    <div class="post-content">
+      <p>切换/创建数据库：use database_name
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">use</span> <span style="color:#a6e22e">stuedu</span></code></pre></div>
+查看所有数据库：
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">show</span> <span style="color:#a6e22e">dbs</span></code></pre></div>
+查看所有集合：
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">show</span> <span style="color:#a6e22e">collections</span></code></pre></div>
+删除当前操作的数据库：db.dropDatabase()
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">db</span>.<span style="color:#a6e22e">dropDatabase</span>()</code></pre></div>
+从指定机器上复制指定数据库数据到某个数据库：
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">db</span>.<span style="color:#a6e22e">copyDatabase</span>()</code></pre></div>
+修复当前数据库
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">db</span>.<span style="color:#a6e22e">repairDatabase</span>()</code></pre></div>
+当前db版本
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">db</span>.<span style="color:#a6e22e">version</span>()</code></pre></div>
+显示当前db状态
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">db</span>.<span style="color:#a6e22e">stats</span>()</code></pre></div>
+查看当前db的连接机器地址
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">db</span>.<span style="color:#a6e22e">getMongo</span>()</code></pre></div>
+查询之前的错误信息
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">db</span>.<span style="color:#a6e22e">getPrevError</span>()</code></pre></div>
+清除错误记录
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">db</span>.<span style="color:#a6e22e">resetError</span>()</code></pre></div></p>
+
+<p><strong>collection集合</strong>：<br />
+创建一个集合
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">db</span>.<span style="color:#a6e22e">createCollection</span>(<span style="color:#e6db74">&#34;collection_name&#34;</span>)</code></pre></div>
+得到指定名称的集合
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">db</span>.<span style="color:#a6e22e">getCollection</span>(<span style="color:#e6db74">&#34;students&#34;</span>)</code></pre></div>
+查询当前db的所有集合
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">db</span>.<span style="color:#a6e22e">getCollectionNames</span>()</code></pre></div>
+查询当前db所有集合索引的状态
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">db</span>.<span style="color:#a6e22e">printCollectionStats</span>()</code></pre></div>
+删除集合
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">db</span>.<span style="color:#a6e22e">collection_name</span>.<span style="color:#a6e22e">drop</span>()</code></pre></div></p>
+
+<p><strong>添加数据</strong>：<br />
+插入数据到集合
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">db</span>.<span style="color:#a6e22e">collection_name</span>.<span style="color:#a6e22e">insert</span>({<span style="color:#e6db74">&#34;name&#34;</span>:<span style="color:#e6db74">&#34;tom&#34;</span>, <span style="color:#e6db74">&#34;age&#34;</span>:<span style="color:#ae81ff">22</span>}</code></pre></div>
+导入数据：-d:数据库 -c：集合名 &ndash;file：数据文件地址 &ndash;jsonArray：导入json文件专用，否则导入失败
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">mongoimport</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">d</span> <span style="color:#a6e22e">db_name</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">c</span> <span style="color:#a6e22e">collection_name</span> <span style="color:#f92672">--</span><span style="color:#a6e22e">file</span> <span style="color:#f92672">/</span><span style="color:#a6e22e">user</span><span style="color:#f92672">/</span><span style="color:#a6e22e">local</span><span style="color:#f92672">/</span><span style="color:#a6e22e">mongodb</span><span style="color:#f92672">/</span><span style="color:#a6e22e">data</span><span style="color:#f92672">/</span><span style="color:#a6e22e">product</span>.<span style="color:#a6e22e">json</span> <span style="color:#f92672">--</span><span style="color:#a6e22e">jsonArray</span></code></pre></div></p>
+
+<p><strong>修改数据</strong>：<br />
+修改集合中name=tom的数据的字段age：第一个false表示不新增数据
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">b</span>.<span style="color:#a6e22e">collection_name</span>.<span style="color:#a6e22e">update</span>({<span style="color:#a6e22e">name</span>:<span style="color:#e6db74">&#34;tom&#34;</span>}, {<span style="color:#960050;background-color:#1e0010">$</span><span style="color:#a6e22e">set</span>:{<span style="color:#a6e22e">age</span>:<span style="color:#ae81ff">33</span>}}, <span style="color:#66d9ef">false</span>, <span style="color:#66d9ef">true</span>)</code></pre></div>
+修改集合中name=tom的数据，让age=age+2， id=id+2
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">b</span>.<span style="color:#a6e22e">collection_name</span>.<span style="color:#a6e22e">update</span>({<span style="color:#a6e22e">name</span>:<span style="color:#e6db74">&#34;tom&#34;</span>}, {<span style="color:#960050;background-color:#1e0010">$</span><span style="color:#a6e22e">inc</span>:{<span style="color:#a6e22e">age</span>:<span style="color:#ae81ff">2</span>, <span style="color:#a6e22e">id</span>:<span style="color:#ae81ff">2</span>}}, <span style="color:#66d9ef">false</span>, <span style="color:#66d9ef">true</span>)</code></pre></div>
+综合上面的修改
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">b</span>.<span style="color:#a6e22e">collection_name</span>.<span style="color:#a6e22e">update</span>({<span style="color:#a6e22e">name</span>:<span style="color:#e6db74">&#34;tom&#34;</span>}, {<span style="color:#960050;background-color:#1e0010">$</span><span style="color:#a6e22e">inc</span>:{<span style="color:#a6e22e">age</span>:<span style="color:#ae81ff">2</span>}, <span style="color:#960050;background-color:#1e0010">$</span><span style="color:#a6e22e">set</span>:{<span style="color:#a6e22e">age</span>:<span style="color:#ae81ff">33</span>}} <span style="color:#66d9ef">false</span>, <span style="color:#66d9ef">true</span>)</code></pre></div></p>
+
+<p><strong>删除数据</strong>：
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">db</span>.<span style="color:#a6e22e">teacher</span>.<span style="color:#a6e22e">remove</span>({<span style="color:#e6db74">&#34;name&#34;</span>:<span style="color:#e6db74">&#34;tom&#34;</span>})</code></pre></div></p>
+
+<p><strong>查询数据</strong>：<br />
+查询集合中所有记录
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">db</span>.<span style="color:#a6e22e">collection_name</span>.<span style="color:#a6e22e">find</span>()</code></pre></div>
+查询数据格式化
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">db</span>.<span style="color:#a6e22e">collection_name</span>.<span style="color:#a6e22e">find</span>().<span style="color:#a6e22e">pretty</span>()</code></pre></div>
+查询集合中所有数据：id和name字段不返回
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">db</span>.<span style="color:#a6e22e">collection_name</span>.<span style="color:#a6e22e">find</span>({}, {<span style="color:#a6e22e">id</span>:<span style="color:#ae81ff">0</span>,<span style="color:#e6db74">&#34;name&#34;</span>:<span style="color:#ae81ff">0</span>})</code></pre></div>
+查询集合中所有数据：id和name字段返回
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">db</span>.<span style="color:#a6e22e">collection_name</span>.<span style="color:#a6e22e">find</span>({}, {<span style="color:#a6e22e">id</span>:<span style="color:#ae81ff">1</span>,<span style="color:#e6db74">&#34;name&#34;</span>:<span style="color:#ae81ff">1</span>})</code></pre></div>
+查询集合中的某个字段的重复数据
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">db</span>.<span style="color:#a6e22e">collection_name</span>.<span style="color:#a6e22e">distinct</span>(<span style="color:#e6db74">&#34;name&#34;</span>)</code></pre></div>
+查询集合中name=tom的数据
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">db</span>.<span style="color:#a6e22e">collection_name</span>.<span style="color:#a6e22e">find</span>({<span style="color:#e6db74">&#34;name&#34;</span>:<span style="color:#e6db74">&#34;tom&#34;</span>})</code></pre></div>
+查询集合中age&gt;20的数据
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">db</span>.<span style="color:#a6e22e">collection_name</span>.<span style="color:#a6e22e">find</span>({<span style="color:#a6e22e">age</span>:{<span style="color:#960050;background-color:#1e0010">$</span><span style="color:#a6e22e">gt</span>:<span style="color:#ae81ff">20</span>}})</code></pre></div>
+查询集合中age&gt;20 age&lt;30的数据
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">db</span>.<span style="color:#a6e22e">collection_name</span>.<span style="color:#a6e22e">find</span>({<span style="color:#a6e22e">age</span>:{<span style="color:#960050;background-color:#1e0010">$</span><span style="color:#a6e22e">gt</span>:<span style="color:#ae81ff">20</span>, <span style="color:#960050;background-color:#1e0010">$</span><span style="color:#a6e22e">lt</span>:<span style="color:#ae81ff">30</span>}})</code></pre></div>
+查询集合中name包含om的数据
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">db</span>.<span style="color:#a6e22e">collection_name</span>.<span style="color:#a6e22e">find</span>({<span style="color:#a6e22e">name</span>:<span style="color:#f92672">/</span><span style="color:#a6e22e">om</span><span style="color:#f92672">/</span>})</code></pre></div>
+查询集合中name以om开头的数据
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">db</span>.<span style="color:#a6e22e">collection_name</span>.<span style="color:#a6e22e">find</span>({<span style="color:#a6e22e">name</span>:<span style="color:#f92672">/</span>^<span style="color:#a6e22e">om</span><span style="color:#f92672">/</span>})</code></pre></div>
+查询集合中name以om结尾的数据
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">db</span>.<span style="color:#a6e22e">collection_name</span>.<span style="color:#a6e22e">find</span>({<span style="color:#a6e22e">name</span>:<span style="color:#f92672">/</span><span style="color:#a6e22e">om</span><span style="color:#960050;background-color:#1e0010">$</span><span style="color:#f92672">/</span>})</code></pre></div>
+查询集合中指定列name和age的数据
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">db</span>.<span style="color:#a6e22e">collection_name</span>.<span style="color:#a6e22e">find</span>({}, {<span style="color:#a6e22e">name</span>:<span style="color:#ae81ff">1</span>,<span style="color:#a6e22e">age</span>:<span style="color:#ae81ff">1</span>})</code></pre></div>
+查询id&gt;3的指定列name和work的数据
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">db</span>.<span style="color:#a6e22e">collection_name</span>.<span style="color:#a6e22e">find</span>({<span style="color:#a6e22e">id</span>:{<span style="color:#960050;background-color:#1e0010">$</span><span style="color:#a6e22e">gt</span>:<span style="color:#ae81ff">3</span>}}, {<span style="color:#a6e22e">name</span>:<span style="color:#ae81ff">1</span>,<span style="color:#a6e22e">work</span>:<span style="color:#ae81ff">1</span>})</code></pre></div>
+按照age大小升序或降序查询：1表示升序，-1表示降序
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">db</span>.<span style="color:#a6e22e">collection_name</span>.<span style="color:#a6e22e">find</span>().<span style="color:#a6e22e">sort</span>({<span style="color:#a6e22e">age</span>:<span style="color:#ae81ff">1</span>})</code></pre></div>
+查询前三条数据
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">db</span>.<span style="color:#a6e22e">collection_name</span>.<span style="color:#a6e22e">find</span>().<span style="color:#a6e22e">limit</span>(<span style="color:#ae81ff">3</span>)</code></pre></div>
+查询前三条之后的数据
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">db</span>.<span style="color:#a6e22e">collection_name</span>.<span style="color:#a6e22e">find</span>().<span style="color:#a6e22e">skip</span>(<span style="color:#ae81ff">3</span>)</code></pre></div>
+查询前三条之后的五条数据
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">db</span>.<span style="color:#a6e22e">collection_name</span>.<span style="color:#a6e22e">find</span>().<span style="color:#a6e22e">limit</span>(<span style="color:#ae81ff">5</span>).<span style="color:#a6e22e">skip</span>(<span style="color:#ae81ff">3</span>)</code></pre></div>
+查询age=22或者age=33的数据：$or-或者 $in-包含 $nin-不包含
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">db</span>.<span style="color:#a6e22e">collection_name</span>.<span style="color:#a6e22e">find</span>({<span style="color:#960050;background-color:#1e0010">$</span><span style="color:#a6e22e">or</span>:[{<span style="color:#a6e22e">age</span>:<span style="color:#ae81ff">22</span>},{<span style="color:#a6e22e">age</span>:<span style="color:#ae81ff">33</span>}]})</code></pre></div>
+查询第一条数据
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">db</span>.<span style="color:#a6e22e">collection_name</span>.<span style="color:#a6e22e">findOne</span>()</code></pre></div>
+查询age&gt;=22的数据的个数
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">db</span>.<span style="color:#a6e22e">collection_name</span>.<span style="color:#a6e22e">find</span>({<span style="color:#a6e22e">age</span>:{<span style="color:#960050;background-color:#1e0010">$</span><span style="color:#a6e22e">gte</span>:<span style="color:#ae81ff">22</span>}}).<span style="color:#a6e22e">count</span>()</code></pre></div>
+查询有name字段的数据的个数
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">db</span>.<span style="color:#a6e22e">collection_name</span>.<span style="color:#a6e22e">find</span>({<span style="color:#a6e22e">name</span>:{<span style="color:#960050;background-color:#1e0010">$</span><span style="color:#a6e22e">exists</span>:<span style="color:#66d9ef">true</span>}}).<span style="color:#a6e22e">count</span>()</code></pre></div></p>
+
+<p><strong>索引</strong>：<br />
+MongoDB支持的索引：id索引(默认建立)、单键索引、多键索引、复合索引、过期索引、全文索引、地理位置索引。索引不改变源数据排列顺序，索引只有升序一种方式。<br />
+创建索引
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">db</span>.<span style="color:#a6e22e">collection_name</span>.<span style="color:#a6e22e">ensureIndex</span>({<span style="color:#a6e22e">name</span>:<span style="color:#ae81ff">1</span>})
+<span style="color:#a6e22e">db</span>.<span style="color:#a6e22e">collection_name</span>.<span style="color:#a6e22e">ensureIndex</span>({<span style="color:#a6e22e">name</span>:<span style="color:#ae81ff">1</span>,<span style="color:#a6e22e">ts</span>:<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>})</code></pre></div>
+查询总索引记录大小
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">db</span>.<span style="color:#a6e22e">collection_name</span>.<span style="color:#a6e22e">totalIndexSize</span>()</code></pre></div>
+读取当前集合的所有索引信息
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">db</span>.<span style="color:#a6e22e">collection_name</span>.<span style="color:#a6e22e">reIndex</span>()</code></pre></div>
+删除指定索引
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">db</span>.<span style="color:#a6e22e">collection_name</span>.<span style="color:#a6e22e">dropIndex</span>({<span style="color:#a6e22e">name</span>:<span style="color:#ae81ff">1</span>})</code></pre></div></p>
+
+    </div>
+
+    
+    
+
+
+    
+    
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          <a href="https://fenglooking.github.io/tags/mongodb/">MongoDB</a>
+          
+        </div>
+
+      
+      <nav class="post-nav">
+        
+        
+          <a class="next" href="/post/mongodb-basicuse/">
+            <span class="next-text nav-default">MongoDB基础使用</span>
+            <span class="prev-text nav-mobile">Next</span>
+            
+            <i class="iconfont">
+              <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18">
+  <path d="M332.091514 74.487481l-75.369571 89.491197c-10.963703 12.998035-10.285251 32.864502 1.499144 44.378743l286.278095 300.375162L266.565125 819.058374c-11.338233 12.190647-11.035334 32.285311 0.638543 44.850487l80.46666 86.564541c11.680017 12.583596 30.356378 12.893658 41.662889 0.716314l377.434212-421.426145c11.332093-12.183484 11.041474-32.266891-0.657986-44.844348l-80.46666-86.564541c-1.772366-1.910513-3.706415-3.533476-5.750981-4.877077L373.270379 71.774697C361.493148 60.273758 343.054193 61.470003 332.091514 74.487481z"></path>
+</svg>
+
+            </i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+
+  
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+    
+
+  
+
+        </div>
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">and</span>
+  <span class="theme-info">
+    Theme by <a class="theme-link" href="https://github.com/xianmin/hugo-theme-jane">Jane</a>
+  </span>
+
+  <span class="division">|</span>
+  <span class="copyright-year">
+    &copy;
+    
+      2017 -
+    2019
+    <span class="heart">
+      
+      <i class="iconfont">
+        <svg class="icon" viewBox="0 0 1025 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="14" height="14">
+  <path d="M1000.1 247.9c-15.5-37.3-37.6-70.6-65.7-98.9-54.4-54.8-125.8-85-201-85-85.7 0-166 39-221.4 107.4C456.6 103 376.3 64 290.6 64c-75.1 0-146.5 30.4-201.1 85.6-28.2 28.5-50.4 61.9-65.8 99.3-16 38.8-24 79.9-23.6 122.2 0.7 91.7 40.1 177.2 108.1 234.8 3.1 2.6 6 5.1 8.9 7.8 14.9 13.4 58 52.8 112.6 102.7 93.5 85.5 209.9 191.9 257.5 234.2 7 6.1 15.8 9.5 24.9 9.5 9.2 0 18.1-3.4 24.9-9.5 34.5-30.7 105.8-95.9 181.4-165 74.2-67.8 150.9-138 195.8-178.2 69.5-57.9 109.6-144.4 109.9-237.3 0.1-42.5-8-83.6-24-122.2z"
+   fill="#8a8a8a"></path>
+</svg>
+
+      </i>
+    </span><span class="author">
+        DYF
+        
+      </span></span>
+
+  
+  
+
+  
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont">
+        
+        <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="35" height="35">
+  <path d="M510.866688 227.694839 95.449397 629.218702l235.761562 0-2.057869 328.796468 362.40389 0L691.55698 628.188232l241.942331-3.089361L510.866688 227.694839zM63.840492 63.962777l894.052392 0 0 131.813095L63.840492 195.775872 63.840492 63.962777 63.840492 63.962777zM63.840492 63.962777"></path>
+</svg>
+
+      </i>
+    </div>
+  </div>
+  
+<script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+
+
+
+
+<script type="text/javascript" src="/js/main.638251f4230630f0335d8c6748e53a96f94b72670920b60c09a56fdc8bece214.js" integrity="sha256-Y4JR9CMGMPAzXYxnSOU6lvlLcmcJILYMCaVv3Ivs4hQ=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    <script type="text/javascript" src="/js/load-photoswipe.js"></script>
+    <script type="text/javascript" src="/lib/photoswipe/photoswipe.min.js"></script>
+    <script type="text/javascript" src="/lib/photoswipe/photoswipe-ui-default.min.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
