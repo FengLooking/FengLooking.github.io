@@ -69,7 +69,7 @@
 
 <meta itemprop="datePublished" content="2018-08-02T22:22:01&#43;08:00" />
 <meta itemprop="dateModified" content="2018-08-02T22:30:01&#43;08:00" />
-<meta itemprop="wordCount" content="1453">
+<meta itemprop="wordCount" content="1456">
 
 
 
@@ -363,7 +363,7 @@ BASE是Basically Available(基本可用)、Soft state(软状态)和Eventually co
 <span style="color:#a6e22e">dbpath</span>=<span style="color:#f92672">/</span><span style="color:#a6e22e">usr</span><span style="color:#f92672">/</span><span style="color:#a6e22e">local</span><span style="color:#f92672">/</span><span style="color:#a6e22e">mongodb</span><span style="color:#f92672">/</span><span style="color:#a6e22e">data</span><span style="color:#f92672">/</span><span style="color:#a6e22e">db</span>
 <span style="color:#a6e22e">fork</span>=<span style="color:#66d9ef">true</span>
 <span style="color:#a6e22e">port</span>=<span style="color:#ae81ff">27017</span></code></pre></div>
-上面的 fork=true 还在linux平台下有效，意思是以守护进程的方式运行。</p>
+上面的 fork=true 只在linux平台下有效，意思是以守护进程的方式在后台运行。</p>
 
 <p><strong>运行MongoDB</strong>：
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#ae81ff">1.</span><span style="color:#a6e22e">进入</span> <span style="color:#f92672">/</span><span style="color:#a6e22e">usr</span><span style="color:#f92672">/</span><span style="color:#a6e22e">local</span><span style="color:#f92672">/</span><span style="color:#a6e22e">mongodb</span><span style="color:#f92672">/</span><span style="color:#a6e22e">bin</span><span style="color:#f92672">/</span> <span style="color:#a6e22e">目录</span>
