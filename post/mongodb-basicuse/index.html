@@ -69,7 +69,7 @@
 
 <meta itemprop="datePublished" content="2018-08-02T22:22:01&#43;08:00" />
 <meta itemprop="dateModified" content="2018-08-02T22:30:01&#43;08:00" />
-<meta itemprop="wordCount" content="2192">
+<meta itemprop="wordCount" content="2574">
 
 
 
@@ -483,6 +483,45 @@ Python要连接MongoDB，需要MongoDB驱动，使用pymongo驱动来连接。�
 <span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">77</span>
 <span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">78</span><span style="color:#66d9ef">if</span> <span style="color:#a6e22e">__name__</span> <span style="color:#f92672">==</span> <span style="color:#960050;background-color:#1e0010">&#39;</span><span style="color:#a6e22e">__main__</span><span style="color:#960050;background-color:#1e0010">&#39;</span>:
 <span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">79</span>    <span style="color:#a6e22e">test_mongo</span>()</code></pre></div></p>
+
+<p><strong>mongoengine</strong>：是一个对象文档映射器(ODM-Object Document Mapping)。mongoengine是基于pymongo的。mongoengine用起来就相当于一个基于SQL的对象关系映射器(ORM-Object Relational Mapping)。<br />
+安装mongoengine
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">pip3</span> <span style="color:#a6e22e">install</span> <span style="color:#a6e22e">mongoengine</span></code></pre></div>
+创建一个Python脚本：mongoengine_test.py
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span style="color:#960050;background-color:#1e0010">#</span>!<span style="color:#f92672">/</span><span style="color:#a6e22e">usr</span><span style="color:#f92672">/</span><span style="color:#a6e22e">bin</span><span style="color:#f92672">/</span><span style="color:#a6e22e">python3</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span style="color:#f92672">import</span> <span style="color:#a6e22e">mongoengine</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span style="color:#960050;background-color:#1e0010">#</span> <span style="color:#a6e22e">连接数据库</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span style="color:#a6e22e">mongoengine</span>.<span style="color:#a6e22e">connect</span>(<span style="color:#e6db74">&#34;hduedu&#34;</span>, <span style="color:#a6e22e">host</span>=<span style="color:#e6db74">&#34;127.0.0.1&#34;</span>, <span style="color:#a6e22e">port</span>=<span style="color:#ae81ff">27017</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span style="color:#a6e22e">class</span> <span style="color:#a6e22e">Teacher</span>(<span style="color:#a6e22e">mongoengine</span>.<span style="color:#a6e22e">Document</span>):
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span>    <span style="color:#a6e22e">name</span> = <span style="color:#a6e22e">mongoengine</span>.<span style="color:#a6e22e">StringField</span>(<span style="color:#a6e22e">required</span>=<span style="color:#a6e22e">True</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span>    <span style="color:#a6e22e">age</span> = <span style="color:#a6e22e">mongoengine</span>.<span style="color:#a6e22e">IntField</span>(<span style="color:#a6e22e">required</span>=<span style="color:#a6e22e">True</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span><span style="color:#66d9ef">if</span> <span style="color:#a6e22e">__name__</span> <span style="color:#f92672">==</span> <span style="color:#960050;background-color:#1e0010">&#39;</span><span style="color:#a6e22e">__main__</span><span style="color:#960050;background-color:#1e0010">&#39;</span>:
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span>    <span style="color:#960050;background-color:#1e0010">#</span> <span style="color:#a6e22e">往集合中增加数据</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span>    <span style="color:#a6e22e">teacher01</span> = <span style="color:#a6e22e">Teacher</span>()
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span>    <span style="color:#a6e22e">teacher01</span>.<span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;andy&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18</span>    <span style="color:#a6e22e">teacher01</span>.<span style="color:#a6e22e">age</span> = <span style="color:#e6db74">&#34;12&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19</span>    <span style="color:#a6e22e">teacher01</span>.<span style="color:#a6e22e">save</span>()
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21</span>    <span style="color:#960050;background-color:#1e0010">#</span> <span style="color:#a6e22e">删除name</span>=<span style="color:#a6e22e">tony的数据</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22</span>    <span style="color:#a6e22e">teacher02</span> = <span style="color:#a6e22e">Teacher</span>.<span style="color:#a6e22e">objects</span>(<span style="color:#a6e22e">name</span>=<span style="color:#e6db74">&#34;tony&#34;</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23</span>    <span style="color:#a6e22e">teacher02</span>.delete()
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25</span>    <span style="color:#960050;background-color:#1e0010">#</span> <span style="color:#a6e22e">将集合中age</span>=<span style="color:#ae81ff">12</span><span style="color:#a6e22e">的数据的name修改为jane</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26</span>    <span style="color:#960050;background-color:#1e0010">#</span> <span style="color:#a6e22e">修改的方法有</span><span style="color:#960050;background-color:#1e0010">：</span><span style="color:#a6e22e">update_one</span>() <span style="color:#a6e22e">update</span>()
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27</span>    <span style="color:#a6e22e">teacher03</span> = <span style="color:#a6e22e">Teacher</span>.<span style="color:#a6e22e">objects</span>(<span style="color:#a6e22e">age</span>=<span style="color:#ae81ff">12</span>).<span style="color:#a6e22e">update_one</span>(<span style="color:#a6e22e">set__name</span>=<span style="color:#e6db74">&#34;jane&#34;</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29</span>    <span style="color:#960050;background-color:#1e0010">#</span> <span style="color:#a6e22e">获取集合中所有数据</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30</span>    <span style="color:#960050;background-color:#1e0010">#</span> <span style="color:#a6e22e">查询方法有</span><span style="color:#960050;background-color:#1e0010">：</span><span style="color:#a6e22e">all</span>() <span style="color:#a6e22e">first</span>() <span style="color:#a6e22e">filter</span>()
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31</span>    <span style="color:#a6e22e">all_teachers</span> = <span style="color:#a6e22e">Teacher</span>.<span style="color:#a6e22e">objects</span>.<span style="color:#a6e22e">all</span>()
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32</span>    <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">teacher</span> <span style="color:#a6e22e">in</span> <span style="color:#a6e22e">all_teachers</span>:
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33</span>        print(<span style="color:#e6db74">&#34;name:{0}, age:{1}&#34;</span>.<span style="color:#a6e22e">format</span>(<span style="color:#a6e22e">teacher</span>.<span style="color:#a6e22e">name</span>, <span style="color:#a6e22e">teacher</span>.<span style="color:#a6e22e">age</span>))</code></pre></div>
+简单用法如上，为了方便维护代码，使用mongoengine时可使用MVC来写代码。</p>
 
     </div>
 
