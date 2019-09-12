@@ -6,10 +6,50 @@
     <description>Recent content on dyfblogs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 03 Aug 2018 19:20:01 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 03 Sep 2018 19:20:01 +0800</lastBuildDate>
     
         <atom:link href="https://fenglooking.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Redis基础使用</title>
+      <link>https://fenglooking.github.io/post/redis-basicuse/</link>
+      <pubDate>Mon, 03 Sep 2018 19:20:01 +0800</pubDate>
+      
+      <guid>https://fenglooking.github.io/post/redis-basicuse/</guid>
+      
+        <description>&lt;p&gt;&lt;strong&gt;Redis&lt;/strong&gt;：Redis(REmote dictionary server)是一个开源的使用ANSI C语言编写、遵守BSD协议、支持网络、可基于内存亦可持久化的key-value型数据库。value的值可以是 string(字符串)、list(列表)、hash(哈希)、set(集合)、zset(sorted set-有序集合) 等类型。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;ANSI&lt;/strong&gt;：ANSI是一种字符代码，为使计算机支持更多语言，通常使用0x00~0x7f范围的1个字节来表示1个英文字符，超出此范围的使用0x80~0xFFFF来编码，即扩展的ANSCII编码。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;BSD协议&lt;/strong&gt;：BSD是Berkeley Software Distribution的缩写。BSD开源协议是一个给予使用者很大自由的协议：可以自由使用，修改源代码，也可以将修改后的代码作为开源或者专有软件再发布。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Mac平台安装Redis&lt;/strong&gt;：&lt;br /&gt;
+Redis下载地址 &lt;a href=&#34;https://redis.io/download&#34;&gt;https://redis.io/download&lt;/a&gt; 下载最新版本并安装。
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;wget&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;http&lt;/span&gt;:&lt;span style=&#34;color:#75715e&#34;&gt;//download.redis.io/releases/redis-5.0.5.tar.gz
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;tar&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;xzf&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;redis&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;5.0.5&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;tar&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;gz&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;cd&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;redis&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;5.0.5&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;make&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+make结束后 redis-5.0.5 目录下会出现编译后的redis服务程序redis-server，还有用于测试的客户端程序redis-cli，两个程序都位于安装目录src下。&lt;br /&gt;
+接下来启动redis服务
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;cd&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;src&lt;/span&gt;
+.&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;redis&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;server&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+这种启动方式使用的是默认配置，可以通过指定配置文件作为启动参数的方式启动redis。
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;cd&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;src&lt;/span&gt;
+.&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;redis&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;server&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;xxx&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;etc&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;redis&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;conf&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+也可以使用内置的客户端与Redis进行交互
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;src&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;redis&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;cli&lt;/span&gt;
+&lt;span style=&#34;color:#ae81ff&#34;&gt;127.0.0.1&lt;/span&gt;:&lt;span style=&#34;color:#ae81ff&#34;&gt;6379&lt;/span&gt;&amp;gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;set&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;name&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;tony&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;OK&lt;/span&gt;
+&lt;span style=&#34;color:#ae81ff&#34;&gt;127.0.0.1&lt;/span&gt;:&lt;span style=&#34;color:#ae81ff&#34;&gt;6379&lt;/span&gt;&amp;gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;get&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;name&lt;/span&gt;
+&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;tony&amp;#34;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+若使用redis-cli方式启动redis，则退出可直接输入quit进行退出
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;127.0.0.1&lt;/span&gt;:&lt;span style=&#34;color:#ae81ff&#34;&gt;6379&lt;/span&gt;&amp;gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;quit&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+若是使用redis-server方式启动可用下面方式关闭服务。
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;src&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;redis&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;cli&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;h&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;127.0.0.1&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;p&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;6379&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;shutdow&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/p&gt;
+</description>
+      
+    </item>
     
     <item>
       <title>MongoDB常用命令</title>
