@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Django on dyfblogs</title>
+    <link>https://fenglooking.github.io/tags/django/</link>
+    <description>Recent content in Django on dyfblogs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 02 Apr 2017 22:20:01 +0800</lastBuildDate>
+    
+	<atom:link href="https://fenglooking.github.io/tags/django/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Django常见问题</title>
+      <link>https://fenglooking.github.io/post/django-question-answer/</link>
+      <pubDate>Sun, 02 Apr 2017 22:20:01 +0800</pubDate>
+      
+      <guid>https://fenglooking.github.io/post/django-question-answer/</guid>
+      <description>我的环境是：Django2.2 + Python3.7 Q1 将Django的DEBUG设置为False后，静态文件加载失败：报404： 原因：Django的DEBUG</description>
+    </item>
+    
+  </channel>
+</rss>
