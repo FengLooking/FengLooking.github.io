@@ -114,14 +114,14 @@
   </url>
   
   <url>
-    <loc>https://fenglooking.github.io/tags/redis/</loc>
+    <loc>https://fenglooking.github.io/categories/redis/</loc>
     <lastmod>2018-09-03T19:30:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://fenglooking.github.io/categories/redis/</loc>
+    <loc>https://fenglooking.github.io/tags/redis/</loc>
     <lastmod>2018-09-03T19:30:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

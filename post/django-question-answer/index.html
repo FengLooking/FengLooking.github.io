@@ -23,7 +23,7 @@
 <meta name="mobile-web-app-capable" content="yes">
 
 <meta name="author" content="dyf" />
-  <meta name="description" content="我的环境是：Django2.2 &#43; Python3.7 Q1 将Django的DEBUG设置为False后，静态文件加载失败：报404： 原因：Django的DEBUG" />
+  <meta name="description" content="我的环境是：Django2.2 &#43; Python3.7 Q1 将Django的DEBUG设置为False后，静态文件加载失败：报404 原因：Django的DEBUG设" />
 
   <meta name="keywords" content="Hugo, theme, jane" />
 
@@ -58,25 +58,25 @@
 
 
 <meta property="og:title" content="Django常见问题" />
-<meta property="og:description" content="我的环境是：Django2.2 &#43; Python3.7 Q1 将Django的DEBUG设置为False后，静态文件加载失败：报404： 原因：Django的DEBUG" />
+<meta property="og:description" content="我的环境是：Django2.2 &#43; Python3.7 Q1 将Django的DEBUG设置为False后，静态文件加载失败：报404 原因：Django的DEBUG设" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://fenglooking.github.io/post/django-question-answer/" />
 <meta property="article:published_time" content="2017-04-02T22:20:01+08:00" />
 <meta property="article:modified_time" content="2017-04-02T22:30:01+08:00" />
 <meta itemprop="name" content="Django常见问题">
-<meta itemprop="description" content="我的环境是：Django2.2 &#43; Python3.7 Q1 将Django的DEBUG设置为False后，静态文件加载失败：报404： 原因：Django的DEBUG">
+<meta itemprop="description" content="我的环境是：Django2.2 &#43; Python3.7 Q1 将Django的DEBUG设置为False后，静态文件加载失败：报404 原因：Django的DEBUG设">
 
 
 <meta itemprop="datePublished" content="2017-04-02T22:20:01&#43;08:00" />
 <meta itemprop="dateModified" content="2017-04-02T22:30:01&#43;08:00" />
-<meta itemprop="wordCount" content="570">
+<meta itemprop="wordCount" content="657">
 
 
 
 <meta itemprop="keywords" content="Django," />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Django常见问题"/>
-<meta name="twitter:description" content="我的环境是：Django2.2 &#43; Python3.7 Q1 将Django的DEBUG设置为False后，静态文件加载失败：报404： 原因：Django的DEBUG"/>
+<meta name="twitter:description" content="我的环境是：Django2.2 &#43; Python3.7 Q1 将Django的DEBUG设置为False后，静态文件加载失败：报404 原因：Django的DEBUG设"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -308,7 +308,7 @@
     
     <div class="post-content">
       <p>我的环境是：Django2.2 + Python3.7<br />
-<strong>Q1 将Django的DEBUG设置为False后，静态文件加载失败：报404</strong>：<br />
+<strong>Q1 将Django的DEBUG设置为False后，静态文件加载失败：报404</strong><br />
 <strong>原因</strong>：Django的DEBUG设置为True，表示项目以调试方式运行，这种模式下程序出错后会在前端页面和后台报出对应错误，并且Django会自动搜索静态文件。设置DEBUG=False后，Django不会自动搜索静态文件，此时需要在ALLOWED_HOSTS里面添加程序所在的机器ip才能正常访问，并且Django会认为当前环境是生产环境，不在代理静态文件，自然也不会去搜索静态文件，程序运行需要加载静态文件时便会报404。<br />
 <strong>解决方法</strong>：给静态文件设置路由以便于程序根据路由搜索静态文件。<br />
 1.在将DEBUG设置为False后，首先需要将程序所在机器的ip加入ALLOWED_HOSTS。
@@ -333,7 +333,11 @@
 <span style="color:#a6e22e">urlpatterns</span> = [
     <span style="color:#a6e22e">url</span>(<span style="color:#a6e22e">r</span><span style="color:#960050;background-color:#1e0010">&#39;</span>^<span style="color:#a6e22e">static</span><span style="color:#f92672">/</span>(<span style="color:#960050;background-color:#1e0010">?</span><span style="color:#a6e22e">P</span>&lt;<span style="color:#a6e22e">path</span>&gt;.<span style="color:#f92672">*</span>)<span style="color:#960050;background-color:#1e0010">$&#39;</span>, <span style="color:#a6e22e">static</span>.<span style="color:#a6e22e">serve</span>, {<span style="color:#960050;background-color:#1e0010">&#39;</span><span style="color:#a6e22e">document_root</span><span style="color:#960050;background-color:#1e0010">&#39;</span>: <span style="color:#a6e22e">settings</span>.<span style="color:#a6e22e">STATIC_ROOT</span>}, <span style="color:#a6e22e">name</span>=<span style="color:#960050;background-color:#1e0010">&#39;</span><span style="color:#a6e22e">static</span><span style="color:#960050;background-color:#1e0010">&#39;</span>),
     <span style="color:#a6e22e">url</span>(<span style="color:#a6e22e">r</span><span style="color:#960050;background-color:#1e0010">&#39;</span>^<span style="color:#a6e22e">media</span><span style="color:#f92672">/</span>(<span style="color:#960050;background-color:#1e0010">?</span><span style="color:#a6e22e">P</span>&lt;<span style="color:#a6e22e">path</span>&gt;.<span style="color:#f92672">*</span>)<span style="color:#960050;background-color:#1e0010">$&#39;</span>, <span style="color:#a6e22e">static</span>.<span style="color:#a6e22e">serve</span>, {<span style="color:#960050;background-color:#1e0010">&#39;</span><span style="color:#a6e22e">document_root</span><span style="color:#960050;background-color:#1e0010">&#39;</span>: <span style="color:#a6e22e">settings</span>.<span style="color:#a6e22e">MEDIA_ROOT</span>}, <span style="color:#a6e22e">name</span>=<span style="color:#960050;background-color:#1e0010">&#39;</span><span style="color:#a6e22e">media</span><span style="color:#960050;background-color:#1e0010">&#39;</span>)
-]</code></pre></div></p>
+]</code></pre></div>
+经过上面的设置后访问管理控制台xadmin页面会发现管理页面的静态文件加载失败，此时为了方便开发有两种处理方式：<br />
+1.将配置还原。<br />
+2.启动Django自带的服务时加上 &ndash;insecure
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">python3</span> <span style="color:#a6e22e">manage</span>.<span style="color:#a6e22e">py</span> <span style="color:#a6e22e">runserver</span> <span style="color:#ae81ff">0.0.0.0</span>:<span style="color:#ae81ff">8000</span> <span style="color:#f92672">--</span><span style="color:#a6e22e">insecure</span></code></pre></div></p>
 
     </div>
 

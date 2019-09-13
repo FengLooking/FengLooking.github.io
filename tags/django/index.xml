@@ -17,7 +17,7 @@
       <pubDate>Sun, 02 Apr 2017 22:20:01 +0800</pubDate>
       
       <guid>https://fenglooking.github.io/post/django-question-answer/</guid>
-      <description>我的环境是：Django2.2 + Python3.7 Q1 将Django的DEBUG设置为False后，静态文件加载失败：报404： 原因：Django的DEBUG</description>
+      <description>我的环境是：Django2.2 + Python3.7 Q1 将Django的DEBUG设置为False后，静态文件加载失败：报404 原因：Django的DEBUG设</description>
     </item>
     
   </channel>
