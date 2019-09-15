@@ -51,7 +51,7 @@
 
 
 
-<link rel="stylesheet" href="/sass/jane.min.9c51b0fc4ad0a1f7263a6924cb00b12bd80841321b275bd02d39c2c5b81be8b6.css" integrity="sha256-nFGw/ErQofcmOmkkywCxK9gIQTIbJ1vQLTnCxbgb6LY=" media="screen" crossorigin="anonymous">
+<link rel="stylesheet" href="/sass/jane.min.8837f707325c2cd1d43aa2529002b99da731485bb5007305bbdc398602b582ba.css" integrity="sha256-iDf3BzJcLNHUOqJSkAK5nacxSFu1AHMFu9w5hgK1gro=" media="screen" crossorigin="anonymous">
 
 
 
@@ -62,7 +62,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://fenglooking.github.io/" />
 
-<meta property="og:updated_time" content="2019-08-31T01:15:13+08:00" />
+<meta property="og:updated_time" content="2018-09-03T19:20:01+08:00" />
 <meta itemprop="name" content="dyfblogs">
 <meta itemprop="description" content="Hugo theme jane example site.">
 
@@ -287,17 +287,24 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/hugoisforlovers/">Getting Started with Hugo</a>
+        <span class="post-pinned">
+          <svg class="icon" style="" viewBox="0 0 1024 1024" version="1.1"
+  width="32" height="32">
+  <path d="M682.666667 512V170.666667h42.666666V85.333333H298.666667v85.333334h42.666666v341.333333l-85.333333 85.333333v85.333334h221.866667v256h68.266666v-256H768v-85.333334l-85.333333-85.333333z"></path>
+</svg>
+
+        </span>
+      
+      <a class="post-link" href="/post/html-element-classify/">HTML元素分类</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2014-04-02" class="post-time">
-        2014-04-02
+      <time datetime="2016-09-02" class="post-time">
+        2016-09-02
       </time>
       <div class="post-category">
-          <a href="https://fenglooking.github.io/categories/development/"> Development </a>
-          <a href="https://fenglooking.github.io/categories/golang/"> golang </a>
-          <a href="https://fenglooking.github.io/categories/index/"> index </a>
+          <a href="https://fenglooking.github.io/categories/html/"> HTML </a>
+          <a href="https://fenglooking.github.io/categories/element/"> element </a>
           
         </div>
       
@@ -309,93 +316,10 @@
   <div class="post-content">
     
     <div class="post-summary">
-      Step 1. Install Hugo Goto hugo releases and download the appropriate version for your os and architecture.
-Save it somewhere specific as we will be using it in the next step.
-More complete instructions are available at installing hugo
-Step 2. Build the Docs Hugo has its own example site which happens to also be the documentation site you are reading right now.
-Follow the following steps:
- Clone the hugo repository Go into the repo Run hugo in server mode and build the docs Open your browser to http://localhost:1313  Corresponding pseudo commands:
+      在HTML中，HTML标签元素大体被分为三种不同的类型：内联元素(又叫行内元素)，块状元素，内联块状元素。 一.常用的内联元素有： 199&lt
     </div>
     <div class="read-more">
-      <a href="/post/hugoisforlovers/" class="read-more-link">Read more</a>
-    </div>
-    
-  </div>
-</article>
-
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/migrate-from-jekyll/">Migrate to Hugo from Jekyll</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2014-03-10" class="post-time">
-        2014-03-10
-      </time>
-      <div class="post-category">
-          <a href="https://fenglooking.github.io/categories/development/"> Development </a>
-          <a href="https://fenglooking.github.io/categories/golang/"> golang </a>
-          <a href="https://fenglooking.github.io/categories/index/"> index </a>
-          
-        </div>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      Move static content to static Jekyll has a rule that any directory not starting with _ will be copied as-is to the _site output. Hugo keeps all static content under static. You should therefore move it all there. With Jekyll, something that looked like
-▾ &lt;root&gt;/ ▾ images/ logo.png  should become
-▾ &lt;root&gt;/ ▾ static/ ▾ images/ logo.png  Additionally, you&rsquo;ll want any files that should reside at the root (such as CNAME) to be moved to static.
-    </div>
-    <div class="read-more">
-      <a href="/post/migrate-from-jekyll/" class="read-more-link">Read more</a>
-    </div>
-    
-  </div>
-</article>
-
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/syntax-highlighting/">Syntax Highlighting</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2011-08-30" class="post-time">
-        2011-08-30
-      </time>
-      <div class="post-category">
-          <a href="https://fenglooking.github.io/categories/syntax-highlighting/"> Syntax Highlighting </a>
-          <a href="https://fenglooking.github.io/categories/index/"> index </a>
-          
-        </div>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      <p>More detail: <a href="https://gohugo.io/content-management/syntax-highlighting/">Syntax Highlighting | Hugo</a></p>
-
-<pre><code class="language-js">function helloWorld () {
-  alert(&quot;Hello, World!&quot;)
-}
-</code></pre>
-    </div>
-    <div class="read-more">
-      <a href="/post/syntax-highlighting/" class="read-more-link">Read more</a>
+      <a href="/post/html-element-classify/" class="read-more-link">Read more</a>
     </div>
     
   </div>
