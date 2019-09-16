@@ -48,11 +48,11 @@
     </item>
     
     <item>
-      <title>Django常见问题</title>
-      <link>https://fenglooking.github.io/post/django-question-answer/</link>
+      <title>Django DEBUG=False后静态文件加载失败</title>
+      <link>https://fenglooking.github.io/post/django-debug-false/</link>
       <pubDate>Sun, 02 Apr 2017 22:20:01 +0800</pubDate>
       
-      <guid>https://fenglooking.github.io/post/django-question-answer/</guid>
+      <guid>https://fenglooking.github.io/post/django-debug-false/</guid>
       <description>我的环境是：Django2.2 + Python3.7 Q1 将Django的DEBUG设置为False后，静态文件加载失败：报404 原因：Django的DEBUG设</description>
     </item>
     
@@ -81,6 +81,15 @@
       
       <guid>https://fenglooking.github.io/post/sqlite-notes/</guid>
       <description>数据库(database)：存放数据的仓库，是一些关联表的集合。 RDBMS(Relational DataBase Management System)：关系数据库管理系统，是将数据组织为行和列的系统，是所有</description>
+    </item>
+    
+    <item>
+      <title>HTTP协议</title>
+      <link>https://fenglooking.github.io/post/http-protocol/</link>
+      <pubDate>Mon, 10 Oct 2016 20:50:01 +0800</pubDate>
+      
+      <guid>https://fenglooking.github.io/post/http-protocol/</guid>
+      <description>HTTP：Hypertext Transfer Protocol，超文本传输协议。是个应用层协议。用于从万维网服务器传输超文本到本地浏览器的传输协议。HTTP</description>
     </item>
     
     <item>

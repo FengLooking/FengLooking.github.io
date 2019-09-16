@@ -591,11 +591,11 @@ Python2：&lt;a href=&#34;https://github.com/zhangfisher/DjangoUeditor&#34;&gt;h
     </item>
     
     <item>
-      <title>Django常见问题</title>
-      <link>https://fenglooking.github.io/post/django-question-answer/</link>
+      <title>Django DEBUG=False后静态文件加载失败</title>
+      <link>https://fenglooking.github.io/post/django-debug-false/</link>
       <pubDate>Sun, 02 Apr 2017 22:20:01 +0800</pubDate>
       
-      <guid>https://fenglooking.github.io/post/django-question-answer/</guid>
+      <guid>https://fenglooking.github.io/post/django-debug-false/</guid>
       
         <description>&lt;p&gt;我的环境是：Django2.2 + Python3.7&lt;br /&gt;
 &lt;strong&gt;Q1 将Django的DEBUG设置为False后，静态文件加载失败：报404&lt;/strong&gt;&lt;br /&gt;
@@ -1069,6 +1069,69 @@ RDBMS术语：&lt;br /&gt;
 上面程序的执行结果为
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;data&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;is&lt;/span&gt;: &amp;lt;&lt;span style=&#34;color:#a6e22e&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;list&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&amp;#39;&lt;/span&gt;&amp;gt;, [(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;1&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;tom&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;20&lt;/span&gt;), (&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;2&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;andy&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;28&lt;/span&gt;)]&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 从程序输出可以看出，fetchall返回一个list，该list的每一个元素都是tuple。&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>HTTP协议</title>
+      <link>https://fenglooking.github.io/post/http-protocol/</link>
+      <pubDate>Mon, 10 Oct 2016 20:50:01 +0800</pubDate>
+      
+      <guid>https://fenglooking.github.io/post/http-protocol/</guid>
+      
+        <description>&lt;p&gt;&lt;strong&gt;HTTP&lt;/strong&gt;：Hypertext Transfer Protocol，超文本传输协议。是个应用层协议。用于从万维网服务器传输超文本到本地浏览器的传输协议。HTTP端口号默认为80。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;HTTP是无连接的：限制每次连接只处理一个请求。服务器处理完客户请求并收到客户应答后，就会断开连接。&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;HTTP是媒体独立的：客户端及服务器指定使用合适的MIME-type内容类型。只要客户端和服务器知道如何处理数据内容，任何类型的数据都可以通过HTTP发送。&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;HTTP是无状态的：无状态是指对于事务处理没有记忆能力。无状态也就意味着若后续需要前面的信息，则它必须重传，这样可能导致每次连接传送的数据量增大。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;HTTP工作原理：HTTP协议工作于 客户端-服务器 架构上。浏览器作为HTTP客户端通过URL向HTTP服务端(WEB服务器)发送请求。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;MIME&lt;/strong&gt;：Multipurpose Internet Mail Extension，多用途英特网邮件扩展。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;URI&lt;/strong&gt;：Uniform Resource Identifier，统一资源标识符。URI有两种形式，分别是URL和URN。
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;URL&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;：&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;统一资源定位符&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;。&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;描述一台特定服务器上某资源的特定位置&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;，&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;说明如何从一个精确&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;、&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;固定的位置获取资源&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;。&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;URN&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;：&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;统一资源名&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;。&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;作为特定内容的唯一名称使用&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;，&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;与目前的资源所在地无关&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;。&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+HTTP状态码分类&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;范围&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;分类&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;100~199&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;信息提示&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;200~299&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;成功&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;300~399&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;重定向&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;400~499&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;客户端错误&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;500~599&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;服务器错误&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 </description>
       
     </item>
