@@ -23,7 +23,7 @@
 <meta name="mobile-web-app-capable" content="yes">
 
 <meta name="author" content="dyf" />
-  <meta name="description" content="HTTP：Hypertext Transfer Protocol，超文本传输协议。是个应用层协议。用于从万维网服务器传输超文本到本地浏览器的传输协议。HTTP" />
+  <meta name="description" content="HTTP：Hypertext Transfer Protocol，超文本传输协议。是一个基于请求与响应模式的、无状态的、应用层的协议，常基于TCP的连接方式。" />
 
   <meta name="keywords" content="Hugo, theme, jane" />
 
@@ -58,25 +58,25 @@
 
 
 <meta property="og:title" content="HTTP协议" />
-<meta property="og:description" content="HTTP：Hypertext Transfer Protocol，超文本传输协议。是个应用层协议。用于从万维网服务器传输超文本到本地浏览器的传输协议。HTTP" />
+<meta property="og:description" content="HTTP：Hypertext Transfer Protocol，超文本传输协议。是一个基于请求与响应模式的、无状态的、应用层的协议，常基于TCP的连接方式。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://fenglooking.github.io/post/http-protocol/" />
 <meta property="article:published_time" content="2016-10-10T20:50:01+08:00" />
 <meta property="article:modified_time" content="2016-10-10T20:50:01+08:00" />
 <meta itemprop="name" content="HTTP协议">
-<meta itemprop="description" content="HTTP：Hypertext Transfer Protocol，超文本传输协议。是个应用层协议。用于从万维网服务器传输超文本到本地浏览器的传输协议。HTTP">
+<meta itemprop="description" content="HTTP：Hypertext Transfer Protocol，超文本传输协议。是一个基于请求与响应模式的、无状态的、应用层的协议，常基于TCP的连接方式。">
 
 
 <meta itemprop="datePublished" content="2016-10-10T20:50:01&#43;08:00" />
 <meta itemprop="dateModified" content="2016-10-10T20:50:01&#43;08:00" />
-<meta itemprop="wordCount" content="562">
+<meta itemprop="wordCount" content="848">
 
 
 
 <meta itemprop="keywords" content="HTTP," />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="HTTP协议"/>
-<meta name="twitter:description" content="HTTP：Hypertext Transfer Protocol，超文本传输协议。是个应用层协议。用于从万维网服务器传输超文本到本地浏览器的传输协议。HTTP"/>
+<meta name="twitter:description" content="HTTP：Hypertext Transfer Protocol，超文本传输协议。是一个基于请求与响应模式的、无状态的、应用层的协议，常基于TCP的连接方式。"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -307,7 +307,7 @@
 
     
     <div class="post-content">
-      <p><strong>HTTP</strong>：Hypertext Transfer Protocol，超文本传输协议。是个应用层协议。用于从万维网服务器传输超文本到本地浏览器的传输协议。HTTP端口号默认为80。</p>
+      <p><strong>HTTP</strong>：Hypertext Transfer Protocol，超文本传输协议。是一个基于请求与响应模式的、无状态的、应用层的协议，常基于TCP的连接方式。用于从万维网服务器传输超文本到本地浏览器的传输协议。HTTP端口号默认为80。</p>
 
 <ul>
 <li>HTTP是无连接的：限制每次连接只处理一个请求。服务器处理完客户请求并收到客户应答后，就会断开连接。<br /></li>
@@ -322,6 +322,46 @@
 <p><strong>URI</strong>：Uniform Resource Identifier，统一资源标识符。URI有两种形式，分别是URL和URN。
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">URL</span><span style="color:#960050;background-color:#1e0010">：</span><span style="color:#a6e22e">统一资源定位符</span><span style="color:#960050;background-color:#1e0010">。</span><span style="color:#a6e22e">描述一台特定服务器上某资源的特定位置</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">说明如何从一个精确</span><span style="color:#960050;background-color:#1e0010">、</span><span style="color:#a6e22e">固定的位置获取资源</span><span style="color:#960050;background-color:#1e0010">。</span>
 <span style="color:#a6e22e">URN</span><span style="color:#960050;background-color:#1e0010">：</span><span style="color:#a6e22e">统一资源名</span><span style="color:#960050;background-color:#1e0010">。</span><span style="color:#a6e22e">作为特定内容的唯一名称使用</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">与目前的资源所在地无关</span><span style="color:#960050;background-color:#1e0010">。</span></code></pre></div>
+<strong>HTTP请求</strong>：HTTP请求由三部分组成：请求行、消息报头、请求正文。<br />
+HTTP主要请求方法如下：</p>
+
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>描述</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>GET</td>
+<td>向服务器请求获取资源</td>
+</tr>
+
+<tr>
+<td>POST</td>
+<td>向服务器提交资源</td>
+</tr>
+
+<tr>
+<td>HEAD</td>
+<td>请求获取响应消息报头</td>
+</tr>
+
+<tr>
+<td>PUT</td>
+<td>请求服务器存储一个资源</td>
+</tr>
+
+<tr>
+<td>DELETE</td>
+<td>请求服务器删除资源</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>HTTP响应</strong>：HTTP响应由三部分组成：状态行、消息报头、响应正文
 HTTP状态码分类</p>
 
 <table>
@@ -356,6 +396,62 @@ HTTP状态码分类</p>
 <tr>
 <td>500~599</td>
 <td align="left">服务器错误</td>
+</tr>
+</tbody>
+</table>
+
+<p>常见状态码、状态描述、说明：</p>
+
+<table>
+<thead>
+<tr>
+<th>状态码</th>
+<th>状态描述</th>
+<th>说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>200</td>
+<td>OK</td>
+<td>客户端请求成功</td>
+</tr>
+
+<tr>
+<td>400</td>
+<td>Bad Request</td>
+<td>客户端请求有语法错误，不能被服务器理解</td>
+</tr>
+
+<tr>
+<td>401</td>
+<td>Unauthorized</td>
+<td>请求未经授权</td>
+</tr>
+
+<tr>
+<td>403</td>
+<td>Forbidden</td>
+<td>服务器收到请求，但是拒绝提供服务</td>
+</tr>
+
+<tr>
+<td>404</td>
+<td>Not Found</td>
+<td>请求资源不存在</td>
+</tr>
+
+<tr>
+<td>500</td>
+<td>Internal Server Error</td>
+<td>服务器发生错误</td>
+</tr>
+
+<tr>
+<td>503</td>
+<td>Server Unavailable</td>
+<td>服务器当前不能处理客户端的请求</td>
 </tr>
 </tbody>
 </table>
