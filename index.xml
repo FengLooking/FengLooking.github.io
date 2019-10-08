@@ -809,6 +809,51 @@ Query OK, &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt; rows &lt;span
     </item>
     
     <item>
+      <title>linux平台虚拟环境依赖安装</title>
+      <link>https://fenglooking.github.io/post/virtualenv-install/</link>
+      <pubDate>Thu, 02 Mar 2017 21:50:01 +0800</pubDate>
+      
+      <guid>https://fenglooking.github.io/post/virtualenv-install/</guid>
+      
+        <description>&lt;p&gt;当你的环境上有多个项目，每个项目所依赖的包版本不同时，搭建多个互不干扰的开发环境就显得很有必要&lt;br /&gt;
+1.安装依赖包
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;sudo&lt;/span&gt;) &lt;span style=&#34;color:#a6e22e&#34;&gt;pip&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;install&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;virtualenv&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;virtualenvwrapper&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+2.在~/.bash_profile(有的是.bashrc,也有的是.zshrc,根据shell类型而异)文件添加以下内容
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; [ &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;f&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;usr&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;local&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;bin&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;virtualenvwrapper&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;sh&lt;/span&gt; ]; &lt;span style=&#34;color:#a6e22e&#34;&gt;then&lt;/span&gt; 
+    &lt;span style=&#34;color:#a6e22e&#34;&gt;export&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;WORKON_HOME&lt;/span&gt;=&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;$&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;HOME&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;virtualenvs&lt;/span&gt;
+    &lt;span style=&#34;color:#a6e22e&#34;&gt;export&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;PROJECT_HOME&lt;/span&gt;=&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;$&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;HOME&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;workspace&lt;/span&gt;
+    &lt;span style=&#34;color:#a6e22e&#34;&gt;export&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;VIRTUALENVWRAPPER_PYTHON&lt;/span&gt;=&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;usr&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;local&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;Frameworks&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;Python&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;framework&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;Versions&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;3.7&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;bin&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;python3&lt;/span&gt;
+    &lt;span style=&#34;color:#a6e22e&#34;&gt;source&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;usr&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;local&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;bin&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;virtualenvwrapper&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;sh&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;fi&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+其中VIRTUALENVWRAPPER_PYTHON是所用环境的python路径&lt;br /&gt;
+修改后如果想让其立即生效可执行类型如下的命令, 也可以重启终端使之生效
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;source&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;~&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;bash_profile&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;虚拟环境常用方法&lt;/strong&gt;&lt;br /&gt;
+创建运行环境xxx_env
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;mkvirtualenv&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;xxx_env&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+进入xxx_env环境
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;workon&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;xxx_env&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+退出环境
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;deactivate&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+列出可用的运行环境
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;lsvirtualenv&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+列出当前环境安装的包
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;lssitepackages&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+删除运行环境
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;rmvirtualenv&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;xxx_env&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;创建临时运行环境
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;mktmpenv&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+创建xxx01项目和运行环境xxx01
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;mkproject&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;xxx01&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
       <title>SQLite基础使用</title>
       <link>https://fenglooking.github.io/post/sqlite-notes/</link>
       <pubDate>Tue, 28 Feb 2017 23:22:01 +0800</pubDate>
@@ -1501,6 +1546,25 @@ RGB的每一项可以是0~255之间的整数，也可以是0%~100%之间的百�
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;199&lt;/span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;div&lt;/span&gt; {
 &lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;200&lt;/span&gt;        &lt;span style=&#34;color:#a6e22e&#34;&gt;display&lt;/span&gt;: &lt;span style=&#34;color:#a6e22e&#34;&gt;inline&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;block&lt;/span&gt;;
 &lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;201&lt;/span&gt;    }&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>linux平台配置pip源</title>
+      <link>https://fenglooking.github.io/post/pip-linux-config/</link>
+      <pubDate>Sun, 10 Jan 2016 20:50:01 +0800</pubDate>
+      
+      <guid>https://fenglooking.github.io/post/pip-linux-config/</guid>
+      
+        <description>&lt;p&gt;1.在根目录下创建.pip文件夹
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;mkdir&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;~&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;pip&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+2.在创建好的.pip文件夹下创建pip源配置文件
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;touch&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;~&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;pip&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;pip&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;conf&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+3.选择国内某一pip源配置到文件pip.conf中，样例如下(这里用的是阿里的pip源)：
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;[&lt;span style=&#34;color:#a6e22e&#34;&gt;global&lt;/span&gt;]
+&lt;span style=&#34;color:#a6e22e&#34;&gt;index&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;url&lt;/span&gt;=&lt;span style=&#34;color:#a6e22e&#34;&gt;http&lt;/span&gt;:&lt;span style=&#34;color:#75715e&#34;&gt;//mirrors.aliyun.com/pypi/simple
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;trusted&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;host&lt;/span&gt;=&lt;span style=&#34;color:#a6e22e&#34;&gt;mirrors&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;aliyun&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;com&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/p&gt;
 </description>
       
     </item>

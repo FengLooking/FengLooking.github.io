@@ -75,6 +75,15 @@
     </item>
     
     <item>
+      <title>linux平台虚拟环境依赖安装</title>
+      <link>https://fenglooking.github.io/post/virtualenv-install/</link>
+      <pubDate>Thu, 02 Mar 2017 21:50:01 +0800</pubDate>
+      
+      <guid>https://fenglooking.github.io/post/virtualenv-install/</guid>
+      <description>当你的环境上有多个项目，每个项目所依赖的包版本不同时，搭建多个互不干扰的开发环境就显得很有必要 1.安装依赖包 (sudo) pip install virtualenv virtualenvwrapper 2.在~/.bash_</description>
+    </item>
+    
+    <item>
       <title>SQLite基础使用</title>
       <link>https://fenglooking.github.io/post/sqlite-notes/</link>
       <pubDate>Tue, 28 Feb 2017 23:22:01 +0800</pubDate>
@@ -135,6 +144,15 @@
       
       <guid>https://fenglooking.github.io/post/html-element-classify/</guid>
       <description>在HTML中，HTML标签元素大体被分为三种不同的类型：内联元素(又叫行内元素)，块状元素，内联块状元素。 一.常用的内联元素有： 199&amp;lt</description>
+    </item>
+    
+    <item>
+      <title>linux平台配置pip源</title>
+      <link>https://fenglooking.github.io/post/pip-linux-config/</link>
+      <pubDate>Sun, 10 Jan 2016 20:50:01 +0800</pubDate>
+      
+      <guid>https://fenglooking.github.io/post/pip-linux-config/</guid>
+      <description>1.在根目录下创建.pip文件夹 mkdir ~/.pip 2.在创建好的.pip文件夹下创建pip源配置文件 touch ~/.pip/pip.conf 3.选择国内某一pip源配置到文件pip.conf</description>
     </item>
     
   </channel>
