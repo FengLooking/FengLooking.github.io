@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Archive - dyfblogs</title>
+  <title>面试题 - dyfblogs</title>
   
 
 <meta name="renderer" content="webkit" />
@@ -22,8 +22,9 @@
 
 <meta name="mobile-web-app-capable" content="yes">
 
-<meta name="author" content="DYF" />
-  <meta name="description" content="Hugo theme jane example site." />
+<meta name="author" content="dyf" />
+  <meta name="description" content="1.DNS解析 DNS：Domain Name System，域名系统的缩写。 通过主机名、最终得到主机名对应的ip地址的过程叫做域名解析(或主机名解析)" />
+
   <meta name="keywords" content="Hugo, theme, jane" />
 
 
@@ -34,8 +35,7 @@
 <meta name="generator" content="Hugo 0.57.2" />
 
 
-<link rel="canonical" href="https://fenglooking.github.io/post/" />
-<link href="%7balternate%20%7bRSS%20application/rss&#43;xml%20%20index%20alternate%20%20false%20false%20true%20false%20false%200%7d%20/post/index.xml%20https://fenglooking.github.io/post/index.xml%7d" rel="alternate" type="application/rss+xml" title="dyfblogs" />
+<link rel="canonical" href="https://fenglooking.github.io/post/interview-questions/" />
 
 
 
@@ -57,18 +57,26 @@
 
 
 
-<meta property="og:title" content="Posts" />
-<meta property="og:description" content="Hugo theme jane example site." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://fenglooking.github.io/post/" />
+<meta property="og:title" content="面试题" />
+<meta property="og:description" content="1.DNS解析 DNS：Domain Name System，域名系统的缩写。 通过主机名、最终得到主机名对应的ip地址的过程叫做域名解析(或主机名解析)" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://fenglooking.github.io/post/interview-questions/" />
+<meta property="article:published_time" content="2019-10-10T20:17:01+08:00" />
+<meta property="article:modified_time" content="2019-10-10T20:50:01+08:00" />
+<meta itemprop="name" content="面试题">
+<meta itemprop="description" content="1.DNS解析 DNS：Domain Name System，域名系统的缩写。 通过主机名、最终得到主机名对应的ip地址的过程叫做域名解析(或主机名解析)">
 
-<meta property="og:updated_time" content="2019-10-10T20:17:01+08:00" />
-<meta itemprop="name" content="Posts">
-<meta itemprop="description" content="Hugo theme jane example site.">
 
+<meta itemprop="datePublished" content="2019-10-10T20:17:01&#43;08:00" />
+<meta itemprop="dateModified" content="2019-10-10T20:50:01&#43;08:00" />
+<meta itemprop="wordCount" content="1571">
+
+
+
+<meta itemprop="keywords" content="interview," />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Posts"/>
-<meta name="twitter:description" content="Hugo theme jane example site."/>
+<meta name="twitter:title" content="面试题"/>
+<meta name="twitter:description" content="1.DNS解析 DNS：Domain Name System，域名系统的缩写。 通过主机名、最终得到主机名对应的ip地址的过程叫做域名解析(或主机名解析)"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -217,7 +225,7 @@
 
       </li>
     
-        <li class="menu-item active">
+        <li class="menu-item">
           
           
           
@@ -275,183 +283,142 @@
     <main id="main" class="main bg-llight">
       <div class="content-wrapper">
         <div id="content" class="content container">
+          <article class="post bg-white article_content">
+    
+    <header class="post-header">
+      <h1 class="post-title">面试题</h1>
+      
+      <div class="post-meta">
+        <span>发表于</span>
+        <time datetime="2019-10-10" class="post-time">
+          2019-10-10
+        </time>
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Table of Contents</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#1-dns解析">1.DNS解析</a></li>
+<li><a href="#2-docker与虚拟化的区别">2.docker与虚拟化的区别</a></li>
+<li><a href="#3-负载均衡四层和七层">3.负载均衡四层和七层</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+
+    
+    <div class="post-content">
+      
+
+<h4 id="1-dns解析">1.DNS解析</h4>
+
+<p>DNS：Domain Name System，域名系统的缩写。<br />
+通过主机名、最终得到主机名对应的ip地址的过程叫做域名解析(或主机名解析)<br />
+过程如下：<br />
+1.用户主机上运行有DNS客户端<br />
+2.浏览器接收到URL后，将URL中的域名字段解析出来，并将该域名字段传送给DNS应用的客户端<br />
+3.DNS客户端向DNS服务器端发送一份查询报文，报文中包含要访问的域名字段<br />
+4.DNS服务器端返回一份应答报文给DNS客户端，应答报文中包含域名对应的ip地址<br />
+5.浏览器收到来自DNS的ip地址后，向该ip地址对应的HTTP服务器发起TCP连接</p>
+
+<p>浏览器是如何通过域名区查询对应的IP(对应的服务器地址)的？<br />
+解析顺序如下：其中①②③称为客户端DNS缓存<br />
+①浏览器缓存：当用户通过浏览器访问某域名时，浏览器首先会在自己的缓存中查找是否有该域名对应的IP地址。如果浏览器访问过该域名且没有清理缓存的情况下IP信息是存在的；<br />
+②系统缓存：当浏览器缓存中没有域名对应的IP，则会自动检查用户计算机系统Host文件DNS缓存中是否存在该域名对应的IP地址；<br />
+③路由器缓存：当浏览器及系统缓存中都没有域名对应的IP则到路由器缓存中进行查询；<br />
+④ISP DNS缓存：在用户客户端查询不到域名对应的IP地址时，就会进入ISP(Internet Service Provider)互联网服务提供商 DNS缓存中进行查询；<br />
+⑤根域名服务器：当以上均未完成，则进入根域名服务器查询。根域名服务器收到请求后会查询区域文件记录，若无则将其管辖范围内的顶级域名(如.com)服务器IP告诉本地DNS服务器；<br />
+⑥顶级域名服务器：顶级域名服务器收到请求后查看区域文件记录，若无则将其管辖范围的主域名服务器的IP地址告诉本地DNS服务器；<br />
+⑦主域名服务器：主域名服务器收到请求后查询自己的缓存，若无则进入下一级域名服务器进行查询，并且会重复该步骤直到查询到正确记录；<br />
+⑧保存结果至缓存：本地域名服务器把返回的结果保存到缓存，以备下一次使用，同时将结果反馈给客户端，客户端会通过这个IP地址与WEB服务器建立链接。</p>
+
+<h4 id="2-docker与虚拟化的区别">2.docker与虚拟化的区别</h4>
+
+<p>虚拟化技术是一个总称，是一系列实现虚拟技术的统称。虚拟化技术包括了虚拟机技术和容器技术。虚拟化技术最大的特点就是将一个真实的机器进行虚拟地分割，然后分割出来的部分可以独立使用。</p>
+
+<p>虚拟机(Virtual Machine)是指通过软件模拟的具有完整硬件系统功能的、运行在一个完全隔离环境中的完整计算机系统。即：把一个硬件划分为多个机器，每个机器都能独立运行。</p>
+
+<p>容器技术也能实现在一台硬件机器上虚拟出多个容器，每个容器中都可以放置一个互相隔离的服务器。所以容器实际也是采用虚拟的方式进行的，在同等条件下，容器技术比虚拟机技术效率高，但是容器中没有包含独立的操作系统，虚拟机中包含独立的操作系统，所以每台虚拟机中的功能比每个容器的功能要多，正是因为虚拟机带有的东西多，所以占用的系统资源大。</p>
+
+<h4 id="3-负载均衡四层和七层">3.负载均衡四层和七层</h4>
+
+<p>负载均衡(Load Balance)就是把任务分摊到多个操作单元上进行执行，如：WEB服务器，FTP服务器等，从而完成工作任务。<br />
+负载均衡是建立在现有网络结构之上，提供了一种廉价有效的方法扩展网络设备和服务器的带宽、增加吞吐量、加强网络数据处理能力、提高网路的灵活性和可用性。</p>
+
+<p>负载均衡四层就是IP+端口的负载均衡，通过虚拟IP+端口接收请求，然后再分配到真实的服务器，主要是通过报文中的目标地址和端口，再加上负载均衡设备设置的服务器选择方式，决定最终选择的服务器。</p>
+
+<p>负载均衡七层就是基于URL等应用层信息的负载均衡，通过虚拟的URL或者主机名接收请求，然后再分配到真实的服务器，七层负载均衡也称为内容交换：就是主要通过报文中真正有意义的应用层内容，加上负载均衡设备设置的服务器选择方式，决定最终选择的服务器。</p>
+
+    </div>
+
+    
+    
+
+
+    
+    
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          <a href="https://fenglooking.github.io/tags/interview/">interview</a>
           
-<section id="archive" class="archive">
-    <div class="archive-title">
-      <span class="archive-post-counter">
-          17 posts In Total
-      </span>
-    </div>
-    
-      <div class="collection-title">
-        <h2 class="archive-year">2019</h2>
-      </div>
+        </div>
 
-    <div class="archive-post">
-      <time datetime="2019-10-10" class="archive-post-time">
-        2019-10-10
-      </time>
-      <span class="archive-post-title">
-        <a href="/post/interview-questions/" class="archive-post-link">
-          面试题
-        </a>
-      </span>
-    </div>
-    
-      <div class="collection-title">
-        <h2 class="archive-year">2018</h2>
-      </div>
-
-    <div class="archive-post">
-      <time datetime="2018-09-03" class="archive-post-time">
-        2018-09-03
-      </time>
-      <span class="archive-post-title">
-        <a href="/post/redis-basicuse/" class="archive-post-link">
-          Redis基础使用
-        </a>
-      </span>
-    </div>
-    
-
-    <div class="archive-post">
-      <time datetime="2018-08-03" class="archive-post-time">
-        2018-08-03
-      </time>
-      <span class="archive-post-title">
-        <a href="/post/mongodb-common/" class="archive-post-link">
-          MongoDB常用命令
-        </a>
-      </span>
-    </div>
-    
-
-    <div class="archive-post">
-      <time datetime="2018-08-02" class="archive-post-time">
-        2018-08-02
-      </time>
-      <span class="archive-post-title">
-        <a href="/post/mongodb-basicuse/" class="archive-post-link">
-          MongoDB基础使用
-        </a>
-      </span>
-    </div>
-    
-      <div class="collection-title">
-        <h2 class="archive-year">2017</h2>
-      </div>
-
-    <div class="archive-post">
-      <time datetime="2017-04-05" class="archive-post-time">
-        2017-04-05
-      </time>
-      <span class="archive-post-title">
-        <a href="/post/django-xadmin-ueditor/" class="archive-post-link">
-          Django的Xadmin后台集成富文本Ueditor
-        </a>
-      </span>
-    </div>
-    
-
-    <div class="archive-post">
-      <time datetime="2017-04-02" class="archive-post-time">
-        2017-04-02
-      </time>
-      <span class="archive-post-title">
-        <a href="/post/django-debug-false/" class="archive-post-link">
-          Django DEBUG=False后静态文件加载失败
-        </a>
-      </span>
-    </div>
-    
-
-    <div class="archive-post">
-      <time datetime="2017-03-10" class="archive-post-time">
-        2017-03-10
-      </time>
-      <span class="archive-post-title">
-        <a href="/post/python-multprocess/" class="archive-post-link">
-          Python多进程
-        </a>
-      </span>
-    </div>
-    
-
-    <div class="archive-post">
-      <time datetime="2017-03-05" class="archive-post-time">
-        2017-03-05
-      </time>
-      <span class="archive-post-title">
-        <a href="/post/mysql-common/" class="archive-post-link">
-          MySQL常用命令
-        </a>
-      </span>
-    </div>
-    
-
-    <div class="archive-post">
-      <time datetime="2017-03-02" class="archive-post-time">
-        2017-03-02
-      </time>
-      <span class="archive-post-title">
-        <a href="/post/virtualenv-install/" class="archive-post-link">
-          linux平台虚拟环境依赖安装
-        </a>
-      </span>
-    </div>
-    
-
-    <div class="archive-post">
-      <time datetime="2017-02-28" class="archive-post-time">
-        2017-02-28
-      </time>
-      <span class="archive-post-title">
-        <a href="/post/sqlite-notes/" class="archive-post-link">
-          SQLite基础使用
-        </a>
-      </span>
-    </div></section>
-
-
-
-
-
-
-  
-  
-  
-
-  
-  
-
-  
-  
-
-  
-  
-
-  
-  
-  <nav class="pagination">
-    <ul>
       
-      <li  class="active" >
-        <a href="/post/">1</a>
-      </li>
-      
-      <li >
-        <a href="/post/page/2/">2</a>
-      </li>
-      
-    </ul>
-  </nav>
+      <nav class="post-nav">
+        
+        
+          <a class="next" href="/post/redis-basicuse/">
+            <span class="next-text nav-default">Redis基础使用</span>
+            <span class="prev-text nav-mobile">Next</span>
+            
+            <i class="iconfont">
+              <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18">
+  <path d="M332.091514 74.487481l-75.369571 89.491197c-10.963703 12.998035-10.285251 32.864502 1.499144 44.378743l286.278095 300.375162L266.565125 819.058374c-11.338233 12.190647-11.035334 32.285311 0.638543 44.850487l80.46666 86.564541c11.680017 12.583596 30.356378 12.893658 41.662889 0.716314l377.434212-421.426145c11.332093-12.183484 11.041474-32.266891-0.657986-44.844348l-80.46666-86.564541c-1.772366-1.910513-3.706415-3.533476-5.750981-4.877077L373.270379 71.774697C361.493148 60.273758 343.054193 61.470003 332.091514 74.487481z"></path>
+</svg>
+
+            </i>
+          </a>
+      </nav>
+    </footer>
+  </article>
 
   
   
 
+  
+  
 
+  
 
+  
+  
 
+  
+
+  
+
+  
+
+    
+
+  
 
         </div>
       </div>

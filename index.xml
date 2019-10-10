@@ -6,10 +6,61 @@
     <description>Recent content on dyfblogs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 03 Sep 2018 19:20:01 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 10 Oct 2019 20:17:01 +0800</lastBuildDate>
     
         <atom:link href="https://fenglooking.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>面试题</title>
+      <link>https://fenglooking.github.io/post/interview-questions/</link>
+      <pubDate>Thu, 10 Oct 2019 20:17:01 +0800</pubDate>
+      
+      <guid>https://fenglooking.github.io/post/interview-questions/</guid>
+      
+        <description>
+
+&lt;h4 id=&#34;1-dns解析&#34;&gt;1.DNS解析&lt;/h4&gt;
+
+&lt;p&gt;DNS：Domain Name System，域名系统的缩写。&lt;br /&gt;
+通过主机名、最终得到主机名对应的ip地址的过程叫做域名解析(或主机名解析)&lt;br /&gt;
+过程如下：&lt;br /&gt;
+1.用户主机上运行有DNS客户端&lt;br /&gt;
+2.浏览器接收到URL后，将URL中的域名字段解析出来，并将该域名字段传送给DNS应用的客户端&lt;br /&gt;
+3.DNS客户端向DNS服务器端发送一份查询报文，报文中包含要访问的域名字段&lt;br /&gt;
+4.DNS服务器端返回一份应答报文给DNS客户端，应答报文中包含域名对应的ip地址&lt;br /&gt;
+5.浏览器收到来自DNS的ip地址后，向该ip地址对应的HTTP服务器发起TCP连接&lt;/p&gt;
+
+&lt;p&gt;浏览器是如何通过域名区查询对应的IP(对应的服务器地址)的？&lt;br /&gt;
+解析顺序如下：其中①②③称为客户端DNS缓存&lt;br /&gt;
+①浏览器缓存：当用户通过浏览器访问某域名时，浏览器首先会在自己的缓存中查找是否有该域名对应的IP地址。如果浏览器访问过该域名且没有清理缓存的情况下IP信息是存在的；&lt;br /&gt;
+②系统缓存：当浏览器缓存中没有域名对应的IP，则会自动检查用户计算机系统Host文件DNS缓存中是否存在该域名对应的IP地址；&lt;br /&gt;
+③路由器缓存：当浏览器及系统缓存中都没有域名对应的IP则到路由器缓存中进行查询；&lt;br /&gt;
+④ISP DNS缓存：在用户客户端查询不到域名对应的IP地址时，就会进入ISP(Internet Service Provider)互联网服务提供商 DNS缓存中进行查询；&lt;br /&gt;
+⑤根域名服务器：当以上均未完成，则进入根域名服务器查询。根域名服务器收到请求后会查询区域文件记录，若无则将其管辖范围内的顶级域名(如.com)服务器IP告诉本地DNS服务器；&lt;br /&gt;
+⑥顶级域名服务器：顶级域名服务器收到请求后查看区域文件记录，若无则将其管辖范围的主域名服务器的IP地址告诉本地DNS服务器；&lt;br /&gt;
+⑦主域名服务器：主域名服务器收到请求后查询自己的缓存，若无则进入下一级域名服务器进行查询，并且会重复该步骤直到查询到正确记录；&lt;br /&gt;
+⑧保存结果至缓存：本地域名服务器把返回的结果保存到缓存，以备下一次使用，同时将结果反馈给客户端，客户端会通过这个IP地址与WEB服务器建立链接。&lt;/p&gt;
+
+&lt;h4 id=&#34;2-docker与虚拟化的区别&#34;&gt;2.docker与虚拟化的区别&lt;/h4&gt;
+
+&lt;p&gt;虚拟化技术是一个总称，是一系列实现虚拟技术的统称。虚拟化技术包括了虚拟机技术和容器技术。虚拟化技术最大的特点就是将一个真实的机器进行虚拟地分割，然后分割出来的部分可以独立使用。&lt;/p&gt;
+
+&lt;p&gt;虚拟机(Virtual Machine)是指通过软件模拟的具有完整硬件系统功能的、运行在一个完全隔离环境中的完整计算机系统。即：把一个硬件划分为多个机器，每个机器都能独立运行。&lt;/p&gt;
+
+&lt;p&gt;容器技术也能实现在一台硬件机器上虚拟出多个容器，每个容器中都可以放置一个互相隔离的服务器。所以容器实际也是采用虚拟的方式进行的，在同等条件下，容器技术比虚拟机技术效率高，但是容器中没有包含独立的操作系统，虚拟机中包含独立的操作系统，所以每台虚拟机中的功能比每个容器的功能要多，正是因为虚拟机带有的东西多，所以占用的系统资源大。&lt;/p&gt;
+
+&lt;h4 id=&#34;3-负载均衡四层和七层&#34;&gt;3.负载均衡四层和七层&lt;/h4&gt;
+
+&lt;p&gt;负载均衡(Load Balance)就是把任务分摊到多个操作单元上进行执行，如：WEB服务器，FTP服务器等，从而完成工作任务。&lt;br /&gt;
+负载均衡是建立在现有网络结构之上，提供了一种廉价有效的方法扩展网络设备和服务器的带宽、增加吞吐量、加强网络数据处理能力、提高网路的灵活性和可用性。&lt;/p&gt;
+
+&lt;p&gt;负载均衡四层就是IP+端口的负载均衡，通过虚拟IP+端口接收请求，然后再分配到真实的服务器，主要是通过报文中的目标地址和端口，再加上负载均衡设备设置的服务器选择方式，决定最终选择的服务器。&lt;/p&gt;
+
+&lt;p&gt;负载均衡七层就是基于URL等应用层信息的负载均衡，通过虚拟的URL或者主机名接收请求，然后再分配到真实的服务器，七层负载均衡也称为内容交换：就是主要通过报文中真正有意义的应用层内容，加上负载均衡设备设置的服务器选择方式，决定最终选择的服务器。&lt;/p&gt;
+</description>
+      
+    </item>
     
     <item>
       <title>Redis基础使用</title>
