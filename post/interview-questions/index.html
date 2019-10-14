@@ -51,7 +51,7 @@
 
 
 
-<link rel="stylesheet" href="/sass/jane.min.8837f707325c2cd1d43aa2529002b99da731485bb5007305bbdc398602b582ba.css" integrity="sha256-iDf3BzJcLNHUOqJSkAK5nacxSFu1AHMFu9w5hgK1gro=" media="screen" crossorigin="anonymous">
+<link rel="stylesheet" href="/sass/jane.min.0667552a520076a23288015fc4fb663a28bc7b91658eb0ff9fee7745b376db14.css" integrity="sha256-BmdVKlIAdqIyiAFfxPtmOii8e5FljrD/n&#43;53RbN22xQ=" media="screen" crossorigin="anonymous">
 
 
 
@@ -69,7 +69,7 @@
 
 <meta itemprop="datePublished" content="2019-10-10T20:17:01&#43;08:00" />
 <meta itemprop="dateModified" content="2019-10-10T20:50:01&#43;08:00" />
-<meta itemprop="wordCount" content="1571">
+<meta itemprop="wordCount" content="1577">
 
 
 
@@ -328,40 +328,35 @@
 
 <p>DNS：Domain Name System，域名系统的缩写。<br />
 通过主机名、最终得到主机名对应的ip地址的过程叫做域名解析(或主机名解析)<br />
-过程如下：<br />
-1.用户主机上运行有DNS客户端<br />
-2.浏览器接收到URL后，将URL中的域名字段解析出来，并将该域名字段传送给DNS应用的客户端<br />
-3.DNS客户端向DNS服务器端发送一份查询报文，报文中包含要访问的域名字段<br />
-4.DNS服务器端返回一份应答报文给DNS客户端，应答报文中包含域名对应的ip地址<br />
-5.浏览器收到来自DNS的ip地址后，向该ip地址对应的HTTP服务器发起TCP连接</p>
-
-<p>浏览器是如何通过域名区查询对应的IP(对应的服务器地址)的？<br />
-解析顺序如下：其中①②③称为客户端DNS缓存<br />
-①浏览器缓存：当用户通过浏览器访问某域名时，浏览器首先会在自己的缓存中查找是否有该域名对应的IP地址。如果浏览器访问过该域名且没有清理缓存的情况下IP信息是存在的；<br />
-②系统缓存：当浏览器缓存中没有域名对应的IP，则会自动检查用户计算机系统Host文件DNS缓存中是否存在该域名对应的IP地址；<br />
-③路由器缓存：当浏览器及系统缓存中都没有域名对应的IP则到路由器缓存中进行查询；<br />
-④ISP DNS缓存：在用户客户端查询不到域名对应的IP地址时，就会进入ISP(Internet Service Provider)互联网服务提供商 DNS缓存中进行查询；<br />
-⑤根域名服务器：当以上均未完成，则进入根域名服务器查询。根域名服务器收到请求后会查询区域文件记录，若无则将其管辖范围内的顶级域名(如.com)服务器IP告诉本地DNS服务器；<br />
-⑥顶级域名服务器：顶级域名服务器收到请求后查看区域文件记录，若无则将其管辖范围的主域名服务器的IP地址告诉本地DNS服务器；<br />
-⑦主域名服务器：主域名服务器收到请求后查询自己的缓存，若无则进入下一级域名服务器进行查询，并且会重复该步骤直到查询到正确记录；<br />
-⑧保存结果至缓存：本地域名服务器把返回的结果保存到缓存，以备下一次使用，同时将结果反馈给客户端，客户端会通过这个IP地址与WEB服务器建立链接。</p>
+过程如下:
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#ae81ff">1.</span><span style="color:#a6e22e">用户主机上运行有DNS客户端</span>  
+<span style="color:#ae81ff">2.</span><span style="color:#a6e22e">浏览器接收到URL后</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">将URL中的域名字段解析出来</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">并将该域名字段传送给DNS应用的客户端</span>  
+<span style="color:#ae81ff">3.</span><span style="color:#a6e22e">DNS客户端向DNS服务器端发送一份查询报文</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">报文中包含要访问的域名字段</span>  
+<span style="color:#ae81ff">4.</span><span style="color:#a6e22e">DNS服务器端返回一份应答报文给DNS客户端</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">应答报文中包含域名对应的ip地址</span>  
+<span style="color:#ae81ff">5.</span><span style="color:#a6e22e">浏览器收到来自DNS的ip地址后</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">向该ip地址对应的HTTP服务器发起TCP连接</span></code></pre></div>
+浏览器是如何通过域名去查询对应的IP(对应的服务器地址)的？<br />
+解析顺序如下：其中1、2、3称为客户端DNS缓存
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#ae81ff">1.</span><span style="color:#a6e22e">浏览器缓存</span><span style="color:#960050;background-color:#1e0010">：</span><span style="color:#a6e22e">当用户通过浏览器访问某域名时</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">浏览器首先会在自己的缓存中查找是否有该域名对应的IP地址</span><span style="color:#960050;background-color:#1e0010">。</span><span style="color:#a6e22e">如果浏览器访问过该域名且没有清理缓存的情况下IP信息是存在的</span><span style="color:#960050;background-color:#1e0010">；</span>  
+<span style="color:#ae81ff">2.</span><span style="color:#a6e22e">系统缓存</span><span style="color:#960050;background-color:#1e0010">：</span><span style="color:#a6e22e">当浏览器缓存中没有域名对应的IP</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">则会自动检查用户计算机系统Host文件DNS缓存中是否存在该域名对应的IP地址</span><span style="color:#960050;background-color:#1e0010">；</span>  
+<span style="color:#ae81ff">3.</span><span style="color:#a6e22e">路由器缓存</span><span style="color:#960050;background-color:#1e0010">：</span><span style="color:#a6e22e">当浏览器及系统缓存中都没有域名对应的IP则到路由器缓存中进行查询</span><span style="color:#960050;background-color:#1e0010">；</span>  
+<span style="color:#ae81ff">4.</span><span style="color:#a6e22e">ISP</span> <span style="color:#a6e22e">DNS缓存</span><span style="color:#960050;background-color:#1e0010">：</span><span style="color:#a6e22e">在用户客户端查询不到域名对应的IP地址时</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">就会进入ISP</span>(<span style="color:#a6e22e">Internet</span> <span style="color:#a6e22e">Service</span> <span style="color:#a6e22e">Provider</span>)<span style="color:#a6e22e">互联网服务提供商</span> <span style="color:#a6e22e">DNS缓存中进行查询</span><span style="color:#960050;background-color:#1e0010">；</span>  
+<span style="color:#ae81ff">5.</span><span style="color:#a6e22e">根域名服务器</span><span style="color:#960050;background-color:#1e0010">：</span><span style="color:#a6e22e">当以上均未完成</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">则进入根域名服务器查询</span><span style="color:#960050;background-color:#1e0010">。</span><span style="color:#a6e22e">根域名服务器收到请求后会查询区域文件记录</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">若无则将其管辖范围内的顶级域名</span>(<span style="color:#a6e22e">如</span>.<span style="color:#a6e22e">com</span>)<span style="color:#a6e22e">服务器IP告诉本地DNS服务器</span><span style="color:#960050;background-color:#1e0010">；</span>  
+<span style="color:#ae81ff">6.</span><span style="color:#a6e22e">顶级域名服务器</span><span style="color:#960050;background-color:#1e0010">：</span><span style="color:#a6e22e">顶级域名服务器收到请求后查看区域文件记录</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">若无则将其管辖范围的主域名服务器的IP地址告诉本地DNS服务器</span><span style="color:#960050;background-color:#1e0010">；</span>  
+<span style="color:#ae81ff">7.</span><span style="color:#a6e22e">主域名服务器</span><span style="color:#960050;background-color:#1e0010">：</span><span style="color:#a6e22e">主域名服务器收到请求后查询自己的缓存</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">若无则进入下一级域名服务器进行查询</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">并且会重复该步骤直到查询到正确记录</span><span style="color:#960050;background-color:#1e0010">；</span>  
+<span style="color:#ae81ff">8.</span><span style="color:#a6e22e">保存结果至缓存</span><span style="color:#960050;background-color:#1e0010">：</span><span style="color:#a6e22e">本地域名服务器把返回的结果保存到缓存</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">以备下一次使用</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">同时将结果反馈给客户端</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">客户端会通过这个IP地址与WEB服务器建立链接</span><span style="color:#960050;background-color:#1e0010">。</span></code></pre></div></p>
 
 <h4 id="2-docker与虚拟化的区别">2.docker与虚拟化的区别</h4>
 
-<p>虚拟化技术是一个总称，是一系列实现虚拟技术的统称。虚拟化技术包括了虚拟机技术和容器技术。虚拟化技术最大的特点就是将一个真实的机器进行虚拟地分割，然后分割出来的部分可以独立使用。</p>
-
-<p>虚拟机(Virtual Machine)是指通过软件模拟的具有完整硬件系统功能的、运行在一个完全隔离环境中的完整计算机系统。即：把一个硬件划分为多个机器，每个机器都能独立运行。</p>
-
-<p>容器技术也能实现在一台硬件机器上虚拟出多个容器，每个容器中都可以放置一个互相隔离的服务器。所以容器实际也是采用虚拟的方式进行的，在同等条件下，容器技术比虚拟机技术效率高，但是容器中没有包含独立的操作系统，虚拟机中包含独立的操作系统，所以每台虚拟机中的功能比每个容器的功能要多，正是因为虚拟机带有的东西多，所以占用的系统资源大。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">   <span style="color:#a6e22e">虚拟化技术是一个总称</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">是一系列实现虚拟技术的统称</span><span style="color:#960050;background-color:#1e0010">。</span><span style="color:#a6e22e">虚拟化技术包括了虚拟机技术和容器技术</span><span style="color:#960050;background-color:#1e0010">。</span><span style="color:#a6e22e">虚拟化技术最大的特点就是将一个真实的机器进行虚拟地分割</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">然后分割出来的部分可以独立使用</span><span style="color:#960050;background-color:#1e0010">。</span>
+   <span style="color:#a6e22e">虚拟机</span>(<span style="color:#a6e22e">Virtual</span> <span style="color:#a6e22e">Machine</span>)<span style="color:#a6e22e">是指通过软件模拟的具有完整硬件系统功能的</span><span style="color:#960050;background-color:#1e0010">、</span><span style="color:#a6e22e">运行在一个完全隔离环境中的完整计算机系统</span><span style="color:#960050;background-color:#1e0010">。</span><span style="color:#a6e22e">即</span><span style="color:#960050;background-color:#1e0010">：</span><span style="color:#a6e22e">把一个硬件划分为多个机器</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">每个机器都能独立运行</span><span style="color:#960050;background-color:#1e0010">。</span>
+   <span style="color:#a6e22e">容器技术也能实现在一台硬件机器上虚拟出多个容器</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">每个容器中都可以放置一个互相隔离的服务器</span><span style="color:#960050;background-color:#1e0010">。</span><span style="color:#a6e22e">所以容器实际也是采用虚拟的方式进行的</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">在同等条件下</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">容器技术比虚拟机技术效率高</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">但是容器中没有包含独立的操作系统</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">虚拟机中包含独立的操作系统</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">所以每台虚拟机中的功能比每个容器的功能要多</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">正是因为虚拟机带有的东西多</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">所以占用的系统资源大</span><span style="color:#960050;background-color:#1e0010">。</span></code></pre></div>
 
 <h4 id="3-负载均衡四层和七层">3.负载均衡四层和七层</h4>
 
-<p>负载均衡(Load Balance)就是把任务分摊到多个操作单元上进行执行，如：WEB服务器，FTP服务器等，从而完成工作任务。<br />
-负载均衡是建立在现有网络结构之上，提供了一种廉价有效的方法扩展网络设备和服务器的带宽、增加吞吐量、加强网络数据处理能力、提高网路的灵活性和可用性。</p>
-
-<p>负载均衡四层就是IP+端口的负载均衡，通过虚拟IP+端口接收请求，然后再分配到真实的服务器，主要是通过报文中的目标地址和端口，再加上负载均衡设备设置的服务器选择方式，决定最终选择的服务器。</p>
-
-<p>负载均衡七层就是基于URL等应用层信息的负载均衡，通过虚拟的URL或者主机名接收请求，然后再分配到真实的服务器，七层负载均衡也称为内容交换：就是主要通过报文中真正有意义的应用层内容，加上负载均衡设备设置的服务器选择方式，决定最终选择的服务器。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">   <span style="color:#a6e22e">负载均衡</span>(<span style="color:#a6e22e">Load</span> <span style="color:#a6e22e">Balance</span>)<span style="color:#a6e22e">就是把任务分摊到多个操作单元上进行执行</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">如</span><span style="color:#960050;background-color:#1e0010">：</span><span style="color:#a6e22e">WEB服务器</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">FTP服务器等</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">从而完成工作任务</span><span style="color:#960050;background-color:#1e0010">。</span>  
+   <span style="color:#a6e22e">负载均衡是建立在现有网络结构之上</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">提供了一种廉价有效的方法扩展网络设备和服务器的带宽</span><span style="color:#960050;background-color:#1e0010">、</span><span style="color:#a6e22e">增加吞吐量</span><span style="color:#960050;background-color:#1e0010">、</span><span style="color:#a6e22e">加强网络数据处理能力</span><span style="color:#960050;background-color:#1e0010">、</span><span style="color:#a6e22e">提高网路的灵活性和可用性</span><span style="color:#960050;background-color:#1e0010">。</span>  
+   <span style="color:#a6e22e">负载均衡四层就是IP</span><span style="color:#f92672">+</span><span style="color:#a6e22e">端口的负载均衡</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">通过虚拟IP</span><span style="color:#f92672">+</span><span style="color:#a6e22e">端口接收请求</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">然后再分配到真实的服务器</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">主要是通过报文中的目标地址和端口</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">再加上负载均衡设备设置的服务器选择方式</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">决定最终选择的服务器</span><span style="color:#960050;background-color:#1e0010">。</span>
+   <span style="color:#a6e22e">负载均衡七层就是基于URL等应用层信息的负载均衡</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">通过虚拟的URL或者主机名接收请求</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">然后再分配到真实的服务器</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">七层负载均衡也称为内容交换</span><span style="color:#960050;background-color:#1e0010">：</span><span style="color:#a6e22e">就是主要通过报文中真正有意义的应用层内容</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">加上负载均衡设备设置的服务器选择方式</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">决定最终选择的服务器</span><span style="color:#960050;background-color:#1e0010">。</span></code></pre></div>
 
     </div>
 
