@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>interview on dyfblogs</title>
-    <link>https://fenglooking.github.io/categories/interview/</link>
+    <link>http://www.dyfblogs.com/categories/interview/</link>
     <description>Recent content in interview on dyfblogs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Thu, 10 Oct 2019 20:17:01 +0800</lastBuildDate>
     
-	<atom:link href="https://fenglooking.github.io/categories/interview/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://www.dyfblogs.com/categories/interview/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>面试题</title>
-      <link>https://fenglooking.github.io/post/interview-questions/</link>
+      <link>http://www.dyfblogs.com/post/interview-questions/</link>
       <pubDate>Thu, 10 Oct 2019 20:17:01 +0800</pubDate>
       
-      <guid>https://fenglooking.github.io/post/interview-questions/</guid>
+      <guid>http://www.dyfblogs.com/post/interview-questions/</guid>
       <description>1.DNS解析 DNS：Domain Name System，域名系统的缩写。 通过主机名、最终得到主机名对应的ip地址的过程叫做域名解析(或主机名解析)</description>
     </item>
     

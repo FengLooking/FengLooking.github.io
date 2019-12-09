@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Django on dyfblogs</title>
-    <link>https://fenglooking.github.io/categories/django/</link>
+    <link>http://www.dyfblogs.com/categories/django/</link>
     <description>Recent content in Django on dyfblogs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Wed, 05 Apr 2017 21:20:01 +0800</lastBuildDate>
     
-	<atom:link href="https://fenglooking.github.io/categories/django/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://www.dyfblogs.com/categories/django/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Django的Xadmin后台集成富文本Ueditor</title>
-      <link>https://fenglooking.github.io/post/django-xadmin-ueditor/</link>
+      <link>http://www.dyfblogs.com/post/django-xadmin-ueditor/</link>
       <pubDate>Wed, 05 Apr 2017 21:20:01 +0800</pubDate>
       
-      <guid>https://fenglooking.github.io/post/django-xadmin-ueditor/</guid>
+      <guid>http://www.dyfblogs.com/post/django-xadmin-ueditor/</guid>
       <description>我的环境是：Python3.7 + Django2.2 Ueditor：UEditor是由百度开源的富文本编辑器，具有轻量、可定制、用户体验优等特点。 Django</description>
     </item>
     
     <item>
       <title>Django DEBUG=False后静态文件加载失败</title>
-      <link>https://fenglooking.github.io/post/django-debug-false/</link>
+      <link>http://www.dyfblogs.com/post/django-debug-false/</link>
       <pubDate>Sun, 02 Apr 2017 22:20:01 +0800</pubDate>
       
-      <guid>https://fenglooking.github.io/post/django-debug-false/</guid>
+      <guid>http://www.dyfblogs.com/post/django-debug-false/</guid>
       <description>我的环境是：Django2.2 + Python3.7 Q1 将Django的DEBUG设置为False后，静态文件加载失败：报404 原因：Django的DEBUG设</description>
     </item>
     

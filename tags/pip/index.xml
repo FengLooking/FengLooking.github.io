@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>pip on dyfblogs</title>
-    <link>https://fenglooking.github.io/tags/pip/</link>
+    <link>http://www.dyfblogs.com/tags/pip/</link>
     <description>Recent content in pip on dyfblogs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Sun, 10 Jan 2016 20:50:01 +0800</lastBuildDate>
     
-	<atom:link href="https://fenglooking.github.io/tags/pip/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://www.dyfblogs.com/tags/pip/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>linux平台配置pip源</title>
-      <link>https://fenglooking.github.io/post/pip-linux-config/</link>
+      <link>http://www.dyfblogs.com/post/pip-linux-config/</link>
       <pubDate>Sun, 10 Jan 2016 20:50:01 +0800</pubDate>
       
-      <guid>https://fenglooking.github.io/post/pip-linux-config/</guid>
+      <guid>http://www.dyfblogs.com/post/pip-linux-config/</guid>
       <description>1.在根目录下创建.pip文件夹 mkdir ~/.pip 2.在创建好的.pip文件夹下创建pip源配置文件 touch ~/.pip/pip.conf 3.选择国内某一pip源配置到文件pip.conf</description>
     </item>
     

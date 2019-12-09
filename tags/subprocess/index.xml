@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>subprocess on dyfblogs</title>
-    <link>https://fenglooking.github.io/tags/subprocess/</link>
+    <link>http://www.dyfblogs.com/tags/subprocess/</link>
     <description>Recent content in subprocess on dyfblogs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Fri, 10 Mar 2017 23:37:22 +0800</lastBuildDate>
     
-	<atom:link href="https://fenglooking.github.io/tags/subprocess/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://www.dyfblogs.com/tags/subprocess/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Python多进程</title>
-      <link>https://fenglooking.github.io/post/python-multprocess/</link>
+      <link>http://www.dyfblogs.com/post/python-multprocess/</link>
       <pubDate>Fri, 10 Mar 2017 23:37:22 +0800</pubDate>
       
-      <guid>https://fenglooking.github.io/post/python-multprocess/</guid>
+      <guid>http://www.dyfblogs.com/post/python-multprocess/</guid>
       <description>进程：一个程序的执行实例。对操作系统来说：一个任务就是一个进程。 线程：一个进程内往往同时运行着多个子任务，这些子任务就是线程。线程是操作系统</description>
     </item>
     

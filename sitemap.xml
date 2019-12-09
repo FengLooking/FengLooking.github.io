@@ -1,386 +1,386 @@
-<?xml-stylesheet type="text/xsl" href="https://fenglooking.github.io/sitemap.xsl"?>
+<?xml-stylesheet type="text/xsl" href="http://www.dyfblogs.com/sitemap.xsl"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://fenglooking.github.io/post/interview-questions/</loc>
+    <loc>http://www.dyfblogs.com/post/interview-questions/</loc>
     <lastmod>2019-10-10T20:50:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://fenglooking.github.io/post/redis-basicuse/</loc>
+    <loc>http://www.dyfblogs.com/post/redis-basicuse/</loc>
     <lastmod>2018-09-03T19:30:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://fenglooking.github.io/post/mongodb-common/</loc>
+    <loc>http://www.dyfblogs.com/post/mongodb-common/</loc>
     <lastmod>2018-08-03T19:30:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://fenglooking.github.io/post/mongodb-basicuse/</loc>
+    <loc>http://www.dyfblogs.com/post/mongodb-basicuse/</loc>
     <lastmod>2018-08-02T22:30:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://fenglooking.github.io/post/django-xadmin-ueditor/</loc>
+    <loc>http://www.dyfblogs.com/post/django-xadmin-ueditor/</loc>
     <lastmod>2017-04-05T21:30:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://fenglooking.github.io/post/django-debug-false/</loc>
+    <loc>http://www.dyfblogs.com/post/django-debug-false/</loc>
     <lastmod>2017-04-02T22:30:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://fenglooking.github.io/post/python-multprocess/</loc>
+    <loc>http://www.dyfblogs.com/post/python-multprocess/</loc>
     <lastmod>2017-03-10T23:37:22+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://fenglooking.github.io/post/mysql-common/</loc>
+    <loc>http://www.dyfblogs.com/post/mysql-common/</loc>
     <lastmod>2017-03-05T20:30:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://fenglooking.github.io/post/virtualenv-install/</loc>
+    <loc>http://www.dyfblogs.com/post/virtualenv-install/</loc>
     <lastmod>2017-03-02T21:50:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://fenglooking.github.io/post/sqlite-notes/</loc>
+    <loc>http://www.dyfblogs.com/post/sqlite-notes/</loc>
     <lastmod>2017-02-28T23:22:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://fenglooking.github.io/post/http-protocol/</loc>
+    <loc>http://www.dyfblogs.com/post/http-protocol/</loc>
     <lastmod>2016-10-10T20:50:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://fenglooking.github.io/post/css-typesetting/</loc>
+    <loc>http://www.dyfblogs.com/post/css-typesetting/</loc>
     <lastmod>2016-09-08T20:30:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://fenglooking.github.io/post/css-color/</loc>
+    <loc>http://www.dyfblogs.com/post/css-color/</loc>
     <lastmod>2016-09-05T23:37:22+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://fenglooking.github.io/post/html-entity/</loc>
+    <loc>http://www.dyfblogs.com/post/html-entity/</loc>
     <lastmod>2016-09-04T20:37:22+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://fenglooking.github.io/post/css-style-position/</loc>
+    <loc>http://www.dyfblogs.com/post/css-style-position/</loc>
     <lastmod>2016-09-03T22:00:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://fenglooking.github.io/post/html-element-classify/</loc>
+    <loc>http://www.dyfblogs.com/post/html-element-classify/</loc>
     <lastmod>2016-09-02T18:00:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://fenglooking.github.io/post/pip-linux-config/</loc>
+    <loc>http://www.dyfblogs.com/post/pip-linux-config/</loc>
     <lastmod>2016-01-10T20:50:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://fenglooking.github.io/about/</loc>
+    <loc>http://www.dyfblogs.com/about/</loc>
     <lastmod>2017-08-28T21:41:52+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://fenglooking.github.io/categories/</loc>
+    <loc>http://www.dyfblogs.com/categories/</loc>
     <lastmod>2019-10-10T20:50:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://fenglooking.github.io/</loc>
+    <loc>http://www.dyfblogs.com/</loc>
     <lastmod>2019-10-10T20:50:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://fenglooking.github.io/tags/interview/</loc>
+    <loc>http://www.dyfblogs.com/categories/interview/</loc>
     <lastmod>2019-10-10T20:50:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://fenglooking.github.io/categories/interview/</loc>
+    <loc>http://www.dyfblogs.com/tags/interview/</loc>
     <lastmod>2019-10-10T20:50:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://fenglooking.github.io/post/</loc>
+    <loc>http://www.dyfblogs.com/post/</loc>
     <lastmod>2019-10-10T20:50:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://fenglooking.github.io/tags/</loc>
+    <loc>http://www.dyfblogs.com/tags/</loc>
     <lastmod>2019-10-10T20:50:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://fenglooking.github.io/tags/redis/</loc>
+    <loc>http://www.dyfblogs.com/tags/redis/</loc>
     <lastmod>2018-09-03T19:30:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://fenglooking.github.io/categories/redis/</loc>
+    <loc>http://www.dyfblogs.com/categories/redis/</loc>
     <lastmod>2018-09-03T19:30:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://fenglooking.github.io/categories/mongodb/</loc>
+    <loc>http://www.dyfblogs.com/categories/mongodb/</loc>
     <lastmod>2018-08-03T19:30:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://fenglooking.github.io/tags/mongodb/</loc>
+    <loc>http://www.dyfblogs.com/tags/mongodb/</loc>
     <lastmod>2018-08-03T19:30:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://fenglooking.github.io/tags/django/</loc>
+    <loc>http://www.dyfblogs.com/categories/django/</loc>
     <lastmod>2017-04-05T21:30:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://fenglooking.github.io/categories/django/</loc>
+    <loc>http://www.dyfblogs.com/tags/django/</loc>
     <lastmod>2017-04-05T21:30:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://fenglooking.github.io/categories/python/</loc>
+    <loc>http://www.dyfblogs.com/tags/python/</loc>
     <lastmod>2017-03-10T23:37:22+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://fenglooking.github.io/tags/python/</loc>
+    <loc>http://www.dyfblogs.com/categories/python/</loc>
     <lastmod>2017-03-10T23:37:22+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://fenglooking.github.io/tags/subprocess/</loc>
+    <loc>http://www.dyfblogs.com/tags/subprocess/</loc>
     <lastmod>2017-03-10T23:37:22+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://fenglooking.github.io/categories/subprocess/</loc>
+    <loc>http://www.dyfblogs.com/categories/subprocess/</loc>
     <lastmod>2017-03-10T23:37:22+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://fenglooking.github.io/tags/mysql/</loc>
+    <loc>http://www.dyfblogs.com/tags/mysql/</loc>
     <lastmod>2017-03-05T20:30:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://fenglooking.github.io/categories/mysql/</loc>
+    <loc>http://www.dyfblogs.com/categories/mysql/</loc>
     <lastmod>2017-03-05T20:30:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://fenglooking.github.io/categories/virtualenv/</loc>
+    <loc>http://www.dyfblogs.com/categories/virtualenv/</loc>
     <lastmod>2017-03-02T21:50:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://fenglooking.github.io/tags/virtualenv/</loc>
+    <loc>http://www.dyfblogs.com/tags/virtualenv/</loc>
     <lastmod>2017-03-02T21:50:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://fenglooking.github.io/tags/sqlite/</loc>
+    <loc>http://www.dyfblogs.com/tags/sqlite/</loc>
     <lastmod>2017-02-28T23:22:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://fenglooking.github.io/categories/sqlite/</loc>
+    <loc>http://www.dyfblogs.com/categories/sqlite/</loc>
     <lastmod>2017-02-28T23:22:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://fenglooking.github.io/tags/http/</loc>
+    <loc>http://www.dyfblogs.com/tags/http/</loc>
     <lastmod>2016-10-10T20:50:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://fenglooking.github.io/categories/http/</loc>
+    <loc>http://www.dyfblogs.com/categories/http/</loc>
     <lastmod>2016-10-10T20:50:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://fenglooking.github.io/categories/css/</loc>
+    <loc>http://www.dyfblogs.com/categories/css/</loc>
     <lastmod>2016-09-08T20:30:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://fenglooking.github.io/tags/css/</loc>
+    <loc>http://www.dyfblogs.com/tags/css/</loc>
     <lastmod>2016-09-08T20:30:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://fenglooking.github.io/tags/style/</loc>
+    <loc>http://www.dyfblogs.com/tags/style/</loc>
     <lastmod>2016-09-08T20:30:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://fenglooking.github.io/categories/style/</loc>
+    <loc>http://www.dyfblogs.com/categories/style/</loc>
     <lastmod>2016-09-08T20:30:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://fenglooking.github.io/tags/color/</loc>
+    <loc>http://www.dyfblogs.com/tags/color/</loc>
     <lastmod>2016-09-05T23:37:22+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://fenglooking.github.io/categories/color/</loc>
+    <loc>http://www.dyfblogs.com/categories/color/</loc>
     <lastmod>2016-09-05T23:37:22+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://fenglooking.github.io/tags/html/</loc>
+    <loc>http://www.dyfblogs.com/tags/html/</loc>
     <lastmod>2016-09-04T20:37:22+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://fenglooking.github.io/categories/html/</loc>
+    <loc>http://www.dyfblogs.com/categories/html/</loc>
     <lastmod>2016-09-04T20:37:22+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://fenglooking.github.io/tags/classify/</loc>
+    <loc>http://www.dyfblogs.com/tags/classify/</loc>
     <lastmod>2016-09-02T18:00:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://fenglooking.github.io/tags/element/</loc>
+    <loc>http://www.dyfblogs.com/tags/element/</loc>
     <lastmod>2016-09-02T18:00:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://fenglooking.github.io/categories/element/</loc>
+    <loc>http://www.dyfblogs.com/categories/element/</loc>
     <lastmod>2016-09-02T18:00:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://fenglooking.github.io/categories/pip/</loc>
+    <loc>http://www.dyfblogs.com/categories/pip/</loc>
     <lastmod>2016-01-10T20:50:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://fenglooking.github.io/tags/pip/</loc>
+    <loc>http://www.dyfblogs.com/tags/pip/</loc>
     <lastmod>2016-01-10T20:50:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

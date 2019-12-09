@@ -2,156 +2,156 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on dyfblogs</title>
-    <link>https://fenglooking.github.io/categories/</link>
+    <link>http://www.dyfblogs.com/categories/</link>
     <description>Recent content in Categories on dyfblogs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Thu, 10 Oct 2019 20:17:01 +0800</lastBuildDate>
     
-	<atom:link href="https://fenglooking.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://www.dyfblogs.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>interview</title>
-      <link>https://fenglooking.github.io/categories/interview/</link>
+      <link>http://www.dyfblogs.com/categories/interview/</link>
       <pubDate>Thu, 10 Oct 2019 20:17:01 +0800</pubDate>
       
-      <guid>https://fenglooking.github.io/categories/interview/</guid>
+      <guid>http://www.dyfblogs.com/categories/interview/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Redis</title>
-      <link>https://fenglooking.github.io/categories/redis/</link>
+      <link>http://www.dyfblogs.com/categories/redis/</link>
       <pubDate>Mon, 03 Sep 2018 19:20:01 +0800</pubDate>
       
-      <guid>https://fenglooking.github.io/categories/redis/</guid>
+      <guid>http://www.dyfblogs.com/categories/redis/</guid>
       <description></description>
     </item>
     
     <item>
       <title>MongoDB</title>
-      <link>https://fenglooking.github.io/categories/mongodb/</link>
+      <link>http://www.dyfblogs.com/categories/mongodb/</link>
       <pubDate>Fri, 03 Aug 2018 19:20:01 +0800</pubDate>
       
-      <guid>https://fenglooking.github.io/categories/mongodb/</guid>
+      <guid>http://www.dyfblogs.com/categories/mongodb/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Django</title>
-      <link>https://fenglooking.github.io/categories/django/</link>
+      <link>http://www.dyfblogs.com/categories/django/</link>
       <pubDate>Wed, 05 Apr 2017 21:20:01 +0800</pubDate>
       
-      <guid>https://fenglooking.github.io/categories/django/</guid>
+      <guid>http://www.dyfblogs.com/categories/django/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Python</title>
-      <link>https://fenglooking.github.io/categories/python/</link>
+      <link>http://www.dyfblogs.com/categories/python/</link>
       <pubDate>Fri, 10 Mar 2017 23:37:22 +0800</pubDate>
       
-      <guid>https://fenglooking.github.io/categories/python/</guid>
+      <guid>http://www.dyfblogs.com/categories/python/</guid>
       <description></description>
     </item>
     
     <item>
       <title>subprocess</title>
-      <link>https://fenglooking.github.io/categories/subprocess/</link>
+      <link>http://www.dyfblogs.com/categories/subprocess/</link>
       <pubDate>Fri, 10 Mar 2017 23:37:22 +0800</pubDate>
       
-      <guid>https://fenglooking.github.io/categories/subprocess/</guid>
+      <guid>http://www.dyfblogs.com/categories/subprocess/</guid>
       <description></description>
     </item>
     
     <item>
       <title>MySQL</title>
-      <link>https://fenglooking.github.io/categories/mysql/</link>
+      <link>http://www.dyfblogs.com/categories/mysql/</link>
       <pubDate>Sun, 05 Mar 2017 20:22:01 +0800</pubDate>
       
-      <guid>https://fenglooking.github.io/categories/mysql/</guid>
+      <guid>http://www.dyfblogs.com/categories/mysql/</guid>
       <description></description>
     </item>
     
     <item>
       <title>virtualenv</title>
-      <link>https://fenglooking.github.io/categories/virtualenv/</link>
+      <link>http://www.dyfblogs.com/categories/virtualenv/</link>
       <pubDate>Thu, 02 Mar 2017 21:50:01 +0800</pubDate>
       
-      <guid>https://fenglooking.github.io/categories/virtualenv/</guid>
+      <guid>http://www.dyfblogs.com/categories/virtualenv/</guid>
       <description></description>
     </item>
     
     <item>
       <title>SQLite</title>
-      <link>https://fenglooking.github.io/categories/sqlite/</link>
+      <link>http://www.dyfblogs.com/categories/sqlite/</link>
       <pubDate>Tue, 28 Feb 2017 23:22:01 +0800</pubDate>
       
-      <guid>https://fenglooking.github.io/categories/sqlite/</guid>
+      <guid>http://www.dyfblogs.com/categories/sqlite/</guid>
       <description></description>
     </item>
     
     <item>
       <title>HTTP</title>
-      <link>https://fenglooking.github.io/categories/http/</link>
+      <link>http://www.dyfblogs.com/categories/http/</link>
       <pubDate>Mon, 10 Oct 2016 20:50:01 +0800</pubDate>
       
-      <guid>https://fenglooking.github.io/categories/http/</guid>
+      <guid>http://www.dyfblogs.com/categories/http/</guid>
       <description></description>
     </item>
     
     <item>
       <title>CSS</title>
-      <link>https://fenglooking.github.io/categories/css/</link>
+      <link>http://www.dyfblogs.com/categories/css/</link>
       <pubDate>Thu, 08 Sep 2016 20:22:01 +0800</pubDate>
       
-      <guid>https://fenglooking.github.io/categories/css/</guid>
+      <guid>http://www.dyfblogs.com/categories/css/</guid>
       <description></description>
     </item>
     
     <item>
       <title>style</title>
-      <link>https://fenglooking.github.io/categories/style/</link>
+      <link>http://www.dyfblogs.com/categories/style/</link>
       <pubDate>Thu, 08 Sep 2016 20:22:01 +0800</pubDate>
       
-      <guid>https://fenglooking.github.io/categories/style/</guid>
+      <guid>http://www.dyfblogs.com/categories/style/</guid>
       <description></description>
     </item>
     
     <item>
       <title>color</title>
-      <link>https://fenglooking.github.io/categories/color/</link>
+      <link>http://www.dyfblogs.com/categories/color/</link>
       <pubDate>Mon, 05 Sep 2016 23:13:54 +0800</pubDate>
       
-      <guid>https://fenglooking.github.io/categories/color/</guid>
+      <guid>http://www.dyfblogs.com/categories/color/</guid>
       <description></description>
     </item>
     
     <item>
       <title>HTML</title>
-      <link>https://fenglooking.github.io/categories/html/</link>
+      <link>http://www.dyfblogs.com/categories/html/</link>
       <pubDate>Sun, 04 Sep 2016 20:36:29 +0800</pubDate>
       
-      <guid>https://fenglooking.github.io/categories/html/</guid>
+      <guid>http://www.dyfblogs.com/categories/html/</guid>
       <description></description>
     </item>
     
     <item>
       <title>element</title>
-      <link>https://fenglooking.github.io/categories/element/</link>
+      <link>http://www.dyfblogs.com/categories/element/</link>
       <pubDate>Fri, 02 Sep 2016 18:00:01 +0800</pubDate>
       
-      <guid>https://fenglooking.github.io/categories/element/</guid>
+      <guid>http://www.dyfblogs.com/categories/element/</guid>
       <description></description>
     </item>
     
     <item>
       <title>pip</title>
-      <link>https://fenglooking.github.io/categories/pip/</link>
+      <link>http://www.dyfblogs.com/categories/pip/</link>
       <pubDate>Sun, 10 Jan 2016 20:50:01 +0800</pubDate>
       
-      <guid>https://fenglooking.github.io/categories/pip/</guid>
+      <guid>http://www.dyfblogs.com/categories/pip/</guid>
       <description></description>
     </item>
     

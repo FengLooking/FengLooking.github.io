@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>dyfblogs</title>
-    <link>https://fenglooking.github.io/</link>
+    <link>http://www.dyfblogs.com/</link>
     <description>Recent content on dyfblogs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Thu, 10 Oct 2019 20:17:01 +0800</lastBuildDate>
     
-        <atom:link href="https://fenglooking.github.io/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://www.dyfblogs.com/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>面试题</title>
-      <link>https://fenglooking.github.io/post/interview-questions/</link>
+      <link>http://www.dyfblogs.com/post/interview-questions/</link>
       <pubDate>Thu, 10 Oct 2019 20:17:01 +0800</pubDate>
       
-      <guid>https://fenglooking.github.io/post/interview-questions/</guid>
+      <guid>http://www.dyfblogs.com/post/interview-questions/</guid>
       
         <description>
 
@@ -59,10 +59,10 @@
     
     <item>
       <title>Redis基础使用</title>
-      <link>https://fenglooking.github.io/post/redis-basicuse/</link>
+      <link>http://www.dyfblogs.com/post/redis-basicuse/</link>
       <pubDate>Mon, 03 Sep 2018 19:20:01 +0800</pubDate>
       
-      <guid>https://fenglooking.github.io/post/redis-basicuse/</guid>
+      <guid>http://www.dyfblogs.com/post/redis-basicuse/</guid>
       
         <description>&lt;p&gt;&lt;strong&gt;Redis&lt;/strong&gt;：Redis(REmote dictionary server)是一个开源的使用ANSI C语言编写、遵守BSD协议、支持网络、可基于内存亦可持久化的key-value型数据库。value的值可以是 string(字符串)、list(列表)、hash(哈希)、set(集合)、zset(sorted set-有序集合) 等类型。&lt;/p&gt;
 
@@ -226,10 +226,10 @@ make结束后 redis-5.0.5 目录下会出现编译后的redis服务程序redis-s
     
     <item>
       <title>MongoDB常用命令</title>
-      <link>https://fenglooking.github.io/post/mongodb-common/</link>
+      <link>http://www.dyfblogs.com/post/mongodb-common/</link>
       <pubDate>Fri, 03 Aug 2018 19:20:01 +0800</pubDate>
       
-      <guid>https://fenglooking.github.io/post/mongodb-common/</guid>
+      <guid>http://www.dyfblogs.com/post/mongodb-common/</guid>
       
         <description>&lt;p&gt;切换/创建数据库：use database_name
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;use&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;stuedu&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -344,10 +344,10 @@ MongoDB支持的索引：id索引(默认建立)、单键索引、多键索引、
     
     <item>
       <title>MongoDB基础使用</title>
-      <link>https://fenglooking.github.io/post/mongodb-basicuse/</link>
+      <link>http://www.dyfblogs.com/post/mongodb-basicuse/</link>
       <pubDate>Thu, 02 Aug 2018 22:22:01 +0800</pubDate>
       
-      <guid>https://fenglooking.github.io/post/mongodb-basicuse/</guid>
+      <guid>http://www.dyfblogs.com/post/mongodb-basicuse/</guid>
       
         <description>&lt;p&gt;&lt;strong&gt;MongoDB&lt;/strong&gt;：是一个基于分布式文件存储的非关系数据库。由C++语言编写。旨在为WEB应用提供可扩展的高性能数据存储解决方案。MongoDB的查询语法有点类似于面向对象的查询语言，几乎可以实现类似关系数据库单表查询的绝大部分功能，而且还支持对数据建立索引。&lt;/p&gt;
 
@@ -373,7 +373,7 @@ MongoDB支持的索引：id索引(默认建立)、单键索引、多键索引、
 BASE是Basically Available(基本可用)、Soft state(软状态)和Eventually consistent(最终一致性)三个短语的简写&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;MongoDB下载&lt;/strong&gt;：下载链接为：&lt;a href=&#34;https://www.mongodb.com/download-center/community&#34;&gt;https://www.mongodb.com/download-center/community&lt;/a&gt; ，若该链接不可用，可去&lt;a href=&#34;https://www.mongodb.com/&#34;&gt;https://www.mongodb.com/&lt;/a&gt; 寻找最新的下载地址。如下图所示：下载地址有不同平台和版本可供选择，选择自己所需版本下载即可。这里我下载的是适用于Mac平台的4.0.12版本。对于Mac平台：从 MongoDB 3.0 版本开始只支持 OS X 10.7 (Lion) 版本及更新的mac版本系统(下载时要注意自己的mac系统版本和MongoDB版本的兼容性)。&lt;br /&gt;
-&lt;img src=&#34;https://fenglooking.github.io/image/mongo-web.png&#34; alt=&#34;mongodb&#34; /&gt;
+&lt;img src=&#34;http://www.dyfblogs.com/image/mongo-web.png&#34; alt=&#34;mongodb&#34; /&gt;
 为了方便我用curl命令下载：
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;进入&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;usr&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;local&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;
 &lt;span style=&#34;color:#a6e22e&#34;&gt;cd&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;usr&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;local&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;
@@ -570,10 +570,10 @@ Python要连接MongoDB，需要MongoDB驱动，使用pymongo驱动来连接。�
     
     <item>
       <title>Django的Xadmin后台集成富文本Ueditor</title>
-      <link>https://fenglooking.github.io/post/django-xadmin-ueditor/</link>
+      <link>http://www.dyfblogs.com/post/django-xadmin-ueditor/</link>
       <pubDate>Wed, 05 Apr 2017 21:20:01 +0800</pubDate>
       
-      <guid>https://fenglooking.github.io/post/django-xadmin-ueditor/</guid>
+      <guid>http://www.dyfblogs.com/post/django-xadmin-ueditor/</guid>
       
         <description>&lt;p&gt;我的环境是：Python3.7 + Django2.2&lt;/p&gt;
 
@@ -631,17 +631,17 @@ Python2：&lt;a href=&#34;https://github.com/zhangfisher/DjangoUeditor&#34;&gt;h
     {% endautoescape %}
 &amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;div&lt;/span&gt;&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 最后启动Django调试服务器，进入xadmin后台查看对应表应用了UEditorField的字段是否显示和具有富文本功能。类似下图样式。&lt;br /&gt;
-&lt;img src=&#34;https://fenglooking.github.io/image/ueditor-eg.png&#34; alt=&#34;ueditor&#34; /&gt;&lt;/p&gt;
+&lt;img src=&#34;http://www.dyfblogs.com/image/ueditor-eg.png&#34; alt=&#34;ueditor&#34; /&gt;&lt;/p&gt;
 </description>
       
     </item>
     
     <item>
       <title>Django DEBUG=False后静态文件加载失败</title>
-      <link>https://fenglooking.github.io/post/django-debug-false/</link>
+      <link>http://www.dyfblogs.com/post/django-debug-false/</link>
       <pubDate>Sun, 02 Apr 2017 22:20:01 +0800</pubDate>
       
-      <guid>https://fenglooking.github.io/post/django-debug-false/</guid>
+      <guid>http://www.dyfblogs.com/post/django-debug-false/</guid>
       
         <description>&lt;p&gt;我的环境是：Django2.2 + Python3.7&lt;br /&gt;
 &lt;strong&gt;Q1 将Django的DEBUG设置为False后，静态文件加载失败：报404&lt;/strong&gt;&lt;br /&gt;
@@ -680,10 +680,10 @@ Python2：&lt;a href=&#34;https://github.com/zhangfisher/DjangoUeditor&#34;&gt;h
     
     <item>
       <title>Python多进程</title>
-      <link>https://fenglooking.github.io/post/python-multprocess/</link>
+      <link>http://www.dyfblogs.com/post/python-multprocess/</link>
       <pubDate>Fri, 10 Mar 2017 23:37:22 +0800</pubDate>
       
-      <guid>https://fenglooking.github.io/post/python-multprocess/</guid>
+      <guid>http://www.dyfblogs.com/post/python-multprocess/</guid>
       
         <description>&lt;p&gt;&lt;strong&gt;进程&lt;/strong&gt;：一个程序的执行实例。对操作系统来说：一个任务就是一个进程。&lt;/p&gt;
 
@@ -796,10 +796,10 @@ all subprocess done
     
     <item>
       <title>MySQL常用命令</title>
-      <link>https://fenglooking.github.io/post/mysql-common/</link>
+      <link>http://www.dyfblogs.com/post/mysql-common/</link>
       <pubDate>Sun, 05 Mar 2017 20:22:01 +0800</pubDate>
       
-      <guid>https://fenglooking.github.io/post/mysql-common/</guid>
+      <guid>http://www.dyfblogs.com/post/mysql-common/</guid>
       
         <description>&lt;p&gt;MySQL创建用户并添加权限的方式：&lt;br /&gt;
 1.进入mysql数据库
@@ -856,10 +856,10 @@ Query OK, &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt; rows &lt;span
     
     <item>
       <title>linux平台虚拟环境依赖安装</title>
-      <link>https://fenglooking.github.io/post/virtualenv-install/</link>
+      <link>http://www.dyfblogs.com/post/virtualenv-install/</link>
       <pubDate>Thu, 02 Mar 2017 21:50:01 +0800</pubDate>
       
-      <guid>https://fenglooking.github.io/post/virtualenv-install/</guid>
+      <guid>http://www.dyfblogs.com/post/virtualenv-install/</guid>
       
         <description>&lt;p&gt;当你的环境上有多个项目，每个项目所依赖的包版本不同时，搭建多个互不干扰的开发环境就显得很有必要&lt;br /&gt;
 1.安装依赖包
@@ -901,10 +901,10 @@ Query OK, &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt; rows &lt;span
     
     <item>
       <title>SQLite基础使用</title>
-      <link>https://fenglooking.github.io/post/sqlite-notes/</link>
+      <link>http://www.dyfblogs.com/post/sqlite-notes/</link>
       <pubDate>Tue, 28 Feb 2017 23:22:01 +0800</pubDate>
       
-      <guid>https://fenglooking.github.io/post/sqlite-notes/</guid>
+      <guid>http://www.dyfblogs.com/post/sqlite-notes/</guid>
       
         <description>&lt;p&gt;&lt;strong&gt;数据库(database)&lt;/strong&gt;：存放数据的仓库，是一些关联表的集合。&lt;/p&gt;
 
@@ -1166,10 +1166,10 @@ RDBMS术语：&lt;br /&gt;
     
     <item>
       <title>HTTP协议</title>
-      <link>https://fenglooking.github.io/post/http-protocol/</link>
+      <link>http://www.dyfblogs.com/post/http-protocol/</link>
       <pubDate>Mon, 10 Oct 2016 20:50:01 +0800</pubDate>
       
-      <guid>https://fenglooking.github.io/post/http-protocol/</guid>
+      <guid>http://www.dyfblogs.com/post/http-protocol/</guid>
       
         <description>&lt;p&gt;&lt;strong&gt;HTTP&lt;/strong&gt;：Hypertext Transfer Protocol，超文本传输协议。是一个基于请求与响应模式的、无状态的、应用层的协议，常基于TCP的连接方式。用于从万维网服务器传输超文本到本地浏览器的传输协议。HTTP端口号默认为80。&lt;/p&gt;
 
@@ -1325,10 +1325,10 @@ HTTP状态码分类&lt;/p&gt;
     
     <item>
       <title>CSS文字段落排版常用设置</title>
-      <link>https://fenglooking.github.io/post/css-typesetting/</link>
+      <link>http://www.dyfblogs.com/post/css-typesetting/</link>
       <pubDate>Thu, 08 Sep 2016 20:22:01 +0800</pubDate>
       
-      <guid>https://fenglooking.github.io/post/css-typesetting/</guid>
+      <guid>http://www.dyfblogs.com/post/css-typesetting/</guid>
       
         <description>&lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;199&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;firstp&lt;/span&gt; {
 &lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;200&lt;/span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;/* 文字排版：颜色、字号、字体、粗体、斜体、下划线、删除线 */&lt;/span&gt;
@@ -1383,10 +1383,10 @@ HTTP状态码分类&lt;/p&gt;
     
     <item>
       <title>CSS颜色样式</title>
-      <link>https://fenglooking.github.io/post/css-color/</link>
+      <link>http://www.dyfblogs.com/post/css-color/</link>
       <pubDate>Mon, 05 Sep 2016 23:13:54 +0800</pubDate>
       
-      <guid>https://fenglooking.github.io/post/css-color/</guid>
+      <guid>http://www.dyfblogs.com/post/css-color/</guid>
       
         <description>
 
@@ -1422,17 +1422,17 @@ RGB的每一项可以是0~255之间的整数，也可以是0%~100%之间的百�
 
 &lt;h3 id=&#34;常用十六进制颜色表&#34;&gt;常用十六进制颜色表&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://fenglooking.github.io/image/csscolor.jpg&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.dyfblogs.com/image/csscolor.jpg&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
 </description>
       
     </item>
     
     <item>
       <title>HTML常用实体</title>
-      <link>https://fenglooking.github.io/post/html-entity/</link>
+      <link>http://www.dyfblogs.com/post/html-entity/</link>
       <pubDate>Sun, 04 Sep 2016 20:36:29 +0800</pubDate>
       
-      <guid>https://fenglooking.github.io/post/html-entity/</guid>
+      <guid>http://www.dyfblogs.com/post/html-entity/</guid>
       
         <description>&lt;table&gt;
 &lt;thead&gt;
@@ -1517,10 +1517,10 @@ RGB的每一项可以是0~255之间的整数，也可以是0%~100%之间的百�
     
     <item>
       <title>CSS样式在HTML中的位置</title>
-      <link>https://fenglooking.github.io/post/css-style-position/</link>
+      <link>http://www.dyfblogs.com/post/css-style-position/</link>
       <pubDate>Sat, 03 Sep 2016 22:00:01 +0800</pubDate>
       
-      <guid>https://fenglooking.github.io/post/css-style-position/</guid>
+      <guid>http://www.dyfblogs.com/post/css-style-position/</guid>
       
         <description>&lt;p&gt;从CSS样式代码插入HTML文件的形式来看可以分为三种插入形式：内联样式、嵌入样式、外部样式。&lt;/p&gt;
 
@@ -1556,10 +1556,10 @@ RGB的每一项可以是0~255之间的整数，也可以是0%~100%之间的百�
     
     <item>
       <title>HTML元素分类</title>
-      <link>https://fenglooking.github.io/post/html-element-classify/</link>
+      <link>http://www.dyfblogs.com/post/html-element-classify/</link>
       <pubDate>Fri, 02 Sep 2016 18:00:01 +0800</pubDate>
       
-      <guid>https://fenglooking.github.io/post/html-element-classify/</guid>
+      <guid>http://www.dyfblogs.com/post/html-element-classify/</guid>
       
         <description>&lt;p&gt;在HTML中，HTML标签元素大体被分为三种不同的类型：内联元素(又叫行内元素)，块状元素，内联块状元素。&lt;/p&gt;
 
@@ -1598,10 +1598,10 @@ RGB的每一项可以是0~255之间的整数，也可以是0%~100%之间的百�
     
     <item>
       <title>linux平台配置pip源</title>
-      <link>https://fenglooking.github.io/post/pip-linux-config/</link>
+      <link>http://www.dyfblogs.com/post/pip-linux-config/</link>
       <pubDate>Sun, 10 Jan 2016 20:50:01 +0800</pubDate>
       
-      <guid>https://fenglooking.github.io/post/pip-linux-config/</guid>
+      <guid>http://www.dyfblogs.com/post/pip-linux-config/</guid>
       
         <description>&lt;p&gt;1.在根目录下创建.pip文件夹
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;mkdir&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;~&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;pip&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -1617,17 +1617,22 @@ RGB的每一项可以是0~255之间的整数，也可以是0%~100%之间的百�
     
     <item>
       <title>关于</title>
-      <link>https://fenglooking.github.io/about/</link>
+      <link>http://www.dyfblogs.com/about/</link>
       <pubDate>Sun, 20 Aug 2017 21:38:52 +0800</pubDate>
       
-      <guid>https://fenglooking.github.io/about/</guid>
+      <guid>http://www.dyfblogs.com/about/</guid>
       
-        <description>&lt;p&gt;内容太少去：&lt;/p&gt;
+        <description>&lt;p&gt;程序员菜鸟一枚，领域涉及前端、后端(Python)、运维。&lt;/p&gt;
+
+&lt;p&gt;内容太少去：&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.cnblogs.com/dyfblogs/&#34;&gt;博客园&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/&#34;&gt;GitHub&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;p&gt;若您对本站内容有疑问，可以扫描下面二维码。&lt;br /&gt;
+&lt;img src=&#34;http://www.dyfblogs.com/image/WechatIMG1.jpeg&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
 </description>
       
     </item>
