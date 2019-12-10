@@ -69,7 +69,7 @@
 
 <meta itemprop="datePublished" content="2019-10-10T20:17:01&#43;08:00" />
 <meta itemprop="dateModified" content="2019-10-10T20:50:01&#43;08:00" />
-<meta itemprop="wordCount" content="1575">
+<meta itemprop="wordCount" content="2702">
 
 
 
@@ -312,6 +312,13 @@
 <li><a href="#1-dns解析">1.DNS解析</a></li>
 <li><a href="#2-docker与虚拟化的区别">2.docker与虚拟化的区别</a></li>
 <li><a href="#3-负载均衡四层和七层">3.负载均衡四层和七层</a></li>
+<li><a href="#4-显示按照消耗cpu前10排序的进程">4.显示按照消耗CPU前10排序的进程</a></li>
+<li><a href="#5-显示按照消耗内存前10排序的进程">5.显示按照消耗内存前10排序的进程</a></li>
+<li><a href="#6-查看磁盘io信息">6.查看磁盘IO信息</a></li>
+<li><a href="#7-使用netstat命令查看主机路由信息">7.使用netstat命令查看主机路由信息</a></li>
+<li><a href="#8-tar-gzip-zip的区别">8.tar、gzip、zip的区别</a></li>
+<li><a href="#9-linux用户组权限管理">9.linux用户组权限管理</a></li>
+<li><a href="#10-linux路由配置">10.linux路由配置</a></li>
 </ul></li>
 </ul></li>
 </ul></li>
@@ -357,6 +364,100 @@
    <span style="color:#a6e22e">负载均衡</span>(<span style="color:#a6e22e">Load</span> <span style="color:#a6e22e">Balance</span>)<span style="color:#a6e22e">就是把任务分摊到多个操作单元上进行执行</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">如</span><span style="color:#960050;background-color:#1e0010">：</span><span style="color:#a6e22e">WEB服务器</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">FTP服务器等</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">从而完成工作任务</span><span style="color:#960050;background-color:#1e0010">。</span>  
    <span style="color:#a6e22e">负载均衡四层就是IP</span><span style="color:#f92672">+</span><span style="color:#a6e22e">端口的负载均衡</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">通过虚拟IP</span><span style="color:#f92672">+</span><span style="color:#a6e22e">端口接收请求</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">然后再分配到真实的服务器</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">主要是通过报文中的目标地址和端口</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">再加上负载均衡设备设置的服务器选择方式</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">决定最终选择的服务器</span><span style="color:#960050;background-color:#1e0010">。</span>
    <span style="color:#a6e22e">负载均衡七层就是基于URL等应用层信息的负载均衡</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">通过虚拟的URL或者主机名接收请求</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">然后再分配到真实的服务器</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">七层负载均衡也称为内容交换</span><span style="color:#960050;background-color:#1e0010">：</span><span style="color:#a6e22e">就是主要通过报文中真正有意义的应用层内容</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">加上负载均衡设备设置的服务器选择方式</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">决定最终选择的服务器</span><span style="color:#960050;background-color:#1e0010">。</span></code></pre></div>
+
+<h4 id="4-显示按照消耗cpu前10排序的进程">4.显示按照消耗CPU前10排序的进程</h4>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">ps</span> <span style="color:#a6e22e">aux</span> | <span style="color:#a6e22e">sort</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">k3nr</span> | <span style="color:#a6e22e">head</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">n</span> <span style="color:#ae81ff">10</span></code></pre></div>
+
+<h4 id="5-显示按照消耗内存前10排序的进程">5.显示按照消耗内存前10排序的进程</h4>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">ps</span> <span style="color:#a6e22e">aux</span> | <span style="color:#a6e22e">sort</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">k4nr</span> | <span style="color:#a6e22e">head</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">n</span> <span style="color:#ae81ff">10</span></code></pre></div>
+
+<h4 id="6-查看磁盘io信息">6.查看磁盘IO信息</h4>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">iotop</span> <span style="color:#a6e22e">或者</span> <span style="color:#a6e22e">iostat</span></code></pre></div>
+
+<h4 id="7-使用netstat命令查看主机路由信息">7.使用netstat命令查看主机路由信息</h4>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">netstat</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">rn</span></code></pre></div>
+
+<h4 id="8-tar-gzip-zip的区别">8.tar、gzip、zip的区别</h4>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">打包和压缩</span><span style="color:#960050;background-color:#1e0010">。</span><span style="color:#a6e22e">打包是指将一大堆文件或目录变成一个总的文件</span><span style="color:#960050;background-color:#1e0010">；</span><span style="color:#a6e22e">压缩则是将一个大的文件通过一些压缩算法变成一个小文件</span><span style="color:#960050;background-color:#1e0010">。</span>
+<span style="color:#a6e22e">tar将多个文件或目录打包在一起</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">可用通过调用gzip或zip实现压缩</span><span style="color:#960050;background-color:#1e0010">、</span><span style="color:#a6e22e">解压的命令</span><span style="color:#960050;background-color:#1e0010">；</span><span style="color:#a6e22e">tar不仅可以多多个文件进行打包</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">还可以对多个文件打包后进行压缩</span><span style="color:#960050;background-color:#1e0010">。</span>
+<span style="color:#a6e22e">gzip命令的作用是将一个大的文件通过压缩算法</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">变成一个小的文件</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">gzip文件不能直接压缩目录</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">如果要压缩目录</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">需要先将目录打包成一个文件</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">在压缩</span><span style="color:#960050;background-color:#1e0010">。</span>
+<span style="color:#a6e22e">zip是linux和windows等多平台通用的压缩格式</span><span style="color:#960050;background-color:#1e0010">。</span><span style="color:#a6e22e">zip比gzip更强的是zip命令压缩文件不会删除源文件</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">还可以压缩目录</span><span style="color:#960050;background-color:#1e0010">。</span>
+
+<span style="color:#a6e22e">zip包</span>  
+<span style="color:#a6e22e">压缩</span><span style="color:#960050;background-color:#1e0010">：</span> <span style="color:#a6e22e">zip</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">r</span> [<span style="color:#a6e22e">目标文件名</span>].<span style="color:#a6e22e">zip</span> [<span style="color:#a6e22e">原文件</span><span style="color:#f92672">/</span><span style="color:#a6e22e">目录名</span>]  
+<span style="color:#a6e22e">解压</span><span style="color:#960050;background-color:#1e0010">：</span> <span style="color:#a6e22e">unzip</span> [<span style="color:#a6e22e">原文件名</span>].<span style="color:#a6e22e">zip</span>  
+<span style="color:#a6e22e">注</span><span style="color:#960050;background-color:#1e0010">：</span><span style="color:#f92672">-</span><span style="color:#a6e22e">r参数代表递归</span>
+
+<span style="color:#a6e22e">tar包</span> <span style="color:#a6e22e">仅仅打包</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">不压缩</span>  
+<span style="color:#a6e22e">打包</span><span style="color:#960050;background-color:#1e0010">：</span><span style="color:#a6e22e">tar</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">cvf</span> [<span style="color:#a6e22e">目标文件名</span>].<span style="color:#a6e22e">tar</span> [<span style="color:#a6e22e">原文件名</span><span style="color:#f92672">/</span><span style="color:#a6e22e">目录名</span>]  
+<span style="color:#a6e22e">解包</span><span style="color:#960050;background-color:#1e0010">：</span><span style="color:#a6e22e">tar</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">xvf</span> [<span style="color:#a6e22e">原文件名</span>].<span style="color:#a6e22e">tar</span>  
+<span style="color:#a6e22e">注</span><span style="color:#960050;background-color:#1e0010">：</span><span style="color:#a6e22e">c参数代表create</span><span style="color:#960050;background-color:#1e0010">（</span><span style="color:#a6e22e">创建</span><span style="color:#960050;background-color:#1e0010">），</span><span style="color:#a6e22e">x参数代表extract</span><span style="color:#960050;background-color:#1e0010">（</span><span style="color:#a6e22e">解包</span><span style="color:#960050;background-color:#1e0010">），</span><span style="color:#a6e22e">v参数代表verbose</span><span style="color:#960050;background-color:#1e0010">（</span><span style="color:#a6e22e">详细信息</span><span style="color:#960050;background-color:#1e0010">），</span><span style="color:#a6e22e">f参数代表filename</span><span style="color:#960050;background-color:#1e0010">（</span><span style="color:#a6e22e">文件名</span><span style="color:#960050;background-color:#1e0010">），</span><span style="color:#a6e22e">所以f后必须接文件名</span><span style="color:#960050;background-color:#1e0010">。</span>
+
+<span style="color:#a6e22e">tar</span>.<span style="color:#a6e22e">gz格式</span>  
+<span style="color:#a6e22e">方式一</span><span style="color:#960050;background-color:#1e0010">：</span><span style="color:#a6e22e">利用前面已经打包好的tar文件</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">直接用压缩命令</span><span style="color:#960050;background-color:#1e0010">。</span>
+<span style="color:#a6e22e">压缩</span><span style="color:#960050;background-color:#1e0010">：</span><span style="color:#a6e22e">gzip</span> [<span style="color:#a6e22e">原文件名</span>].<span style="color:#a6e22e">tar</span>  
+<span style="color:#a6e22e">解压</span><span style="color:#960050;background-color:#1e0010">：</span><span style="color:#a6e22e">gunzip</span> [<span style="color:#a6e22e">原文件名</span>].<span style="color:#a6e22e">tar</span>.<span style="color:#a6e22e">gz</span>  
+
+<span style="color:#a6e22e">方式二</span><span style="color:#960050;background-color:#1e0010">：</span><span style="color:#a6e22e">一次性打包并压缩</span><span style="color:#960050;background-color:#1e0010">、</span><span style="color:#a6e22e">解压并解包</span>
+<span style="color:#a6e22e">打包并压缩</span><span style="color:#960050;background-color:#1e0010">：</span> <span style="color:#a6e22e">tar</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">zcvf</span> [<span style="color:#a6e22e">目标文件名</span>].<span style="color:#a6e22e">tar</span>.<span style="color:#a6e22e">gz</span> [<span style="color:#a6e22e">原文件名</span><span style="color:#f92672">/</span><span style="color:#a6e22e">目录名</span>]  
+<span style="color:#a6e22e">解压并解包</span><span style="color:#960050;background-color:#1e0010">：</span> <span style="color:#a6e22e">tar</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">zxvf</span> [<span style="color:#a6e22e">原文件名</span>].<span style="color:#a6e22e">tar</span>.<span style="color:#a6e22e">gz</span>  
+<span style="color:#a6e22e">注</span><span style="color:#960050;background-color:#1e0010">：</span><span style="color:#a6e22e">z代表用gzip算法来压缩</span><span style="color:#f92672">/</span><span style="color:#a6e22e">解压</span><span style="color:#960050;background-color:#1e0010">。</span></code></pre></div>
+
+<h4 id="9-linux用户组权限管理">9.linux用户组权限管理</h4>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#960050;background-color:#1e0010">#</span> <span style="color:#a6e22e">查看当前目录</span><span style="color:#960050;background-color:#1e0010">（</span><span style="color:#a6e22e">包含隐藏文件</span><span style="color:#960050;background-color:#1e0010">）</span><span style="color:#a6e22e">的长格式</span><span style="color:#960050;background-color:#1e0010">。</span>
+<span style="color:#a6e22e">ls</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">la</span>  
+  <span style="color:#f92672">-</span><span style="color:#a6e22e">rw</span><span style="color:#f92672">-</span><span style="color:#a6e22e">r</span><span style="color:#f92672">--</span><span style="color:#a6e22e">r</span><span style="color:#f92672">--</span>   <span style="color:#ae81ff">1</span> <span style="color:#a6e22e">user</span>  <span style="color:#a6e22e">staff</span>   <span style="color:#ae81ff">651</span> <span style="color:#a6e22e">Oct</span> <span style="color:#ae81ff">12</span> <span style="color:#ae81ff">12</span>:<span style="color:#ae81ff">53</span> .<span style="color:#a6e22e">gitmodules</span>
+<span style="color:#a6e22e">d</span> <span style="color:#960050;background-color:#1e0010">：</span><span style="color:#a6e22e">第一位表示文件类型</span>  
+　　<span style="color:#a6e22e">d</span> <span style="color:#a6e22e">文件夹</span>  
+　　<span style="color:#f92672">-</span> <span style="color:#a6e22e">普通文件</span>  
+　　<span style="color:#a6e22e">l</span> <span style="color:#a6e22e">链接</span>  
+　　<span style="color:#a6e22e">b</span> <span style="color:#a6e22e">块设备文件</span>  
+　　<span style="color:#a6e22e">p</span> <span style="color:#a6e22e">管道文件</span>  
+　　<span style="color:#a6e22e">c</span> <span style="color:#a6e22e">字符设备文件</span>  
+　　<span style="color:#a6e22e">s</span> <span style="color:#a6e22e">套接口文件</span>
+
+<span style="color:#a6e22e">rwx</span> <span style="color:#960050;background-color:#1e0010">：</span><span style="color:#a6e22e">第2</span><span style="color:#f92672">-</span><span style="color:#ae81ff">4</span><span style="color:#a6e22e">位表示这个文件的属主</span>(<span style="color:#a6e22e">当前用户</span>)<span style="color:#a6e22e">拥有的权限</span><span style="color:#960050;background-color:#1e0010">。</span><span style="color:#a6e22e">r是读</span><span style="color:#960050;background-color:#1e0010">、</span><span style="color:#a6e22e">w是写</span><span style="color:#960050;background-color:#1e0010">、</span><span style="color:#a6e22e">x是执行</span>
+<span style="color:#a6e22e">r</span><span style="color:#f92672">-</span><span style="color:#a6e22e">x</span> <span style="color:#960050;background-color:#1e0010">：</span><span style="color:#a6e22e">第5</span><span style="color:#f92672">-</span><span style="color:#ae81ff">7</span><span style="color:#a6e22e">位表示和这个文件属主所在同一个组的用户</span>(<span style="color:#a6e22e">组用户</span>)<span style="color:#a6e22e">所具有的权限</span>
+<span style="color:#a6e22e">r</span><span style="color:#f92672">-</span><span style="color:#a6e22e">x</span> <span style="color:#960050;background-color:#1e0010">：</span><span style="color:#a6e22e">第8</span><span style="color:#f92672">-</span><span style="color:#ae81ff">10</span><span style="color:#a6e22e">位表示其他用户所具有的权限</span>
+
+<span style="color:#a6e22e">通常用三个数字来表示文件的读取</span><span style="color:#960050;background-color:#1e0010">、</span><span style="color:#a6e22e">写入</span><span style="color:#960050;background-color:#1e0010">、</span><span style="color:#a6e22e">执行权限</span><span style="color:#960050;background-color:#1e0010">：</span>
+<span style="color:#a6e22e">读取</span><span style="color:#960050;background-color:#1e0010">：</span><span style="color:#ae81ff">4</span>
+<span style="color:#a6e22e">写入</span><span style="color:#960050;background-color:#1e0010">：</span><span style="color:#ae81ff">2</span>
+<span style="color:#a6e22e">执行</span><span style="color:#960050;background-color:#1e0010">：</span><span style="color:#ae81ff">1</span>
+
+<span style="color:#a6e22e">例如</span><span style="color:#960050;background-color:#1e0010">；</span>
+<span style="color:#a6e22e">drwxr</span><span style="color:#f92672">-</span><span style="color:#a6e22e">xr</span><span style="color:#f92672">-</span><span style="color:#a6e22e">w</span>
+<span style="color:#a6e22e">rwx</span> <span style="color:#ae81ff">4</span><span style="color:#f92672">+</span><span style="color:#ae81ff">2</span><span style="color:#f92672">+</span><span style="color:#ae81ff">1</span> <span style="color:#ae81ff">7</span> <span style="color:#a6e22e">所有权限</span>
+<span style="color:#a6e22e">r</span><span style="color:#f92672">-</span><span style="color:#a6e22e">x</span> <span style="color:#ae81ff">4</span><span style="color:#f92672">+</span><span style="color:#ae81ff">1</span> <span style="color:#ae81ff">5</span> <span style="color:#a6e22e">读和执行权限</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">没有写权限</span>
+<span style="color:#a6e22e">r</span><span style="color:#f92672">-</span><span style="color:#a6e22e">w</span> <span style="color:#ae81ff">4</span><span style="color:#f92672">+</span><span style="color:#ae81ff">2</span> <span style="color:#ae81ff">6</span> <span style="color:#a6e22e">读写权限</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">没有执行权限</span>
+<span style="color:#a6e22e">具体使用</span><span style="color:#960050;background-color:#1e0010">：</span>  
+<span style="color:#a6e22e">chmod</span> <span style="color:#ae81ff">766</span> <span style="color:#a6e22e">文件名</span>
+
+<span style="color:#a6e22e">改变文件的owner</span>  
+<span style="color:#a6e22e">chown</span> <span style="color:#a6e22e">用户</span>:<span style="color:#a6e22e">用户组</span> <span style="color:#a6e22e">文件名</span>  
+<span style="color:#a6e22e">例如</span><span style="color:#960050;background-color:#1e0010">：</span><span style="color:#a6e22e">chown</span> <span style="color:#a6e22e">tctadmin</span>:<span style="color:#a6e22e">tctgroup</span> <span style="color:#a6e22e">test</span>.<span style="color:#a6e22e">xls</span></code></pre></div>
+
+<h4 id="10-linux路由配置">10.linux路由配置</h4>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#960050;background-color:#1e0010">#</span> <span style="color:#a6e22e">添加到主机的路由</span>
+<span style="color:#a6e22e">route</span> <span style="color:#a6e22e">add</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">host</span> <span style="color:#ae81ff">192.168.1.2</span> <span style="color:#a6e22e">dev</span> <span style="color:#a6e22e">eth0</span>
+<span style="color:#a6e22e">route</span> <span style="color:#a6e22e">add</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">host</span> <span style="color:#ae81ff">10.20.30.148</span> <span style="color:#a6e22e">gw</span> <span style="color:#ae81ff">10.20.30.40</span>
+<span style="color:#960050;background-color:#1e0010">#</span> <span style="color:#a6e22e">添加到网络的路由</span>
+<span style="color:#a6e22e">route</span> <span style="color:#a6e22e">add</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">net</span> <span style="color:#ae81ff">10.20.30.40</span> <span style="color:#a6e22e">netmask</span> <span style="color:#ae81ff">255.255.255.248</span> <span style="color:#a6e22e">eth0</span>
+<span style="color:#a6e22e">route</span> <span style="color:#a6e22e">add</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">net</span> <span style="color:#ae81ff">10.20.30.48</span> <span style="color:#a6e22e">netmask</span> <span style="color:#ae81ff">255.255.255.248</span> <span style="color:#a6e22e">gw</span> <span style="color:#ae81ff">10.20.30.41</span>
+<span style="color:#a6e22e">route</span> <span style="color:#a6e22e">add</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">net</span> <span style="color:#ae81ff">192.168.1.0</span><span style="color:#f92672">/</span><span style="color:#ae81ff">24</span> <span style="color:#a6e22e">eth1</span>
+<span style="color:#960050;background-color:#1e0010">#</span> <span style="color:#a6e22e">添加默认路由</span>
+<span style="color:#a6e22e">route</span> <span style="color:#a6e22e">add</span> <span style="color:#66d9ef">default</span> <span style="color:#a6e22e">gw</span> <span style="color:#ae81ff">192.168.1.1</span>  
+<span style="color:#960050;background-color:#1e0010">#</span> <span style="color:#a6e22e">删除路由</span>
+<span style="color:#a6e22e">route</span> <span style="color:#a6e22e">del</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">host</span> <span style="color:#ae81ff">192.168.1.2</span> <span style="color:#a6e22e">dev</span> <span style="color:#a6e22e">eth0</span></code></pre></div>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"></code></pre></div>
 
     </div>
 
