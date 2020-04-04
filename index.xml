@@ -6,10 +6,122 @@
     <description>Recent content on dyfblogs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 10 Oct 2019 20:17:01 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 12 Oct 2019 20:50:23 +0800</lastBuildDate>
     
         <atom:link href="http://www.dyfblogs.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Win10使用Vmware安装centos7</title>
+      <link>http://www.dyfblogs.com/post/vmware_install_centos7/</link>
+      <pubDate>Sat, 12 Oct 2019 20:50:23 +0800</pubDate>
+      
+      <guid>http://www.dyfblogs.com/post/vmware_install_centos7/</guid>
+      
+        <description>
+
+&lt;h4 id=&#34;安装前准备&#34;&gt;安装前准备&lt;/h4&gt;
+
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;Win10&lt;/span&gt;
+&lt;span style=&#34;color:#ae81ff&#34;&gt;2.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;VMware&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Workstation&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;（&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;v15&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;）&lt;/span&gt;
+&lt;span style=&#34;color:#ae81ff&#34;&gt;3.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;centos7镜像文件&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h4 id=&#34;安装&#34;&gt;安装&lt;/h4&gt;
+
+&lt;p&gt;由于安装过程较简单，此处省略安装过程，接下来讲解安装后的配置&lt;/p&gt;
+
+&lt;h4 id=&#34;1-nat网络配置&#34;&gt;1.NAT网络配置&lt;/h4&gt;
+
+&lt;p&gt;右键虚拟机选择“设置”，选择网络适配器，点击自定义，选择NAT模式
+&lt;img src=&#34;http://www.dyfblogs.com/image/vmwareinstallcentos7.jpg&#34; alt=&#34;image&#34; /&gt;
+点击VMware Workstation“编辑”功能选择“虚拟网络编辑器”选项，配置nat子网，此处注意nat子网ip不能和宿主机ip同网段
+&lt;img src=&#34;http://www.dyfblogs.com/image/vmwareinstallcentos7_02.jpg&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;2-网卡配置&#34;&gt;2.网卡配置&lt;/h4&gt;
+
+&lt;p&gt;centos7网卡配置文件路径一般为：/etc/sysconfig/network-scripts/ifcfg-ens33
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;TYPE&lt;/span&gt;=&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Ethernet&amp;#34;&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;PROXY_METHOD&lt;/span&gt;=&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;none&amp;#34;&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;BROWSER_ONLY&lt;/span&gt;=&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;no&amp;#34;&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;BOOTPROTO&lt;/span&gt;=&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;static&amp;#34;&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;DEFROUTE&lt;/span&gt;=&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;yes&amp;#34;&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;IPV4_FAILURE_FATAL&lt;/span&gt;=&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;no&amp;#34;&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;IPV6INIT&lt;/span&gt;=&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;yes&amp;#34;&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;IPV6_AUTOCONF&lt;/span&gt;=&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;yes&amp;#34;&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;IPV6_DEFROUTE&lt;/span&gt;=&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;yes&amp;#34;&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;IPV6_FAILURE_FATAL&lt;/span&gt;=&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;no&amp;#34;&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;IPV6_ADDR_GEN_MODE&lt;/span&gt;=&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;stable-privacy&amp;#34;&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;NAME&lt;/span&gt;=&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;ens33&amp;#34;&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;UUID&lt;/span&gt;=&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;93fb1d87-af1f-4a2d-a419-c8895ac93119&amp;#34;&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;DEVICE&lt;/span&gt;=&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;ens33&amp;#34;&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;IPADDR&lt;/span&gt;=&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;192.168.188.130&amp;#34;&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;NETMASK&lt;/span&gt;=&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;255.255.255.0&amp;#34;&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;DNS1&lt;/span&gt;=&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;8.8.8.8&amp;#34;&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;ONBOOT&lt;/span&gt;=&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;yes&amp;#34;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;3-路由配置&#34;&gt;3.路由配置&lt;/h4&gt;
+
+&lt;p&gt;centos7路由配置文件路径一般为：/etc/sysconfig/network-scripts/route-ens33, 若无该文件则新建一个
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;default&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;via&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;192.168.188.2&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;dev&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;ens33&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;4-关闭networkmanager&#34;&gt;4.关闭NetworkManager&lt;/h4&gt;
+
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// 暂时关闭
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;systemctl&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;stop&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;NetworkManager&lt;/span&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;// 永久关闭
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;systemctl&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;disable&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;NetworkManager&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h4 id=&#34;5-关闭防火墙&#34;&gt;5.关闭防火墙&lt;/h4&gt;
+
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// 停止防火墙
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;systemctl&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;stop&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;firewalld&lt;/span&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;// 使防火墙不随开机启动
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;systemctl&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;disable&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;firewalld&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h4 id=&#34;6-重启虚拟机网络使以上配置生效&#34;&gt;6.重启虚拟机网络使以上配置生效&lt;/h4&gt;
+
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;service&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;network&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;restart&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h4 id=&#34;7-设置系统时间&#34;&gt;7.设置系统时间&lt;/h4&gt;
+
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// 01）设置当前时间
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;timedatectl&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;set&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;time&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;YYYY-MM-DD HHSS&amp;#34;&lt;/span&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;// 02）查看所有可用的时区
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;timedatectl&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;list&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;timezones&lt;/span&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;// 03）设置时区
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;timedatectl&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;set&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;timezone&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Asia&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;Shanghai&lt;/span&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;// 04）设置硬件时间
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;timedatectl&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;set&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;local&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;rtc&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;// 05）启动自动同步时间
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;timedatectl&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;set&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;ntp&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;yes&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h4 id=&#34;8-配置yum源-此处以配置阿里云yum源为例&#34;&gt;8.配置yum源(此处以配置阿里云yum源为例)&lt;/h4&gt;
+
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// 01）先下载wget
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;yum&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;install&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;wget&lt;/span&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;// 02）备份
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;cd&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;etc&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;yum&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;repos&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;d&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;mkdir&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;repo_bak&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;mv&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;repo&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;repo_bak&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;// 03）下载新的CentOS-Base.repo 到/etc/yum.repos.d/
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;wget&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;O&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;etc&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;yum&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;repos&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;d&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;CentOS&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;Base&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;repo&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;http&lt;/span&gt;:&lt;span style=&#34;color:#75715e&#34;&gt;//mirrors.aliyun.com/repo/Centos-7.repo
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// 04）清除缓存
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;yum&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;clean&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;all&lt;/span&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;// 05）生成新的缓存
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;yum&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;makecache&lt;/span&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;// 06）下载epel
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;yum&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;install&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;y&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;epel&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;release&lt;/span&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;// 07）清除缓存
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;yum&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;clean&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;all&lt;/span&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;// 08）生成新的缓存
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;yum&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;makecache&lt;/span&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;// 09）更新
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;yum&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;update&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+</description>
+      
+    </item>
     
     <item>
       <title>面试题</title>

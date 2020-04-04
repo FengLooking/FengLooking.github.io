@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.dyfblogs.com/post/vmware_install_centos7/</loc>
+    <lastmod>2019-10-13T20:50:01+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://www.dyfblogs.com/post/interview-questions/</loc>
     <lastmod>2019-10-10T20:50:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -129,13 +136,48 @@
   
   <url>
     <loc>http://www.dyfblogs.com/categories/</loc>
-    <lastmod>2019-10-10T20:50:01+08:00</lastmod>
+    <lastmod>2019-10-13T20:50:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://www.dyfblogs.com/</loc>
+    <lastmod>2019-10-13T20:50:01+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.dyfblogs.com/tags/linux/</loc>
+    <lastmod>2019-10-13T20:50:01+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.dyfblogs.com/categories/linux/</loc>
+    <lastmod>2019-10-13T20:50:01+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.dyfblogs.com/post/</loc>
+    <lastmod>2019-10-13T20:50:01+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.dyfblogs.com/tags/</loc>
+    <lastmod>2019-10-13T20:50:01+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.dyfblogs.com/categories/interview/</loc>
     <lastmod>2019-10-10T20:50:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -149,35 +191,14 @@
   </url>
   
   <url>
-    <loc>http://www.dyfblogs.com/categories/interview/</loc>
-    <lastmod>2019-10-10T20:50:01+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.dyfblogs.com/post/</loc>
-    <lastmod>2019-10-10T20:50:01+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.dyfblogs.com/tags/</loc>
-    <lastmod>2019-10-10T20:50:01+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.dyfblogs.com/tags/redis/</loc>
+    <loc>http://www.dyfblogs.com/categories/redis/</loc>
     <lastmod>2018-09-03T19:30:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.dyfblogs.com/categories/redis/</loc>
+    <loc>http://www.dyfblogs.com/tags/redis/</loc>
     <lastmod>2018-09-03T19:30:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -198,14 +219,14 @@
   </url>
   
   <url>
-    <loc>http://www.dyfblogs.com/tags/django/</loc>
+    <loc>http://www.dyfblogs.com/categories/django/</loc>
     <lastmod>2017-04-05T21:30:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.dyfblogs.com/categories/django/</loc>
+    <loc>http://www.dyfblogs.com/tags/django/</loc>
     <lastmod>2017-04-05T21:30:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -240,14 +261,14 @@
   </url>
   
   <url>
-    <loc>http://www.dyfblogs.com/tags/mysql/</loc>
+    <loc>http://www.dyfblogs.com/categories/mysql/</loc>
     <lastmod>2017-03-05T20:30:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.dyfblogs.com/categories/mysql/</loc>
+    <loc>http://www.dyfblogs.com/tags/mysql/</loc>
     <lastmod>2017-03-05T20:30:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -282,14 +303,14 @@
   </url>
   
   <url>
-    <loc>http://www.dyfblogs.com/tags/http/</loc>
+    <loc>http://www.dyfblogs.com/categories/http/</loc>
     <lastmod>2016-10-10T20:50:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.dyfblogs.com/categories/http/</loc>
+    <loc>http://www.dyfblogs.com/tags/http/</loc>
     <lastmod>2016-10-10T20:50:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -324,14 +345,14 @@
   </url>
   
   <url>
-    <loc>http://www.dyfblogs.com/tags/color/</loc>
+    <loc>http://www.dyfblogs.com/categories/color/</loc>
     <lastmod>2016-09-05T23:37:22+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.dyfblogs.com/categories/color/</loc>
+    <loc>http://www.dyfblogs.com/tags/color/</loc>
     <lastmod>2016-09-05T23:37:22+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -359,14 +380,14 @@
   </url>
   
   <url>
-    <loc>http://www.dyfblogs.com/tags/element/</loc>
+    <loc>http://www.dyfblogs.com/categories/element/</loc>
     <lastmod>2016-09-02T18:00:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.dyfblogs.com/categories/element/</loc>
+    <loc>http://www.dyfblogs.com/tags/element/</loc>
     <lastmod>2016-09-02T18:00:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
