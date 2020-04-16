@@ -6,10 +6,154 @@
     <description>Recent content on dyfblogs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 12 Oct 2019 20:50:23 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 17 Oct 2019 20:55:33 +0800</lastBuildDate>
     
         <atom:link href="http://www.dyfblogs.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>centos7安装nginx1.16</title>
+      <link>http://www.dyfblogs.com/post/centos_install_nginx/</link>
+      <pubDate>Thu, 17 Oct 2019 20:55:33 +0800</pubDate>
+      
+      <guid>http://www.dyfblogs.com/post/centos_install_nginx/</guid>
+      
+        <description>
+
+&lt;h4 id=&#34;安装依赖&#34;&gt;安装依赖&lt;/h4&gt;
+
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;yum&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;install&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;y&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;gcc&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;c&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;pcre&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;pcre&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;devel&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;zlib&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;zlib&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;devel&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h4 id=&#34;下载nginx包&#34;&gt;下载nginx包&lt;/h4&gt;
+
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;wget&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;http&lt;/span&gt;:&lt;span style=&#34;color:#f92672&#34;&gt;//&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;nginx&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;org&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;download&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;nginx&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1.16.0&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;tar&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;gz&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h4 id=&#34;解压nginx包&#34;&gt;解压nginx包&lt;/h4&gt;
+
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;tar&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;zxvf&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;nginx&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1.16.0&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;tar&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;gz&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h4 id=&#34;编译安装&#34;&gt;编译安装&lt;/h4&gt;
+
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;cd&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;nginx&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1.16.0&lt;/span&gt;
+.&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;configure&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;make&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;make&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;install&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h4 id=&#34;启动nginx&#34;&gt;启动nginx&lt;/h4&gt;
+
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;cd&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;usr&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;local&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;nginx&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;sbin&lt;/span&gt;
+.&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;nginx&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h4 id=&#34;查看nginx是否运行&#34;&gt;查看nginx是否运行&lt;/h4&gt;
+
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;ps&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;ef&lt;/span&gt; | &lt;span style=&#34;color:#a6e22e&#34;&gt;grep&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;nginx&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h4 id=&#34;配置修改后使配置生效&#34;&gt;配置修改后使配置生效&lt;/h4&gt;
+
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;.&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;nginx&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;s&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;reload&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h4 id=&#34;代理配置&#34;&gt;代理配置&lt;/h4&gt;
+
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;location&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; {
+    &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;#&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;root&lt;/span&gt;   &lt;span style=&#34;color:#a6e22e&#34;&gt;html&lt;/span&gt;;
+    &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;#&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;index&lt;/span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;index&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;html&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;index&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;htm&lt;/span&gt;;
+    &lt;span style=&#34;color:#a6e22e&#34;&gt;proxy_pass&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;http&lt;/span&gt;:&lt;span style=&#34;color:#75715e&#34;&gt;//192.168.188.130:30100;
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h4 id=&#34;常用代理配置项&#34;&gt;常用代理配置项&lt;/h4&gt;
+
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// 重写后端服务器的location和refresh头
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;proxy_redirect&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;off&lt;/span&gt;;
+&lt;span style=&#34;color:#75715e&#34;&gt;// 重写发送给后端服务器的请求头内容
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;proxy_set_header&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Host&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;$&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;host&lt;/span&gt;;
+&lt;span style=&#34;color:#75715e&#34;&gt;// 代理服务器接收请求到连接后端服务器的最长等待时间
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;proxy_connect_timeout&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;300&lt;/span&gt;;
+&lt;span style=&#34;color:#75715e&#34;&gt;// 后端响应的缓冲区数量和大小
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;proxy_buffer_size&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;k&lt;/span&gt;;
+&lt;span style=&#34;color:#75715e&#34;&gt;// 请求后端的缓冲区数量和大小
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;proxy_buffers&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;32&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;k&lt;/span&gt;;
+&lt;span style=&#34;color:#75715e&#34;&gt;// 当代理服务器忙时，缓冲区的最大值
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;proxy_busy_buffers_size&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;64&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;k&lt;/span&gt;;
+&lt;span style=&#34;color:#75715e&#34;&gt;// 将超时与请求传输到代理服务器分配
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;proxy_send_timeout&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;300&lt;/span&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;// NGINX等待获取请求响应的时间
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;proxy_read_timeout&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;300&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>centos7安装MySQL5.7.28</title>
+      <link>http://www.dyfblogs.com/post/centos_install_mysql/</link>
+      <pubDate>Tue, 15 Oct 2019 20:40:41 +0800</pubDate>
+      
+      <guid>http://www.dyfblogs.com/post/centos_install_mysql/</guid>
+      
+        <description>
+
+&lt;h4 id=&#34;配置yum源&#34;&gt;配置yum源&lt;/h4&gt;
+
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// 1）下载
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;wget&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;https&lt;/span&gt;:&lt;span style=&#34;color:#75715e&#34;&gt;//dev.mysql.com/get/mysql57-community-release-el7-9.noarch.rpm
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// 2）安装
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;rpm&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;ivh&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;mysql57&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;community&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;release&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;el7&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;9.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;noarch&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;rpm&lt;/span&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;// 执行完成后会在/etc/yum.repos.d/目录下生成两个repo文件mysql-community.repo mysql-community-source.repo
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// 3）更新yum源
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;yum&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;clean&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;all&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;yum&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;makecache&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;yum&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;update&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h4 id=&#34;安装及配置&#34;&gt;安装及配置&lt;/h4&gt;
+
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// 1) 安装MySQL-5.7.28
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;yum&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;install&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;mysql&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;server&lt;/span&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;// 2) 安装完成后启动mysql
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;systemctl&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;start&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;mysqld&lt;/span&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;// 3) 设置开机启动
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;systemctl&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;enable&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;mysqld&lt;/span&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;// 4) 获取安装时的临时密码（在第一次登录时就是用这个密码）
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;grep&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;temporary&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;password&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;log&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;mysqld&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;log&lt;/span&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;// 5) 登录mysql
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;mysql&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;u&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;root&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;p&lt;/span&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;// 然后输入密码（刚刚获取的临时密码）
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// 6) 登录后修改root密码
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;ALTER&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;USER&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;root&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;@&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;localhost&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;IDENTIFIED&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;BY&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&amp;#39;@&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;abcd123456&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&amp;#39;&lt;/span&gt;; 
+&lt;span style=&#34;color:#75715e&#34;&gt;// 注意：mysql5.7默认安装了密码安全检查插件（validate_password），默认密码检查策略要求密码必须包含：大小写字母、数字和特殊符号，并且长度不能少于8// 位。否则会提示ERROR 1819 (HY000): Your password does not satisfy the current policy requirements错误
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// 不需要此策略可以进行修改
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// 在/etc/my.cnf文件添加validate_password_policy配置，指定密码策略
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// 选择0（LOW），1（MEDIUM），2（STRONG）其中一种，选择2需要提供密码字典文件
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;validate_password_policy&lt;/span&gt;=&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;// 如果不需要密码策略，添加my.cnf文件中添加如下配置禁用即可：
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;validate_password&lt;/span&gt; = &lt;span style=&#34;color:#a6e22e&#34;&gt;off&lt;/span&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;// 重新启动mysql服务使配置生效：
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;systemctl&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;restart&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;mysqld&lt;/span&gt;
+
+&lt;span style=&#34;color:#75715e&#34;&gt;// 7) 添加远程登录用户
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;create&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;user&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;pyjsh&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;@&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;localhost&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;identified&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;by&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;pyjsh&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&amp;#39;&lt;/span&gt;;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;grant&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;all&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;on&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;.&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;to&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;pyjsh&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;@&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;%&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;identified&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;by&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;pyjsh&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&amp;#39;&lt;/span&gt;;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;grant&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;all&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;on&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;.&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;to&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;pyjsh&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;@&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;localhost&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;identified&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;by&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;pyjsh&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&amp;#39;&lt;/span&gt;;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;flush&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;privileges&lt;/span&gt;;
+
+&lt;span style=&#34;color:#75715e&#34;&gt;// 8) 配置默认编码为utf8
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// 修改/etc/my.cnf配置文件，在[mysqld]下添加编码配置，如下所示：
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;[&lt;span style=&#34;color:#a6e22e&#34;&gt;mysqld&lt;/span&gt;]
+&lt;span style=&#34;color:#a6e22e&#34;&gt;character_set_server&lt;/span&gt;=&lt;span style=&#34;color:#a6e22e&#34;&gt;utf8&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;init_connect&lt;/span&gt;=&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;SET&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;NAMES&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;utf8&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&amp;#39;&lt;/span&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;// 重新启动mysql服务使配置生效
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;systemctl&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;restart&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;mysqld&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h4 id=&#34;默认配置文件路径&#34;&gt;默认配置文件路径&lt;/h4&gt;
+
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;配置文件&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;：&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;etc&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;my&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;cnf&lt;/span&gt;  
+    &lt;span style=&#34;color:#a6e22e&#34;&gt;日志文件&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;：&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;log&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;mysqld&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;log&lt;/span&gt;  
+ &lt;span style=&#34;color:#a6e22e&#34;&gt;服务启动脚本&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;：&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;usr&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;lib&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;systemd&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;system&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;mysqld&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;service&lt;/span&gt;  
+  &lt;span style=&#34;color:#a6e22e&#34;&gt;socket文件&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;：&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;run&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;mysqld&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;mysqld&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;pid&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+</description>
+      
+    </item>
     
     <item>
       <title>Win10使用Vmware安装centos7</title>
@@ -1817,28 +1961,6 @@ RGB的每一项可以是0~255之间的整数，也可以是0%~100%之间的百�
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;[&lt;span style=&#34;color:#a6e22e&#34;&gt;global&lt;/span&gt;]
 &lt;span style=&#34;color:#a6e22e&#34;&gt;index&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;url&lt;/span&gt;=&lt;span style=&#34;color:#a6e22e&#34;&gt;http&lt;/span&gt;:&lt;span style=&#34;color:#75715e&#34;&gt;//mirrors.aliyun.com/pypi/simple
 &lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;trusted&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;host&lt;/span&gt;=&lt;span style=&#34;color:#a6e22e&#34;&gt;mirrors&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;aliyun&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;com&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/p&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>关于</title>
-      <link>http://www.dyfblogs.com/about/</link>
-      <pubDate>Sun, 20 Aug 2017 21:38:52 +0800</pubDate>
-      
-      <guid>http://www.dyfblogs.com/about/</guid>
-      
-        <description>&lt;p&gt;程序员菜鸟一枚，领域涉及前端、后端(Python)、运维。&lt;/p&gt;
-
-&lt;p&gt;内容太少去：&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.cnblogs.com/dyfblogs/&#34;&gt;博客园&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/&#34;&gt;GitHub&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;若您对本站内容有疑问，可以扫描下面二维码。&lt;br /&gt;
-&lt;img src=&#34;http://www.dyfblogs.com/image/WechatIMG1.jpeg&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
 </description>
       
     </item>

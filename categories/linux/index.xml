@@ -6,10 +6,28 @@
     <description>Recent content in linux on dyfblogs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 12 Oct 2019 20:50:23 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 17 Oct 2019 20:55:33 +0800</lastBuildDate>
     
 	<atom:link href="http://www.dyfblogs.com/categories/linux/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>centos7安装nginx1.16</title>
+      <link>http://www.dyfblogs.com/post/centos_install_nginx/</link>
+      <pubDate>Thu, 17 Oct 2019 20:55:33 +0800</pubDate>
+      
+      <guid>http://www.dyfblogs.com/post/centos_install_nginx/</guid>
+      <description>安装依赖 yum install -y gcc-c++ pcre pcre-devel zlib zlib-devel 下载nginx包 wget http://nginx.org/download/nginx-1.16.0.tar.gz 解压nginx包 tar -zxvf nginx-1.16.0.tar.gz 编译安装 cd nginx-1.16.0 ./configure make &amp;amp;&amp;amp; make install 启动nginx cd /usr/local/nginx/sbin ./nginx 查看nginx是否运行 ps -ef | grep nginx</description>
+    </item>
+    
+    <item>
+      <title>centos7安装MySQL5.7.28</title>
+      <link>http://www.dyfblogs.com/post/centos_install_mysql/</link>
+      <pubDate>Tue, 15 Oct 2019 20:40:41 +0800</pubDate>
+      
+      <guid>http://www.dyfblogs.com/post/centos_install_mysql/</guid>
+      <description>配置yum源 // 1）下载 wget https://dev.mysql.com/get/mysql57-community-release-el7-9.noarch.rpm // 2）安装 rpm -ivh mysql57-community-release-el7-9.noarch.rpm // 执行完成后会在/etc/yum.repos.d/目录下生成两个repo文件mysql-commu</description>
+    </item>
     
     <item>
       <title>Win10使用Vmware安装centos7</title>
