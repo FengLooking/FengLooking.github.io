@@ -6,10 +6,57 @@
     <description>Recent content on dyfblogs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 17 Oct 2019 20:55:33 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 20 Oct 2019 22:50:10 +0800</lastBuildDate>
     
         <atom:link href="http://www.dyfblogs.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>centos7安装jdk8</title>
+      <link>http://www.dyfblogs.com/post/centos_install_jdk8/</link>
+      <pubDate>Sun, 20 Oct 2019 22:50:10 +0800</pubDate>
+      
+      <guid>http://www.dyfblogs.com/post/centos_install_jdk8/</guid>
+      
+        <description>
+
+&lt;h4 id=&#34;一-百度搜索jdk8&#34;&gt;一.百度搜索jdk8&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://www.dyfblogs.com/image/jdk8_01.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;二-进入oracle官网下载页面-鼠标放在sign-in-上-点击-sign-in-to-my-account&#34;&gt;二.进入oracle官网下载页面，鼠标放在Sign in 上，点击 Sign in to my Account&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://www.dyfblogs.com/image/jdk8_02.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;三-有账号的输入账号后点击登录-没有账号的创建一个账号后登录&#34;&gt;三.有账号的输入账号后点击登录，没有账号的创建一个账号后登录&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://www.dyfblogs.com/image/jdk8_03.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;四-登录后点击accept-license-agreement-然后点击jdk-8u231-linux-x64-rpm后下载jdk8&#34;&gt;四.登录后点击Accept License Agreement, 然后点击jdk-8u231-linux-x64.rpm后下载jdk8&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://www.dyfblogs.com/image/jdk8_04.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;五-下载结束后将下载的jdk包上传到你要安装的虚拟机&#34;&gt;五.下载结束后将下载的jdk包上传到你要安装的虚拟机&lt;/h4&gt;
+
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;#&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;执行ll查看你上传的文件&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;总用量&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;174404&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;rw&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;r&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;--&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;r&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;--&lt;/span&gt;. &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;root&lt;/span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;root&lt;/span&gt;  &lt;span style=&#34;color:#ae81ff&#34;&gt;178589686&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;12&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;月&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;30&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;23&lt;/span&gt;:&lt;span style=&#34;color:#ae81ff&#34;&gt;19&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;jdk&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;8&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;u231&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;linux&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;x64&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;rpm&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h4 id=&#34;六-安装jdk8-i-显示套件的相关信息-v-显示指令执行过程-h或-hash-套件安装时列出标记&#34;&gt;六.安装jdk8：-i：显示套件的相关信息，-v：显示指令执行过程；-h或&amp;ndash;hash：套件安装时列出标记&lt;/h4&gt;
+
+&lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;rpm&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;ivh&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;jdk&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;8&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;u231&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;linux&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;x64&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;rpm&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;img src=&#34;http://www.dyfblogs.com/image/jdk8_05.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;七-用-java-version-的命令查看java的环境变量是否生效-出现下面的内容就说明java的jdk已经部署完成&#34;&gt;七.用“java -version”的命令查看java的环境变量是否生效,出现下面的内容就说明java的jdk已经部署完成&lt;/h4&gt;
+
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;java&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;version&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;1.8.0_231&amp;#34;&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;Java&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;TM&lt;/span&gt;) &lt;span style=&#34;color:#a6e22e&#34;&gt;SE&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Runtime&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Environment&lt;/span&gt; (&lt;span style=&#34;color:#a6e22e&#34;&gt;build&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1.8.0&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;_231&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;b11&lt;/span&gt;)
+&lt;span style=&#34;color:#a6e22e&#34;&gt;Java&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;HotSpot&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;TM&lt;/span&gt;) &lt;span style=&#34;color:#ae81ff&#34;&gt;64&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;Bit&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Server&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;VM&lt;/span&gt; (&lt;span style=&#34;color:#a6e22e&#34;&gt;build&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;25.231&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;b11&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;mixed&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;mode&lt;/span&gt;)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+</description>
+      
+    </item>
     
     <item>
       <title>centos7安装nginx1.16</title>
@@ -1942,25 +1989,6 @@ RGB的每一项可以是0~255之间的整数，也可以是0%~100%之间的百�
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;div&lt;/span&gt; {
     &lt;span style=&#34;color:#a6e22e&#34;&gt;display&lt;/span&gt;: &lt;span style=&#34;color:#a6e22e&#34;&gt;inline&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;block&lt;/span&gt;;
 }&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/p&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>linux平台配置pip源</title>
-      <link>http://www.dyfblogs.com/post/pip-linux-config/</link>
-      <pubDate>Sun, 10 Jan 2016 20:50:01 +0800</pubDate>
-      
-      <guid>http://www.dyfblogs.com/post/pip-linux-config/</guid>
-      
-        <description>&lt;p&gt;1.在根目录下创建.pip文件夹
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;mkdir&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;~&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;pip&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-2.在创建好的.pip文件夹下创建pip源配置文件
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;touch&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;~&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;pip&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;pip&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;conf&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-3.选择国内某一pip源配置到文件pip.conf中，样例如下(这里用的是阿里的pip源)：
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;[&lt;span style=&#34;color:#a6e22e&#34;&gt;global&lt;/span&gt;]
-&lt;span style=&#34;color:#a6e22e&#34;&gt;index&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;url&lt;/span&gt;=&lt;span style=&#34;color:#a6e22e&#34;&gt;http&lt;/span&gt;:&lt;span style=&#34;color:#75715e&#34;&gt;//mirrors.aliyun.com/pypi/simple
-&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;trusted&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;host&lt;/span&gt;=&lt;span style=&#34;color:#a6e22e&#34;&gt;mirrors&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;aliyun&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;com&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/p&gt;
 </description>
       
     </item>
