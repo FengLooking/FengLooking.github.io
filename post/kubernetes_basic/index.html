@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Kubernetes - dyfblogs</title>
+  
+
+<meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta name="MobileOptimized" content="width"/>
+<meta name="HandheldFriendly" content="true"/>
+
+
+<meta name="applicable-device" content="pc,mobile">
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+<meta name="mobile-web-app-capable" content="yes">
+
+<meta name="author" content="dyf" />
+  <meta name="description" content="kubernetes kubernetes是一个开源的，用于管理云平台中多个主机上的容器化的应用。简称K8s，是用8代替8个字符“ubernete”而成的缩写。" />
+
+  <meta name="keywords" content="Hugo, theme, jane" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.57.2" />
+
+
+<link rel="canonical" href="http://www.dyfblogs.com/post/kubernetes_basic/" />
+
+
+
+<link rel="icon" href="/favicon.ico" />
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/sass/jane.min.767e8d19348cc668e31b1e043ece58a4e41f5a6ef892b2b2935a57a23b63bae9.css" integrity="sha256-dn6NGTSMxmjjGx4EPs5YpOQfWm74krKyk1pXojtjuuk=" media="screen" crossorigin="anonymous">
+
+
+
+
+
+<meta property="og:title" content="Kubernetes" />
+<meta property="og:description" content="kubernetes kubernetes是一个开源的，用于管理云平台中多个主机上的容器化的应用。简称K8s，是用8代替8个字符“ubernete”而成的缩写。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://www.dyfblogs.com/post/kubernetes_basic/" />
+<meta property="article:published_time" content="2019-10-25T20:21:56+08:00" />
+<meta property="article:modified_time" content="2019-10-25T21:50:01+08:00" />
+<meta itemprop="name" content="Kubernetes">
+<meta itemprop="description" content="kubernetes kubernetes是一个开源的，用于管理云平台中多个主机上的容器化的应用。简称K8s，是用8代替8个字符“ubernete”而成的缩写。">
+
+
+<meta itemprop="datePublished" content="2019-10-25T20:21:56&#43;08:00" />
+<meta itemprop="dateModified" content="2019-10-25T21:50:01&#43;08:00" />
+<meta itemprop="wordCount" content="2057">
+
+
+
+<meta itemprop="keywords" content="k8s," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Kubernetes"/>
+<meta name="twitter:description" content="kubernetes kubernetes是一个开源的，用于管理云平台中多个主机上的容器化的应用。简称K8s，是用8代替8个字符“ubernete”而成的缩写。"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+
+
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">DYFNOTES</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <li class="mobile-menu-item">
+          
+          
+            <a class="menu-item-link" href="http://www.dyfblogs.com/">首页</a>
+          
+      </li><li class="mobile-menu-item">
+          
+          
+            <a class="menu-item-link" href="http://www.dyfblogs.com/post/">归档</a>
+          
+      </li><li class="mobile-menu-item">
+          
+          
+            <a class="menu-item-link" href="http://www.dyfblogs.com/tags/">标签</a>
+          
+      </li><li class="mobile-menu-item">
+          
+          
+            <a class="menu-item-link" href="http://www.dyfblogs.com/categories/">归类</a>
+          
+      </li><li class="mobile-menu-item">
+          
+          
+            <a class="menu-item-link" href="http://www.dyfblogs.com/about/">关于</a>
+          
+      </li>
+    
+
+    
+  </ul>
+</nav>
+
+
+  
+    
+
+
+
+
+
+
+  <link rel="stylesheet" href="/lib/photoswipe/photoswipe.min.css" />
+  <link rel="stylesheet" href="/lib/photoswipe/default-skin/default-skin.min.css" />
+
+
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+  
+
+  
+
+  
+
+  <header id="header" class="header container">
+    <div class="logo-wrapper">
+  <a href="/" class="logo">
+    
+      DYFNOTES
+    
+  </a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    
+    
+        <li class="menu-item">
+          
+          
+          
+            <a class="menu-item-link" href="http://www.dyfblogs.com/">首页</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+          
+          
+          
+            <a class="menu-item-link" href="http://www.dyfblogs.com/post/">归档</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+          
+          
+          
+            <a class="menu-item-link" href="http://www.dyfblogs.com/tags/">标签</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+          
+          
+          
+            <a class="menu-item-link" href="http://www.dyfblogs.com/categories/">归类</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+          
+          
+          
+            <a class="menu-item-link" href="http://www.dyfblogs.com/about/">关于</a>
+          
+
+        
+
+      </li>
+    
+
+    
+    
+
+    
+  </ul>
+</nav>
+
+  </header>
+
+  <div id="mobile-panel">
+    <main id="main" class="main bg-llight">
+      <div class="content-wrapper">
+        <div id="content" class="content container">
+          <article class="post bg-white article_content">
+    
+    <header class="post-header">
+      <h1 class="post-title">Kubernetes</h1>
+      
+      <div class="post-meta">
+        <span>发表于</span>
+        <time datetime="2019-10-25" class="post-time">
+          2019-10-25
+        </time>
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Table of Contents</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#kubernetes">kubernetes</a></li>
+<li><a href="#kubernetes组件">kubernetes组件</a></li>
+<li><a href="#kubernetes资源">kubernetes资源</a></li>
+<li><a href="#pod的分类">Pod的分类</a></li>
+<li><a href="#init容器">init容器</a></li>
+<li><a href="#service类型">Service类型</a></li>
+<li><a href="#污点">污点</a></li>
+<li><a href="#kubernetes常用命令">kubernetes常用命令</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+
+    
+    <div class="post-content">
+      
+
+<h4 id="kubernetes">kubernetes</h4>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">kubernetes是一个开源的</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">用于管理云平台中多个主机上的容器化的应用</span><span style="color:#960050;background-color:#1e0010">。</span><span style="color:#a6e22e">简称K8s</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">是用8代替8个字符</span><span style="color:#960050;background-color:#1e0010">“</span><span style="color:#a6e22e">ubernete</span><span style="color:#960050;background-color:#1e0010">”</span><span style="color:#a6e22e">而成的缩写</span><span style="color:#960050;background-color:#1e0010">。</span>
+    <span style="color:#a6e22e">容器占用资源少</span><span style="color:#960050;background-color:#1e0010">、</span><span style="color:#a6e22e">部署快</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">每个应用可以被打包成一个容器镜像</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">每个应用与容器间成一对一关系也使容器有更大优势</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">使用容器可以在build或release</span> <span style="color:#a6e22e">的阶段</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">为应用创建容器镜像</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">因为每个应用不需要与其余的应用堆栈组合</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">也不依赖于生产环境基础结构</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">这使得从研发到测试</span><span style="color:#960050;background-color:#1e0010">、</span><span style="color:#a6e22e">生产能提供一致环境</span><span style="color:#960050;background-color:#1e0010">。</span><span style="color:#a6e22e">类似地</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">容器比虚拟机轻量</span><span style="color:#960050;background-color:#1e0010">、</span><span style="color:#a6e22e">更</span><span style="color:#960050;background-color:#1e0010">“</span><span style="color:#a6e22e">透明</span><span style="color:#960050;background-color:#1e0010">”，</span><span style="color:#a6e22e">这更便于监控和管理</span><span style="color:#960050;background-color:#1e0010">。</span>
+    <span style="color:#a6e22e">每个容器之间互相隔离</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">每个容器有自己的文件系统</span> <span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">容器之间进程不会相互影响</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">能区分计算资源</span><span style="color:#960050;background-color:#1e0010">。</span><span style="color:#a6e22e">相对于虚拟机</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">容器能快速部署</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">由于容器与底层设施</span><span style="color:#960050;background-color:#1e0010">、</span><span style="color:#a6e22e">机器文件系统解耦的</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">所以它能在不同云</span><span style="color:#960050;background-color:#1e0010">、</span><span style="color:#a6e22e">不同版本操作系统间进行迁移</span><span style="color:#960050;background-color:#1e0010">。</span>
+<span style="color:#a6e22e">Kubernetes</span> <span style="color:#a6e22e">的特点</span><span style="color:#960050;background-color:#1e0010">：</span>
+    <span style="color:#a6e22e">可移植</span>: <span style="color:#a6e22e">支持公有云</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">私有云</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">混合云</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">多重云</span><span style="color:#960050;background-color:#1e0010">（</span><span style="color:#a6e22e">multi</span><span style="color:#f92672">-</span><span style="color:#a6e22e">cloud</span><span style="color:#960050;background-color:#1e0010">）</span>
+    <span style="color:#a6e22e">可扩展</span>: <span style="color:#a6e22e">模块化</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">插件化</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">可挂载</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">可组合</span>
+    <span style="color:#a6e22e">自动化</span>: <span style="color:#a6e22e">自动部署</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">自动重启</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">自动复制</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">自动伸缩</span><span style="color:#f92672">/</span><span style="color:#a6e22e">扩展</span></code></pre></div>
+
+<h4 id="kubernetes组件">kubernetes组件</h4>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">Master</span> <span style="color:#a6e22e">组件</span>
+    <span style="color:#a6e22e">kube</span><span style="color:#f92672">-</span><span style="color:#a6e22e">apiserver</span><span style="color:#960050;background-color:#1e0010">：</span><span style="color:#a6e22e">所有服务访问统一入口</span>
+    <span style="color:#a6e22e">ETCD</span><span style="color:#960050;background-color:#1e0010">：</span><span style="color:#a6e22e">键值对数据库</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">存储k8s集群所有重要信息</span>
+    <span style="color:#a6e22e">controller</span><span style="color:#f92672">-</span><span style="color:#a6e22e">manager</span><span style="color:#960050;background-color:#1e0010">：</span><span style="color:#a6e22e">维持副本期望数目</span>
+    <span style="color:#a6e22e">kube</span><span style="color:#f92672">-</span><span style="color:#a6e22e">scheduler</span><span style="color:#960050;background-color:#1e0010">：</span><span style="color:#a6e22e">任务调度</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">选择合适的节点进行任务分配</span>
+    <span style="color:#a6e22e">COREDNS</span><span style="color:#960050;background-color:#1e0010">：</span><span style="color:#a6e22e">为集群中的SVC创建一个域名IP的对应关系解析</span>
+<span style="color:#a6e22e">节点</span><span style="color:#960050;background-color:#1e0010">（</span><span style="color:#a6e22e">Node</span><span style="color:#960050;background-color:#1e0010">）</span><span style="color:#a6e22e">组件</span>
+    <span style="color:#a6e22e">kubelet</span><span style="color:#960050;background-color:#1e0010">：</span><span style="color:#a6e22e">直接和容器引擎交互实现容器的生命周期管理</span>
+    <span style="color:#a6e22e">kube</span><span style="color:#f92672">-</span><span style="color:#a6e22e">proxy</span><span style="color:#960050;background-color:#1e0010">：</span><span style="color:#a6e22e">写入规则到IPTABLES</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">IPVS</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">实现服务映射访问</span>
+    <span style="color:#a6e22e">docker</span>: <span style="color:#a6e22e">用于运行容器</span>
+    <span style="color:#a6e22e">supervisord</span><span style="color:#960050;background-color:#1e0010">：</span><span style="color:#a6e22e">supervisord是一个轻量级的监控系统</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">用于保障kubelet和docker运行</span>
+    <span style="color:#a6e22e">fluentd</span><span style="color:#960050;background-color:#1e0010">：</span><span style="color:#a6e22e">一个守护进程</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">可提供cluster</span><span style="color:#f92672">-</span><span style="color:#a6e22e">level</span> <span style="color:#a6e22e">logging</span></code></pre></div>
+
+<h4 id="kubernetes资源">kubernetes资源</h4>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">资源</span><span style="color:#960050;background-color:#1e0010">：</span><span style="color:#a6e22e">k8s中所有内容都抽象为资源</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">资源实例化后叫做对象</span><span style="color:#960050;background-color:#1e0010">。</span>
+<span style="color:#a6e22e">资源清单</span><span style="color:#960050;background-color:#1e0010">：</span><span style="color:#a6e22e">k8s中</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">一般使用yaml格式的文件来创建符合我们预期的pod</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">这样的yaml文件称为资源清单</span>
+<span style="color:#a6e22e">集群资源分类</span><span style="color:#960050;background-color:#1e0010">：</span>
+    <span style="color:#a6e22e">名称空间级别资源</span><span style="color:#960050;background-color:#1e0010">：</span>
+        <span style="color:#a6e22e">工作负载型资源</span><span style="color:#960050;background-color:#1e0010">：</span><span style="color:#a6e22e">pod</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">ReplicaSet</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">Deployment</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">StatefulSet</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">DaemonSet</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">Job</span>
+        <span style="color:#a6e22e">服务发现型及负载均衡型资源</span><span style="color:#960050;background-color:#1e0010">：</span><span style="color:#a6e22e">Service</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">Ingress</span>
+        <span style="color:#a6e22e">配置与存储型资源</span><span style="color:#960050;background-color:#1e0010">：</span><span style="color:#a6e22e">Volume</span>(<span style="color:#a6e22e">存储卷</span>)<span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">CSI</span>(<span style="color:#a6e22e">容器存储接口</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">可以扩展各种各样的第三方存储卷</span>)
+        <span style="color:#a6e22e">特殊类型存储卷</span><span style="color:#960050;background-color:#1e0010">：</span><span style="color:#a6e22e">ConfigMap</span>(<span style="color:#a6e22e">当配置中心来使用</span>)<span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">Secret</span>(<span style="color:#a6e22e">保存敏感数据</span>)<span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">DownwardAPI</span>(<span style="color:#a6e22e">把外部环境中的信息输出给容器</span>)
+    <span style="color:#a6e22e">集群级别资源</span><span style="color:#960050;background-color:#1e0010">：</span><span style="color:#a6e22e">Namespace</span>,<span style="color:#a6e22e">Node</span>,<span style="color:#a6e22e">Role</span>,<span style="color:#a6e22e">ClusterRole</span>,<span style="color:#a6e22e">Rolebinding</span>,<span style="color:#a6e22e">ClusterRoleBinding</span>
+    <span style="color:#a6e22e">元数据型资源</span><span style="color:#960050;background-color:#1e0010">：</span><span style="color:#a6e22e">HPA</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">PodTemplate</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">LimitRange</span></code></pre></div>
+
+<h4 id="pod的分类">Pod的分类</h4>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">自主式Pod</span><span style="color:#960050;background-color:#1e0010">：</span><span style="color:#a6e22e">当Pod退出后</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">此类型的Pod不会被创建</span>
+<span style="color:#a6e22e">控制器管理的Pod</span><span style="color:#960050;background-color:#1e0010">：</span><span style="color:#a6e22e">在控制器的生命周期里</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">始终要维持Pod的副本数目</span></code></pre></div>
+
+<h4 id="init容器">init容器</h4>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">Pod能够具有多个容器</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">应用运行在容器里面</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">但是它也可能有一个或多个先于容器启动的init容器</span><span style="color:#960050;background-color:#1e0010">。</span>
+<span style="color:#a6e22e">init容器与普通容器非常像</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">除了如下两点</span><span style="color:#960050;background-color:#1e0010">：</span>
+    <span style="color:#a6e22e">init容器总是运行到成功完成为止</span>
+    <span style="color:#a6e22e">每个init容器都必须在下一个init容器启动之前成功完成</span>
+<span style="color:#a6e22e">如果pod的init容器失败了</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">kubernetes会不断的重启该pod</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">直到init容器成功为止</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">然而</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">如果pod对应的restartPolicy为never</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">它不会重启</span><span style="color:#960050;background-color:#1e0010">。</span></code></pre></div>
+
+<h4 id="service类型">Service类型</h4>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">ClusterIp</span>: <span style="color:#a6e22e">默认类型</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">自动分配一个仅Cluster内部可以访问的虚拟IP</span>
+<span style="color:#a6e22e">NodePort</span><span style="color:#960050;background-color:#1e0010">：</span><span style="color:#a6e22e">在ClusterIp基础上为Service在每台机器上绑定一个端口</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">这样就可以通过node_ip</span>:<span style="color:#a6e22e">node_port的方式来访问服务</span>
+<span style="color:#a6e22e">LoadBalancer</span><span style="color:#960050;background-color:#1e0010">：</span><span style="color:#a6e22e">在NodePort的基础上</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">借助cloud</span> <span style="color:#a6e22e">provider创建一个外部负载均衡器</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">并将请求转发到node_ip</span>:<span style="color:#a6e22e">node_port</span><span style="color:#960050;background-color:#1e0010">。</span>
+<span style="color:#a6e22e">ExternalName</span><span style="color:#960050;background-color:#1e0010">：</span><span style="color:#a6e22e">把集群外部的服务引入到集群内部来</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">在集群内部直接使用</span><span style="color:#960050;background-color:#1e0010">。</span><span style="color:#a6e22e">没有任何类型代理被创建</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">这在kubernetes</span> <span style="color:#ae81ff">1.7</span><span style="color:#a6e22e">以上的版本的kube</span><span style="color:#f92672">-</span><span style="color:#a6e22e">dns才支持</span></code></pre></div>
+
+<h4 id="污点">污点</h4>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">每个污点有一个key和value作为污点的标签</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">其中value可以为空</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">effect描述污点的作用</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">当前taint</span> <span style="color:#a6e22e">effect支持如下三个选项</span><span style="color:#960050;background-color:#1e0010">：</span>
+    <span style="color:#a6e22e">NoSchedule</span><span style="color:#960050;background-color:#1e0010">：</span><span style="color:#a6e22e">表示k8s将不会将pod调度到具有该污点的Node上</span>
+    <span style="color:#a6e22e">PreferNoSchedule</span><span style="color:#960050;background-color:#1e0010">：</span><span style="color:#a6e22e">表示k8s将尽量避免pod调度到具有该污点的pod上</span>
+    <span style="color:#a6e22e">NoExecute</span><span style="color:#960050;background-color:#1e0010">：</span><span style="color:#a6e22e">表示k8s将不会将pod调度到具有该污点的node上</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">同时会将node上已存在的pod驱逐出去</span>
+<span style="color:#a6e22e">污点的设置</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">查看和取出</span>
+<span style="color:#a6e22e">设置污点</span><span style="color:#960050;background-color:#1e0010">：</span>
+<span style="color:#a6e22e">kubectl</span> <span style="color:#a6e22e">taint</span> <span style="color:#a6e22e">nodes</span> <span style="color:#a6e22e">node1</span> <span style="color:#a6e22e">key1</span>=<span style="color:#a6e22e">value1</span>:<span style="color:#a6e22e">NoSchedule</span>
+<span style="color:#a6e22e">查看污点</span>
+<span style="color:#a6e22e">kubectl</span> <span style="color:#a6e22e">describe</span> <span style="color:#a6e22e">node</span> <span style="color:#a6e22e">node_name</span>
+<span style="color:#a6e22e">取出污点</span>
+<span style="color:#a6e22e">kubectl</span> <span style="color:#a6e22e">taint</span> <span style="color:#a6e22e">nodes</span> <span style="color:#a6e22e">node1</span> <span style="color:#a6e22e">key1</span>:<span style="color:#a6e22e">NoSchedule</span><span style="color:#f92672">-</span></code></pre></div>
+
+<h4 id="kubernetes常用命令">kubernetes常用命令</h4>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">查看pod</span>
+<span style="color:#a6e22e">kubectl</span> <span style="color:#a6e22e">get</span> <span style="color:#a6e22e">pod</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">n</span> <span style="color:#a6e22e">namespaces_name</span>
+<span style="color:#a6e22e">查看pod详情</span>
+<span style="color:#a6e22e">kubectl</span> <span style="color:#a6e22e">describe</span> <span style="color:#a6e22e">pod</span> <span style="color:#a6e22e">pod_name</span>
+<span style="color:#a6e22e">查看pod日志</span>
+<span style="color:#a6e22e">kubectl</span> <span style="color:#a6e22e">logs</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">f</span> <span style="color:#f92672">--</span><span style="color:#a6e22e">tail</span>=<span style="color:#ae81ff">900</span> <span style="color:#a6e22e">pod_name</span>
+<span style="color:#a6e22e">用yaml文件创建pod</span>
+<span style="color:#a6e22e">kubectl</span> <span style="color:#a6e22e">create</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">f</span> <span style="color:#a6e22e">pod</span>.<span style="color:#a6e22e">yml</span>
+<span style="color:#a6e22e">删除pod</span>
+<span style="color:#a6e22e">kubectl</span> <span style="color:#a6e22e">delete</span> <span style="color:#a6e22e">pod</span> <span style="color:#a6e22e">pod_name</span>
+<span style="color:#a6e22e">进入某个pod</span>
+<span style="color:#a6e22e">kubectl</span> <span style="color:#a6e22e">exec</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">it</span> <span style="color:#a6e22e">pod_name</span> <span style="color:#f92672">/</span><span style="color:#a6e22e">bin</span><span style="color:#f92672">/</span><span style="color:#a6e22e">bash</span></code></pre></div>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"></code></pre></div>
+
+    </div>
+
+    
+    
+
+
+    
+    
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          <a href="http://www.dyfblogs.com/tags/k8s/">k8s</a>
+          
+        </div>
+
+      
+      <nav class="post-nav">
+        
+        
+          <a class="next" href="/post/docker_basic/">
+            <span class="next-text nav-default">Docker</span>
+            <span class="prev-text nav-mobile">Next</span>
+            
+            <i class="iconfont">
+              <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18">
+  <path d="M332.091514 74.487481l-75.369571 89.491197c-10.963703 12.998035-10.285251 32.864502 1.499144 44.378743l286.278095 300.375162L266.565125 819.058374c-11.338233 12.190647-11.035334 32.285311 0.638543 44.850487l80.46666 86.564541c11.680017 12.583596 30.356378 12.893658 41.662889 0.716314l377.434212-421.426145c11.332093-12.183484 11.041474-32.266891-0.657986-44.844348l-80.46666-86.564541c-1.772366-1.910513-3.706415-3.533476-5.750981-4.877077L373.270379 71.774697C361.493148 60.273758 343.054193 61.470003 332.091514 74.487481z"></path>
+</svg>
+
+            </i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+
+  
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+    
+
+  
+
+        </div>
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">and</span>
+  <span class="theme-info">
+    Theme by <a class="theme-link" href="https://github.com/xianmin/hugo-theme-jane">Jane</a>
+  </span>
+
+  <span class="division">|</span>
+  <span class="copyright-year">
+    &copy;
+    
+      2017 -
+    2020
+    <span class="heart">
+      
+      <i class="iconfont">
+        <svg class="icon" viewBox="0 0 1025 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="14" height="14">
+  <path d="M1000.1 247.9c-15.5-37.3-37.6-70.6-65.7-98.9-54.4-54.8-125.8-85-201-85-85.7 0-166 39-221.4 107.4C456.6 103 376.3 64 290.6 64c-75.1 0-146.5 30.4-201.1 85.6-28.2 28.5-50.4 61.9-65.8 99.3-16 38.8-24 79.9-23.6 122.2 0.7 91.7 40.1 177.2 108.1 234.8 3.1 2.6 6 5.1 8.9 7.8 14.9 13.4 58 52.8 112.6 102.7 93.5 85.5 209.9 191.9 257.5 234.2 7 6.1 15.8 9.5 24.9 9.5 9.2 0 18.1-3.4 24.9-9.5 34.5-30.7 105.8-95.9 181.4-165 74.2-67.8 150.9-138 195.8-178.2 69.5-57.9 109.6-144.4 109.9-237.3 0.1-42.5-8-83.6-24-122.2z"
+   fill="#8a8a8a"></path>
+</svg>
+
+      </i>
+    </span><span class="author">
+        DYF
+        
+      </span></span>
+
+  
+  
+
+  
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont">
+        
+        <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="35" height="35">
+  <path d="M510.866688 227.694839 95.449397 629.218702l235.761562 0-2.057869 328.796468 362.40389 0L691.55698 628.188232l241.942331-3.089361L510.866688 227.694839zM63.840492 63.962777l894.052392 0 0 131.813095L63.840492 195.775872 63.840492 63.962777 63.840492 63.962777zM63.840492 63.962777"></path>
+</svg>
+
+      </i>
+    </div>
+  </div>
+  
+<script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+
+
+
+
+<script type="text/javascript" src="/js/main.638251f4230630f0335d8c6748e53a96f94b72670920b60c09a56fdc8bece214.js" integrity="sha256-Y4JR9CMGMPAzXYxnSOU6lvlLcmcJILYMCaVv3Ivs4hQ=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    <script type="text/javascript" src="/js/load-photoswipe.js"></script>
+    <script type="text/javascript" src="/lib/photoswipe/photoswipe.min.js"></script>
+    <script type="text/javascript" src="/lib/photoswipe/photoswipe-ui-default.min.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
