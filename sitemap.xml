@@ -16,6 +16,13 @@
   </url>
   
   <url>
+    <loc>http://www.dyfblogs.com/post/centos_install_elk/</loc>
+    <lastmod>2019-10-20T21:50:01+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://www.dyfblogs.com/post/centos_install_nexus/</loc>
     <lastmod>2019-10-19T21:50:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -191,14 +198,14 @@
   </url>
   
   <url>
-    <loc>http://www.dyfblogs.com/tags/k8s/</loc>
+    <loc>http://www.dyfblogs.com/categories/k8s/</loc>
     <lastmod>2019-10-25T21:50:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.dyfblogs.com/categories/k8s/</loc>
+    <loc>http://www.dyfblogs.com/tags/k8s/</loc>
     <lastmod>2019-10-25T21:50:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -219,13 +226,6 @@
   </url>
   
   <url>
-    <loc>http://www.dyfblogs.com/tags/docker/</loc>
-    <lastmod>2019-10-22T21:50:01+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>http://www.dyfblogs.com/categories/docker/</loc>
     <lastmod>2019-10-22T21:50:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -233,15 +233,22 @@
   </url>
   
   <url>
-    <loc>http://www.dyfblogs.com/categories/linux/</loc>
-    <lastmod>2019-10-19T21:50:01+08:00</lastmod>
+    <loc>http://www.dyfblogs.com/tags/docker/</loc>
+    <lastmod>2019-10-22T21:50:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://www.dyfblogs.com/tags/linux/</loc>
-    <lastmod>2019-10-19T21:50:01+08:00</lastmod>
+    <lastmod>2019-10-20T21:50:01+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.dyfblogs.com/categories/linux/</loc>
+    <lastmod>2019-10-20T21:50:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -261,14 +268,14 @@
   </url>
   
   <url>
-    <loc>http://www.dyfblogs.com/categories/redis/</loc>
+    <loc>http://www.dyfblogs.com/tags/redis/</loc>
     <lastmod>2018-09-03T19:30:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.dyfblogs.com/tags/redis/</loc>
+    <loc>http://www.dyfblogs.com/categories/redis/</loc>
     <lastmod>2018-09-03T19:30:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

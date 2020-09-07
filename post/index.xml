@@ -30,6 +30,15 @@
     </item>
     
     <item>
+      <title>centos7安装ELK</title>
+      <link>http://www.dyfblogs.com/post/centos_install_elk/</link>
+      <pubDate>Sun, 20 Oct 2019 20:50:10 +0800</pubDate>
+      
+      <guid>http://www.dyfblogs.com/post/centos_install_elk/</guid>
+      <description>Elasticsearch Elasticsearch是个开源分布式搜索引擎，提供搜集、分析、存储数据三大功能。它的特点有：分布式，零配置，自动发现，索引自动分片，索</description>
+    </item>
+    
+    <item>
       <title>centos7安装nexus</title>
       <link>http://www.dyfblogs.com/post/centos_install_nexus/</link>
       <pubDate>Sat, 19 Oct 2019 20:50:10 +0800</pubDate>
@@ -180,15 +189,6 @@
       
       <guid>http://www.dyfblogs.com/post/css-typesetting/</guid>
       <description>199.firstp { 200 /* 文字排版：颜色、字号、字体、粗体、斜体、下划线、删除线 */ 201 color: #666; /*颜色*/ 202 font-size: 30px; /*字号*/ 203 font-family: &amp;#34;宋体&amp;#34;; /*字体*</description>
-    </item>
-    
-    <item>
-      <title>CSS颜色样式</title>
-      <link>http://www.dyfblogs.com/post/css-color/</link>
-      <pubDate>Mon, 05 Sep 2016 23:13:54 +0800</pubDate>
-      
-      <guid>http://www.dyfblogs.com/post/css-color/</guid>
-      <description>CSS颜色样式设置 1.英文单词设置颜色样式 20.content {color: red;} 2.RGB值设置颜色样式：由R(red)、G(green)、B(blue)三种颜色的比例来配</description>
     </item>
     
   </channel>
