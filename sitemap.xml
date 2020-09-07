@@ -16,8 +16,15 @@
   </url>
   
   <url>
+    <loc>http://www.dyfblogs.com/post/centos_install_nexus/</loc>
+    <lastmod>2019-10-19T21:50:01+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://www.dyfblogs.com/post/centos_install_jdk8/</loc>
-    <lastmod>2019-10-21T21:50:01+08:00</lastmod>
+    <lastmod>2019-10-18T21:50:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -212,13 +219,6 @@
   </url>
   
   <url>
-    <loc>http://www.dyfblogs.com/categories/docker/</loc>
-    <lastmod>2019-10-22T21:50:01+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>http://www.dyfblogs.com/tags/docker/</loc>
     <lastmod>2019-10-22T21:50:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -226,28 +226,35 @@
   </url>
   
   <url>
-    <loc>http://www.dyfblogs.com/tags/linux/</loc>
-    <lastmod>2019-10-21T21:50:01+08:00</lastmod>
+    <loc>http://www.dyfblogs.com/categories/docker/</loc>
+    <lastmod>2019-10-22T21:50:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://www.dyfblogs.com/categories/linux/</loc>
-    <lastmod>2019-10-21T21:50:01+08:00</lastmod>
+    <lastmod>2019-10-19T21:50:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.dyfblogs.com/categories/interview/</loc>
-    <lastmod>2019-10-10T20:50:01+08:00</lastmod>
+    <loc>http://www.dyfblogs.com/tags/linux/</loc>
+    <lastmod>2019-10-19T21:50:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://www.dyfblogs.com/tags/interview/</loc>
+    <lastmod>2019-10-10T20:50:01+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.dyfblogs.com/categories/interview/</loc>
     <lastmod>2019-10-10T20:50:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

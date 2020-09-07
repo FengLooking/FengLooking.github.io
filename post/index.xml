@@ -30,9 +30,18 @@
     </item>
     
     <item>
+      <title>centos7安装nexus</title>
+      <link>http://www.dyfblogs.com/post/centos_install_nexus/</link>
+      <pubDate>Sat, 19 Oct 2019 20:50:10 +0800</pubDate>
+      
+      <guid>http://www.dyfblogs.com/post/centos_install_nexus/</guid>
+      <description>获取nexus包 https://sonatype-download.global.ssl.fastly.net/nexus/3/latest-unix.tar.gz https://download.sonatype.com/nexus/3/latest-unix.tar.gz 添加用户 useradd nexus echo &amp;#34;123456&amp;#34; | passwd nexus --stdin 解压nexus的包 tar -zxvf nexus-3.9.0-01-unix.tar.gz mv nexus-3.9.0-01 nexus 配置nexus vi nexus/etc/nexus-default.properties vi nexus/bin/nexus 设置nexus环境变量 NEXUS_HOME=/usr/local/nexus/bin PATH=$PATH:$NEXUS_HOME export PATH NEXUS_HOME 设置开机启动</description>
+    </item>
+    
+    <item>
       <title>centos7安装jdk8</title>
       <link>http://www.dyfblogs.com/post/centos_install_jdk8/</link>
-      <pubDate>Sun, 20 Oct 2019 22:50:10 +0800</pubDate>
+      <pubDate>Fri, 18 Oct 2019 20:50:10 +0800</pubDate>
       
       <guid>http://www.dyfblogs.com/post/centos_install_jdk8/</guid>
       <description>一.百度搜索jdk8 二.进入oracle官网下载页面，鼠标放在Sign in 上，点击 Sign in to my Account 三.有账号的输入账号后点击登录，没有账号的创建一个</description>
@@ -180,15 +189,6 @@
       
       <guid>http://www.dyfblogs.com/post/css-color/</guid>
       <description>CSS颜色样式设置 1.英文单词设置颜色样式 20.content {color: red;} 2.RGB值设置颜色样式：由R(red)、G(green)、B(blue)三种颜色的比例来配</description>
-    </item>
-    
-    <item>
-      <title>HTML常用实体</title>
-      <link>http://www.dyfblogs.com/post/html-entity/</link>
-      <pubDate>Sun, 04 Sep 2016 20:36:29 +0800</pubDate>
-      
-      <guid>http://www.dyfblogs.com/post/html-entity/</guid>
-      <description>name HTML 换行 &amp;lt;br /&amp;gt; 空格 &amp;amp;nbsp; 水平线 &amp;lt;hr /&amp;gt; 左双引号“ &amp;amp;ldquo; 右双引号” &amp;amp;rdquo; 和号&amp;amp; &amp;amp;amp; 短横线 &amp;amp;mdash; 省略号 &amp;amp;hellip; 小于号&amp;lt; &amp;amp;lt; 大于号&amp;gt; &amp;amp;gt; 已注册&amp;reg; &amp;amp;reg; 版权&amp;</description>
     </item>
     
   </channel>

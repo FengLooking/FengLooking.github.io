@@ -398,9 +398,101 @@
     </item>
     
     <item>
+      <title>centos7安装nexus</title>
+      <link>http://www.dyfblogs.com/post/centos_install_nexus/</link>
+      <pubDate>Sat, 19 Oct 2019 20:50:10 +0800</pubDate>
+      
+      <guid>http://www.dyfblogs.com/post/centos_install_nexus/</guid>
+      
+        <description>
+
+&lt;h4 id=&#34;获取nexus包&#34;&gt;获取nexus包&lt;/h4&gt;
+
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;https&lt;/span&gt;:&lt;span style=&#34;color:#75715e&#34;&gt;//sonatype-download.global.ssl.fastly.net/nexus/3/latest-unix.tar.gz
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;https&lt;/span&gt;:&lt;span style=&#34;color:#f92672&#34;&gt;//&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;download&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;sonatype&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;com&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;nexus&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;latest&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;unix&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;tar&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;gz&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h4 id=&#34;添加用户&#34;&gt;添加用户&lt;/h4&gt;
+
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;useradd&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;nexus&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;echo&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;123456&amp;#34;&lt;/span&gt; | &lt;span style=&#34;color:#a6e22e&#34;&gt;passwd&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;nexus&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;--&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;stdin&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h4 id=&#34;解压nexus的包&#34;&gt;解压nexus的包&lt;/h4&gt;
+
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;tar&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;zxvf&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;nexus&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;3.9.0&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;01&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;unix&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;tar&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;gz&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;mv&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;nexus&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;3.9.0&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;01&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;nexus&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h4 id=&#34;配置nexus&#34;&gt;配置nexus&lt;/h4&gt;
+
+&lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;vi&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;nexus&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;etc&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;nexus&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;default&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;properties&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;img src=&#34;http://www.dyfblogs.com/image/nexus01.png&#34; alt=&#34;image&#34; /&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;vi&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;nexus&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;bin&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;nexus&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;img src=&#34;http://www.dyfblogs.com/image/nexus02.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;设置nexus环境变量&#34;&gt;设置nexus环境变量&lt;/h4&gt;
+
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;NEXUS_HOME&lt;/span&gt;=&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;usr&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;local&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;nexus&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;bin&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;PATH&lt;/span&gt;=&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;$&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;PATH&lt;/span&gt;:&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;$&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;NEXUS_HOME&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;export&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;PATH&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;NEXUS_HOME&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h4 id=&#34;设置开机启动&#34;&gt;设置开机启动&lt;/h4&gt;
+
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;vi&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;etc&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;rc&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;d&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;rc&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;local&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;添加&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;usr&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;local&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;nexus&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;bin&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;nexus&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;start&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;chmod&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;755&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;etc&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;rc&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;d&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;rc&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;local&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h4 id=&#34;登录nexus界面&#34;&gt;登录nexus界面&lt;/h4&gt;
+
+&lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;http&lt;/span&gt;:&lt;span style=&#34;color:#75715e&#34;&gt;//192.168.188.133:10000/
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;默认用户名&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;密码&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;：&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;admin&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;admin123&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;img src=&#34;http://www.dyfblogs.com/image/nexus03.png&#34; alt=&#34;image&#34; /&gt;
+&lt;img src=&#34;http://www.dyfblogs.com/image/nexus04.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;配置docker私有仓库&#34;&gt;配置docker私有仓库&lt;/h4&gt;
+
+&lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;点击设置按钮&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;，&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;2.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;点击Repositories&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;，&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;3.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;点击create&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;repository&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;img src=&#34;http://www.dyfblogs.com/image/nexus05.png&#34; alt=&#34;image&#34; /&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;选择仓库类型&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;img src=&#34;http://www.dyfblogs.com/image/nexus06.png&#34; alt=&#34;image&#34; /&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;然后输入仓库名称&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;，&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;勾选HTTP并输入端口号&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;，&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;勾选允许交互的API&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;，&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;最后点击create按钮&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;img src=&#34;http://www.dyfblogs.com/image/nexus07.png&#34; alt=&#34;image&#34; /&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;docker配置&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;：&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;vi&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;etc&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;docker&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;daemon&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;json&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;添加&lt;/span&gt;
+{
+    &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;insecure-registries&amp;#34;&lt;/span&gt;: [&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;http://192.168.188.133:10001&amp;#34;&lt;/span&gt;]
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;登录仓库&#34;&gt;登录仓库&lt;/h4&gt;
+
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;docker&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;login&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;u&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;admin&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;p&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;admin123&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;192.168.188.133&lt;/span&gt;:&lt;span style=&#34;color:#ae81ff&#34;&gt;10001&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;------------------------------------------------------------------------------&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;WARNING&lt;/span&gt;! &lt;span style=&#34;color:#a6e22e&#34;&gt;Using&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;--&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;password&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;via&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;the&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;CLI&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;is&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;insecure&lt;/span&gt;. &lt;span style=&#34;color:#a6e22e&#34;&gt;Use&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;--&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;password&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;stdin&lt;/span&gt;.
+&lt;span style=&#34;color:#a6e22e&#34;&gt;WARNING&lt;/span&gt;! &lt;span style=&#34;color:#a6e22e&#34;&gt;Your&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;password&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;will&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;be&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;stored&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;unencrypted&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;in&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;root&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;docker&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;config&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;json&lt;/span&gt;.
+&lt;span style=&#34;color:#a6e22e&#34;&gt;Configure&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;a&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;credential&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;helper&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;to&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;remove&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;this&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;warning&lt;/span&gt;. &lt;span style=&#34;color:#a6e22e&#34;&gt;See&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;https&lt;/span&gt;:&lt;span style=&#34;color:#75715e&#34;&gt;//docs.docker.com/engine/reference/commandline/login/#credentials-store
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;Login&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Succeeded&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h4 id=&#34;上传镜像&#34;&gt;上传镜像&lt;/h4&gt;
+
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;docker&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;tag&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;quay&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;io&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;coreos&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;configmap&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;reload&lt;/span&gt;:&lt;span style=&#34;color:#a6e22e&#34;&gt;v0&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;.0.1&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;192.168.188.133&lt;/span&gt;:&lt;span style=&#34;color:#ae81ff&#34;&gt;10001&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;configmap&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;reload&lt;/span&gt;:&lt;span style=&#34;color:#ae81ff&#34;&gt;0.1&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;docker&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;push&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;192.168.188.133&lt;/span&gt;:&lt;span style=&#34;color:#ae81ff&#34;&gt;10001&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;configmap&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;reload&lt;/span&gt;:&lt;span style=&#34;color:#ae81ff&#34;&gt;0.1&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;---------------------------------------------------------------------------------------------&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;The&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;push&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;refers&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;to&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;repository&lt;/span&gt; [&lt;span style=&#34;color:#ae81ff&#34;&gt;192.168.188.133&lt;/span&gt;:&lt;span style=&#34;color:#ae81ff&#34;&gt;10001&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;configmap&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;reload&lt;/span&gt;]
+&lt;span style=&#34;color:#ae81ff&#34;&gt;5&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;f70bf18a086&lt;/span&gt;: &lt;span style=&#34;color:#a6e22e&#34;&gt;Pushed&lt;/span&gt; 
+&lt;span style=&#34;color:#ae81ff&#34;&gt;91&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;bd48b9e0b0&lt;/span&gt;: &lt;span style=&#34;color:#a6e22e&#34;&gt;Pushed&lt;/span&gt; 
+&lt;span style=&#34;color:#ae81ff&#34;&gt;0.1&lt;/span&gt;: &lt;span style=&#34;color:#a6e22e&#34;&gt;digest&lt;/span&gt;: &lt;span style=&#34;color:#a6e22e&#34;&gt;sha256&lt;/span&gt;:&lt;span style=&#34;color:#ae81ff&#34;&gt;50&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;c53db55ece9a6e1a7274e497f308bcc24164bdb4c0885524037c1b8e4e758d&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;size&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;734&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h4 id=&#34;然后去页面可以搜索到刚刚上传的镜像&#34;&gt;然后去页面可以搜索到刚刚上传的镜像&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://www.dyfblogs.com/image/nexus08.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
+
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+</description>
+      
+    </item>
+    
+    <item>
       <title>centos7安装jdk8</title>
       <link>http://www.dyfblogs.com/post/centos_install_jdk8/</link>
-      <pubDate>Sun, 20 Oct 2019 22:50:10 +0800</pubDate>
+      <pubDate>Fri, 18 Oct 2019 20:50:10 +0800</pubDate>
       
       <guid>http://www.dyfblogs.com/post/centos_install_jdk8/</guid>
       
@@ -2206,94 +2298,6 @@ RGB的每一项可以是0~255之间的整数，也可以是0%~100%之间的百�
 &lt;h3 id=&#34;常用十六进制颜色表&#34;&gt;常用十六进制颜色表&lt;/h3&gt;
 
 &lt;p&gt;&lt;img src=&#34;http://www.dyfblogs.com/image/csscolor.jpg&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>HTML常用实体</title>
-      <link>http://www.dyfblogs.com/post/html-entity/</link>
-      <pubDate>Sun, 04 Sep 2016 20:36:29 +0800</pubDate>
-      
-      <guid>http://www.dyfblogs.com/post/html-entity/</guid>
-      
-        <description>&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;name&lt;/th&gt;
-&lt;th align=&#34;left&#34;&gt;HTML&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;换行&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;&amp;lt;br /&amp;gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;空格&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;&amp;amp;nbsp;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;水平线&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;&amp;lt;hr /&amp;gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;左双引号“&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;&amp;amp;ldquo;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;右双引号”&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;&amp;amp;rdquo;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;和号&amp;amp;&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;&amp;amp;amp;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;短横线&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;&amp;amp;mdash;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;省略号&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;&amp;amp;hellip;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;小于号&amp;lt;&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;&amp;amp;lt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;大于号&amp;gt;&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;&amp;amp;gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;已注册&amp;reg;&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;&amp;amp;reg;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;版权&amp;copy;&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;&amp;amp;copy;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;商标&amp;trade;&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;&amp;amp;trade;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;HTML部分实体如上表，以后有机会再新增😏&lt;/p&gt;
 </description>
       
     </item>

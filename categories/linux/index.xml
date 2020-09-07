@@ -6,15 +6,24 @@
     <description>Recent content in linux on dyfblogs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 20 Oct 2019 22:50:10 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 19 Oct 2019 20:50:10 +0800</lastBuildDate>
     
 	<atom:link href="http://www.dyfblogs.com/categories/linux/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>centos7安装nexus</title>
+      <link>http://www.dyfblogs.com/post/centos_install_nexus/</link>
+      <pubDate>Sat, 19 Oct 2019 20:50:10 +0800</pubDate>
+      
+      <guid>http://www.dyfblogs.com/post/centos_install_nexus/</guid>
+      <description>获取nexus包 https://sonatype-download.global.ssl.fastly.net/nexus/3/latest-unix.tar.gz https://download.sonatype.com/nexus/3/latest-unix.tar.gz 添加用户 useradd nexus echo &amp;#34;123456&amp;#34; | passwd nexus --stdin 解压nexus的包 tar -zxvf nexus-3.9.0-01-unix.tar.gz mv nexus-3.9.0-01 nexus 配置nexus vi nexus/etc/nexus-default.properties vi nexus/bin/nexus 设置nexus环境变量 NEXUS_HOME=/usr/local/nexus/bin PATH=$PATH:$NEXUS_HOME export PATH NEXUS_HOME 设置开机启动</description>
+    </item>
+    
+    <item>
       <title>centos7安装jdk8</title>
       <link>http://www.dyfblogs.com/post/centos_install_jdk8/</link>
-      <pubDate>Sun, 20 Oct 2019 22:50:10 +0800</pubDate>
+      <pubDate>Fri, 18 Oct 2019 20:50:10 +0800</pubDate>
       
       <guid>http://www.dyfblogs.com/post/centos_install_jdk8/</guid>
       <description>一.百度搜索jdk8 二.进入oracle官网下载页面，鼠标放在Sign in 上，点击 Sign in to my Account 三.有账号的输入账号后点击登录，没有账号的创建一个</description>
