@@ -62,7 +62,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://www.dyfblogs.com/" />
 
-<meta property="og:updated_time" content="2019-10-25T20:21:56+08:00" />
+<meta property="og:updated_time" content="2019-11-22T20:50:10+08:00" />
 <meta itemprop="name" content="dyfblogs">
 <meta itemprop="description" content="Hugo theme jane example site.">
 
@@ -295,12 +295,12 @@
 
         </span>
       
-      <a class="post-link" href="/post/kubernetes_basic/">Kubernetes</a>
+      <a class="post-link" href="/post/reason_pod_restart/">pod自动重启的可能原因</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2019-10-25" class="post-time">
-        2019-10-25
+      <time datetime="2019-11-22" class="post-time">
+        2019-11-22
       </time>
       <div class="post-category">
           <a href="http://www.dyfblogs.com/categories/k8s/"> k8s </a>
@@ -315,10 +315,10 @@
   <div class="post-content">
     
     <div class="post-summary">
-      kubernetes kubernetes是一个开源的，用于管理云平台中多个主机上的容器化的应用。简称K8s，是用8代替8个字符“ubernete”而成的缩写。
+      k8s pod自动重启原因（jvm内存设置） k8s集群环境下，docker容器中运行镜像方式启动springboot项目。由于制作的镜像未对JVM
     </div>
     <div class="read-more">
-      <a href="/post/kubernetes_basic/" class="read-more-link">Read more</a>
+      <a href="/post/reason_pod_restart/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -337,15 +337,15 @@
 
         </span>
       
-      <a class="post-link" href="/post/docker_basic/">Docker</a>
+      <a class="post-link" href="/post/k8s_install_nfs/">k8s安装nfs</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2019-10-22" class="post-time">
-        2019-10-22
+      <time datetime="2019-11-15" class="post-time">
+        2019-11-15
       </time>
       <div class="post-category">
-          <a href="http://www.dyfblogs.com/categories/docker/"> docker </a>
+          <a href="http://www.dyfblogs.com/categories/k8s/"> k8s </a>
           
         </div>
       
@@ -357,10 +357,10 @@
   <div class="post-content">
     
     <div class="post-summary">
-      镜像搜索操作 搜索镜像： docker search image_name 搜索结果过滤是否官方镜像： docker search --filter &#34;is-official=true&#34; image_name 搜索结果过滤是否自动化构建： docker search --filter &#34;is-automated=true&#34; image_name 搜索结果过滤大于多少颗星： docker search --filter stars=3 image_name 列
+      节点规划 192.168.188.133 centos7 2U2G 50G k8s-nfs 搭建nfs服务 #master节点安装nfs yum -y install nfs-utils #创建nfs目录 mkdir -p /nfs/data/ #修改权限 chmod -R 777 /nfs/data #编辑export文件 vim /etc/exports /nfs/data *(rw,no_root_squash,sync) #
     </div>
     <div class="read-more">
-      <a href="/post/docker_basic/" class="read-more-link">Read more</a>
+      <a href="/post/k8s_install_nfs/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -379,15 +379,15 @@
 
         </span>
       
-      <a class="post-link" href="/post/centos_install_elk/">centos7安装ELK</a>
+      <a class="post-link" href="/post/k8s_install_promethus/">k8s安装promethus</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2019-10-20" class="post-time">
-        2019-10-20
+      <time datetime="2019-11-06" class="post-time">
+        2019-11-06
       </time>
       <div class="post-category">
-          <a href="http://www.dyfblogs.com/categories/linux/"> linux </a>
+          <a href="http://www.dyfblogs.com/categories/k8s/"> k8s </a>
           
         </div>
       
@@ -399,10 +399,10 @@
   <div class="post-content">
     
     <div class="post-summary">
-      Elasticsearch Elasticsearch是个开源分布式搜索引擎，提供搜集、分析、存储数据三大功能。它的特点有：分布式，零配置，自动发现，索引自动分片，索
+      记录安装prometheus + grafana 1.从github 下载prometheus git clone https://github.com/coreos/kube-prometheus.git cd kube-prometheus/manifests 2.修改grafana-service.yaml文件，使
     </div>
     <div class="read-more">
-      <a href="/post/centos_install_elk/" class="read-more-link">Read more</a>
+      <a href="/post/k8s_install_promethus/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -421,15 +421,15 @@
 
         </span>
       
-      <a class="post-link" href="/post/centos_install_nexus/">centos7安装nexus</a>
+      <a class="post-link" href="/post/k8s_install_helm/">k8s安装helm</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2019-10-19" class="post-time">
-        2019-10-19
+      <time datetime="2019-11-05" class="post-time">
+        2019-11-05
       </time>
       <div class="post-category">
-          <a href="http://www.dyfblogs.com/categories/linux/"> linux </a>
+          <a href="http://www.dyfblogs.com/categories/k8s/"> k8s </a>
           
         </div>
       
@@ -441,10 +441,10 @@
   <div class="post-content">
     
     <div class="post-summary">
-      获取nexus包 https://sonatype-download.global.ssl.fastly.net/nexus/3/latest-unix.tar.gz https://download.sonatype.com/nexus/3/latest-unix.tar.gz 添加用户 useradd nexus echo &#34;123456&#34; | passwd nexus --stdin 解压nexus的包 tar -zxvf nexus-3.9.0-01-unix.tar.gz mv nexus-3.9.0-01 nexus 配置nexus vi nexus/etc/nexus-default.properties vi nexus/bin/nexus 设置nexus环境变量 NEXUS_HOME=/usr/local/nexus/bin PATH=$PATH:$NEXUS_HOME export PATH NEXUS_HOME 设置开机启动
+      下载安装包，并解压 wget https://get.helm.sh/helm-v2.15.2-linux-amd64.tar.gz tar -xvf helm-v2.15.2-linux-amd64.tar.gz cd helm-v2.15.2-linux-amd64/ cp helm /usr/local/bin/ 初始化Helm 并安装tiller Tiller是helm的服务器端，一般运行于kubernetes集群之
     </div>
     <div class="read-more">
-      <a href="/post/centos_install_nexus/" class="read-more-link">Read more</a>
+      <a href="/post/k8s_install_helm/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -463,15 +463,15 @@
 
         </span>
       
-      <a class="post-link" href="/post/centos_install_jdk8/">centos7安装jdk8</a>
+      <a class="post-link" href="/post/centos_install_k8s/">k8s集群搭建</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2019-10-18" class="post-time">
-        2019-10-18
+      <time datetime="2019-10-28" class="post-time">
+        2019-10-28
       </time>
       <div class="post-category">
-          <a href="http://www.dyfblogs.com/categories/linux/"> linux </a>
+          <a href="http://www.dyfblogs.com/categories/k8s/"> k8s </a>
           
         </div>
       
@@ -483,10 +483,10 @@
   <div class="post-content">
     
     <div class="post-summary">
-      一.百度搜索jdk8 二.进入oracle官网下载页面，鼠标放在Sign in 上，点击 Sign in to my Account 三.有账号的输入账号后点击登录，没有账号的创建一个
+      集群规划 master centos7 2U3G 30G 192.168.188.130 node01 centos7 2U3G 30G 192.168.188.131 node02 centos7 2U3G 30G 192.168.188.132 备注：以下操作1~8在所有节点执行，9~10在master节点执行，11~12在node节点执行 最后的
     </div>
     <div class="read-more">
-      <a href="/post/centos_install_jdk8/" class="read-more-link">Read more</a>
+      <a href="/post/centos_install_k8s/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -536,6 +536,10 @@
       
       <li >
         <a href="/page/5/">5</a>
+      </li>
+      
+      <li >
+        <a href="/page/6/">6</a>
       </li>
       
     </ul>
