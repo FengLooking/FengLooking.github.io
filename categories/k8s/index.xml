@@ -2,66 +2,66 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>k8s on dyfblogs</title>
-    <link>http://www.dyfblogs.com/categories/k8s/</link>
+    <link>http://101.200.124.95/categories/k8s/</link>
     <description>Recent content in k8s on dyfblogs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Fri, 22 Nov 2019 20:50:10 +0800</lastBuildDate>
     
-	<atom:link href="http://www.dyfblogs.com/categories/k8s/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://101.200.124.95/categories/k8s/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>pod自动重启的可能原因</title>
-      <link>http://www.dyfblogs.com/post/reason_pod_restart/</link>
+      <link>http://101.200.124.95/post/reason_pod_restart/</link>
       <pubDate>Fri, 22 Nov 2019 20:50:10 +0800</pubDate>
       
-      <guid>http://www.dyfblogs.com/post/reason_pod_restart/</guid>
+      <guid>http://101.200.124.95/post/reason_pod_restart/</guid>
       <description>k8s pod自动重启原因（jvm内存设置） k8s集群环境下，docker容器中运行镜像方式启动springboot项目。由于制作的镜像未对JVM</description>
     </item>
     
     <item>
       <title>k8s安装nfs</title>
-      <link>http://www.dyfblogs.com/post/k8s_install_nfs/</link>
+      <link>http://101.200.124.95/post/k8s_install_nfs/</link>
       <pubDate>Fri, 15 Nov 2019 20:50:10 +0800</pubDate>
       
-      <guid>http://www.dyfblogs.com/post/k8s_install_nfs/</guid>
+      <guid>http://101.200.124.95/post/k8s_install_nfs/</guid>
       <description>节点规划 192.168.188.133 centos7 2U2G 50G k8s-nfs 搭建nfs服务 #master节点安装nfs yum -y install nfs-utils #创建nfs目录 mkdir -p /nfs/data/ #修改权限 chmod -R 777 /nfs/data #编辑export文件 vim /etc/exports /nfs/data *(rw,no_root_squash,sync) #</description>
     </item>
     
     <item>
       <title>k8s安装promethus</title>
-      <link>http://www.dyfblogs.com/post/k8s_install_promethus/</link>
+      <link>http://101.200.124.95/post/k8s_install_promethus/</link>
       <pubDate>Wed, 06 Nov 2019 20:50:10 +0800</pubDate>
       
-      <guid>http://www.dyfblogs.com/post/k8s_install_promethus/</guid>
+      <guid>http://101.200.124.95/post/k8s_install_promethus/</guid>
       <description>记录安装prometheus + grafana 1.从github 下载prometheus git clone https://github.com/coreos/kube-prometheus.git cd kube-prometheus/manifests 2.修改grafana-service.yaml文件，使</description>
     </item>
     
     <item>
       <title>k8s安装helm</title>
-      <link>http://www.dyfblogs.com/post/k8s_install_helm/</link>
+      <link>http://101.200.124.95/post/k8s_install_helm/</link>
       <pubDate>Tue, 05 Nov 2019 20:50:10 +0800</pubDate>
       
-      <guid>http://www.dyfblogs.com/post/k8s_install_helm/</guid>
+      <guid>http://101.200.124.95/post/k8s_install_helm/</guid>
       <description>下载安装包，并解压 wget https://get.helm.sh/helm-v2.15.2-linux-amd64.tar.gz tar -xvf helm-v2.15.2-linux-amd64.tar.gz cd helm-v2.15.2-linux-amd64/ cp helm /usr/local/bin/ 初始化Helm 并安装tiller Tiller是helm的服务器端，一般运行于kubernetes集群之</description>
     </item>
     
     <item>
       <title>k8s集群搭建</title>
-      <link>http://www.dyfblogs.com/post/centos_install_k8s/</link>
+      <link>http://101.200.124.95/post/centos_install_k8s/</link>
       <pubDate>Mon, 28 Oct 2019 20:50:10 +0800</pubDate>
       
-      <guid>http://www.dyfblogs.com/post/centos_install_k8s/</guid>
+      <guid>http://101.200.124.95/post/centos_install_k8s/</guid>
       <description>集群规划 master centos7 2U3G 30G 192.168.188.130 node01 centos7 2U3G 30G 192.168.188.131 node02 centos7 2U3G 30G 192.168.188.132 备注：以下操作1~8在所有节点执行，9~10在master节点执行，11~12在node节点执行 最后的</description>
     </item>
     
     <item>
       <title>Kubernetes</title>
-      <link>http://www.dyfblogs.com/post/kubernetes_basic/</link>
+      <link>http://101.200.124.95/post/kubernetes_basic/</link>
       <pubDate>Fri, 25 Oct 2019 20:21:56 +0800</pubDate>
       
-      <guid>http://www.dyfblogs.com/post/kubernetes_basic/</guid>
+      <guid>http://101.200.124.95/post/kubernetes_basic/</guid>
       <description>kubernetes kubernetes是一个开源的，用于管理云平台中多个主机上的容器化的应用。简称K8s，是用8代替8个字符“ubernete”而成的缩写。</description>
     </item>
     

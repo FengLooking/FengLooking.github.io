@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>SQLite on dyfblogs</title>
-    <link>http://www.dyfblogs.com/categories/sqlite/</link>
+    <link>http://101.200.124.95/categories/sqlite/</link>
     <description>Recent content in SQLite on dyfblogs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Tue, 28 Feb 2017 23:22:01 +0800</lastBuildDate>
     
-	<atom:link href="http://www.dyfblogs.com/categories/sqlite/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://101.200.124.95/categories/sqlite/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>SQLite基础使用</title>
-      <link>http://www.dyfblogs.com/post/sqlite-notes/</link>
+      <link>http://101.200.124.95/post/sqlite-notes/</link>
       <pubDate>Tue, 28 Feb 2017 23:22:01 +0800</pubDate>
       
-      <guid>http://www.dyfblogs.com/post/sqlite-notes/</guid>
+      <guid>http://101.200.124.95/post/sqlite-notes/</guid>
       <description>数据库(database)：存放数据的仓库，是一些关联表的集合。 RDBMS(Relational DataBase Management System)：关系数据库管理系统，是将数据组织为行和列的系统，是所有</description>
     </item>
     

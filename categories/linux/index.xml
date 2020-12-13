@@ -2,66 +2,66 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>linux on dyfblogs</title>
-    <link>http://www.dyfblogs.com/categories/linux/</link>
+    <link>http://101.200.124.95/categories/linux/</link>
     <description>Recent content in linux on dyfblogs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Sun, 20 Oct 2019 20:50:10 +0800</lastBuildDate>
     
-	<atom:link href="http://www.dyfblogs.com/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://101.200.124.95/categories/linux/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>centos7安装ELK</title>
-      <link>http://www.dyfblogs.com/post/centos_install_elk/</link>
+      <link>http://101.200.124.95/post/centos_install_elk/</link>
       <pubDate>Sun, 20 Oct 2019 20:50:10 +0800</pubDate>
       
-      <guid>http://www.dyfblogs.com/post/centos_install_elk/</guid>
+      <guid>http://101.200.124.95/post/centos_install_elk/</guid>
       <description>Elasticsearch Elasticsearch是个开源分布式搜索引擎，提供搜集、分析、存储数据三大功能。它的特点有：分布式，零配置，自动发现，索引自动分片，索</description>
     </item>
     
     <item>
       <title>centos7安装nexus</title>
-      <link>http://www.dyfblogs.com/post/centos_install_nexus/</link>
+      <link>http://101.200.124.95/post/centos_install_nexus/</link>
       <pubDate>Sat, 19 Oct 2019 20:50:10 +0800</pubDate>
       
-      <guid>http://www.dyfblogs.com/post/centos_install_nexus/</guid>
+      <guid>http://101.200.124.95/post/centos_install_nexus/</guid>
       <description>获取nexus包 https://sonatype-download.global.ssl.fastly.net/nexus/3/latest-unix.tar.gz https://download.sonatype.com/nexus/3/latest-unix.tar.gz 添加用户 useradd nexus echo &amp;#34;123456&amp;#34; | passwd nexus --stdin 解压nexus的包 tar -zxvf nexus-3.9.0-01-unix.tar.gz mv nexus-3.9.0-01 nexus 配置nexus vi nexus/etc/nexus-default.properties vi nexus/bin/nexus 设置nexus环境变量 NEXUS_HOME=/usr/local/nexus/bin PATH=$PATH:$NEXUS_HOME export PATH NEXUS_HOME 设置开机启动</description>
     </item>
     
     <item>
       <title>centos7安装jdk8</title>
-      <link>http://www.dyfblogs.com/post/centos_install_jdk8/</link>
+      <link>http://101.200.124.95/post/centos_install_jdk8/</link>
       <pubDate>Fri, 18 Oct 2019 20:50:10 +0800</pubDate>
       
-      <guid>http://www.dyfblogs.com/post/centos_install_jdk8/</guid>
+      <guid>http://101.200.124.95/post/centos_install_jdk8/</guid>
       <description>一.百度搜索jdk8 二.进入oracle官网下载页面，鼠标放在Sign in 上，点击 Sign in to my Account 三.有账号的输入账号后点击登录，没有账号的创建一个</description>
     </item>
     
     <item>
       <title>centos7安装nginx1.16</title>
-      <link>http://www.dyfblogs.com/post/centos_install_nginx/</link>
+      <link>http://101.200.124.95/post/centos_install_nginx/</link>
       <pubDate>Thu, 17 Oct 2019 20:55:33 +0800</pubDate>
       
-      <guid>http://www.dyfblogs.com/post/centos_install_nginx/</guid>
+      <guid>http://101.200.124.95/post/centos_install_nginx/</guid>
       <description>安装依赖 yum install -y gcc-c++ pcre pcre-devel zlib zlib-devel 下载nginx包 wget http://nginx.org/download/nginx-1.16.0.tar.gz 解压nginx包 tar -zxvf nginx-1.16.0.tar.gz 编译安装 cd nginx-1.16.0 ./configure make &amp;amp;&amp;amp; make install 启动nginx cd /usr/local/nginx/sbin ./nginx 查看nginx是否运行 ps -ef | grep nginx</description>
     </item>
     
     <item>
       <title>centos7安装MySQL5.7.28</title>
-      <link>http://www.dyfblogs.com/post/centos_install_mysql/</link>
+      <link>http://101.200.124.95/post/centos_install_mysql/</link>
       <pubDate>Tue, 15 Oct 2019 20:40:41 +0800</pubDate>
       
-      <guid>http://www.dyfblogs.com/post/centos_install_mysql/</guid>
+      <guid>http://101.200.124.95/post/centos_install_mysql/</guid>
       <description>配置yum源 // 1）下载 wget https://dev.mysql.com/get/mysql57-community-release-el7-9.noarch.rpm // 2）安装 rpm -ivh mysql57-community-release-el7-9.noarch.rpm // 执行完成后会在/etc/yum.repos.d/目录下生成两个repo文件mysql-commu</description>
     </item>
     
     <item>
       <title>Win10使用Vmware安装centos7</title>
-      <link>http://www.dyfblogs.com/post/vmware_install_centos7/</link>
+      <link>http://101.200.124.95/post/vmware_install_centos7/</link>
       <pubDate>Sat, 12 Oct 2019 20:50:23 +0800</pubDate>
       
-      <guid>http://www.dyfblogs.com/post/vmware_install_centos7/</guid>
+      <guid>http://101.200.124.95/post/vmware_install_centos7/</guid>
       <description>安装前准备 1.Win10 2.VMware Workstation（v15） 3.centos7镜像文件 安装 由于安装过程较简单，此处省略安装过程，接下来讲解安装后的配置 1.</description>
     </item>
     
