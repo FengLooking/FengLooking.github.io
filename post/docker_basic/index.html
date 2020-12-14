@@ -23,7 +23,7 @@
 <meta name="mobile-web-app-capable" content="yes">
 
 <meta name="author" content="dyf" />
-  <meta name="description" content="镜像搜索操作 搜索镜像： docker search image_name 搜索结果过滤是否官方镜像： docker search --filter &amp;#34;is-official=true&amp;#34; image_name 搜索结果过滤是否自动化构建： docker search --filter &amp;#34;is-automated=true&amp;#34; image_name 搜索结果过滤大于多少颗星： docker search --filter stars=3 image_name 列" />
+  <meta name="description" content="docker Linux 容器的一种封装，提供简单易用的容器使用接口。Docker 中包括三个基本的概念：镜像(Image),容器(Container),仓库(Re" />
 
   <meta name="keywords" content="Hugo, theme, jane" />
 
@@ -58,25 +58,25 @@
 
 
 <meta property="og:title" content="Docker" />
-<meta property="og:description" content="镜像搜索操作 搜索镜像： docker search image_name 搜索结果过滤是否官方镜像： docker search --filter &#34;is-official=true&#34; image_name 搜索结果过滤是否自动化构建： docker search --filter &#34;is-automated=true&#34; image_name 搜索结果过滤大于多少颗星： docker search --filter stars=3 image_name 列" />
+<meta property="og:description" content="docker Linux 容器的一种封装，提供简单易用的容器使用接口。Docker 中包括三个基本的概念：镜像(Image),容器(Container),仓库(Re" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://101.200.124.95/post/docker_basic/" />
 <meta property="article:published_time" content="2019-10-22T20:21:56+08:00" />
 <meta property="article:modified_time" content="2019-10-22T21:50:01+08:00" />
 <meta itemprop="name" content="Docker">
-<meta itemprop="description" content="镜像搜索操作 搜索镜像： docker search image_name 搜索结果过滤是否官方镜像： docker search --filter &#34;is-official=true&#34; image_name 搜索结果过滤是否自动化构建： docker search --filter &#34;is-automated=true&#34; image_name 搜索结果过滤大于多少颗星： docker search --filter stars=3 image_name 列">
+<meta itemprop="description" content="docker Linux 容器的一种封装，提供简单易用的容器使用接口。Docker 中包括三个基本的概念：镜像(Image),容器(Container),仓库(Re">
 
 
 <meta itemprop="datePublished" content="2019-10-22T20:21:56&#43;08:00" />
 <meta itemprop="dateModified" content="2019-10-22T21:50:01&#43;08:00" />
-<meta itemprop="wordCount" content="2505">
+<meta itemprop="wordCount" content="2840">
 
 
 
 <meta itemprop="keywords" content="docker," />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Docker"/>
-<meta name="twitter:description" content="镜像搜索操作 搜索镜像： docker search image_name 搜索结果过滤是否官方镜像： docker search --filter &#34;is-official=true&#34; image_name 搜索结果过滤是否自动化构建： docker search --filter &#34;is-automated=true&#34; image_name 搜索结果过滤大于多少颗星： docker search --filter stars=3 image_name 列"/>
+<meta name="twitter:description" content="docker Linux 容器的一种封装，提供简单易用的容器使用接口。Docker 中包括三个基本的概念：镜像(Image),容器(Container),仓库(Re"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -309,6 +309,9 @@
 <ul>
 <li>
 <ul>
+<li><a href="#docker">docker</a></li>
+<li><a href="#镜像">镜像</a></li>
+<li><a href="#容器">容器</a></li>
 <li><a href="#镜像搜索操作">镜像搜索操作</a></li>
 <li><a href="#列出本地主机上的镜像">列出本地主机上的镜像</a></li>
 <li><a href="#创建容器">创建容器</a></li>
@@ -334,6 +337,21 @@
     
     <div class="post-content">
       
+
+<h4 id="docker">docker</h4>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">Linux</span> <span style="color:#a6e22e">容器的一种封装</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">提供简单易用的容器使用接口</span><span style="color:#960050;background-color:#1e0010">。</span><span style="color:#a6e22e">Docker</span> <span style="color:#a6e22e">中包括三个基本的概念</span><span style="color:#960050;background-color:#1e0010">：</span><span style="color:#a6e22e">镜像</span>(<span style="color:#a6e22e">Image</span>),<span style="color:#a6e22e">容器</span>(<span style="color:#a6e22e">Container</span>),<span style="color:#a6e22e">仓库</span>(<span style="color:#a6e22e">Repository</span>)</code></pre></div>
+
+<h4 id="镜像">镜像</h4>
+
+<p><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">ocker</span> <span style="color:#a6e22e">镜像可以看作是一个特殊的文件系统</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">除了提供容器运行时所需的程序</span><span style="color:#960050;background-color:#1e0010">、</span><span style="color:#a6e22e">库</span><span style="color:#960050;background-color:#1e0010">、</span><span style="color:#a6e22e">资源</span><span style="color:#960050;background-color:#1e0010">、</span><span style="color:#a6e22e">配置等文件外</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">还包含了一些为运行时准备的一些配置参数</span><span style="color:#960050;background-color:#1e0010">（</span><span style="color:#a6e22e">如匿名卷</span><span style="color:#960050;background-color:#1e0010">、</span><span style="color:#a6e22e">环境变量</span><span style="color:#960050;background-color:#1e0010">、</span><span style="color:#a6e22e">用户等</span><span style="color:#960050;background-color:#1e0010">）。</span><span style="color:#a6e22e">镜像不包含任何动态数据</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">其内容在构建之后也不会被改变</span><span style="color:#960050;background-color:#1e0010">。</span>
+<span style="color:#a6e22e">镜像</span><span style="color:#960050;background-color:#1e0010">（</span><span style="color:#a6e22e">Image</span><span style="color:#960050;background-color:#1e0010">）</span><span style="color:#a6e22e">就是一堆只读层</span><span style="color:#960050;background-color:#1e0010">（</span><span style="color:#a6e22e">read</span><span style="color:#f92672">-</span><span style="color:#a6e22e">only</span> <span style="color:#a6e22e">layer</span><span style="color:#960050;background-color:#1e0010">）</span><span style="color:#a6e22e">的统一视角</span><span style="color:#960050;background-color:#1e0010">：</span><span style="color:#a6e22e">镜像由多个层组成</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">每层叠加之后</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">从外部看来就如一个独立的对象</span><span style="color:#960050;background-color:#1e0010">。</span><span style="color:#a6e22e">镜像内部是一个精简的操作系统</span><span style="color:#960050;background-color:#1e0010">（</span><span style="color:#a6e22e">OS</span><span style="color:#960050;background-color:#1e0010">），</span><span style="color:#a6e22e">同时还包含应用运行所必须的文件和依赖包</span><span style="color:#960050;background-color:#1e0010">。</span></code></pre></div>
+<img src="/image/image_layer.png" alt="image" /></p>
+
+<h4 id="容器">容器</h4>
+
+<p><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">容器也是一堆层的统一视角</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">和镜像的区别在于容器的最上面那一层是可读可写的</span><span style="color:#960050;background-color:#1e0010">。</span></code></pre></div>
+<img src="/image/container_layer.png" alt="image" /></p>
 
 <h4 id="镜像搜索操作">镜像搜索操作</h4>
 
