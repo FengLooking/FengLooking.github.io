@@ -282,14 +282,14 @@
   </url>
   
   <url>
-    <loc>http://101.200.124.95/categories/docker/</loc>
+    <loc>http://101.200.124.95/tags/docker/</loc>
     <lastmod>2019-10-22T21:50:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://101.200.124.95/tags/docker/</loc>
+    <loc>http://101.200.124.95/categories/docker/</loc>
     <lastmod>2019-10-22T21:50:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -310,13 +310,6 @@
   </url>
   
   <url>
-    <loc>http://101.200.124.95/categories/interview/</loc>
-    <lastmod>2019-10-10T20:50:01+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>http://101.200.124.95/tags/interview/</loc>
     <lastmod>2019-10-10T20:50:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -324,8 +317,8 @@
   </url>
   
   <url>
-    <loc>http://101.200.124.95/categories/redis/</loc>
-    <lastmod>2018-09-03T19:30:01+08:00</lastmod>
+    <loc>http://101.200.124.95/categories/interview/</loc>
+    <lastmod>2019-10-10T20:50:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -338,14 +331,21 @@
   </url>
   
   <url>
-    <loc>http://101.200.124.95/categories/mongodb/</loc>
-    <lastmod>2018-08-03T19:30:01+08:00</lastmod>
+    <loc>http://101.200.124.95/categories/redis/</loc>
+    <lastmod>2018-09-03T19:30:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://101.200.124.95/tags/mongodb/</loc>
+    <lastmod>2018-08-03T19:30:01+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://101.200.124.95/categories/mongodb/</loc>
     <lastmod>2018-08-03T19:30:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -366,13 +366,6 @@
   </url>
   
   <url>
-    <loc>http://101.200.124.95/categories/subprocess/</loc>
-    <lastmod>2017-03-10T23:37:22+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>http://101.200.124.95/tags/subprocess/</loc>
     <lastmod>2017-03-10T23:37:22+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -380,14 +373,21 @@
   </url>
   
   <url>
-    <loc>http://101.200.124.95/categories/mysql/</loc>
-    <lastmod>2017-03-05T20:30:01+08:00</lastmod>
+    <loc>http://101.200.124.95/categories/subprocess/</loc>
+    <lastmod>2017-03-10T23:37:22+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://101.200.124.95/tags/mysql/</loc>
+    <lastmod>2017-03-05T20:30:01+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://101.200.124.95/categories/mysql/</loc>
     <lastmod>2017-03-05T20:30:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
