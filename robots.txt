@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: http://101.200.124.95/sitemap.xml
+Sitemap: http://www.dyfblog.com/sitemap.xml

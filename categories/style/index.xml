@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>style on dyfblogs</title>
-    <link>http://101.200.124.95/categories/style/</link>
-    <description>Recent content in style on dyfblogs</description>
+    <title>style on dyfblog</title>
+    <link>http://www.dyfblog.com/categories/style/</link>
+    <description>Recent content in style on dyfblog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Thu, 08 Sep 2016 20:22:01 +0800</lastBuildDate>
     
-	<atom:link href="http://101.200.124.95/categories/style/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://www.dyfblog.com/categories/style/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>CSS文字段落排版常用设置</title>
-      <link>http://101.200.124.95/post/css-typesetting/</link>
+      <link>http://www.dyfblog.com/post/css-typesetting/</link>
       <pubDate>Thu, 08 Sep 2016 20:22:01 +0800</pubDate>
       
-      <guid>http://101.200.124.95/post/css-typesetting/</guid>
+      <guid>http://www.dyfblog.com/post/css-typesetting/</guid>
       <description>199.firstp { 200 /* 文字排版：颜色、字号、字体、粗体、斜体、下划线、删除线 */ 201 color: #666; /*颜色*/ 202 font-size: 30px; /*字号*/ 203 font-family: &amp;#34;宋体&amp;#34;; /*字体*</description>
     </item>
     
     <item>
       <title>CSS样式在HTML中的位置</title>
-      <link>http://101.200.124.95/post/css-style-position/</link>
+      <link>http://www.dyfblog.com/post/css-style-position/</link>
       <pubDate>Sat, 03 Sep 2016 22:00:01 +0800</pubDate>
       
-      <guid>http://101.200.124.95/post/css-style-position/</guid>
+      <guid>http://www.dyfblog.com/post/css-style-position/</guid>
       <description>从CSS样式代码插入HTML文件的形式来看可以分为三种插入形式：内联样式、嵌入样式、外部样式。 内联样式：就是将CSS样式写在HTML的开始标</description>
     </item>
     

@@ -1,184 +1,184 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on dyfblogs</title>
-    <link>http://101.200.124.95/categories/</link>
-    <description>Recent content in Categories on dyfblogs</description>
+    <title>Categories on dyfblog</title>
+    <link>http://www.dyfblog.com/categories/</link>
+    <description>Recent content in Categories on dyfblog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Mon, 30 Nov 2020 19:00:34 +0800</lastBuildDate>
     
-	<atom:link href="http://101.200.124.95/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://www.dyfblog.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Django</title>
-      <link>http://101.200.124.95/categories/django/</link>
+      <link>http://www.dyfblog.com/categories/django/</link>
       <pubDate>Mon, 30 Nov 2020 19:00:34 +0800</pubDate>
       
-      <guid>http://101.200.124.95/categories/django/</guid>
+      <guid>http://www.dyfblog.com/categories/django/</guid>
       <description></description>
     </item>
     
     <item>
       <title>k8s</title>
-      <link>http://101.200.124.95/categories/k8s/</link>
+      <link>http://www.dyfblog.com/categories/k8s/</link>
       <pubDate>Fri, 22 Nov 2019 20:50:10 +0800</pubDate>
       
-      <guid>http://101.200.124.95/categories/k8s/</guid>
+      <guid>http://www.dyfblog.com/categories/k8s/</guid>
       <description></description>
     </item>
     
     <item>
       <title>docker</title>
-      <link>http://101.200.124.95/categories/docker/</link>
+      <link>http://www.dyfblog.com/categories/docker/</link>
       <pubDate>Tue, 22 Oct 2019 20:21:56 +0800</pubDate>
       
-      <guid>http://101.200.124.95/categories/docker/</guid>
+      <guid>http://www.dyfblog.com/categories/docker/</guid>
       <description></description>
     </item>
     
     <item>
       <title>linux</title>
-      <link>http://101.200.124.95/categories/linux/</link>
+      <link>http://www.dyfblog.com/categories/linux/</link>
       <pubDate>Sun, 20 Oct 2019 20:50:10 +0800</pubDate>
       
-      <guid>http://101.200.124.95/categories/linux/</guid>
+      <guid>http://www.dyfblog.com/categories/linux/</guid>
       <description></description>
     </item>
     
     <item>
       <title>interview</title>
-      <link>http://101.200.124.95/categories/interview/</link>
+      <link>http://www.dyfblog.com/categories/interview/</link>
       <pubDate>Thu, 10 Oct 2019 20:17:01 +0800</pubDate>
       
-      <guid>http://101.200.124.95/categories/interview/</guid>
+      <guid>http://www.dyfblog.com/categories/interview/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Redis</title>
-      <link>http://101.200.124.95/categories/redis/</link>
+      <link>http://www.dyfblog.com/categories/redis/</link>
       <pubDate>Mon, 03 Sep 2018 19:20:01 +0800</pubDate>
       
-      <guid>http://101.200.124.95/categories/redis/</guid>
+      <guid>http://www.dyfblog.com/categories/redis/</guid>
       <description></description>
     </item>
     
     <item>
       <title>MongoDB</title>
-      <link>http://101.200.124.95/categories/mongodb/</link>
+      <link>http://www.dyfblog.com/categories/mongodb/</link>
       <pubDate>Fri, 03 Aug 2018 19:20:01 +0800</pubDate>
       
-      <guid>http://101.200.124.95/categories/mongodb/</guid>
+      <guid>http://www.dyfblog.com/categories/mongodb/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Python</title>
-      <link>http://101.200.124.95/categories/python/</link>
+      <link>http://www.dyfblog.com/categories/python/</link>
       <pubDate>Fri, 10 Mar 2017 23:37:22 +0800</pubDate>
       
-      <guid>http://101.200.124.95/categories/python/</guid>
+      <guid>http://www.dyfblog.com/categories/python/</guid>
       <description></description>
     </item>
     
     <item>
       <title>subprocess</title>
-      <link>http://101.200.124.95/categories/subprocess/</link>
+      <link>http://www.dyfblog.com/categories/subprocess/</link>
       <pubDate>Fri, 10 Mar 2017 23:37:22 +0800</pubDate>
       
-      <guid>http://101.200.124.95/categories/subprocess/</guid>
+      <guid>http://www.dyfblog.com/categories/subprocess/</guid>
       <description></description>
     </item>
     
     <item>
       <title>MySQL</title>
-      <link>http://101.200.124.95/categories/mysql/</link>
+      <link>http://www.dyfblog.com/categories/mysql/</link>
       <pubDate>Sun, 05 Mar 2017 20:22:01 +0800</pubDate>
       
-      <guid>http://101.200.124.95/categories/mysql/</guid>
+      <guid>http://www.dyfblog.com/categories/mysql/</guid>
       <description></description>
     </item>
     
     <item>
       <title>virtualenv</title>
-      <link>http://101.200.124.95/categories/virtualenv/</link>
+      <link>http://www.dyfblog.com/categories/virtualenv/</link>
       <pubDate>Thu, 02 Mar 2017 21:50:01 +0800</pubDate>
       
-      <guid>http://101.200.124.95/categories/virtualenv/</guid>
+      <guid>http://www.dyfblog.com/categories/virtualenv/</guid>
       <description></description>
     </item>
     
     <item>
       <title>SQLite</title>
-      <link>http://101.200.124.95/categories/sqlite/</link>
+      <link>http://www.dyfblog.com/categories/sqlite/</link>
       <pubDate>Tue, 28 Feb 2017 23:22:01 +0800</pubDate>
       
-      <guid>http://101.200.124.95/categories/sqlite/</guid>
+      <guid>http://www.dyfblog.com/categories/sqlite/</guid>
       <description></description>
     </item>
     
     <item>
       <title>HTTP</title>
-      <link>http://101.200.124.95/categories/http/</link>
+      <link>http://www.dyfblog.com/categories/http/</link>
       <pubDate>Mon, 10 Oct 2016 20:50:01 +0800</pubDate>
       
-      <guid>http://101.200.124.95/categories/http/</guid>
+      <guid>http://www.dyfblog.com/categories/http/</guid>
       <description></description>
     </item>
     
     <item>
       <title>CSS</title>
-      <link>http://101.200.124.95/categories/css/</link>
+      <link>http://www.dyfblog.com/categories/css/</link>
       <pubDate>Thu, 08 Sep 2016 20:22:01 +0800</pubDate>
       
-      <guid>http://101.200.124.95/categories/css/</guid>
+      <guid>http://www.dyfblog.com/categories/css/</guid>
       <description></description>
     </item>
     
     <item>
       <title>style</title>
-      <link>http://101.200.124.95/categories/style/</link>
+      <link>http://www.dyfblog.com/categories/style/</link>
       <pubDate>Thu, 08 Sep 2016 20:22:01 +0800</pubDate>
       
-      <guid>http://101.200.124.95/categories/style/</guid>
+      <guid>http://www.dyfblog.com/categories/style/</guid>
       <description></description>
     </item>
     
     <item>
       <title>color</title>
-      <link>http://101.200.124.95/categories/color/</link>
+      <link>http://www.dyfblog.com/categories/color/</link>
       <pubDate>Mon, 05 Sep 2016 23:13:54 +0800</pubDate>
       
-      <guid>http://101.200.124.95/categories/color/</guid>
+      <guid>http://www.dyfblog.com/categories/color/</guid>
       <description></description>
     </item>
     
     <item>
       <title>HTML</title>
-      <link>http://101.200.124.95/categories/html/</link>
+      <link>http://www.dyfblog.com/categories/html/</link>
       <pubDate>Sun, 04 Sep 2016 20:36:29 +0800</pubDate>
       
-      <guid>http://101.200.124.95/categories/html/</guid>
+      <guid>http://www.dyfblog.com/categories/html/</guid>
       <description></description>
     </item>
     
     <item>
       <title>element</title>
-      <link>http://101.200.124.95/categories/element/</link>
+      <link>http://www.dyfblog.com/categories/element/</link>
       <pubDate>Fri, 02 Sep 2016 18:00:01 +0800</pubDate>
       
-      <guid>http://101.200.124.95/categories/element/</guid>
+      <guid>http://www.dyfblog.com/categories/element/</guid>
       <description></description>
     </item>
     
     <item>
       <title>pip</title>
-      <link>http://101.200.124.95/categories/pip/</link>
+      <link>http://www.dyfblog.com/categories/pip/</link>
       <pubDate>Sun, 10 Jan 2016 20:50:01 +0800</pubDate>
       
-      <guid>http://101.200.124.95/categories/pip/</guid>
+      <guid>http://www.dyfblog.com/categories/pip/</guid>
       <description></description>
     </item>
     

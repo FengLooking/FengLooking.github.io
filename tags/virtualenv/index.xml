@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>virtualenv on dyfblogs</title>
-    <link>http://101.200.124.95/tags/virtualenv/</link>
-    <description>Recent content in virtualenv on dyfblogs</description>
+    <title>virtualenv on dyfblog</title>
+    <link>http://www.dyfblog.com/tags/virtualenv/</link>
+    <description>Recent content in virtualenv on dyfblog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Thu, 02 Mar 2017 21:50:01 +0800</lastBuildDate>
     
-	<atom:link href="http://101.200.124.95/tags/virtualenv/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://www.dyfblog.com/tags/virtualenv/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>linux平台虚拟环境依赖安装</title>
-      <link>http://101.200.124.95/post/virtualenv-install/</link>
+      <link>http://www.dyfblog.com/post/virtualenv-install/</link>
       <pubDate>Thu, 02 Mar 2017 21:50:01 +0800</pubDate>
       
-      <guid>http://101.200.124.95/post/virtualenv-install/</guid>
+      <guid>http://www.dyfblog.com/post/virtualenv-install/</guid>
       <description>当你的环境上有多个项目，每个项目所依赖的包版本不同时，搭建多个互不干扰的开发环境就显得很有必要 1.安装依赖包 (sudo) pip install virtualenv virtualenvwrapper 2.在~/.bash_</description>
     </item>
     

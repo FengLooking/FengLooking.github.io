@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>color on dyfblogs</title>
-    <link>http://101.200.124.95/categories/color/</link>
-    <description>Recent content in color on dyfblogs</description>
+    <title>color on dyfblog</title>
+    <link>http://www.dyfblog.com/categories/color/</link>
+    <description>Recent content in color on dyfblog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Mon, 05 Sep 2016 23:13:54 +0800</lastBuildDate>
     
-	<atom:link href="http://101.200.124.95/categories/color/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://www.dyfblog.com/categories/color/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>CSS颜色样式</title>
-      <link>http://101.200.124.95/post/css-color/</link>
+      <link>http://www.dyfblog.com/post/css-color/</link>
       <pubDate>Mon, 05 Sep 2016 23:13:54 +0800</pubDate>
       
-      <guid>http://101.200.124.95/post/css-color/</guid>
+      <guid>http://www.dyfblog.com/post/css-color/</guid>
       <description>CSS颜色样式设置 1.英文单词设置颜色样式 20.content {color: red;} 2.RGB值设置颜色样式：由R(red)、G(green)、B(blue)三种颜色的比例来配</description>
     </item>
     

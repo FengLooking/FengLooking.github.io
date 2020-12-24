@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>dyfblogs</title>
-    <link>http://101.200.124.95/</link>
-    <description>Recent content on dyfblogs</description>
+    <title>dyfblog</title>
+    <link>http://www.dyfblog.com/</link>
+    <description>Recent content on dyfblog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Mon, 30 Nov 2020 19:00:34 +0800</lastBuildDate>
     
-        <atom:link href="http://101.200.124.95/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://www.dyfblog.com/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>记录Django的settings文件常用配置</title>
-      <link>http://101.200.124.95/post/django_settings/</link>
+      <link>http://www.dyfblog.com/post/django_settings/</link>
       <pubDate>Mon, 30 Nov 2020 19:00:34 +0800</pubDate>
       
-      <guid>http://101.200.124.95/post/django_settings/</guid>
+      <guid>http://www.dyfblog.com/post/django_settings/</guid>
       
         <description>&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&amp;#34;
 &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;Django settings for mxOnline project.
@@ -177,10 +177,10 @@
     
     <item>
       <title>pod自动重启的可能原因</title>
-      <link>http://101.200.124.95/post/reason_pod_restart/</link>
+      <link>http://www.dyfblog.com/post/reason_pod_restart/</link>
       <pubDate>Fri, 22 Nov 2019 20:50:10 +0800</pubDate>
       
-      <guid>http://101.200.124.95/post/reason_pod_restart/</guid>
+      <guid>http://www.dyfblog.com/post/reason_pod_restart/</guid>
       
         <description>
 
@@ -201,10 +201,10 @@
     
     <item>
       <title>k8s安装nfs</title>
-      <link>http://101.200.124.95/post/k8s_install_nfs/</link>
+      <link>http://www.dyfblog.com/post/k8s_install_nfs/</link>
       <pubDate>Fri, 15 Nov 2019 20:50:10 +0800</pubDate>
       
-      <guid>http://101.200.124.95/post/k8s_install_nfs/</guid>
+      <guid>http://www.dyfblog.com/post/k8s_install_nfs/</guid>
       
         <description>
 
@@ -459,10 +459,10 @@
     
     <item>
       <title>k8s安装promethus</title>
-      <link>http://101.200.124.95/post/k8s_install_promethus/</link>
+      <link>http://www.dyfblog.com/post/k8s_install_promethus/</link>
       <pubDate>Wed, 06 Nov 2019 20:50:10 +0800</pubDate>
       
-      <guid>http://101.200.124.95/post/k8s_install_promethus/</guid>
+      <guid>http://www.dyfblog.com/post/k8s_install_promethus/</guid>
       
         <description>
 
@@ -545,7 +545,7 @@
 
 &lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;kubectl&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;get&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;pod&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;n&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;monitoring&lt;/span&gt;
 &lt;span style=&#34;color:#a6e22e&#34;&gt;如果有镜像加载失败&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;，&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;需要手动加载&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;img src=&#34;http://101.200.124.95/image/pro_6_1.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
+&lt;img src=&#34;http://www.dyfblog.com/image/pro_6_1.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;7-手动加载镜像gcr-io-registry-aliyuncs-com&#34;&gt;7.手动加载镜像gcr.io&amp;ndash;&amp;gt;registry.aliyuncs.com&lt;/h4&gt;
 
@@ -567,15 +567,15 @@
 &lt;h4 id=&#34;8-再次查看pod是否正常运行&#34;&gt;8.再次查看pod是否正常运行&lt;/h4&gt;
 
 &lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;kubectl&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;get&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;pod&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;n&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;monitoring&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;img src=&#34;http://101.200.124.95/image/pro_8_1.png&#34; alt=&#34;image&#34; /&gt;
+&lt;img src=&#34;http://www.dyfblog.com/image/pro_8_1.png&#34; alt=&#34;image&#34; /&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;kubectl&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;get&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;svc&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;--&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;all&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;namespaces&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;img src=&#34;http://101.200.124.95/image/pro_8_2.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
+&lt;img src=&#34;http://www.dyfblog.com/image/pro_8_2.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;9-访问prometheus界面&#34;&gt;9.访问prometheus界面&lt;/h4&gt;
 
 &lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;http&lt;/span&gt;:&lt;span style=&#34;color:#75715e&#34;&gt;//192.168.188.130:30200/
 &lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;sum&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;by&lt;/span&gt; (&lt;span style=&#34;color:#a6e22e&#34;&gt;pod_name&lt;/span&gt;)(&lt;span style=&#34;color:#a6e22e&#34;&gt;rate&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;container_cpu_usage_seconds_total&lt;/span&gt;{&lt;span style=&#34;color:#a6e22e&#34;&gt;image&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;!=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;,&lt;span style=&#34;color:#a6e22e&#34;&gt;pod_name&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;!=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;}[&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;m&lt;/span&gt;]))&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;img src=&#34;http://101.200.124.95/image/pro_9_1.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
+&lt;img src=&#34;http://www.dyfblog.com/image/pro_9_1.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;10-访问grafana&#34;&gt;10.访问grafana&lt;/h4&gt;
 
@@ -590,10 +590,10 @@
     
     <item>
       <title>k8s安装helm</title>
-      <link>http://101.200.124.95/post/k8s_install_helm/</link>
+      <link>http://www.dyfblog.com/post/k8s_install_helm/</link>
       <pubDate>Tue, 05 Nov 2019 20:50:10 +0800</pubDate>
       
-      <guid>http://101.200.124.95/post/k8s_install_helm/</guid>
+      <guid>http://www.dyfblog.com/post/k8s_install_helm/</guid>
       
         <description>
 
@@ -648,10 +648,10 @@
     
     <item>
       <title>k8s集群搭建</title>
-      <link>http://101.200.124.95/post/centos_install_k8s/</link>
+      <link>http://www.dyfblog.com/post/centos_install_k8s/</link>
       <pubDate>Mon, 28 Oct 2019 20:50:10 +0800</pubDate>
       
-      <guid>http://101.200.124.95/post/centos_install_k8s/</guid>
+      <guid>http://www.dyfblog.com/post/centos_install_k8s/</guid>
       
         <description>
 
@@ -746,7 +746,7 @@
 &lt;span style=&#34;color:#f92672&#34;&gt;--&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;service&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;cidr&lt;/span&gt;=&lt;span style=&#34;color:#ae81ff&#34;&gt;10.1.0.0&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;16&lt;/span&gt; \
 &lt;span style=&#34;color:#f92672&#34;&gt;--&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;pod&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;network&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;cidr&lt;/span&gt;=&lt;span style=&#34;color:#ae81ff&#34;&gt;10.244.0.0&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;16&lt;/span&gt;
 &lt;span style=&#34;color:#a6e22e&#34;&gt;若出现如下结果表示初始化顺利&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;img src=&#34;http://101.200.124.95/image/k8s_9.1.png&#34; alt=&#34;image&#34; /&gt;
+&lt;img src=&#34;http://www.dyfblog.com/image/k8s_9.1.png&#34; alt=&#34;image&#34; /&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;kubeadm&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;join&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;192.168.188.130&lt;/span&gt;:&lt;span style=&#34;color:#ae81ff&#34;&gt;6443&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;--&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;token&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;q25g7a&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;g0l60io5eheqjdij&lt;/span&gt; \
     &lt;span style=&#34;color:#f92672&#34;&gt;--&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;discovery&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;token&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;ca&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;cert&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;hash&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;sha256&lt;/span&gt;:&lt;span style=&#34;color:#ae81ff&#34;&gt;168&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;c90c4793d96fe60fe845db8958704632baecb72fd24de7150d1a5288a78a1&lt;/span&gt;
 &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;）&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;使用kubectl工具&lt;/span&gt;
@@ -755,23 +755,23 @@
 &lt;span style=&#34;color:#a6e22e&#34;&gt;sudo&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;cp&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;i&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;etc&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;kubernetes&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;admin&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;conf&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;$&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;HOME&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;kube&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;config&lt;/span&gt;
 &lt;span style=&#34;color:#a6e22e&#34;&gt;sudo&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;chown&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;$&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;id&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;u&lt;/span&gt;):&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;$&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;id&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;g&lt;/span&gt;) &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;$&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;HOME&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;kube&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;config&lt;/span&gt;　
 &lt;span style=&#34;color:#a6e22e&#34;&gt;下面就可以直接使用kubectl命令了&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;img src=&#34;http://101.200.124.95/image/k8s_9.2.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
+&lt;img src=&#34;http://www.dyfblog.com/image/k8s_9.2.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;10-安装pod网络插件-cni&#34;&gt;10.安装Pod网络插件（CNI）&lt;/h4&gt;
 
 &lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;kubectl&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;apply&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;f&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;https&lt;/span&gt;:&lt;span style=&#34;color:#f92672&#34;&gt;//&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;raw&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;githubusercontent&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;com&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;coreos&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;flannel&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;a70459be0084506e4ec919aa1c114638878db11b&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;Documentation&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;kube&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;flannel&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;yml&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;img src=&#34;http://101.200.124.95/image/k8s_10.1.png&#34; alt=&#34;image&#34; /&gt;
+&lt;img src=&#34;http://www.dyfblog.com/image/k8s_10.1.png&#34; alt=&#34;image&#34; /&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;）&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;查看是否部署成功&lt;/span&gt;
 &lt;span style=&#34;color:#a6e22e&#34;&gt;kubectl&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;get&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;pods&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;n&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;kube&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;system&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;img src=&#34;http://101.200.124.95/image/k8s_10.2.png&#34; alt=&#34;image&#34; /&gt;
+&lt;img src=&#34;http://www.dyfblog.com/image/k8s_10.2.png&#34; alt=&#34;image&#34; /&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;有镜像拉取失败&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;，&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;手动拉取镜像&lt;/span&gt;
 &lt;span style=&#34;color:#a6e22e&#34;&gt;docker&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;pull&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;quay&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;mirror&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;qiniu&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;com&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;coreos&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;flannel&lt;/span&gt;:&lt;span style=&#34;color:#a6e22e&#34;&gt;v0&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;.11.0&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;amd64&lt;/span&gt;
 &lt;span style=&#34;color:#a6e22e&#34;&gt;docker&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;tag&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;quay&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;mirror&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;qiniu&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;com&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;coreos&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;flannel&lt;/span&gt;:&lt;span style=&#34;color:#a6e22e&#34;&gt;v0&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;.11.0&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;amd64&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;quay&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;io&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;coreos&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;flannel&lt;/span&gt;:&lt;span style=&#34;color:#a6e22e&#34;&gt;v0&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;.11.0&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;amd64&lt;/span&gt;
 &lt;span style=&#34;color:#a6e22e&#34;&gt;过几分钟用kubectl&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;get&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;pods&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;n&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;kube&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;system命令查看是否重新部署成功&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;img src=&#34;http://101.200.124.95/image/k8s_10.2.2.png&#34; alt=&#34;image&#34; /&gt;
+&lt;img src=&#34;http://www.dyfblog.com/image/k8s_10.2.2.png&#34; alt=&#34;image&#34; /&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;）&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;再次查看node&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;，&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;可以看到状态为ready&lt;/span&gt;
 &lt;span style=&#34;color:#a6e22e&#34;&gt;kubectl&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;get&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;node&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;img src=&#34;http://101.200.124.95/image/k8s_10.3.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
+&lt;img src=&#34;http://www.dyfblog.com/image/k8s_10.3.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;11-node节点手动拉取镜像&#34;&gt;11.Node节点手动拉取镜像&lt;/h4&gt;
 
@@ -784,19 +784,19 @@
 &lt;span style=&#34;color:#a6e22e&#34;&gt;kubeadm&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;join&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;192.168.188.130&lt;/span&gt;:&lt;span style=&#34;color:#ae81ff&#34;&gt;6443&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;--&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;token&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;c0rjh9&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;.6&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;mvp2gg9dbmnimvc&lt;/span&gt; \
     &lt;span style=&#34;color:#f92672&#34;&gt;--&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;discovery&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;token&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;ca&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;cert&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;hash&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;sha256&lt;/span&gt;:&lt;span style=&#34;color:#ae81ff&#34;&gt;168&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;c90c4793d96fe60fe845db8958704632baecb72fd24de7150d1a5288a78a1&lt;/span&gt;
 &lt;span style=&#34;color:#a6e22e&#34;&gt;若加入成功显示如下&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;img src=&#34;http://101.200.124.95/image/k8s_12.1.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
+&lt;img src=&#34;http://www.dyfblog.com/image/k8s_12.1.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;13-测试kubernetes集群&#34;&gt;13.测试kubernetes集群&lt;/h4&gt;
 
 &lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;$&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;kubectl&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;create&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;deployment&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;nginx&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;--&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;image&lt;/span&gt;=&lt;span style=&#34;color:#a6e22e&#34;&gt;nginx&lt;/span&gt;
 &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;$&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;kubectl&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;expose&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;deployment&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;nginx&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;--&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;port&lt;/span&gt;=&lt;span style=&#34;color:#ae81ff&#34;&gt;80&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;--&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;type&lt;/span&gt;=&lt;span style=&#34;color:#a6e22e&#34;&gt;NodePort&lt;/span&gt;
 &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;$&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;kubectl&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;get&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;pod&lt;/span&gt;,&lt;span style=&#34;color:#a6e22e&#34;&gt;svc&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;img src=&#34;http://101.200.124.95/image/k8s_13.1.png&#34; alt=&#34;image&#34; /&gt;
+&lt;img src=&#34;http://www.dyfblog.com/image/k8s_13.1.png&#34; alt=&#34;image&#34; /&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;kubectl&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;get&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;pod&lt;/span&gt;,&lt;span style=&#34;color:#a6e22e&#34;&gt;svc&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;o&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;wide&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;img src=&#34;http://101.200.124.95/image/k8s_13.2.png&#34; alt=&#34;image&#34; /&gt;
+&lt;img src=&#34;http://www.dyfblog.com/image/k8s_13.2.png&#34; alt=&#34;image&#34; /&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;通过浏览器访问&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;：&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;http&lt;/span&gt;:&lt;span style=&#34;color:#f92672&#34;&gt;//&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;192.168.188.130&lt;/span&gt;:&lt;span style=&#34;color:#ae81ff&#34;&gt;30372&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;可以正常访问&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;img src=&#34;http://101.200.124.95/image/k8s_13.3.png&#34; alt=&#34;image&#34; /&gt;
-&lt;img src=&#34;http://101.200.124.95/image/k8s_13.4.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
+&lt;img src=&#34;http://www.dyfblog.com/image/k8s_13.3.png&#34; alt=&#34;image&#34; /&gt;
+&lt;img src=&#34;http://www.dyfblog.com/image/k8s_13.4.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
 
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 </description>
@@ -805,10 +805,10 @@
     
     <item>
       <title>Kubernetes</title>
-      <link>http://101.200.124.95/post/kubernetes_basic/</link>
+      <link>http://www.dyfblog.com/post/kubernetes_basic/</link>
       <pubDate>Fri, 25 Oct 2019 20:21:56 +0800</pubDate>
       
-      <guid>http://101.200.124.95/post/kubernetes_basic/</guid>
+      <guid>http://www.dyfblog.com/post/kubernetes_basic/</guid>
       
         <description>
 
@@ -906,10 +906,10 @@
     
     <item>
       <title>Docker</title>
-      <link>http://101.200.124.95/post/docker_basic/</link>
+      <link>http://www.dyfblog.com/post/docker_basic/</link>
       <pubDate>Tue, 22 Oct 2019 20:21:56 +0800</pubDate>
       
-      <guid>http://101.200.124.95/post/docker_basic/</guid>
+      <guid>http://www.dyfblog.com/post/docker_basic/</guid>
       
         <description>
 
@@ -921,12 +921,12 @@
 
 &lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;docker&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;镜像可以看作是一个特殊的文件系统&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;，&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;除了提供容器运行时所需的程序&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;、&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;库&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;、&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;资源&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;、&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;配置等文件外&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;，&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;还包含了一些为运行时准备的一些配置参数&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;（&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;如匿名卷&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;、&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;环境变量&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;、&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;用户等&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;）。&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;镜像不包含任何动态数据&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;，&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;其内容在构建之后也不会被改变&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;。&lt;/span&gt;
 &lt;span style=&#34;color:#a6e22e&#34;&gt;镜像&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;（&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;Image&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;）&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;就是一堆只读层&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;（&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;read&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;only&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;layer&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;）&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;的统一视角&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;：&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;镜像由多个层组成&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;，&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;每层叠加之后&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;，&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;从外部看来就如一个独立的对象&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;。&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;镜像内部是一个精简的操作系统&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;（&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;OS&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;），&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;同时还包含应用运行所必须的文件和依赖包&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;。&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;img src=&#34;http://101.200.124.95/image/image_layer.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
+&lt;img src=&#34;http://www.dyfblog.com/image/image_layer.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;容器&#34;&gt;容器&lt;/h4&gt;
 
 &lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;容器也是一堆层的统一视角&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;，&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;和镜像的区别在于容器的最上面那一层是可读可写的&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;。&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;img src=&#34;http://101.200.124.95/image/container_layer.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
+&lt;img src=&#34;http://www.dyfblog.com/image/container_layer.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;镜像搜索操作&#34;&gt;镜像搜索操作&lt;/h4&gt;
 
@@ -1185,11 +1185,11 @@
 
 &lt;h4 id=&#34;dockerfile命令总结&#34;&gt;Dockerfile命令总结&lt;/h4&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://101.200.124.95/image/dockerfile_cmdtree.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.dyfblog.com/image/dockerfile_cmdtree.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;一个dockerfile例子&#34;&gt;一个Dockerfile例子&lt;/h4&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://101.200.124.95/image/dockerfile_eg.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.dyfblog.com/image/dockerfile_eg.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;docker执行dockerfile的流程&#34;&gt;docker执行Dockerfile的流程&lt;/h4&gt;
 
@@ -1206,10 +1206,10 @@
     
     <item>
       <title>centos7安装ELK</title>
-      <link>http://101.200.124.95/post/centos_install_elk/</link>
+      <link>http://www.dyfblog.com/post/centos_install_elk/</link>
       <pubDate>Sun, 20 Oct 2019 20:50:10 +0800</pubDate>
       
-      <guid>http://101.200.124.95/post/centos_install_elk/</guid>
+      <guid>http://www.dyfblog.com/post/centos_install_elk/</guid>
       
         <description>
 
@@ -1383,26 +1383,26 @@
 &lt;h4 id=&#34;查看端口是否已监听&#34;&gt;查看端口是否已监听&lt;/h4&gt;
 
 &lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;ss&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;tnl&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;img src=&#34;http://101.200.124.95/image/elk01.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
+&lt;img src=&#34;http://www.dyfblog.com/image/elk01.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;查看elasticsearch状态&#34;&gt;查看elasticsearch状态&lt;/h4&gt;
 
 &lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;curl&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;XGET&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;http&lt;/span&gt;:&lt;span style=&#34;color:#f92672&#34;&gt;//&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;192.168.188.133&lt;/span&gt;:&lt;span style=&#34;color:#ae81ff&#34;&gt;9200&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;_cluster&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;state&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;nodes&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;?&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;pretty&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&amp;#39;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;img src=&#34;http://101.200.124.95/image/elk02.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
+&lt;img src=&#34;http://www.dyfblog.com/image/elk02.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;查看elasticsearch的master&#34;&gt;查看elasticsearch的master&lt;/h4&gt;
 
 &lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;curl&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;XGET&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;http&lt;/span&gt;:&lt;span style=&#34;color:#f92672&#34;&gt;//&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;192.168.188.133&lt;/span&gt;:&lt;span style=&#34;color:#ae81ff&#34;&gt;9200&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;_cluster&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;state&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;master_node&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;?&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;pretty&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&amp;#39;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;img src=&#34;http://101.200.124.95/image/elk03.png&#34; alt=&#34;image&#34; /&gt;
+&lt;img src=&#34;http://www.dyfblog.com/image/elk03.png&#34; alt=&#34;image&#34; /&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;curl&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;XGET&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;http&lt;/span&gt;:&lt;span style=&#34;color:#f92672&#34;&gt;//&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;192.168.188.133&lt;/span&gt;:&lt;span style=&#34;color:#ae81ff&#34;&gt;9200&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;_cat&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;master&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;?&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;v&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&amp;#39;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;img src=&#34;http://101.200.124.95/image/elk04.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
+&lt;img src=&#34;http://www.dyfblog.com/image/elk04.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;查看健康状态&#34;&gt;查看健康状态&lt;/h4&gt;
 
 &lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;curl&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;XGET&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;http&lt;/span&gt;:&lt;span style=&#34;color:#f92672&#34;&gt;//&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;192.168.188.133&lt;/span&gt;:&lt;span style=&#34;color:#ae81ff&#34;&gt;9200&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;_cat&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;health&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;?&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;v&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&amp;#39;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;img src=&#34;http://101.200.124.95/image/elk05.png&#34; alt=&#34;image&#34; /&gt;
+&lt;img src=&#34;http://www.dyfblog.com/image/elk05.png&#34; alt=&#34;image&#34; /&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;curl&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;XGET&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;http&lt;/span&gt;:&lt;span style=&#34;color:#f92672&#34;&gt;//&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;192.168.188.133&lt;/span&gt;:&lt;span style=&#34;color:#ae81ff&#34;&gt;9200&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;_cluster&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;health&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;?&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;pretty&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&amp;#39;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;img src=&#34;http://101.200.124.95/image/elk06.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
+&lt;img src=&#34;http://www.dyfblog.com/image/elk06.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;需要收集日志的节点安装filebeat&#34;&gt;需要收集日志的节点安装Filebeat&lt;/h4&gt;
 
@@ -1436,20 +1436,20 @@
 
 &lt;h4 id=&#34;访问kibana-192-168-188-133-5601&#34;&gt;访问kibana： 192.168.188.133:5601&lt;/h4&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://101.200.124.95/image/elk07.png&#34; alt=&#34;image&#34; /&gt;
-&lt;img src=&#34;http://101.200.124.95/image/elk08.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.dyfblog.com/image/elk07.png&#34; alt=&#34;image&#34; /&gt;
+&lt;img src=&#34;http://www.dyfblog.com/image/elk08.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;第一个框中输入filebeat-然后点击next-step&#34;&gt;第一个框中输入filebeat-*, 然后点击Next step&lt;/h4&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://101.200.124.95/image/elk09.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.dyfblog.com/image/elk09.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;然后选择-timestamp-点击create-index-pattern&#34;&gt;然后选择@timestamp，点击create index pattern&lt;/h4&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://101.200.124.95/image/elk10.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.dyfblog.com/image/elk10.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;创建好后-点击左上角discover-就可以看到如下图所示的日志内容了&#34;&gt;创建好后，点击左上角Discover，就可以看到如下图所示的日志内容了&lt;/h4&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://101.200.124.95/image/elk11.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.dyfblog.com/image/elk11.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;安装配置iptables&#34;&gt;安装配置iptables&lt;/h4&gt;
 
@@ -1473,10 +1473,10 @@
     
     <item>
       <title>centos7安装nexus</title>
-      <link>http://101.200.124.95/post/centos_install_nexus/</link>
+      <link>http://www.dyfblog.com/post/centos_install_nexus/</link>
       <pubDate>Sat, 19 Oct 2019 20:50:10 +0800</pubDate>
       
-      <guid>http://101.200.124.95/post/centos_install_nexus/</guid>
+      <guid>http://www.dyfblog.com/post/centos_install_nexus/</guid>
       
         <description>
 
@@ -1498,9 +1498,9 @@
 &lt;h4 id=&#34;配置nexus&#34;&gt;配置nexus&lt;/h4&gt;
 
 &lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;vi&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;nexus&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;etc&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;nexus&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;default&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;properties&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;img src=&#34;http://101.200.124.95/image/nexus01.png&#34; alt=&#34;image&#34; /&gt;
+&lt;img src=&#34;http://www.dyfblog.com/image/nexus01.png&#34; alt=&#34;image&#34; /&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;vi&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;nexus&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;bin&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;nexus&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;img src=&#34;http://101.200.124.95/image/nexus02.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
+&lt;img src=&#34;http://www.dyfblog.com/image/nexus02.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;设置nexus环境变量&#34;&gt;设置nexus环境变量&lt;/h4&gt;
 
@@ -1517,17 +1517,17 @@
 
 &lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;http&lt;/span&gt;:&lt;span style=&#34;color:#75715e&#34;&gt;//192.168.188.133:10000/
 &lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;默认用户名&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;密码&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;：&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;admin&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;admin123&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;img src=&#34;http://101.200.124.95/image/nexus03.png&#34; alt=&#34;image&#34; /&gt;
-&lt;img src=&#34;http://101.200.124.95/image/nexus04.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
+&lt;img src=&#34;http://www.dyfblog.com/image/nexus03.png&#34; alt=&#34;image&#34; /&gt;
+&lt;img src=&#34;http://www.dyfblog.com/image/nexus04.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;配置docker私有仓库&#34;&gt;配置docker私有仓库&lt;/h4&gt;
 
 &lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;点击设置按钮&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;，&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;2.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;点击Repositories&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;，&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;3.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;点击create&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;repository&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;img src=&#34;http://101.200.124.95/image/nexus05.png&#34; alt=&#34;image&#34; /&gt;
+&lt;img src=&#34;http://www.dyfblog.com/image/nexus05.png&#34; alt=&#34;image&#34; /&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;选择仓库类型&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;img src=&#34;http://101.200.124.95/image/nexus06.png&#34; alt=&#34;image&#34; /&gt;
+&lt;img src=&#34;http://www.dyfblog.com/image/nexus06.png&#34; alt=&#34;image&#34; /&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;然后输入仓库名称&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;，&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;勾选HTTP并输入端口号&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;，&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;勾选允许交互的API&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;，&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;最后点击create按钮&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;img src=&#34;http://101.200.124.95/image/nexus07.png&#34; alt=&#34;image&#34; /&gt;
+&lt;img src=&#34;http://www.dyfblog.com/image/nexus07.png&#34; alt=&#34;image&#34; /&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;docker配置&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;：&lt;/span&gt;
 &lt;span style=&#34;color:#a6e22e&#34;&gt;vi&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;etc&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;docker&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;daemon&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;json&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;添加&lt;/span&gt;
 {
@@ -1556,7 +1556,7 @@
 
 &lt;h4 id=&#34;然后去页面可以搜索到刚刚上传的镜像&#34;&gt;然后去页面可以搜索到刚刚上传的镜像&lt;/h4&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://101.200.124.95/image/nexus08.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.dyfblog.com/image/nexus08.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
 
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 </description>
@@ -1565,28 +1565,28 @@
     
     <item>
       <title>centos7安装jdk8</title>
-      <link>http://101.200.124.95/post/centos_install_jdk8/</link>
+      <link>http://www.dyfblog.com/post/centos_install_jdk8/</link>
       <pubDate>Fri, 18 Oct 2019 20:50:10 +0800</pubDate>
       
-      <guid>http://101.200.124.95/post/centos_install_jdk8/</guid>
+      <guid>http://www.dyfblog.com/post/centos_install_jdk8/</guid>
       
         <description>
 
 &lt;h4 id=&#34;一-百度搜索jdk8&#34;&gt;一.百度搜索jdk8&lt;/h4&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://101.200.124.95/image/jdk8_01.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.dyfblog.com/image/jdk8_01.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;二-进入oracle官网下载页面-鼠标放在sign-in-上-点击-sign-in-to-my-account&#34;&gt;二.进入oracle官网下载页面，鼠标放在Sign in 上，点击 Sign in to my Account&lt;/h4&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://101.200.124.95/image/jdk8_02.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.dyfblog.com/image/jdk8_02.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;三-有账号的输入账号后点击登录-没有账号的创建一个账号后登录&#34;&gt;三.有账号的输入账号后点击登录，没有账号的创建一个账号后登录&lt;/h4&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://101.200.124.95/image/jdk8_03.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.dyfblog.com/image/jdk8_03.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;四-登录后点击accept-license-agreement-然后点击jdk-8u231-linux-x64-rpm后下载jdk8&#34;&gt;四.登录后点击Accept License Agreement, 然后点击jdk-8u231-linux-x64.rpm后下载jdk8&lt;/h4&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://101.200.124.95/image/jdk8_04.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.dyfblog.com/image/jdk8_04.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;五-下载结束后将下载的jdk包上传到你要安装的虚拟机&#34;&gt;五.下载结束后将下载的jdk包上传到你要安装的虚拟机&lt;/h4&gt;
 
@@ -1597,7 +1597,7 @@
 &lt;h4 id=&#34;六-安装jdk8-i-显示套件的相关信息-v-显示指令执行过程-h或-hash-套件安装时列出标记&#34;&gt;六.安装jdk8：-i：显示套件的相关信息，-v：显示指令执行过程；-h或&amp;ndash;hash：套件安装时列出标记&lt;/h4&gt;
 
 &lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;rpm&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;ivh&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;jdk&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;8&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;u231&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;linux&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;x64&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;rpm&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;img src=&#34;http://101.200.124.95/image/jdk8_05.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
+&lt;img src=&#34;http://www.dyfblog.com/image/jdk8_05.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;七-用-java-version-的命令查看java的环境变量是否生效-出现下面的内容就说明java的jdk已经部署完成&#34;&gt;七.用“java -version”的命令查看java的环境变量是否生效,出现下面的内容就说明java的jdk已经部署完成&lt;/h4&gt;
 
@@ -1612,10 +1612,10 @@
     
     <item>
       <title>centos7安装nginx1.16</title>
-      <link>http://101.200.124.95/post/centos_install_nginx/</link>
+      <link>http://www.dyfblog.com/post/centos_install_nginx/</link>
       <pubDate>Thu, 17 Oct 2019 20:55:33 +0800</pubDate>
       
-      <guid>http://101.200.124.95/post/centos_install_nginx/</guid>
+      <guid>http://www.dyfblog.com/post/centos_install_nginx/</guid>
       
         <description>
 
@@ -1684,10 +1684,10 @@
     
     <item>
       <title>centos7安装MySQL5.7.28</title>
-      <link>http://101.200.124.95/post/centos_install_mysql/</link>
+      <link>http://www.dyfblog.com/post/centos_install_mysql/</link>
       <pubDate>Tue, 15 Oct 2019 20:40:41 +0800</pubDate>
       
-      <guid>http://101.200.124.95/post/centos_install_mysql/</guid>
+      <guid>http://www.dyfblog.com/post/centos_install_mysql/</guid>
       
         <description>
 
@@ -1756,10 +1756,10 @@
     
     <item>
       <title>Win10使用Vmware安装centos7</title>
-      <link>http://101.200.124.95/post/vmware_install_centos7/</link>
+      <link>http://www.dyfblog.com/post/vmware_install_centos7/</link>
       <pubDate>Sat, 12 Oct 2019 20:50:23 +0800</pubDate>
       
-      <guid>http://101.200.124.95/post/vmware_install_centos7/</guid>
+      <guid>http://www.dyfblog.com/post/vmware_install_centos7/</guid>
       
         <description>
 
@@ -1776,9 +1776,9 @@
 &lt;h4 id=&#34;1-nat网络配置&#34;&gt;1.NAT网络配置&lt;/h4&gt;
 
 &lt;p&gt;右键虚拟机选择“设置”，选择网络适配器，点击自定义，选择NAT模式
-&lt;img src=&#34;http://101.200.124.95/image/vmwareinstallcentos7.jpg&#34; alt=&#34;image&#34; /&gt;
+&lt;img src=&#34;http://www.dyfblog.com/image/vmwareinstallcentos7.jpg&#34; alt=&#34;image&#34; /&gt;
 点击VMware Workstation“编辑”功能选择“虚拟网络编辑器”选项，配置nat子网，此处注意nat子网ip不能和宿主机ip同网段
-&lt;img src=&#34;http://101.200.124.95/image/vmwareinstallcentos7_02.jpg&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
+&lt;img src=&#34;http://www.dyfblog.com/image/vmwareinstallcentos7_02.jpg&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;2-网卡配置&#34;&gt;2.网卡配置&lt;/h4&gt;
 
@@ -1868,10 +1868,10 @@
     
     <item>
       <title>面试题</title>
-      <link>http://101.200.124.95/post/interview-questions/</link>
+      <link>http://www.dyfblog.com/post/interview-questions/</link>
       <pubDate>Thu, 10 Oct 2019 20:17:01 +0800</pubDate>
       
-      <guid>http://101.200.124.95/post/interview-questions/</guid>
+      <guid>http://www.dyfblog.com/post/interview-questions/</guid>
       
         <description>
 
@@ -2008,10 +2008,10 @@
     
     <item>
       <title>Redis基础使用</title>
-      <link>http://101.200.124.95/post/redis-basicuse/</link>
+      <link>http://www.dyfblog.com/post/redis-basicuse/</link>
       <pubDate>Mon, 03 Sep 2018 19:20:01 +0800</pubDate>
       
-      <guid>http://101.200.124.95/post/redis-basicuse/</guid>
+      <guid>http://www.dyfblog.com/post/redis-basicuse/</guid>
       
         <description>&lt;p&gt;&lt;strong&gt;Redis&lt;/strong&gt;：Redis(REmote dictionary server)是一个开源的使用ANSI C语言编写、遵守BSD协议、支持网络、可基于内存亦可持久化的key-value型数据库。value的值可以是 string(字符串)、list(列表)、hash(哈希)、set(集合)、zset(sorted set-有序集合) 等类型。&lt;/p&gt;
 
@@ -2175,10 +2175,10 @@ make结束后 redis-5.0.5 目录下会出现编译后的redis服务程序redis-s
     
     <item>
       <title>MongoDB常用命令</title>
-      <link>http://101.200.124.95/post/mongodb-common/</link>
+      <link>http://www.dyfblog.com/post/mongodb-common/</link>
       <pubDate>Fri, 03 Aug 2018 19:20:01 +0800</pubDate>
       
-      <guid>http://101.200.124.95/post/mongodb-common/</guid>
+      <guid>http://www.dyfblog.com/post/mongodb-common/</guid>
       
         <description>&lt;p&gt;切换/创建数据库：use database_name
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;use&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;stuedu&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -2293,10 +2293,10 @@ MongoDB支持的索引：id索引(默认建立)、单键索引、多键索引、
     
     <item>
       <title>MongoDB基础使用</title>
-      <link>http://101.200.124.95/post/mongodb-basicuse/</link>
+      <link>http://www.dyfblog.com/post/mongodb-basicuse/</link>
       <pubDate>Thu, 02 Aug 2018 22:22:01 +0800</pubDate>
       
-      <guid>http://101.200.124.95/post/mongodb-basicuse/</guid>
+      <guid>http://www.dyfblog.com/post/mongodb-basicuse/</guid>
       
         <description>&lt;p&gt;&lt;strong&gt;MongoDB&lt;/strong&gt;：是一个基于分布式文件存储的非关系数据库。由C++语言编写。旨在为WEB应用提供可扩展的高性能数据存储解决方案。MongoDB的查询语法有点类似于面向对象的查询语言，几乎可以实现类似关系数据库单表查询的绝大部分功能，而且还支持对数据建立索引。&lt;/p&gt;
 
@@ -2322,7 +2322,7 @@ MongoDB支持的索引：id索引(默认建立)、单键索引、多键索引、
 BASE是Basically Available(基本可用)、Soft state(软状态)和Eventually consistent(最终一致性)三个短语的简写&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;MongoDB下载&lt;/strong&gt;：下载链接为：&lt;a href=&#34;https://www.mongodb.com/download-center/community&#34;&gt;https://www.mongodb.com/download-center/community&lt;/a&gt; ，若该链接不可用，可去&lt;a href=&#34;https://www.mongodb.com/&#34;&gt;https://www.mongodb.com/&lt;/a&gt; 寻找最新的下载地址。如下图所示：下载地址有不同平台和版本可供选择，选择自己所需版本下载即可。这里我下载的是适用于Mac平台的4.0.12版本。对于Mac平台：从 MongoDB 3.0 版本开始只支持 OS X 10.7 (Lion) 版本及更新的mac版本系统(下载时要注意自己的mac系统版本和MongoDB版本的兼容性)。&lt;br /&gt;
-&lt;img src=&#34;http://101.200.124.95/image/mongo-web.png&#34; alt=&#34;mongodb&#34; /&gt;
+&lt;img src=&#34;http://www.dyfblog.com/image/mongo-web.png&#34; alt=&#34;mongodb&#34; /&gt;
 为了方便我用curl命令下载：
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;进入&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;usr&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;local&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;
 &lt;span style=&#34;color:#a6e22e&#34;&gt;cd&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;usr&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;local&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;
@@ -2519,10 +2519,10 @@ Python要连接MongoDB，需要MongoDB驱动，使用pymongo驱动来连接。�
     
     <item>
       <title>Django的Xadmin后台集成富文本Ueditor</title>
-      <link>http://101.200.124.95/post/django-xadmin-ueditor/</link>
+      <link>http://www.dyfblog.com/post/django-xadmin-ueditor/</link>
       <pubDate>Wed, 05 Apr 2017 21:20:01 +0800</pubDate>
       
-      <guid>http://101.200.124.95/post/django-xadmin-ueditor/</guid>
+      <guid>http://www.dyfblog.com/post/django-xadmin-ueditor/</guid>
       
         <description>&lt;p&gt;我的环境是：Python3.7 + Django2.2&lt;/p&gt;
 
@@ -2580,17 +2580,17 @@ Python2：&lt;a href=&#34;https://github.com/zhangfisher/DjangoUeditor&#34;&gt;h
     {% endautoescape %}
 &amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;div&lt;/span&gt;&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 最后启动Django调试服务器，进入xadmin后台查看对应表应用了UEditorField的字段是否显示和具有富文本功能。类似下图样式。&lt;br /&gt;
-&lt;img src=&#34;http://101.200.124.95/image/ueditor-eg.png&#34; alt=&#34;ueditor&#34; /&gt;&lt;/p&gt;
+&lt;img src=&#34;http://www.dyfblog.com/image/ueditor-eg.png&#34; alt=&#34;ueditor&#34; /&gt;&lt;/p&gt;
 </description>
       
     </item>
     
     <item>
       <title>Django DEBUG=False后静态文件加载失败</title>
-      <link>http://101.200.124.95/post/django-debug-false/</link>
+      <link>http://www.dyfblog.com/post/django-debug-false/</link>
       <pubDate>Sun, 02 Apr 2017 22:20:01 +0800</pubDate>
       
-      <guid>http://101.200.124.95/post/django-debug-false/</guid>
+      <guid>http://www.dyfblog.com/post/django-debug-false/</guid>
       
         <description>&lt;p&gt;我的环境是：Django2.2 + Python3.7&lt;br /&gt;
 &lt;strong&gt;Q1 将Django的DEBUG设置为False后，静态文件加载失败：报404&lt;/strong&gt;&lt;br /&gt;
