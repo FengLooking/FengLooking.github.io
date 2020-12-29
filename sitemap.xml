@@ -233,14 +233,14 @@
   </url>
   
   <url>
-    <loc>http://www.dyfblog.com/categories/django/</loc>
+    <loc>http://www.dyfblog.com/tags/django/</loc>
     <lastmod>2019-11-30T21:50:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.dyfblog.com/tags/django/</loc>
+    <loc>http://www.dyfblog.com/categories/django/</loc>
     <lastmod>2019-11-30T21:50:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -268,13 +268,6 @@
   </url>
   
   <url>
-    <loc>http://www.dyfblog.com/tags/k8s/</loc>
-    <lastmod>2019-11-22T21:50:01+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>http://www.dyfblog.com/categories/k8s/</loc>
     <lastmod>2019-11-22T21:50:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -282,14 +275,21 @@
   </url>
   
   <url>
-    <loc>http://www.dyfblog.com/categories/docker/</loc>
-    <lastmod>2019-10-22T21:50:01+08:00</lastmod>
+    <loc>http://www.dyfblog.com/tags/k8s/</loc>
+    <lastmod>2019-11-22T21:50:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://www.dyfblog.com/tags/docker/</loc>
+    <lastmod>2019-10-22T21:50:01+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.dyfblog.com/categories/docker/</loc>
     <lastmod>2019-10-22T21:50:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -310,14 +310,14 @@
   </url>
   
   <url>
-    <loc>http://www.dyfblog.com/categories/interview/</loc>
+    <loc>http://www.dyfblog.com/tags/interview/</loc>
     <lastmod>2019-10-10T20:50:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.dyfblog.com/tags/interview/</loc>
+    <loc>http://www.dyfblog.com/categories/interview/</loc>
     <lastmod>2019-10-10T20:50:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -338,14 +338,14 @@
   </url>
   
   <url>
-    <loc>http://www.dyfblog.com/tags/mongodb/</loc>
+    <loc>http://www.dyfblog.com/categories/mongodb/</loc>
     <lastmod>2018-08-03T19:30:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.dyfblog.com/categories/mongodb/</loc>
+    <loc>http://www.dyfblog.com/tags/mongodb/</loc>
     <lastmod>2018-08-03T19:30:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
