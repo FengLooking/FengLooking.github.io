@@ -310,14 +310,14 @@
   </url>
   
   <url>
-    <loc>http://www.dyfblog.com/tags/interview/</loc>
+    <loc>http://www.dyfblog.com/categories/interview/</loc>
     <lastmod>2019-10-10T20:50:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.dyfblog.com/categories/interview/</loc>
+    <loc>http://www.dyfblog.com/tags/interview/</loc>
     <lastmod>2019-10-10T20:50:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -338,14 +338,14 @@
   </url>
   
   <url>
-    <loc>http://www.dyfblog.com/categories/mongodb/</loc>
+    <loc>http://www.dyfblog.com/tags/mongodb/</loc>
     <lastmod>2018-08-03T19:30:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.dyfblog.com/tags/mongodb/</loc>
+    <loc>http://www.dyfblog.com/categories/mongodb/</loc>
     <lastmod>2018-08-03T19:30:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -380,14 +380,14 @@
   </url>
   
   <url>
-    <loc>http://www.dyfblog.com/categories/mysql/</loc>
+    <loc>http://www.dyfblog.com/tags/mysql/</loc>
     <lastmod>2017-03-05T20:30:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.dyfblog.com/tags/mysql/</loc>
+    <loc>http://www.dyfblog.com/categories/mysql/</loc>
     <lastmod>2017-03-05T20:30:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
